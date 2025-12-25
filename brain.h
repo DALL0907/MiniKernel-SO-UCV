@@ -81,7 +81,7 @@ typedef struct
     unsigned int PC : 16;        // Program Counter (suficiente para 2000 posiciones)
 } PSW_t;
 
-// Contexto de Registros de CPU [Fuente: 13-19]
+// Contexto de Registros de CPU
 typedef struct
 {
     Word AC;   // Acumulador
