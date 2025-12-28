@@ -5,7 +5,7 @@
 
 static FILE *log_file = NULL;
 
-void log_nit()
+void log_init()
 {
     // Abre el archivo log.txt en modo escritura (sobrescribe si ya existe)
     log_file = fopen("log.txt", "w");

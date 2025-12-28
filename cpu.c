@@ -71,7 +71,7 @@ void cpu_interrupt(int interrupt_code)
     }
 }
 
-void cpu()
+int cpu()
 {
     // Etapa Fetch
     context.MAR = context.PSW.PC;               // Cargar PC en MAR

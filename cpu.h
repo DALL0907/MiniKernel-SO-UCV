@@ -1,9 +1,9 @@
 #ifndef CPU_H
 #define CPU_H
 
-int mmu_translate();
+int mmu_translate(int logical_addr);
 
-void decode();
+void decode(Word instruction, int *opcode, int *mode, int *operand);
 
 // inicializa el procesador como queremos
 void cpu_init();

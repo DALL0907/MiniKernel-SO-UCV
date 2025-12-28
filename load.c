@@ -1,6 +1,6 @@
 #include "load.h"
 #include "bus.h"
-#include "logger.h"
+#include "log.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
