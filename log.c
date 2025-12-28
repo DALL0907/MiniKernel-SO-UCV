@@ -58,7 +58,7 @@ void write_log(int console, const char *format, ...)
     // Si se solicita, también imprimir en la consola
     if (console)
     {
-        va_start(parametros, format);
+        va_start(parametros, format); // se inicializa de nuevo, el escribir en log lo dejo apuntando a la parte final de la lista de args
         vprintf(format, parametros);
         va_end(parametros);
     }

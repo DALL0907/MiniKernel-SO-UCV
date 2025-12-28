@@ -11,7 +11,7 @@ int load_program(const char *filename, int base_address, loadParams *info)
     FILE *file = fopen(filename, "r");
     if (!file)
     {
-        log_event(1, "No se pudo abrir el archivo: %s", filename);
+        write_log(1, "No se pudo abrir el archivo: %s", filename);
         return -1;
     }
 
@@ -22,7 +22,7 @@ int load_program(const char *filename, int base_address, loadParams *info)
     info->n_words = 0;
     info->index_start = 0;
 
-    log_event(1, "Cargando programa %s en direccion fisica %d...\n", filename, base_address);
+    write_log(1, "Cargando programa %s en direccion fisica %d...\n", filename, base_address);
 
     while (fgets(line, sizeof(line), file))
     {
@@ -39,19 +39,19 @@ int load_program(const char *filename, int base_address, loadParams *info)
         if (strcmp(aux_word, "_start") == 0)
         {
             sscanf(line, "%*s %d", &info->index_start);
-            log_event(0, "Directiva: Inicio en linea %d\n", info->index_start);
+            write_log(0, "Directiva: Inicio en linea %d\n", info->index_start);
             continue;
         }
         if (strcmp(aux_word, ".NumeroPalabras") == 0)
         {
             sscanf(line, "%*s %d", &info->n_words);
-            log_event(0, "Directiva: Numero de palabras %d\n", info->n_words);
+            write_log(0, "Directiva: Numero de palabras %d\n", info->n_words);
             continue;
         }
         if (strcmp(aux_word, ".NombreProg") == 0)
         {
             sscanf(line, "%*s %d", &info->load_address);
-            log_event(0, "Directiva: Direccion de carga %d\n", info->load_address);
+            write_log(0, "Directiva: Direccion de carga %d\n", info->load_address);
             continue;
         }
         else if (isdigit(aux_word[0]))
@@ -64,7 +64,7 @@ int load_program(const char *filename, int base_address, loadParams *info)
                 offset++; // el 2 es el ID del cargador, sirve para el log
             else
             {
-                log_event(1, "Error al escribir en memoria en la direccion %d", address);
+                write_log(1, "Error al escribir en memoria en la direccion %d", address);
                 fclose(file);
                 return -1;
             }
