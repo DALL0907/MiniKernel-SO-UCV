@@ -9,7 +9,7 @@ CPU_Context context;
 
 int mmu_translate(int logical_addr)
 {
-    if (context.PSW.Mode == MODE_KERNEL)
+    if (context.PSW.Mode == KERNEL_MODE)
     {
         return logical_addr; // Modo privilegiado accede a todo
     }
@@ -53,7 +53,7 @@ void cpu_init()
 
     // inicializar PSW
     context.PSW.CC = 0;
-    context.PSW.Mode = MODE_USER;
+    context.PSW.Mode = USER_MODE;
     context.PSW.Interrupts = 1;
     context.PSW.PC = 0;
 

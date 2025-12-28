@@ -28,7 +28,7 @@
 #define OP_SUM 0
 #define OP_RES 1
 #define OP_MULT 2
-#define OP_DIV 3
+#define OP_DIVI 3
 // Transferencia de Datos
 #define OP_LOAD 4
 #define OP_STR 5
