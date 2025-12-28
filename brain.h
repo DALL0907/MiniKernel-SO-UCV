@@ -9,8 +9,8 @@
 #define WORD_DIGITS 8
 
 // Modos de Operacion
-#define USER_MODE 0
-#define KERNEL_MODE 1
+#define MODE_USER 0
+#define MODE_KERNEL 1
 
 // Códigos de Interrupción (Vector)
 #define INT_SYSCALL_INVALID 0
@@ -28,7 +28,7 @@
 #define OP_SUM 0
 #define OP_RES 1
 #define OP_MULT 2
-#define OP_DIV 3
+#define OP_DIVI 3
 // Transferencia de Datos
 #define OP_LOAD 4
 #define OP_STR 5
