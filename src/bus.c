@@ -3,7 +3,7 @@
 #include <pthread.h>
 #include <stdio.h>
 
-// Mutex para el arbitraje [Fuente: 44, 96]
+// Mutex para el arbitraje
 static pthread_mutex_t bus_lock;
 
 void bus_init()

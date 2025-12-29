@@ -11,7 +11,7 @@ int load_program(const char *filename, int base_address, loadParams *info)
     FILE *file = fopen(filename, "r");
     if (!file)
     {
-        write_log(1, "No se pudo abrir el archivo: %s", filename);
+        write_log(1, "No se pudo abrir el archivo: %s\n", filename);
         return -1;
     }
 
@@ -64,13 +64,13 @@ int load_program(const char *filename, int base_address, loadParams *info)
                 offset++; // el 2 es el ID del cargador, sirve para el log
             else
             {
-                write_log(1, "Error al escribir en memoria en la direccion %d", address);
+                write_log(1, "Error al escribir en memoria en la direccion %d\n", address);
                 fclose(file);
                 return -1;
             }
         }
     }
     fclose(file);
-    log_info("Programa cargado exitosamente: %s", filename);
+    write_log(1, "Programa cargado exitosamente: %s\n", filename);
     return 0;
 }

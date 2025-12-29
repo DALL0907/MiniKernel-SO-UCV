@@ -204,7 +204,7 @@ int cpu()
 
     default:
         write_log(1, "ERROR: Instruccion Ilegal (Opcode %d) en PC=%d\n", opcode, context.PSW.PC - 1);
-        cpu_interrupt(INT_INV_INSTR); // Interrupción 5 [cite: 70]
+        cpu_interrupt(INT_INV_INSTR); // Interrupción 5
         return 1;
     }
 

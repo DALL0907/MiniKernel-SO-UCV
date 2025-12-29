@@ -12,6 +12,6 @@ void cpu_init();
 void cpu_interrupt();
 
 // acciones normales del cpu, las 34 instruc
-void cpu();
+int cpu();
 
 #endif
