@@ -76,11 +76,15 @@ int cpu()
     // Etapa Fetch
     context.MAR = context.PSW.PC;               // Cargar PC en MAR
     int phys_addr = mmu_translate(context.MAR); // traducir direccion
-    if (phys_addr == -1) return; // Error de traducción
+    if (phys_addr == -1) return 1; // Error de traducción: mmu_translate ya registró la violación de segmento
 
     if (bus_read(phys_addr, &context.MDR, 0) != 0)
     {
-        write_log(1, "FATAL: Error de lectura en Bus (PC=%d)\n", context.PSW.PC);
+        // Hubo fallo al leer en la dirección física
+        write_log(1, "FATAL: Error de lectura en Bus/Memoria (PC=%d, phys=%d)\n", context.PSW.PC, phys_addr);
+
+        cpu_interrupt(INT_INV_ADDR);
+
         return 1;
     }
     context.IR = context.MDR; // Cargar instrucción en IR

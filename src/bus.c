@@ -23,6 +23,10 @@ int bus_read(int address, Word *data, int client_id)
     // 3. Liberar el bus
     pthread_mutex_unlock(&bus_lock);
 
+    /* El bus no escribe en el log para evitar mensajes duplicados
+       Se delega la responsabilidad de escribir el log al cliente (CPU, DMA, loader)
+       que tiene mejor contexto (PC, operación E/S, client_id, etc.)*/
+
     return result;
 }
 
@@ -36,6 +40,6 @@ int bus_write(int address, Word data, int client_id)
 
     // 3. Liberar
     pthread_mutex_unlock(&bus_lock);
-
+    // Igual que en bus_read: no logueamos aquí para evitar duplicados
     return result;
 }
