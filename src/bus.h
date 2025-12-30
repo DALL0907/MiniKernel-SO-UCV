@@ -4,7 +4,7 @@
 #include "brain.h"
 
 // Inicializa el semáforo/mutex del bus
-void bus_init();
+int bus_init();
 // Elimina el semáforo/mutex del bus
 void bus_destroy();
 // La CPU o DMA solicitan acceso a memoria a través del bus.

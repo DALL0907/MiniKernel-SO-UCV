@@ -58,12 +58,12 @@
 #define OP_POP 26
 #define OP_J 27 // Salto incondicional
 // E/S (DMA)
-#define OP_SDMAP 28
-#define OP_SDMAC 29
-#define OP_SDMAS 30 // Y SDMAIO (Mismo opcode 30/31 en tabla, pero 30 es sector)
-#define OP_SDMAIO 31
-#define OP_SDMAM 32
-#define OP_SDMAON 33
+#define OP_SDMAP 28 // Establece la pista a acceder
+#define OP_SDMAC 29 // Establece el cilindro a acceder
+#define OP_SDMAS 30 // Establece el sector a acceder
+#define OP_SDMAIO 31 // Establece si es I/O (0 = read memory | 1 = write memory)
+#define OP_SDMAM 32 // Establece la posición de memoria a ser accedida
+#define OP_SDMAON 33 // Inicia DMA
 
 // ==========================================
 // Estructuras de Datos
