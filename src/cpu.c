@@ -14,21 +14,32 @@ int get_value(int mode, int operand, int *value)
         *value = operand; // valor viene en la instruccion
         return 0;         //
     }
-    else if (mode == 0)
+
+    int logical_addr = operand; // por defecto modo 0
+
+    if (mode == 2)
     {
-        int phys_addr = mmu_translate(operand);
-        if (phys_addr == -1)
-            return -1; // Error de traducción
-        Word aux;
-        if (bus_read(phys_addr, &aux, 0) != 0)
-        {
-            write_log(1, "FATAL: Error de lectura en Bus/Memoria (get_value addr=%d, phys=%d)\n", operand, phys_addr);
-            return -1; // fallo en bus
-        }
-        *value = aux;
-        return 0;
+        logical_addr = operand + context.RX; // Modo 2: Sumamos el índice RX
     }
-    return -1; // modo inválido
+
+    if (mode != 0 && mode != 2)
+    {
+        write_log(1, "ERROR: Modo de direccionamiento inválido (%d)\n", mode);
+        return -1;
+    }
+
+    int phys_addr = mmu_translate(logical_addr);
+    if (phys_addr == -1)
+        return -1; // Error de traducción
+    Word aux;
+    if (bus_read(phys_addr, &aux, 0) != 0)
+    {
+        write_log(1, "FATAL: Error de lectura en Bus/Memoria (get_value addr=%d, phys=%d)\n", operand, phys_addr);
+        return -1; // fallo en bus
+    }
+    *value = aux;
+
+    return 0; // modo inválido
 }
 
 int mmu_translate(int logical_addr)
@@ -173,7 +184,13 @@ int cpu()
             write_log(1, "ERROR: Modo inmediato inválido para STR\n");
             return 1;
         }
-        int target_addr = mmu_translate(operand);
+        // se calcula la direccion final segun el modo de direccionamiento
+        int final_addr = operand;
+        if (mode == 2)
+        {
+            final_addr = operand + context.RX; // Sumar índice
+        }
+        int target_addr = mmu_translate(final_addr);
         if (target_addr != -1)
         {
             bus_write(target_addr, context.AC, 0);
@@ -193,7 +210,12 @@ int cpu()
             write_log(1, "ERROR: Modo inmediato inválido para STRRX\n");
             return 1;
         }
-        int target_addr_rx = mmu_translate(operand);
+        int final_addr = operand;
+        if (mode == 2)
+        {
+            final_addr = operand + context.RX;
+        }
+        int target_addr_rx = mmu_translate(final_addr);
         if (target_addr_rx != -1)
         {
             bus_write(target_addr_rx, context.RX, 0);
