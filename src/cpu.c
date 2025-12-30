@@ -76,8 +76,7 @@ int cpu()
     // Etapa Fetch
     context.MAR = context.PSW.PC;               // Cargar PC en MAR
     int phys_addr = mmu_translate(context.MAR); // traducir direccion
-    if (phys_addr == -1)
-        return; // Error de traducción
+    if (phys_addr == -1) return; // Error de traducción
 
     if (bus_read(phys_addr, &context.MDR, 0) != 0)
     {
