@@ -7,6 +7,30 @@
 
 CPU_Context context;
 
+int get_value(int mode, int operand, int *value)
+{
+    if (mode == 1)
+    {
+        *value = operand; // valor viene en la instruccion
+        return 0;         //
+    }
+    else if (mode == 0)
+    {
+        int phys_addr = mmu_translate(operand);
+        if (phys_addr == -1)
+            return -1; // Error de traducción
+        Word aux;
+        if (bus_read(phys_addr, &aux, 0) != 0)
+        {
+            write_log(1, "FATAL: Error de lectura en Bus/Memoria (get_value addr=%d, phys=%d)\n", operand, phys_addr);
+            return -1; // fallo en bus
+        }
+        *value = aux;
+        return 0;
+    }
+    return -1; // modo inválido
+}
+
 int mmu_translate(int logical_addr)
 {
     if (context.PSW.Mode == KERNEL_MODE)
@@ -76,7 +100,8 @@ int cpu()
     // Etapa Fetch
     context.MAR = context.PSW.PC;               // Cargar PC en MAR
     int phys_addr = mmu_translate(context.MAR); // traducir direccion
-    if (phys_addr == -1) return 1; // Error de traducción: mmu_translate ya registró la violación de segmento
+    if (phys_addr == -1)
+        return 1; // Error de traducción: mmu_translate ya registró la violación de segmento
 
     if (bus_read(phys_addr, &context.MDR, 0) != 0)
     {
@@ -91,7 +116,7 @@ int cpu()
     context.PSW.PC++;         // Incrementar PC
 
     // decode
-    int opcode, mode, operand;
+    int opcode, mode, operand, val;
     decode(context.IR, &opcode, &mode, &operand);
 
     // execute
@@ -100,34 +125,103 @@ int cpu()
     {
     // --- ARITMÉTICAS ---
     case OP_SUM: // 00
-        write_log(0, "Ejecutando SUM\n");
+        if (get_value(mode, operand, &val) == 0)
+        {
+            context.AC += val;
+            write_log(0, "Ejecutando SUM, Ahora AC=%d\n", context.AC);
+        }
         break;
     case OP_RES: // 01
-        write_log(0, "Ejecutando RES\n");
+        if (get_value(mode, operand, &val) == 0)
+        {
+            context.AC -= val;
+            write_log(0, "Ejecutando RES, ahora AC=%d\n", context.AC);
+        }
         break;
     case OP_MULT: // 02
-        write_log(0, "Ejecutando MULT\n");
+        if (get_value(mode, operand, &val) == 0)
+        {
+            context.AC *= val;
+            write_log(0, "Ejecutando MULT, ahora AC=%d\n", context.AC);
+        }
         break;
     case OP_DIVI: // 03
-        write_log(0, "Ejecutando DIVI\n");
+        if (get_value(mode, operand, &val) == 0)
+        {
+            if (val == 0)
+            {
+                write_log(1, "ERROR: División por cero en DIVI\n");
+                cpu_interrupt(INT_INVALID_OP); // Interrupción 7
+                return 1;
+            }
+            context.AC /= val;
+            write_log(0, "Ejecutando DIVI, ahora AC=%d\n", context.AC);
+        }
         break;
 
     // --- TRANSFERENCIA DE DATOS ---
     case OP_LOAD: // 04
-        write_log(0, "Ejecutando LOAD\n");
+        if (get_value(mode, operand, &val) == 0)
+        {
+            context.AC = val;
+            write_log(0, "Ejecutando LOAD, AC cargado con %d\n", val);
+        }
         break;
     case OP_STR: // 05
-        write_log(0, "Ejecutando STR\n");
+        if (mode == 1)
+        {
+            write_log(1, "ERROR: Modo inmediato inválido para STR\n");
+            return 1;
+        }
+        int target_addr = mmu_translate(operand);
+        if (target_addr != -1)
+        {
+            bus_write(target_addr, context.AC, 0);
+            write_log(0, "Ejecutando STR, valor %d escrito en dirección %d\n", context.AC, target_addr);
+        }
         break;
     case OP_LOADRX: // 06
-        write_log(0, "Ejecutando LOADRX\n");
+        if (get_value(mode, operand, &val) == 0)
+        {
+            context.RX = val;
+            write_log(0, "Ejecutando LOADRX, RX cargado con %d\n", val);
+        }
         break;
     case OP_STRRX: // 07
-        write_log(0, "Ejecutando STRRX\n");
+        if (mode == 1)
+        {
+            write_log(1, "ERROR: Modo inmediato inválido para STRRX\n");
+            return 1;
+        }
+        int target_addr_rx = mmu_translate(operand);
+        if (target_addr_rx != -1)
+        {
+            bus_write(target_addr_rx, context.RX, 0);
+            write_log(0, "Ejecutando STRRX, valor %d escrito en dirección %d\n", context.RX, target_addr_rx);
+        }
+
         break;
 
     // --- COMPARACIÓN Y SALTOS ---
     case OP_COMP: // 08
+        if (get_value(mode, operand, &val) == 0)
+        {
+            if (context.AC == val)
+            {
+                context.PSW.CC = 0; // Igual
+                write_log(0, "COMP : AC == val == %d\n, CC=0", val);
+            }
+            else if (context.AC < val)
+            {
+                context.PSW.CC = 1; // Menor
+                write_log(0, "COMP : AC < val == %d\n, CC=1", val);
+            }
+            else
+            {
+                context.PSW.CC = 2; // Mayor
+                write_log(0, "COMP : AC > val == %d\n, CC=2", val);
+            }
+        }
         write_log(0, "Ejecutando COMP\n");
         break;
     case OP_JMPE: // 09
