@@ -5,7 +5,8 @@
 
 // Inicializa el semáforo/mutex del bus
 void bus_init();
-
+// Elimina el semáforo/mutex del bus
+void bus_destroy();
 // La CPU o DMA solicitan acceso a memoria a través del bus.
 // El bus se encarga del bloqueo (arbitraje) y llama a mem_phys.
 // client_id es solo para debug/log (0=CPU, 1=DMA)

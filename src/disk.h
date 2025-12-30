@@ -12,6 +12,9 @@
 // Inicializa el disco. Devuelve 0 ok, -1 error
 void disk_init(void);
 
+// Elimina el semáforo/mutex del disco (eliminar el disco pues)
+void disk_destroy(void);
+
 // Leer un sector
 int disk_read_sector(int track, int cylinder, int sector, char *out_buf);
 

@@ -1,6 +1,7 @@
 #include "disk.h"
 #include "log.h"
 #include <pthread.h>
+#include <string.h>
 
 // Inicializar un disco como un arreglo global estático tridimensional (es de 4D para simplificar las cosas)
 // Cada sector almacena exactamente 9 caracteres
@@ -13,6 +14,8 @@ void disk_init(void)
 {
     // Inicializar todas las posiciones con una cadena vacía con memset
     memset(DISK, '\0', sizeof(DISK));
+    //Verificar errores que pueda arrojar esta funcion de abajo
+    pthread_mutex_init(&disk_lock, NULL);
 }
 
 int disk_read_sector(int track, int cylinder, int sector, char *out_buf)
@@ -60,4 +63,10 @@ int disk_write_sector(int track, int cylinder, int sector, const char *in_buf)
     // Desbloquear el acceso al disco
     pthread_mutex_unlock(&disk_lock);
     return 0;
+}
+
+void disk_destroy(void)
+{
+    //Verificar errores que pueda arrojar esta funcion de abajo
+    pthread_mutex_destroy(&disk_lock);
 }

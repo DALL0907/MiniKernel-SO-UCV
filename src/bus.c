@@ -9,6 +9,7 @@ static pthread_mutex_t bus_lock;
 void bus_init()
 {
     mem_init(); // El bus enciende la memoria
+    //Verificar errores que pueda arrojar esta funcion de abajo
     pthread_mutex_init(&bus_lock, NULL);
 }
 
@@ -42,4 +43,10 @@ int bus_write(int address, Word data, int client_id)
     pthread_mutex_unlock(&bus_lock);
     // Igual que en bus_read: no logueamos aquí para evitar duplicados
     return result;
+}
+
+void bus_destroy()
+{
+    //Verificar errores que pueda arrojar esta funcion de abajo
+    pthread_mutex_destroy(&bus_lock);
 }
