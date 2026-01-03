@@ -6,6 +6,45 @@
 #include <stdlib.h>
 
 CPU_Context context;
+// Variables para gestión de interrupciones
+static int interrupt_pending = 0;  // Bandera: 0=No, 1=Si
+static int interrupt_code_val = 0; // Cuál interrupción es
+
+// Guarda un valor en la Pila del Sistema
+// Retorna 0 si éxito, -1 si desbordamiento (Stack Overflow)
+int push_stack(int value)
+{
+    // La pila crece hacia abajo (direcciones menores)
+    // El SP apunta a la próxima dirección LIBRE).
+
+    context.SP--;
+
+    // Protección básica para no sobrescribir el Vector de Interrupciones (posiciones 0-20)
+    if (context.SP < 20)
+    {
+        write_log(1, "FATAL: Stack Overflow (SP < 20). Sistema colapsado.\n");
+        exit(1);
+    }
+
+    // Escribimos directamente en memoria física (el Kernel accede directo)
+    // Usamos el ID 0 (CPU)
+    if (bus_write(context.SP, value, 0) != 0)
+    {
+        return -1;
+    }
+    return 0;
+}
+
+// Saca un valor de la pila
+int pop_stack(int *value)
+{
+    // Leemos de donde apunta SP
+    if (bus_read(context.SP, value, 0) != 0)
+        return -1;
+    // Incrementamos SP (la pila se reduce)
+    context.SP++;
+    return 0;
+}
 
 int get_value(int mode, int operand, int *value)
 {
@@ -84,7 +123,7 @@ void cpu_init()
     context.RB = 0;
     context.RL = 0;
     context.RX = 0;
-    context.SP = 0;
+    context.SP = 299; // limite memoria del SO, aqui inicia la PILA
 
     // inicializar PSW
     context.PSW.CC = 0;
@@ -97,17 +136,65 @@ void cpu_init()
 
 void cpu_interrupt(int interrupt_code)
 {
-    write_log(1, "Manejando interrupción en CPU.\n");
-    // Aquí se implementaría la lógica para manejar interrupciones y salvar contexto
-    // TAREA 11
+
+    // Solo registramos que hay una interrupción pendiente.
+    // El ciclo cpu_step la procesará antes de la siguiente instrucción.
+    interrupt_pending = 1;
+    interrupt_code_val = interrupt_code;
     if (interrupt_code == INT_INV_ADDR || interrupt_code == INT_INV_INSTR)
     {
         exit(1); // Detener por error fatal momentáneamente
     }
+    write_log(1, ">> SOLICITUD INTERRUPCION: Codigo %d detectada.\n", interrupt_code);
+}
+
+void handle_interrupt()
+{
+    write_log(0, "INT: Iniciando secuencia de interrupción %d...\n", interrupt_code_val);
+
+    // 1. SALVAR CONTEXTO (Guardar registros en la Pila)
+    // El orden es arbitrario, pero debe coincidir con el futuro "RETRN" (IRET)
+    push_stack(context.PSW.PC); // Guardar dónde íbamos
+    push_stack(context.AC);     // Guardar Acumulador
+    push_stack(context.RX);     // Guardar Registro Auxiliar
+    push_stack(context.RB);     // Guardar Base
+    push_stack(context.RL);     // Guardar Límite
+    push_stack(context.PSW.CC); // Guardar Estado de comparación
+
+    // Guardamos el Modo anterior para poder volver a él
+    push_stack(context.PSW.Mode);
+
+    // 2. CAMBIAR A MODO KERNEL
+    context.PSW.Mode = KERNEL_MODE; // Ahora somos omnipotentes
+    context.PSW.Interrupts = 0;     // Deshabilitar int anidadas (para no interrumpir al manejador)
+
+    // 3. SALTO AL MANEJADOR (Vector de Interrupciones)
+    // Leemos la dirección de memoria física donde está el código para esta interrupción.
+    // Asumimos que el Vector está en las direcciones 0, 1, 2... de la RAM física.
+    Word handler_address;
+    if (bus_read(interrupt_code_val, &handler_address, 0) == 0)
+    {
+        context.PSW.PC = handler_address;
+        write_log(0, "INT: Contexto salvado. Saltando a manejador en dir %d\n", handler_address);
+    }
+    else
+    {
+        write_log(1, "INT FATAL: No se pudo leer el Vector de Interrupciones.\n");
+        exit(1);
+    }
+
+    // Limpiamos la bandera
+    interrupt_pending = 0;
 }
 
 int cpu()
 {
+    // Solo atendemos si hay una pendiente Y las interrupciones están habilitadas
+    if (interrupt_pending && context.PSW.Interrupts)
+    {
+        handle_interrupt();
+        return 0; // el ciclo  solo maneja la interrupción
+    }
     // Etapa Fetch
     context.MAR = context.PSW.PC;               // Cargar PC en MAR
     int phys_addr = mmu_translate(context.MAR); // traducir direccion
@@ -246,28 +333,77 @@ int cpu()
         }
         write_log(0, "Ejecutando COMP\n");
         break;
-    case OP_JMPE: // 09
-        write_log(0, "Ejecutando JMPE\n");
+    case OP_JMPE: // 09 - Jump if Equal (CC == 0)
+        if (context.PSW.CC == 0)
+        {
+            context.PSW.PC = operand; // Saltamos (PC = Dirección Lógica destino)
+            write_log(0, "JMPE: Salto tomado a %d\n", operand);
+        }
         break;
-    case OP_JMPNE: // 10
-        write_log(0, "Ejecutando JMPNE\n");
+    case OP_JMPNE: // 10 - Jump if Not Equal (CC != 0)
+        if (context.PSW.CC != 0)
+        {
+            context.PSW.PC = operand;
+            write_log(0, "JMPNE: Salto tomado a %d\n", operand);
+        }
         break;
-    case OP_JMPLT: // 11
-        write_log(0, "Ejecutando JMPLT\n");
+    case OP_JMPLT: // 11 - Jump if Less Than (CC == 1)
+        if (context.PSW.CC == 1)
+        {
+            context.PSW.PC = operand;
+            write_log(0, "JMPLT: Salto tomado a %d\n", operand);
+        }
         break;
-    case OP_JMPLGT: // 12
-        write_log(0, "Ejecutando JMPLGT\n");
+    case OP_JMPLGT: // 12 - Jump if Greater Than (CC == 2)
+        if (context.PSW.CC == 2)
+        {
+            context.PSW.PC = operand;
+            write_log(0, "JMPLGT: Salto tomado a %d\n", operand);
+        }
         break;
     case OP_J: // 27 (Salto incondicional)
-        write_log(0, "Ejecutando J (Salto)\n");
+        context.PSW.PC = operand;
+        write_log(0, "J: Salto incondicional a %d\n", operand);
         break;
 
     // --- SISTEMA Y PILA ---
     case OP_SVC: // 13
+        write_log(0, "SVC: Solicitud de servicio al sistema.\n");
+        // Esto dispara una interrupción de software (Código 2 según brain.h)
+        cpu_interrupt(INT_SYSCALL);
+        break;
         write_log(1, "SVC: Llamada al Sistema (Fin de programa temporal)\n");
         return 1;  // Detener ejecución por ahora
-    case OP_RETRN: // 14
-        write_log(0, "Ejecutando RETRN\n");
+    case OP_RETRN: // 14 //Retorno de interrupción
+        if (context.PSW.Mode == USER_MODE)
+        {
+            write_log(1, "ERROR: Intento de RETRN en Modo Usuario.\n");
+            cpu_interrupt(INT_INVALID_OP); // Protección
+        }
+        else
+        {
+            // Recuperar contexto en ORDEN INVERSO al guardado en handle_interrupt
+            // Orden guardado: PC, AC, RX, RB, RL, CC, Mode
+            // Orden recuperación: Mode, CC, RL, RB, RX, AC, PC
+            int temp;
+            pop_stack(&temp);
+            context.PSW.Mode = temp;
+            pop_stack(&temp);
+            context.PSW.CC = temp;
+            pop_stack(&temp);
+            context.RL = temp;
+            pop_stack(&temp);
+            context.RB = temp;
+            pop_stack(&temp);
+            context.RX = temp;
+            pop_stack(&temp);
+            context.AC = temp;
+            pop_stack(&temp);
+            context.PSW.PC = temp;
+
+            context.PSW.Interrupts = 1; // Volver a habilitar interrupciones
+            write_log(0, "RETRN: Contexto restaurado. Volviendo a PC=%d\n", context.PSW.PC);
+        }
         break;
     case OP_HAB: // 15
         write_log(0, "Ejecutando HAB (Habilitar Int)\n");
