@@ -9,7 +9,7 @@ void decode(Word instruction, int *opcode, int *mode, int *operand);
 void cpu_init();
 
 // manejar interrupciones del cpu
-void cpu_interrupt();
+void cpu_interrupt(int interrupt_code);
 
 // acciones normales del cpu, las 34 instruc
 int cpu();

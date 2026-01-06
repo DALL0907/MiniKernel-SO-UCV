@@ -4,23 +4,31 @@
 #include "brain.h"
 #include <pthread.h>
 
-typedef struct {
-    unsigned int TRACK;     // pista del disco
-    unsigned int CYLINDER;  // cilindro del disco
-    unsigned int SECTOR;    // sector del disco
-    unsigned int IO;        // 0 = leer (mem -> disk), 1 = escribir (disk -> mem)
-    unsigned int ADDRESS;   // direccion fisica de la memoria a leer o escribir
-    unsigned int STATE : 1; // Resultado de la op E/S -> 0 = exito 1 = fallo
+typedef struct 
+{
+    int TRACK;     // pista del disco
+    int CYLINDER;  // cilindro del disco
+    int SECTOR;    // sector del disco
+    int IO;        // 0 = leer (mem -> disk), 1 = escribir (disk -> mem)
+    int ADDRESS;   // direccion fisica de la memoria a leer o escribir
+    int STATE;     // Resultado de la op E/S -> 0 = exito, 1 = fallo
+    int BUSY;      // 0 = libre, 1 = ocupado
     pthread_mutex_t lock;   // semáforo del dma
 } DMA_t;
 
 int dma_init();
 void dma_destroy();
 
-// Recibe el código y el operando de la instruccion
+// Recibe el código y el valor a usar con la instruccion
 int dma_handler(int opcode, int value);
+
+// Indica si el dma está trabajando
+int dma_is_busy();
 
 // Devuelve el estado del DMA
 int dma_get_state();
+
+// Funcion que ejecutará el hilo que quiera usar el dma para su op de E/S 
+void *dma_perform_io(void *arg);
 
 #endif // DMA_H
