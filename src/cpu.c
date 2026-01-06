@@ -38,6 +38,11 @@ int push_stack(int value)
 // Saca un valor de la pila
 int pop_stack(int *value)
 {
+    if (context.SP >= 300)
+    { // 300 es el inicio de usuario
+        write_log(1, "ERROR: Stack Underflow\n");
+        return -1;
+    }
     // Leemos de donde apunta SP
     if (bus_read(context.SP, value, 0) != 0)
         return -1;
@@ -61,7 +66,7 @@ int get_value(int mode, int operand, int *value)
         logical_addr = operand + context.RX; // Modo 2: Sumamos el índice RX
     }
 
-    if (mode != 0 && mode != 2)
+    if (mode != 0)
     {
         write_log(1, "ERROR: Modo de direccionamiento inválido (%d)\n", mode);
         return -1;
@@ -141,10 +146,6 @@ void cpu_interrupt(int interrupt_code)
     // El ciclo cpu_step la procesará antes de la siguiente instrucción.
     interrupt_pending = 1;
     interrupt_code_val = interrupt_code;
-    if (interrupt_code == INT_INV_ADDR || interrupt_code == INT_INV_INSTR)
-    {
-        exit(1); // Detener por error fatal momentáneamente
-    }
     write_log(1, ">> SOLICITUD INTERRUPCION: Codigo %d detectada.\n", interrupt_code);
 }
 
@@ -371,7 +372,6 @@ int cpu()
         write_log(0, "SVC: Solicitud de servicio al sistema.\n");
         // Esto dispara una interrupción de software (Código 2 según brain.h)
         cpu_interrupt(INT_SYSCALL);
-        break;
         write_log(1, "SVC: Llamada al Sistema (Fin de programa temporal)\n");
         return 1;  // Detener ejecución por ahora
     case OP_RETRN: // 14 //Retorno de interrupción
@@ -413,37 +413,185 @@ int cpu()
         write_log(0, "Ejecutando DHAB (Deshabilitar Int)\n");
         context.PSW.Interrupts = 0;
         break;
-    case OP_TTI: // 17
-        write_log(0, "Ejecutando TTI (Timer)\n");
+    case OP_TTI: // 17 // Simula un evento de reloj
+        write_log(0, "TTI: Checkpoint de Timer ejecutado.\n");
         break;
-    case OP_CHMOD: // 18
-        write_log(0, "Ejecutando CHMOD\n");
+    case OP_CHMOD: // 18 (Change mode)
+        if (context.PSW.Mode == USER_MODE)
+        {
+            write_log(1, "ERROR: Intento de CHMOD en Modo Usuario.\n");
+            cpu_interrupt(INT_INVALID_OP); // Protección
+        }
+        else
+        {
+            // Si el operando es 0 o 1, cambiamos el modo
+            if (get_value(mode, operand, &val) == 0)
+            {
+                if (val == 0 || val == 1)
+                {
+                    context.PSW.Mode = val;
+                    write_log(0, "CHMOD: Modo cambiado a %d\n", val);
+                }
+                else
+                {
+                    write_log(1, "ERROR: Modo invalido para CHMOD (%d)\n", val);
+                }
+            }
+        }
         break;
 
     // --- REGISTROS BASE/LIMITE/PILA ---
     case OP_LOADRB: // 19
-        write_log(0, "Ejecutando LOADRB\n");
+        if (context.PSW.Mode == USER_MODE)
+        {
+            cpu_interrupt(INT_INVALID_OP); // Prohibido para usuario
+        }
+        else
+        {
+            if (get_value(mode, operand, &val) == 0)
+            {
+                context.RB = val;
+                write_log(0, "LOADRB: RB actualizado a %d\n", context.RB);
+            }
+        }
         break;
     case OP_STRRB: // 20
-        write_log(0, "Ejecutando STRRB\n");
+        // Guardar el valor de RB en memoria
+        {
+            if (context.PSW.Mode == USER_MODE)
+            {
+                cpu_interrupt(INT_INVALID_OP);
+            }
+            else
+            {
+                if (mode == 1)
+                {
+                    write_log(1, "ERROR: STRRB Inmediato\n");
+                    return 1;
+                }
+                int log_addr = (mode == 2) ? operand + context.RX : operand;
+                // Al ser Kernel, mmu_translate devuelve la dir física directa (no suma RB)
+                int aux = mmu_translate(log_addr);
+                if (aux != -1)
+                {
+                    bus_write(aux, context.RB, 0);
+                    write_log(0, "STRRB: Guardado RB (%d) en Mem[%d]\n", context.RB, aux);
+                }
+            }
+        }
         break;
     case OP_LOADRL: // 21
-        write_log(0, "Ejecutando LOADRL\n");
+        if (context.PSW.Mode == USER_MODE)
+        {
+            cpu_interrupt(INT_INVALID_OP);
+        }
+        else
+        {
+            if (get_value(mode, operand, &val) == 0)
+            {
+                context.RL = val;
+                write_log(0, "LOADRL: RL actualizado a %d\n", context.RL);
+            }
+        }
         break;
     case OP_STRRL: // 22
-        write_log(0, "Ejecutando STRRL\n");
+        if (context.PSW.Mode == USER_MODE)
+        {
+            cpu_interrupt(INT_INVALID_OP);
+        }
+        else
+        {
+            if (mode == 1)
+            {
+                write_log(1, "ERROR: STRRL Inmediato\n");
+                return 1;
+            }
+            int log_addr = (mode == 2) ? operand + context.RX : operand;
+            int aux = mmu_translate(log_addr);
+            if (aux != -1)
+            {
+                bus_write(aux, context.RL, 0);
+                write_log(0, "STRRL: Guardado RL (%d) en Mem[%d]\n", context.RL, aux);
+            }
+        }
         break;
     case OP_LOADSP: // 23
-        write_log(0, "Ejecutando LOADSP\n");
+        // Cambiar dónde está la pila. Solo el Kernel debe hacer esto
+        // para inicializar la pila de un nuevo proceso o resetear la del sistema.
+        if (context.PSW.Mode == USER_MODE)
+        {
+            cpu_interrupt(INT_INVALID_OP);
+        }
+        else
+        {
+            if (get_value(mode, operand, &val) == 0)
+            {
+                context.SP = val;
+                write_log(0, "LOADSP: SP actualizado a %d\n", context.SP);
+            }
+        }
         break;
     case OP_STRSP: // 24
-        write_log(0, "Ejecutando STRSP\n");
+        if (context.PSW.Mode == USER_MODE)
+        {
+            cpu_interrupt(INT_INVALID_OP);
+        }
+        else
+        {
+            if (mode == 1)
+            {
+                write_log(1, "ERROR: STRSP Inmediato\n");
+                return 1;
+            }
+            int log_addr = (mode == 2) ? operand + context.RX : operand;
+            int tgt = mmu_translate(log_addr);
+            if (tgt != -1)
+            {
+                bus_write(tgt, context.SP, 0);
+                write_log(0, "STRSP: Guardado SP (%d) en Mem[%d]\n", context.SP, tgt);
+            }
+        }
         break;
     case OP_PSH: // 25
-        write_log(0, "Ejecutando PSH (Push)\n");
+        // Push: Mete un valor en la pila
+        if (get_value(mode, operand, &val) == 0)
+        {
+            if (push_stack(val) == 0)
+            {
+                write_log(0, "PSH: Guardado %d en Stack (SP=%d)\n", val, context.SP);
+            }
+            else
+            {
+                cpu_interrupt(INT_OVERFLOW);
+            }
+        }
         break;
     case OP_POP: // 26
-        write_log(0, "Ejecutando POP\n");
+        // Pop: Saca valor de pila y lo guarda en Memoria (segun operando)
+        {
+            if (mode == 1)
+            {
+                write_log(1, "ERROR: POP Inmediato\n");
+                return 1;
+            }
+
+            int pop_value;
+            if (pop_stack(&pop_value) == 0)
+            {
+                // Ahora guardamos 'pop_value' en la dirección indicada por el operando
+                int log_addr = (mode == 2) ? operand + context.RX : operand;
+                int tgt = mmu_translate(log_addr);
+                if (tgt != -1)
+                {
+                    bus_write(tgt, pop_value, 0);
+                    write_log(0, "POP: Recuperado %d y guardado en Mem[%d]\n", pop_value, tgt);
+                }
+            }
+            else
+            {
+                cpu_interrupt(INT_UNDERFLOW); // Código 7
+            }
+        }
         break;
 
     // --- E/S DMA ---
