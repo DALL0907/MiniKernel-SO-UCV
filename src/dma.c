@@ -40,7 +40,7 @@ int dma_init()
     return 0;
 }
 
-int dma_handler(int opcode, int value) 
+int dma_handler(int opcode, int value, unsigned int mode) 
 {
     /*
     * 1. DMA debe recibir la operacion dma con su valor
@@ -94,6 +94,12 @@ int dma_handler(int opcode, int value)
           if (dma.ADDRESS < 0 || dma.ADDRESS >= MEM_SIZE) 
           {
               write_log(1,"DMA: ERROR - Dirección de memoria inválida: %d (rango válido: 0-%d)\n",dma.ADDRESS, MEM_SIZE - 1);
+              pthread_mutex_unlock(&dma.lock);
+              return -1;
+          }
+          if (mode == USER_MODE && dma.ADDRESS < OS_RESERVED)
+          {
+              write_log(1, "DMA: ERROR - Intento de acceso a memoria reservada por el sistema.\n");
               pthread_mutex_unlock(&dma.lock);
               return -1;
           }

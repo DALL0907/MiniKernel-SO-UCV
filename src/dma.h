@@ -19,8 +19,8 @@ typedef struct
 int dma_init();
 void dma_destroy();
 
-// Recibe el código y el valor a usar con la instruccion
-int dma_handler(int opcode, int value);
+// Recibe el código, el valor y el modo de ejecución (Kernel/Usuario) a usar con la instruccion
+int dma_handler(int opcode, int value, unsigned int mode);
 
 // Indica si el dma está trabajando
 int dma_is_busy();

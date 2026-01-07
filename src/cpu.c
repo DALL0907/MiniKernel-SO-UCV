@@ -60,18 +60,17 @@ int get_value(int mode, int operand, int *value)
         return 0;         //
     }
 
+    if (mode < 0 || mode > 2)
+    {
+        write_log(1, "ERROR: Modo de direccionamiento inválido (%d)\n", mode);
+        return -1;
+    }
+
     int logical_addr = operand; // por defecto modo 0
 
     if (mode == 2)
     {
         logical_addr = operand + context.RX; // Modo 2: Sumamos el índice RX
-        return 0;
-    }
-
-    if (mode != 0)
-    {
-        write_log(1, "ERROR: Modo de direccionamiento inválido (%d)\n", mode);
-        return -1;
     }
 
     int phys_addr = mmu_translate(logical_addr);
@@ -609,7 +608,27 @@ int cpu()
         }
         write_log(0, "Ejecutando Instruccion DMA (%d)\n", opcode);
         // Aquí se comunicará con el módulo dma.c
-        if (dma_handler(opcode, val) != 0)
+        // 
+        // ---------------IMPORTANTE---------------------- 
+        // 
+        //  VERIFICAR EL ESTADO DEL DMA EN handle_interrupt para saber si la operacion E/S tuvo exito
+        // se puede hacer algo así mas o menos
+      /*if (interrupt_code_val == INT_IO_END) 
+       *{
+            int resultado = dma_get_state();
+            if (resultado == 0) {
+                write_log(0, "CPU: DMA reporta ÉXITO en operación E/S\n");
+            } else {
+              write_log(1, "CPU: DMA reporta FALLO en operación E/S\n");
+              // El kernel decidirá qué hacer con este fallo
+            }
+        } */
+        // dma_handler nada mas se encarga de delegar el trabajo al modulo dma 
+        // retorna 0 si se ejecutó la instrucción correctamente
+        // en dma.c se crea un hilo que realizará la operacion concurrentemente
+        // llama a cpu_interrupt(INT_IO_END)
+        // luego el handler deberia verificar el dma_get_state() para conocer el resultado
+        if (dma_handler(opcode, val, context.PSW.Mode) != 0)
         {
             write_log(1, "ERROR: Fallo en dma_handler para opcode %d\n", opcode);
             return 1;
