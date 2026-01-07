@@ -604,7 +604,7 @@ int cpu()
     case OP_SDMAON: // 33
         write_log(0, "Ejecutando Instruccion DMA (%d)\n", opcode);
         // Aquí se comunicará con el módulo dma.c
-        if (dma_handler(opcode, operand) != 0)
+        if (dma_handler(opcode, val) != 0)
         {
             write_log(1, "ERROR: Fallo en dma_handler para opcode %d\n", opcode);
             return 1;
