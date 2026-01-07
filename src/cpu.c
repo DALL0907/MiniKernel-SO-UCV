@@ -2,6 +2,7 @@
 #include "bus.h"
 #include "memory.h"
 #include "log.h"
+#include "dma.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -603,6 +604,11 @@ int cpu()
     case OP_SDMAON: // 33
         write_log(0, "Ejecutando Instruccion DMA (%d)\n", opcode);
         // Aquí se comunicará con el módulo dma.c
+        if (dma_handler(opcode, operand) != 0)
+        {
+            write_log(1, "ERROR: Fallo en dma_handler para opcode %d\n", opcode);
+            return 1;
+        }
         break;
 
     default:
