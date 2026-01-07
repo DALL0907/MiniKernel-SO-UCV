@@ -65,6 +65,7 @@ int get_value(int mode, int operand, int *value)
     if (mode == 2)
     {
         logical_addr = operand + context.RX; // Modo 2: Sumamos el índice RX
+        return 0;
     }
 
     if (mode != 0)
@@ -602,6 +603,10 @@ int cpu()
     case OP_SDMAIO: // 31
     case OP_SDMAM:  // 32
     case OP_SDMAON: // 33
+        if (get_value(mode, operand, &val) != 0)
+        {
+            return 1; // Error al obtener el valor
+        }
         write_log(0, "Ejecutando Instruccion DMA (%d)\n", opcode);
         // Aquí se comunicará con el módulo dma.c
         if (dma_handler(opcode, val) != 0)
