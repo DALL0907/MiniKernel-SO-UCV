@@ -2,11 +2,19 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <time.h>
+#include <pthread.h>
 
 static FILE *log_file = NULL;
+static pthread_mutex_t log_lock;
 
 void log_init()
 {
+    // Inicializamos el mutex
+    if (pthread_mutex_init(&log_lock, NULL) != 0)
+    {
+        perror("Error fatal al iniciar mutex de log");
+        return;
+    }
     // Abre el archivo log.txt en modo escritura (sobrescribe si ya existe)
     log_file = fopen("log.txt", "w");
     if (log_file == NULL)
@@ -21,12 +29,15 @@ void log_init()
 
 void log_close()
 {
+    pthread_mutex_lock(&log_lock);
     if (log_file != NULL)
     {
         write_log(0, "Log cerrado.\n");
         fclose(log_file);
         log_file = NULL;
     }
+    pthread_mutex_unlock(&log_lock);
+    pthread_mutex_destroy(&log_lock);
 }
 
 void write_log(int console, const char *format, ...)
@@ -35,6 +46,12 @@ void write_log(int console, const char *format, ...)
     {
         return; // Si el archivo no está abierto, no hacer nada
     }
+
+    // 1. ADQUIRIR CANDADO
+    // Esto obliga a que si el DMA quiere escribir y la CPU ya lo está haciendo,
+    // el DMA espere su turno.
+    pthread_mutex_lock(&log_lock);
+
     va_list parametros; // es como un puntero para los argumentos variables
 
     // Obtener la hora actual
@@ -62,4 +79,6 @@ void write_log(int console, const char *format, ...)
         vprintf(format, parametros);
         va_end(parametros);
     }
+    // 2. LIBERAR CANDADO
+    pthread_mutex_unlock(&log_lock);
 }
