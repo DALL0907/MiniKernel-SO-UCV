@@ -1,0 +1,31 @@
+.NombreProg test_loop
+.NumeroPalabras 9
+_start 0
+
+// 0. LOAD 3 (Inicializar iteraciones)
+04100003
+
+// 1. STR 20 (Guardar contador en variable Mem[20])
+05000020
+
+// --- INICIO DEL BUCLE (Dir Relativa 2) ---
+// 2. LOAD 20 (Cargar contador actual)
+04000020
+
+// 3. RES 1 (Decrementar)
+01100001
+
+// 4. STR 20 (Actualizar variable en memoria)
+05000020
+
+// 5. COMP 0 (¿Llegamos a 0?)
+08100000
+
+// 6. JMPE 8 (Si es 0, Salir del bucle -> Ir a SVC)
+09000008
+
+// 7. J 2 (Si no es 0, Repetir -> Ir a instrucción 2)
+27000002
+
+// 8. SVC (Fin del programa)
+13000000

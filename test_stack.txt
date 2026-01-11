@@ -1,0 +1,21 @@
+.NombreProg test_stack
+.NumeroPalabras 6
+_start 0
+
+// 1. PSH 111 (Inmediato) -> Stack: [111]
+25100111
+
+// 2. PSH 222 (Inmediato) -> Stack: [111, 222]
+25100222
+
+// 3. PSH 333 (Inmediato) -> Stack: [111, 222, 333]
+25100333
+
+// 4. POP 10 (Saca 333 y guarda en dir 10) -> Mem[10]=333
+26000010
+
+// 5. POP 11 (Saca 222 y guarda en dir 11) -> Mem[11]=222
+26000011
+
+// 6. SVC (Fin)
+13000000

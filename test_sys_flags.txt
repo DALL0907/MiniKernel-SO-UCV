@@ -1,0 +1,20 @@
+.NombreProg test_sys_flags
+.NumeroPalabras 5
+_start 0
+
+// 1. TTI (Simula un tick de reloj o checkpoint) -> Op 17
+17000000
+
+// 2. DHAB (Deshabilitar Interrupciones) -> Op 16
+// El PSW.Interrupts debe cambiar a 0
+16000000
+
+// 3. LOAD 10 (Hacemos algo en el medio)
+04100010
+
+// 4. HAB (Habilitar Interrupciones) -> Op 15
+// El PSW.Interrupts debe volver a 1
+15000000
+
+// 5. SVC
+13000000

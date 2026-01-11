@@ -1,0 +1,33 @@
+.NombreProg test_jump_adv
+.NumeroPalabras 10
+_start 0
+
+// 1. LOAD 10
+04100010
+
+// 2. COMP 5 (10 > 5 -> CC=2 Mayor)
+08100005
+
+// 3. JMPLGT 5 (Saltar a instrucción 5 si es Mayor) -> Op 12
+// Si funciona, salta la instrucción 4.
+12000005
+
+// 4. STR 0 (Si se ejecuta esto, falló JMPLGT. Guardamos basura)
+05000000
+
+// --- DESTINO DEL SALTO ---
+// 5. LOAD 5
+04100005
+
+// 6. COMP 5 (5 == 5 -> CC=0 Igual)
+08100005
+
+// 7. JMPNE 9 (Saltar a 9 si NO es igual).
+// Como SON iguales, NO debe saltar. Debe seguir a la 8. -> Op 10
+10000009
+
+// 8. LOAD 777 (Código de Éxito)
+04100777
+
+// 9. SVC
+13000000

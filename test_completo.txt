@@ -1,0 +1,36 @@
+.NombreProg test_completo
+.NumeroPalabras 10
+_start 0
+
+// 1. LOAD 10 (Carga inicial) -> AC = 10
+04100010
+
+// 2. MULT 5 (Multiplicar) -> AC = 50
+02100005
+
+// 3. STR 100 (Guardamos el 50 en Memoria[100] temporalmente)
+05000100
+
+// 4. PSH 100 (Metemos el valor de Memoria[100] a la PILA) -> Stack: [50]
+// Usamos modo 0 (Directo) porque PSH lee de memoria, no del AC
+25000100
+
+// 5. LOAD 20 (Cargamos nuevo valor para segunda operación) -> AC = 20
+04100020
+
+// 6. RES 5 (Restamos 5) -> AC = 15
+01100005
+
+// 7. POP 101 (Recuperamos el 50 de la pila y lo guardamos en Memoria[101])
+// Ahora Memoria[101] = 50
+26000101
+
+// 8. SUM 101 (Sumamos el valor recuperado al AC actual) -> 15 + 50 = 65
+// AC = 65
+00000101
+
+// 9. STR 200 (Guardamos el resultado final en Memoria[200])
+05000200
+
+// 10. SVC (Fin del programa)
+13000000

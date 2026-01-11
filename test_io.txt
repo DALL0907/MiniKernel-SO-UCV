@@ -1,0 +1,32 @@
+.NombreProg test_io
+.NumeroPalabras 11
+_start 0
+
+// 1. LOAD 999 (Dato a guardar)
+04100999
+
+// 2. STR 0 (Poner dato en RAM[0] para que DMA lo tome)
+05000000
+
+// --- CONFIG DMA ESCRITURA (RAM->DISK) ---
+// 3. SDMAP 0, SDMAC 0, SDMAS 0
+28100000
+29100000
+30100000
+
+// 4. SDMAIO 1 (Escribir), SDMAM 0 (Desde dir 0), SDMAON
+31100001
+32100000
+33000000
+
+// 5. LOAD 0 (Pausa breve, esperar hilo)
+04100000
+
+// --- CONFIG DMA LECTURA (DISK->RAM) ---
+// 6. SDMAIO 0 (Leer), SDMAM 50 (Hacia dir 50), SDMAON
+31100000
+32100050
+33000000
+
+// 7. SVC
+13000000
