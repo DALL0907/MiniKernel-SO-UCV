@@ -1,3 +1,4 @@
+#include "brain.h"
 #include "cpu.h"
 #include "bus.h"
 #include "memory.h"
