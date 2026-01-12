@@ -138,6 +138,10 @@ void cpu_init()
     context.PSW.Interrupts = 1;
     context.PSW.PC = 0;
 
+    // Limpiar banderas de interrupción antiguas ---
+    interrupt_pending = 0;
+    interrupt_code_val = 0;
+
     write_log(0, "CPU Inicializada.\n");
 }
 
@@ -334,34 +338,49 @@ int cpu()
                 write_log(0, "COMP : AC > val == %d\n, CC=2", val);
             }
         }
-        write_log(0, "Ejecutando COMP\n");
         break;
     case OP_JMPE: // 09 - Jump if Equal (CC == 0)
         if (context.PSW.CC == 0)
         {
-            context.PSW.PC = operand; // Saltamos (PC = Dirección Lógica destino)
-            write_log(0, "JMPE: Salto tomado a %d\n", operand);
+            context.PSW.PC = context.RB + operand;
+            write_log(0, "JMPE: Condicion cumplida (CC=0). Salto tomado a %d.\n", operand);
+        }
+        else
+        {
+            write_log(0, "JMPE: Condicion falsa (CC=%d). Salto NO tomado.\n", context.PSW.CC);
         }
         break;
     case OP_JMPNE: // 10 - Jump if Not Equal (CC != 0)
         if (context.PSW.CC != 0)
         {
-            context.PSW.PC = operand;
-            write_log(0, "JMPNE: Salto tomado a %d\n", operand);
+            context.PSW.PC = context.RB + operand;
+            write_log(0, "JMPNE: Condicion cumplida. Salto tomado a %d.\n", operand);
+        }
+        else
+        {
+            write_log(0, "JMPNE: Condicion falsa (CC=0/Igual). Salto NO tomado.\n");
         }
         break;
     case OP_JMPLT: // 11 - Jump if Less Than (CC == 1)
         if (context.PSW.CC == 1)
+        { // 1 significa Menor
+            context.PSW.PC = context.RB + operand;
+            write_log(0, "JMPLT: Condicion cumplida (Menor). Salto tomado a %d.\n", operand);
+        }
+        else
         {
-            context.PSW.PC = operand;
-            write_log(0, "JMPLT: Salto tomado a %d\n", operand);
+            write_log(0, "JMPLT: Condicion falsa (CC=%d). Salto NO tomado.\n", context.PSW.CC);
         }
         break;
     case OP_JMPLGT: // 12 - Jump if Greater Than (CC == 2)
         if (context.PSW.CC == 2)
         {
-            context.PSW.PC = operand;
-            write_log(0, "JMPLGT: Salto tomado a %d\n", operand);
+            context.PSW.PC = context.RB + operand;
+            write_log(0, "JMPGT: Condicion cumplida (Mayor). Salto tomado a %d.\n", operand);
+        }
+        else
+        {
+            write_log(0, "JMPGT: Condicion falsa (CC=%d). Salto NO tomado.\n", context.PSW.CC);
         }
         break;
     case OP_J: // 27 (Salto incondicional)
@@ -597,17 +616,47 @@ int cpu()
         break;
 
     // --- E/S DMA ---
+    // GRUPO 1: Configuración simple (Track, Cyl, Sec, IO)
     case OP_SDMAP:  // 28
     case OP_SDMAC:  // 29
     case OP_SDMAS:  // 30
     case OP_SDMAIO: // 31
-    case OP_SDMAM:  // 32
+        // Usamos get_value para soportar que el valor venga de un registro o inmediato
+        if (get_value(mode, operand, &val) == 0)
+        {
+            dma_handler(opcode, val, context.PSW.Mode);
+        }
+        break;
+    case OP_SDMAM: // 32
+        int logical_dma_addr = operand;
+        if (mode == 2)
+            logical_dma_addr += context.RX; // Soportar indexado si se quiere
+
+        int phys_dma_addr = logical_dma_addr;
+
+        // Si es USUARIO, hay que traducir (Base + Desplazamiento)
+        if (context.PSW.Mode == USER_MODE)
+        {
+            phys_dma_addr += context.RB;
+        }
+
+        // Validación extra de MMU antes de enviar al hardware
+        if (phys_dma_addr > context.RL)
+        {
+            write_log(1, "CPU: Violacion de Segmento en SDMAM (Dir %d)\n", phys_dma_addr);
+            cpu_interrupt(INT_INV_ADDR);
+        }
+        else
+        {
+            // Enviamos la dirección FÍSICA corregida al DMA
+            dma_handler(opcode, phys_dma_addr, context.PSW.Mode);
+        }
+        break;
     case OP_SDMAON: // 33
         if (get_value(mode, operand, &val) != 0)
         {
             return 1; // Error al obtener el valor
         }
-        write_log(0, "Ejecutando Instruccion DMA (%d)\n", opcode);
         // Aquí se comunicará con el módulo dma.c
         //
         // ---------------IMPORTANTE----------------------
