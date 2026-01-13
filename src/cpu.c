@@ -325,24 +325,24 @@ int cpu()
             if (context.AC == val)
             {
                 context.PSW.CC = 0; // Igual
-                write_log(0, "COMP : AC == val == %d\n, CC=0", val);
+                write_log(0, "COMP : AC == val == %d, CC=0", val);
             }
             else if (context.AC < val)
             {
                 context.PSW.CC = 1; // Menor
-                write_log(0, "COMP : AC < val == %d\n, CC=1", val);
+                write_log(0, "COMP : AC < val == %d, CC=1", val);
             }
             else
             {
                 context.PSW.CC = 2; // Mayor
-                write_log(0, "COMP : AC > val == %d\n, CC=2", val);
+                write_log(0, "COMP : AC > val == %d, CC=2", val);
             }
         }
         break;
     case OP_JMPE: // 09 - Jump if Equal (CC == 0)
         if (context.PSW.CC == 0)
         {
-            context.PSW.PC = context.RB + operand;
+            context.PSW.PC = operand;
             write_log(0, "JMPE: Condicion cumplida (CC=0). Salto tomado a %d.\n", operand);
         }
         else
@@ -353,7 +353,7 @@ int cpu()
     case OP_JMPNE: // 10 - Jump if Not Equal (CC != 0)
         if (context.PSW.CC != 0)
         {
-            context.PSW.PC = context.RB + operand;
+            context.PSW.PC = operand;
             write_log(0, "JMPNE: Condicion cumplida. Salto tomado a %d.\n", operand);
         }
         else
@@ -364,7 +364,7 @@ int cpu()
     case OP_JMPLT: // 11 - Jump if Less Than (CC == 1)
         if (context.PSW.CC == 1)
         { // 1 significa Menor
-            context.PSW.PC = context.RB + operand;
+            context.PSW.PC = operand;
             write_log(0, "JMPLT: Condicion cumplida (Menor). Salto tomado a %d.\n", operand);
         }
         else
@@ -375,7 +375,7 @@ int cpu()
     case OP_JMPLGT: // 12 - Jump if Greater Than (CC == 2)
         if (context.PSW.CC == 2)
         {
-            context.PSW.PC = context.RB + operand;
+            context.PSW.PC = operand;
             write_log(0, "JMPGT: Condicion cumplida (Mayor). Salto tomado a %d.\n", operand);
         }
         else
