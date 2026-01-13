@@ -15,19 +15,22 @@ _start 0
 // 4. STR 0 (Si se ejecuta esto, falló JMPLGT. Guardamos basura)
 05000000
 
+// 5. SVC //No se debería ejecutar
+13000000
+
 // --- DESTINO DEL SALTO ---
-// 5. LOAD 5
+// 6. LOAD 5
 04100005
 
-// 6. COMP 5 (5 == 5 -> CC=0 Igual)
+// 7. COMP 5 (5 == 5 -> CC=0 Igual)
 08100005
 
-// 7. JMPNE 9 (Saltar a 9 si NO es igual).
+// 8. JMPNE 9 (Saltar a 9 si NO es igual).
 // Como SON iguales, NO debe saltar. Debe seguir a la 8. -> Op 10
 10000009
 
-// 8. LOAD 777 (Código de Éxito)
+// 9. LOAD 777 (Código de Éxito)
 04100777
 
-// 9. SVC
+// 10. SVC
 13000000

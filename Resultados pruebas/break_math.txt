@@ -1,0 +1,42 @@
+[2026-01-12 21:56:40] Log iniciado.
+[2026-01-12 21:56:40] === INICIANDO SISTEMA ===
+[2026-01-12 21:56:40] BUS: Inicializado exitosamente
+[2026-01-12 21:56:40] DMA: inicializado exitosamente
+[2026-01-12 21:56:40] CPU Inicializada.
+[2026-01-12 21:56:40] Escribiendo memoria fisica: direccion 0, valor 100
+[2026-01-12 21:56:40] Escribiendo memoria fisica: direccion 1, valor 100
+[2026-01-12 21:56:40] Escribiendo memoria fisica: direccion 2, valor 100
+[2026-01-12 21:56:40] Escribiendo memoria fisica: direccion 3, valor 100
+[2026-01-12 21:56:40] Escribiendo memoria fisica: direccion 4, valor 100
+[2026-01-12 21:56:40] Escribiendo memoria fisica: direccion 5, valor 100
+[2026-01-12 21:56:40] Escribiendo memoria fisica: direccion 6, valor 100
+[2026-01-12 21:56:40] Escribiendo memoria fisica: direccion 7, valor 100
+[2026-01-12 21:56:40] Escribiendo memoria fisica: direccion 8, valor 100
+[2026-01-12 21:56:40] Escribiendo memoria fisica: direccion 9, valor 100
+[2026-01-12 21:56:40] Escribiendo memoria fisica: direccion 10, valor 100
+[2026-01-12 21:56:40] Escribiendo memoria fisica: direccion 11, valor 100
+[2026-01-12 21:56:40] Escribiendo memoria fisica: direccion 12, valor 100
+[2026-01-12 21:56:40] Escribiendo memoria fisica: direccion 13, valor 100
+[2026-01-12 21:56:40] Escribiendo memoria fisica: direccion 14, valor 100
+[2026-01-12 21:56:40] Escribiendo memoria fisica: direccion 15, valor 100
+[2026-01-12 21:56:40] Escribiendo memoria fisica: direccion 16, valor 100
+[2026-01-12 21:56:40] Escribiendo memoria fisica: direccion 17, valor 100
+[2026-01-12 21:56:40] Escribiendo memoria fisica: direccion 18, valor 100
+[2026-01-12 21:56:40] Escribiendo memoria fisica: direccion 19, valor 100
+[2026-01-12 21:56:40] Escribiendo memoria fisica: direccion 100, valor 14000000
+[2026-01-12 21:56:40] KERNEL: Vector de interrupciones inicializado.
+[2026-01-12 21:57:01] LOADER: Cargando break_math.txt en dir fisica 300...
+[2026-01-12 21:57:01] LOADER: Nombre del programa: break_math
+[2026-01-12 21:57:01] LOADER: Palabras declaradas en header: 4
+[2026-01-12 21:57:01] LOADER: Punto de entrada (_start) relativo: 0
+[2026-01-12 21:57:01] Escribiendo memoria fisica: direccion 300, valor 4100100
+[2026-01-12 21:57:01] Escribiendo memoria fisica: direccion 301, valor 3100000
+[2026-01-12 21:57:01] Escribiendo memoria fisica: direccion 302, valor 5000010
+[2026-01-12 21:57:01] Escribiendo memoria fisica: direccion 303, valor 13000000
+[2026-01-12 21:57:01] LOADER: Carga finalizada. 4 palabras escritas.
+[2026-01-12 21:57:01] CPU Inicializada.
+[2026-01-12 21:57:03] Leyendo memoria fisica: direccion 300, valor 4100100
+[2026-01-12 21:57:03] Ejecutando LOAD, AC cargado con 100
+[2026-01-12 21:57:03] Leyendo memoria fisica: direccion 301, valor 3100000
+[2026-01-12 21:57:03] ERROR: División por cero en DIVI
+[2026-01-12 21:57:03] >> SOLICITUD INTERRUPCION: Codigo 1 detectada.

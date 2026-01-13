@@ -29,14 +29,12 @@ void log_init()
 
 void log_close()
 {
-    pthread_mutex_lock(&log_lock);
     if (log_file != NULL)
     {
-        write_log(0, "Log cerrado.\n");
+        fprintf(log_file, "LOG: finalizado exitosamente.\n");
         fclose(log_file);
         log_file = NULL;
     }
-    pthread_mutex_unlock(&log_lock);
     pthread_mutex_destroy(&log_lock);
 }
 

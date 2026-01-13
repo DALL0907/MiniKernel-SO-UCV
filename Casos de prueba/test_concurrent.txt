@@ -1,0 +1,37 @@
+.NombreProg test_conc
+.NumeroPalabras 17
+_start 0
+
+// 1. Preparar Datos: Guardar 999 en Mem[50]
+04100999
+05000050
+
+// 2. Configurar DMA (Write Mem->Disk)
+// Opcode 28 (Track) = 1
+28100001
+// Opcode 29 (Cylinder) = 1
+29100001
+// Opcode 30 (Sector) = 1
+30100001
+// Opcode 31 (IO) = 1 (Escritura)
+31100001
+// Opcode 32 (Address) = 50 (Donde esta el 999)
+32100050
+
+// 3. ENCENDER DMA (Aquí se crea el hilo y empieza el sleep)
+33000000
+
+// 4. LA CARRERA: Bucle de CPU (Mientras DMA duerme)
+// Cargar contador = 100 iteraciones
+04100100
+
+// -- ETIQUETA BUCLE (Dirección relativa 9) --
+// Restar 1
+01100001
+// Comparar con 0
+08100000
+// Si NO es igual a 0, saltar a BUCLE (dir 9) -> Opcode 10
+10000009
+
+// 5. FIN (Si llega a 0, sale)
+13000000

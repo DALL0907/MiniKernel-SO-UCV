@@ -1,0 +1,1436 @@
+[2026-01-12 21:58:25] Log iniciado.
+[2026-01-12 21:58:25] === INICIANDO SISTEMA ===
+[2026-01-12 21:58:25] BUS: Inicializado exitosamente
+[2026-01-12 21:58:25] DMA: inicializado exitosamente
+[2026-01-12 21:58:25] CPU Inicializada.
+[2026-01-12 21:58:25] Escribiendo memoria fisica: direccion 0, valor 100
+[2026-01-12 21:58:25] Escribiendo memoria fisica: direccion 1, valor 100
+[2026-01-12 21:58:25] Escribiendo memoria fisica: direccion 2, valor 100
+[2026-01-12 21:58:25] Escribiendo memoria fisica: direccion 3, valor 100
+[2026-01-12 21:58:25] Escribiendo memoria fisica: direccion 4, valor 100
+[2026-01-12 21:58:25] Escribiendo memoria fisica: direccion 5, valor 100
+[2026-01-12 21:58:25] Escribiendo memoria fisica: direccion 6, valor 100
+[2026-01-12 21:58:25] Escribiendo memoria fisica: direccion 7, valor 100
+[2026-01-12 21:58:25] Escribiendo memoria fisica: direccion 8, valor 100
+[2026-01-12 21:58:25] Escribiendo memoria fisica: direccion 9, valor 100
+[2026-01-12 21:58:25] Escribiendo memoria fisica: direccion 10, valor 100
+[2026-01-12 21:58:25] Escribiendo memoria fisica: direccion 11, valor 100
+[2026-01-12 21:58:25] Escribiendo memoria fisica: direccion 12, valor 100
+[2026-01-12 21:58:25] Escribiendo memoria fisica: direccion 13, valor 100
+[2026-01-12 21:58:25] Escribiendo memoria fisica: direccion 14, valor 100
+[2026-01-12 21:58:25] Escribiendo memoria fisica: direccion 15, valor 100
+[2026-01-12 21:58:25] Escribiendo memoria fisica: direccion 16, valor 100
+[2026-01-12 21:58:25] Escribiendo memoria fisica: direccion 17, valor 100
+[2026-01-12 21:58:25] Escribiendo memoria fisica: direccion 18, valor 100
+[2026-01-12 21:58:25] Escribiendo memoria fisica: direccion 19, valor 100
+[2026-01-12 21:58:25] Escribiendo memoria fisica: direccion 100, valor 14000000
+[2026-01-12 21:58:25] KERNEL: Vector de interrupciones inicializado.
+[2026-01-12 21:58:35] LOADER: Cargando break_stack.txt en dir fisica 300...
+[2026-01-12 21:58:35] LOADER: Nombre del programa: break_stack
+[2026-01-12 21:58:35] LOADER: Palabras declaradas en header: 5
+[2026-01-12 21:58:35] LOADER: Punto de entrada (_start) relativo: 0
+[2026-01-12 21:58:35] Escribiendo memoria fisica: direccion 300, valor 4100999
+[2026-01-12 21:58:35] Escribiendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:35] Escribiendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:35] Escribiendo memoria fisica: direccion 303, valor 13000000
+[2026-01-12 21:58:35] LOADER: Carga finalizada. 4 palabras escritas.
+[2026-01-12 21:58:35] CPU Inicializada.
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 300, valor 4100999
+[2026-01-12 21:58:37] Ejecutando LOAD, AC cargado con 999
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 298, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=298)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 297, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=297)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 296, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=296)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 295, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=295)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 294, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=294)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 293, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=293)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 292, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=292)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 291, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=291)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 290, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=290)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 289, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=289)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 288, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=288)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 287, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=287)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 286, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=286)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 285, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=285)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 284, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=284)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 283, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=283)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 282, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=282)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 281, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=281)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 280, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=280)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 279, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=279)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 278, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=278)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 277, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=277)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 276, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=276)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 275, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=275)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 274, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=274)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 273, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=273)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 272, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=272)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 271, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=271)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 270, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=270)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 269, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=269)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 268, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=268)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 267, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=267)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 266, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=266)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 265, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=265)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 264, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=264)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 263, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=263)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 262, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=262)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 261, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=261)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 260, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=260)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 259, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=259)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 258, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=258)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 257, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=257)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 256, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=256)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 255, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=255)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 254, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=254)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 253, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=253)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 252, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=252)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 251, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=251)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 250, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=250)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 249, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=249)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 248, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=248)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 247, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=247)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 246, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=246)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 245, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=245)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 244, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=244)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 243, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=243)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 242, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=242)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 241, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=241)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 240, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=240)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 239, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=239)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 238, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=238)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 237, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=237)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 236, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=236)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 235, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=235)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 234, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=234)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 233, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=233)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 232, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=232)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 231, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=231)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 230, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=230)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 229, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=229)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 228, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=228)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 227, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=227)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 226, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=226)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 225, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=225)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 224, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=224)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 223, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=223)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 222, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=222)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 221, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=221)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 220, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=220)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 219, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=219)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 218, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=218)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 217, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=217)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 216, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=216)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 215, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=215)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 214, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=214)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 213, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=213)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 212, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=212)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 211, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=211)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 210, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=210)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 209, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=209)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 208, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=208)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 207, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=207)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 206, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=206)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 205, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=205)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 204, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=204)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 203, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=203)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 202, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=202)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 201, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=201)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 200, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=200)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 199, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=199)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 198, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=198)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 197, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=197)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 196, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=196)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 195, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=195)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 194, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=194)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 193, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=193)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 192, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=192)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 191, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=191)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 190, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=190)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 189, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=189)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 188, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=188)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 187, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=187)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 186, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=186)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 185, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=185)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 184, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=184)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 183, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=183)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 182, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=182)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 181, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=181)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 180, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=180)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 179, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=179)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 178, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=178)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 177, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=177)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 176, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=176)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 175, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=175)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 174, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=174)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 173, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=173)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 172, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=172)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 171, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=171)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 170, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=170)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 169, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=169)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 168, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=168)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 167, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=167)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 166, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=166)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 165, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=165)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 164, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=164)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 163, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=163)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 162, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=162)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 161, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=161)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 160, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=160)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 159, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=159)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 158, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=158)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 157, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=157)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 156, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=156)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 155, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=155)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 154, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=154)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 153, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=153)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 152, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=152)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 151, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=151)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 150, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=150)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 149, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=149)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 148, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=148)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 147, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=147)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 146, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=146)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 145, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=145)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 144, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=144)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 143, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=143)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 142, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=142)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 141, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=141)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 140, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=140)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 139, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=139)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 138, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=138)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 137, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=137)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 136, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=136)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 135, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=135)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 134, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=134)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 133, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=133)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 132, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=132)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 131, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=131)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 130, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=130)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 129, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=129)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 128, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=128)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 127, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=127)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 126, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=126)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 125, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=125)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 124, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=124)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 123, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=123)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 122, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=122)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 121, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=121)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 120, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=120)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 119, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=119)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 118, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=118)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 117, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=117)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 116, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=116)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 115, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=115)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 114, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=114)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 113, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=113)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 112, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=112)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 111, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=111)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 110, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=110)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 109, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=109)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 108, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=108)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 107, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=107)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 106, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=106)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 105, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=105)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 104, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=104)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 103, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=103)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 102, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=102)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 101, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=101)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 100, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=100)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 99, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=99)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 98, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=98)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 97, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=97)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 96, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=96)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 95, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=95)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 94, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=94)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 93, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=93)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 92, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=92)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 91, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=91)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 90, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=90)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 89, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=89)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 88, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=88)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 87, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=87)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 86, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=86)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 85, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=85)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 84, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=84)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 83, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=83)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 82, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=82)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 81, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=81)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 80, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=80)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 79, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=79)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 78, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=78)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 77, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=77)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 76, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=76)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 75, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=75)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 74, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=74)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 73, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=73)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 72, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=72)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 71, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=71)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 70, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=70)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 69, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=69)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 68, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=68)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 67, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=67)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 66, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=66)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 65, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=65)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 64, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=64)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 63, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=63)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 62, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=62)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 61, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=61)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 60, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=60)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 59, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=59)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 58, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=58)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 57, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=57)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 56, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=56)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 55, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=55)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 54, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=54)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 53, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=53)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 52, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=52)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 51, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=51)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 50, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=50)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 49, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=49)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 48, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=48)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 47, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=47)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 46, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=46)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 45, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=45)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 44, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=44)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 43, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=43)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 42, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=42)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 41, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=41)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 40, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=40)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 39, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=39)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 38, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=38)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 37, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=37)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 36, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=36)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 35, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=35)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 34, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=34)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 33, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=33)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 32, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=32)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 31, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=31)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 30, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=30)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 29, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=29)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 28, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=28)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 27, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=27)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 26, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=26)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 25, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=25)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 24, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=24)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 23, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=23)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 22, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=22)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 21, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=21)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] Escribiendo memoria fisica: direccion 20, valor 999
+[2026-01-12 21:58:37] PSH: Guardado 999 en Stack (SP=20)
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 302, valor 27000001
+[2026-01-12 21:58:37] J: Salto incondicional a 1
+[2026-01-12 21:58:37] Leyendo memoria fisica: direccion 301, valor 25100999
+[2026-01-12 21:58:37] FATAL: Stack Overflow (SP < 20). Sistema colapsado.
