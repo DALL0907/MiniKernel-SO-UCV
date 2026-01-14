@@ -22,9 +22,9 @@ int push_stack(int value)
     context.SP--;
 
     // Protección básica para no sobrescribir el Vector de Interrupciones (posiciones 0-20)
-    if (context.SP < 20)
+    if (context.SP < 30)
     {
-        write_log(1, "FATAL: Stack Overflow (SP < 20). Sistema colapsado.\n");
+        write_log(1, "FATAL: Stack Overflow (SP < 30). Sistema colapsado.\n");
         exit(1);
     }
 
@@ -325,12 +325,12 @@ int cpu()
             if (context.AC == val)
             {
                 context.PSW.CC = 0; // Igual
-                write_log(0, "COMP : AC == val == %d, CC=0\n", val);
+                write_log(0, "COMP : AC == val == %d, CC=0", val);
             }
             else if (context.AC < val)
             {
                 context.PSW.CC = 1; // Menor
-                write_log(0, "COMP : AC < val == %d, CC=1\n", val);
+                write_log(0, "COMP : AC < val == %d, CC=1", val);
             }
             else
             {

@@ -34,14 +34,20 @@ void print_registers()
 // Inicializa el vector de interrupciones para evitar crashes
 void init_kernel()
 {
-    // Llenamos las direcciones 0-19 apuntando a la dirección 100
+    // Llenamos las direcciones 0-19 apuntando a la dirección 20
     for (int i = 0; i < 20; i++)
     {
-        mem_write_physical(i, 100);
+        mem_write_physical(i, 20);
     }
-    // En la dirección 100 ponemos un RETRN (Opcode 14) de emergencia
+    // En la dirección 20 ponemos un RETRN (Opcode 14) de emergencia
     // 14 0 00000 = 14000000
-    mem_write_physical(100, 14000000);
+    mem_write_physical(20, 14000000);
+
+    // dejamos vacios las posiciones 21-29 para futuros manejadores
+    for (int i = 21; i < 30; i++)
+    {
+        mem_write_physical(i, 0);
+    }
 
     write_log(0, "KERNEL: Vector de interrupciones inicializado.\n");
 }
