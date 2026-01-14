@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 
 static DMA_t dma;
 static int dma_initialized = 0;    // Singleton (lo logico es que se trabaje con una sola instancia)
@@ -62,49 +63,55 @@ int dma_handler(int opcode, int value, unsigned int mode)
         return -1;
     }
     pthread_mutex_lock(&dma.lock);
-
+    // Aquí creo que deberia ir la comprobacion de que el DMA no esté ocupado
+    /*if (dma.BUSY)
+        {
+            write_log(1, "DMA: (Handler) ERROR - DMA ocupado. Espere a que termine la transferencia actual\n");
+            pthread_mutex_unlock(&dma.lock);
+            return 99;
+        }*/
     switch (opcode)
     {
     case OP_SDMAP:
         dma.TRACK = value;
-        write_log(0, "DMA: Pista establecida en %d\n", value);
+        write_log(0, "DMA: (Handler) Pista establecida en %d\n", value);
         break;
     case OP_SDMAC:
         dma.CYLINDER = value;
-        write_log(0, "DMA: Cilindro establecido en %d\n", value);
+        write_log(0, "DMA: (Handler) Cilindro establecido en %d\n", value);
         break;
     case OP_SDMAS:
         dma.SECTOR = value;
-        write_log(0, "DMA: Sector establecido en %d\n", value);
+        write_log(0, "DMA: (Handler) Sector establecido en %d\n", value);
         break;
     case OP_SDMAIO:
         dma.IO = value;
-        write_log(0, "DMA: Modo de operación establecido en %d (0 = leer, 1 = escribir)\n", value);
+        write_log(0, "DMA: (Handler) Modo de operación establecido en %d (0 = leer, 1 = escribir)\n", value);
         break;
     case OP_SDMAM:
         dma.ADDRESS = value;
-        write_log(0, "DMA: Dirección de memoria establecida en %d\n", value);
+        write_log(0, "DMA: (Handler) Dirección de memoria establecida en %d\n", value);
         break;
     case OP_SDMAON:
         // Iniciar la operacion de E/S
         // Verificar que el DMA no esté ocupado
         if (dma.BUSY)
         {
-            write_log(1, "DMA: ERROR - DMA ocupado. Espere a que termine la transferencia actual\n");
+            write_log(1, "DMA: (Handler) ERROR - DMA ocupado. Espere a que termine la transferencia actual\n");
             pthread_mutex_unlock(&dma.lock);
-            return -1;
+            return 99;
         }
 
         // Validar dirección de memoria
         if (dma.ADDRESS < 0 || dma.ADDRESS >= MEM_SIZE)
         {
-            write_log(1, "DMA: ERROR - Dirección de memoria inválida: %d (rango válido: 0-%d)\n", dma.ADDRESS, MEM_SIZE - 1);
+            write_log(1, "DMA: (Handler) ERROR - Dirección de memoria inválida: %d (rango válido: 0-%d)\n", dma.ADDRESS, MEM_SIZE - 1);
             pthread_mutex_unlock(&dma.lock);
             return -1;
         }
         if (mode == USER_MODE && dma.ADDRESS < OS_RESERVED)
         {
-            write_log(1, "DMA: ERROR - Intento de acceso a memoria reservada por el sistema.\n");
+            write_log(1, "DMA: (Handler) ERROR - Intento de acceso a memoria reservada por el sistema.\n");
             pthread_mutex_unlock(&dma.lock);
             return -1;
         }
@@ -112,12 +119,12 @@ int dma_handler(int opcode, int value, unsigned int mode)
         // Validar parámetros del disco
         if (dma.TRACK < 0 || dma.TRACK >= DISK_TRACKS || dma.CYLINDER < 0 || dma.CYLINDER >= DISK_CYLINDERS || dma.SECTOR < 0 || dma.SECTOR >= DISK_SECTORS)
         {
-            write_log(1, "DMA: Error - Parámetros del disco inválidos\n");
+            write_log(1, "DMA: (Handler) Error - Parámetros del disco inválidos\n");
             pthread_mutex_unlock(&dma.lock);
             return -1;
         }
         // Preparando el DMA para una nueva operacion
-        write_log(0, "DMA: Iniciando operación E/S asíncrona...\n");
+        write_log(0, "DMA: (Handler) Iniciando operación E/S asíncrona...\n");
 
         dma.BUSY = 1;           // DMA ahora está ocupado
         dma_thread_running = 1; // Hilo estará ejecutándose
@@ -129,7 +136,7 @@ int dma_handler(int opcode, int value, unsigned int mode)
         // Crear el hilo para realizar la operación de E/S
         if (pthread_create(&dma_thread, NULL, dma_perform_io, NULL) != 0)
         {
-            write_log(1, "DMA: FATAL No se pudo crear hilo de transferencia\n");
+            write_log(1, "DMA: (Handler) FATAL No se pudo crear hilo de transferencia\n");
 
             // Recuperar mutex para limpiar estado (ya que falló la creación)
             pthread_mutex_lock(&dma.lock);
@@ -140,11 +147,12 @@ int dma_handler(int opcode, int value, unsigned int mode)
 
             return -1;
         }
-        write_log(0, "DMA: Transferencia iniciada en segundo plano (hilo creado)\n");
+        //write_log(0, "DMA: (Handler) Transferencia iniciada en segundo plano (hilo creado)\n");
+        usleep(2);
         return 0; // Éxito - hilo creado correctamente
         break;
     default:
-        write_log(1, "DMA: ERROR - Código de operación desconocido: %d\n", opcode);
+        write_log(1, "DMA: (Handler) ERROR - Código de operación desconocido: %d\n", opcode);
         pthread_mutex_unlock(&dma.lock);
         return -1;
     }
@@ -156,7 +164,7 @@ void *dma_perform_io(void *arg)
 {
     char buffer[SECTOR_BYTES]; // Buffer para datos del disco (9 bytes = 8 dígitos + '\0')
     int result;                // Variable para resultados de operaciones de disco
-
+    
     write_log(0, "DMA: Hilo de transferencia iniciado\n");
 
     // 1. Adquirir exclusión mutua
@@ -286,6 +294,9 @@ void *dma_perform_io(void *arg)
 
     // Liberar el mutex antes de enviar la interrupción (evita bloquear el mutex mientras se notifica a la CPU)
     pthread_mutex_unlock(&dma.lock);
+
+    // 4. Simular retardo de transferencia
+    //sleep(1);
 
     // 5. Notificar a la CPU
     write_log(0, "DMA: Operación finalizada. Estado: %d (0=éxito, 1=error).\n", dma.STATE);

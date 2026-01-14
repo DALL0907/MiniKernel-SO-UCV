@@ -11,6 +11,8 @@ CPU_Context context;
 // Variables para gestión de interrupciones
 static int interrupt_pending = 0;  // Bandera: 0=No, 1=Si
 static int interrupt_code_val = 0; // Cuál interrupción es
+static const int dma_busy_code = 99; // Código para saber si el DMA está ocupado
+static const int IO_ERROR = 500; // Código para error de E/S
 
 // Guarda un valor en la Pila del Sistema
 // Retorna 0 si éxito, -1 si desbordamiento (Stack Overflow)
@@ -159,6 +161,23 @@ void cpu_interrupt(int interrupt_code)
 int handle_interrupt()
 {
     write_log(0, "INT: Iniciando secuencia de interrupción %d...\n", interrupt_code_val);
+
+    // Caso especial: Interrupción por finalización de E/S
+    if (interrupt_code_val == INT_IO_END)
+    {
+        // Verificar el estado del DMA
+        int dma_state = dma_get_state();
+        
+        if (dma_state != 0)
+        {
+            write_log(1, "INT: Operación DMA falló con estado %d\n", dma_state);
+            
+            // Si hay error en DMA, terminamos el programa
+            // Limpiamos la bandera de interrupción
+            interrupt_pending = 0;
+            return IO_ERROR;
+        }
+    }
 
     // 1. SALVAR CONTEXTO (Guardar registros en la Pila)
     // El orden es arbitrario, pero debe coincidir con el futuro "RETRN" (IRET)
@@ -403,6 +422,15 @@ int cpu()
 
     // --- SISTEMA Y PILA ---
     case OP_SVC: // 13
+        // -----------------IMPORTANTE------------------
+        // Verificar que no haya operaciones DMA pendientes antes de SVC
+        // ---------------------------------------------
+        /*if (dma_is_busy()) {
+            write_log(0, "SVC: DMA ocupado. Esperando que termine antes de llamada al sistema...\n");
+            // Volver a ejecutar SVC en el siguiente ciclo
+            context.PSW.PC--; 
+            return 0; // Continuar ejecución sin llamar al sistema
+        }*/
         write_log(0, "SVC: Solicitud de servicio al sistema.\n");
         // Esto dispara una interrupción de software (Código 2 según brain.h)
         cpu_interrupt(INT_SYSCALL);
@@ -691,13 +719,20 @@ int cpu()
         // en dma.c se crea un hilo que realizará la operacion concurrentemente
         // llama a cpu_interrupt(INT_IO_END)
         // luego el handler deberia verificar el dma_get_state() para conocer el resultado
-        if (dma_handler(opcode, val, context.PSW.Mode) != 0)
+        int dma_result = dma_handler(opcode, val, context.PSW.Mode);
+        
+        if (dma_result == dma_busy_code)
         {
-            write_log(1, "ERROR: Fallo en dma_handler para opcode %d\n", opcode);
+            // DMA está ocupado - reintentar en siguiente ciclo
+            write_log(0, "CPU: DMA ocupado. Reintentando en siguiente ciclo...\n");
+            context.PSW.PC--; // Decrementar PC para volver a ejecutar esta instrucción
+        }
+        else if (dma_result != 0)
+        {
+            write_log(1, "ERROR: Fallo en dma_handler para opcode %d (código: %d)\n", opcode, dma_result);
             return 1;
         }
         break;
-
     default:
         write_log(1, "ERROR: Instruccion Ilegal (Opcode %d) en PC=%d\n", opcode, context.PSW.PC - 1);
         cpu_interrupt(INT_INV_INSTR); // Interrupción 5
