@@ -167,6 +167,9 @@ void *dma_perform_io(void *arg)
     
     write_log(0, "DMA: Hilo de transferencia iniciado\n");
 
+    // Simular Latencia de Disco
+    // 20,000 microsegundos = 20ms
+    usleep(20000);
     // 1. Adquirir exclusión mutua
     pthread_mutex_lock(&dma.lock);
 
