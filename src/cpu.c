@@ -25,7 +25,8 @@ int push_stack(int value)
     if (context.SP < 30)
     {
         write_log(1, "FATAL: Stack Overflow (SP < 30). Sistema colapsado.\n");
-        exit(1);
+        context.SP++; // Revertir cambio
+        return -1;
     }
 
     // Escribimos directamente en memoria física (el Kernel accede directo)
@@ -161,15 +162,22 @@ void handle_interrupt()
 
     // 1. SALVAR CONTEXTO (Guardar registros en la Pila)
     // El orden es arbitrario, pero debe coincidir con el futuro "RETRN" (IRET)
-    push_stack(context.PSW.PC); // Guardar dónde íbamos
-    push_stack(context.AC);     // Guardar Acumulador
-    push_stack(context.RX);     // Guardar Registro Auxiliar
-    push_stack(context.RB);     // Guardar Base
-    push_stack(context.RL);     // Guardar Límite
-    push_stack(context.PSW.CC); // Guardar Estado de comparación
+    if (push_stack(context.PSW.PC) != 0)
+        return -1; // Guardar dónde íbamos
+    if (push_stack(context.AC) != 0)
+        return -1; // Guardar Acumulador
+    if (push_stack(context.RX) != 0)
+        return -1; // Guardar Registro Auxiliar
+    if (push_stack(context.RB) != 0)
+        return -1; // Guardar Base
+    if (push_stack(context.RL) != 0)
+        return -1; // Guardar Límite
+    if (push_stack(context.PSW.CC) != 0)
+        return -1; // Guardar Estado de comparación
 
     // Guardamos el Modo anterior para poder volver a él
-    push_stack(context.PSW.Mode);
+    if (push_stack(context.PSW.Mode) != 0)
+        return -1;
 
     // 2. CAMBIAR A MODO KERNEL
     context.PSW.Mode = KERNEL_MODE; // Ahora somos omnipotentes
@@ -187,7 +195,7 @@ void handle_interrupt()
     else
     {
         write_log(1, "INT FATAL: No se pudo leer el Vector de Interrupciones.\n");
-        exit(1);
+        return -1;
     }
 
     // Limpiamos la bandera
@@ -199,7 +207,11 @@ int cpu()
     // Solo atendemos si hay una pendiente Y las interrupciones están habilitadas
     if (interrupt_pending && context.PSW.Interrupts)
     {
-        handle_interrupt();
+        if (handle_interrupt() != 0)
+        {
+            write_log(1, "CPU CRASH: Fallo irrecuperable en manejo de interrupción. Deteniendo proceso.\n");
+            return -1;
+        };
         return 0; // el ciclo  solo maneja la interrupción
     }
     // Etapa Fetch
