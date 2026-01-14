@@ -11,6 +11,8 @@ void cpu_init();
 // manejar interrupciones del cpu
 void cpu_interrupt(int interrupt_code);
 
+int handle_interrupt();
+
 // acciones normales del cpu, las 34 instruc
 int cpu();
 
