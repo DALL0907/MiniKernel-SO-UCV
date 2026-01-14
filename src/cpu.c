@@ -156,7 +156,7 @@ void cpu_interrupt(int interrupt_code)
     write_log(1, ">> SOLICITUD INTERRUPCION: Codigo %d detectada.\n", interrupt_code);
 }
 
-void handle_interrupt()
+int handle_interrupt()
 {
     write_log(0, "INT: Iniciando secuencia de interrupción %d...\n", interrupt_code_val);
 
@@ -200,6 +200,7 @@ void handle_interrupt()
 
     // Limpiamos la bandera
     interrupt_pending = 0;
+    return 0;
 }
 
 int cpu()
