@@ -1,698 +1,612 @@
-[2026-01-13 21:58:08] Log iniciado.
-[2026-01-13 21:58:08] === INICIANDO SISTEMA ===
-[2026-01-13 21:58:08] BUS: Inicializado exitosamente
-[2026-01-13 21:58:08] DMA: inicializado exitosamente
-[2026-01-13 21:58:08] CPU Inicializada.
-[2026-01-13 21:58:08] Escribiendo memoria fisica: direccion 0, valor 100
-[2026-01-13 21:58:08] Escribiendo memoria fisica: direccion 1, valor 100
-[2026-01-13 21:58:08] Escribiendo memoria fisica: direccion 2, valor 100
-[2026-01-13 21:58:08] Escribiendo memoria fisica: direccion 3, valor 100
-[2026-01-13 21:58:08] Escribiendo memoria fisica: direccion 4, valor 100
-[2026-01-13 21:58:08] Escribiendo memoria fisica: direccion 5, valor 100
-[2026-01-13 21:58:08] Escribiendo memoria fisica: direccion 6, valor 100
-[2026-01-13 21:58:08] Escribiendo memoria fisica: direccion 7, valor 100
-[2026-01-13 21:58:08] Escribiendo memoria fisica: direccion 8, valor 100
-[2026-01-13 21:58:08] Escribiendo memoria fisica: direccion 9, valor 100
-[2026-01-13 21:58:08] Escribiendo memoria fisica: direccion 10, valor 100
-[2026-01-13 21:58:08] Escribiendo memoria fisica: direccion 11, valor 100
-[2026-01-13 21:58:08] Escribiendo memoria fisica: direccion 12, valor 100
-[2026-01-13 21:58:08] Escribiendo memoria fisica: direccion 13, valor 100
-[2026-01-13 21:58:08] Escribiendo memoria fisica: direccion 14, valor 100
-[2026-01-13 21:58:08] Escribiendo memoria fisica: direccion 15, valor 100
-[2026-01-13 21:58:08] Escribiendo memoria fisica: direccion 16, valor 100
-[2026-01-13 21:58:08] Escribiendo memoria fisica: direccion 17, valor 100
-[2026-01-13 21:58:08] Escribiendo memoria fisica: direccion 18, valor 100
-[2026-01-13 21:58:08] Escribiendo memoria fisica: direccion 19, valor 100
-[2026-01-13 21:58:08] Escribiendo memoria fisica: direccion 100, valor 14000000
-[2026-01-13 21:58:08] KERNEL: Vector de interrupciones inicializado.
-[2026-01-13 21:58:15] LOADER: Cargando test_concurrent.txt en dir fisica 300...
-[2026-01-13 21:58:15] LOADER: Nombre del programa: test_conc
-[2026-01-13 21:58:15] LOADER: Palabras declaradas en header: 17
-[2026-01-13 21:58:15] LOADER: Punto de entrada (_start) relativo: 0
-[2026-01-13 21:58:15] Escribiendo memoria fisica: direccion 300, valor 4100999
-[2026-01-13 21:58:15] Escribiendo memoria fisica: direccion 301, valor 5000050
-[2026-01-13 21:58:15] Escribiendo memoria fisica: direccion 302, valor 28100001
-[2026-01-13 21:58:15] Escribiendo memoria fisica: direccion 303, valor 29100001
-[2026-01-13 21:58:15] Escribiendo memoria fisica: direccion 304, valor 30100001
-[2026-01-13 21:58:15] Escribiendo memoria fisica: direccion 305, valor 31100001
-[2026-01-13 21:58:15] Escribiendo memoria fisica: direccion 306, valor 32100050
-[2026-01-13 21:58:15] Escribiendo memoria fisica: direccion 307, valor 33000000
-[2026-01-13 21:58:15] Escribiendo memoria fisica: direccion 308, valor 4100100
-[2026-01-13 21:58:15] Escribiendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:15] Escribiendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:15] Escribiendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:15] Escribiendo memoria fisica: direccion 312, valor 13000000
-[2026-01-13 21:58:15] LOADER: Carga finalizada. 13 palabras escritas.
-[2026-01-13 21:58:15] CPU Inicializada.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 300, valor 4100999
-[2026-01-13 21:58:17] Ejecutando LOAD, AC cargado con 999
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 301, valor 5000050
-[2026-01-13 21:58:17] Escribiendo memoria fisica: direccion 350, valor 999
-[2026-01-13 21:58:17] Ejecutando STR, valor 999 escrito en dirección 350
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 302, valor 28100001
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 303, valor 29100001
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 304, valor 30100001
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 305, valor 31100001
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 306, valor 32100050
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 307, valor 33000000
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 300, valor 4100999
-[2026-01-13 21:58:17] DMA: Iniciando operación E/S asíncrona...
-[2026-01-13 21:58:17] DMA: Transferencia iniciada en segundo plano (hilo creado)
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 308, valor 4100100
-[2026-01-13 21:58:17] Ejecutando LOAD, AC cargado con 100
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=99
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=98
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=97
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=96
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=95
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=94
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=93
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=92
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=91
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=90
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=89
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=88
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=87
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=86
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=85
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=84
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=83
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=82
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=81
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=80
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=79
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=78
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=77
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=76
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=75
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=74
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=73
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=72
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=71
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=70
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=69
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=68
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=67
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=66
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=65
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=64
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=63
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=62
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=61
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=60
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=59
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=58
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=57
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=56
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=55
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=54
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=53
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=52
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=51
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=50
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=49
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=48
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=47
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=46
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=45
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=44
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=43
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=42
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=41
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=40
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=39
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] DMA: Hilo de transferencia iniciado
-[2026-01-13 21:58:17] DMA: Operación E/S con parámetros - PISTA=1, CILINDRO=1, SECTOR=1, IO=1, ADDRESS=350
-[2026-01-13 21:58:17] Leyendo en disco: pista 1, cilindro 1, sector 1, data: 
-[2026-01-13 21:58:17] DMA: Leído sector del disco. Contenido: ""
-[2026-01-13 21:58:17] DMA: Convertido a entero. Valor: 0
-[2026-01-13 21:58:17] Escribiendo memoria fisica: direccion 350, valor 0
-[2026-01-13 21:58:17] DMA: ÉXITO - Transferencia Disco->Memoria completada. Sector "" escrito en dirección 350 como valor 0
-[2026-01-13 21:58:17] DMA: Operación finalizada. Estado: 0 (0=éxito, 1=error).
-[2026-01-13 21:58:17] >> SOLICITUD INTERRUPCION: Codigo 4 detectada.
-[2026-01-13 21:58:17] DMA: Hilo de transferencia finalizado correctamente
-[2026-01-13 21:58:17] INT: Iniciando secuencia de interrupción 4...
-[2026-01-13 21:58:17] Escribiendo memoria fisica: direccion 298, valor 11
-[2026-01-13 21:58:17] Escribiendo memoria fisica: direccion 297, valor 39
-[2026-01-13 21:58:17] Escribiendo memoria fisica: direccion 296, valor 0
-[2026-01-13 21:58:17] Escribiendo memoria fisica: direccion 295, valor 300
-[2026-01-13 21:58:17] Escribiendo memoria fisica: direccion 294, valor 1999
-[2026-01-13 21:58:17] Escribiendo memoria fisica: direccion 293, valor 2
-[2026-01-13 21:58:17] Escribiendo memoria fisica: direccion 292, valor 0
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 4, valor 100
-[2026-01-13 21:58:17] INT: Contexto salvado. Saltando a manejador en dir 100
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 100, valor 14000000
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 292, valor 0
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 293, valor 2
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 294, valor 1999
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 295, valor 300
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 296, valor 0
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 297, valor 39
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 298, valor 11
-[2026-01-13 21:58:17] RETRN: Contexto restaurado. Volviendo a PC=11
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=38
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=37
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=36
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=35
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=34
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=33
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=32
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=31
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=30
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=29
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=28
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=27
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=26
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=25
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=24
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=23
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=22
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=21
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=20
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=19
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=18
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=17
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=16
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=15
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=14
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=13
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=12
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=11
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=10
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=9
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=8
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=7
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=6
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=5
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=4
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=3
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=2
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=1
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC > val == 0
-, CC=2[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion cumplida. Salto tomado a 9.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 309, valor 1100001
-[2026-01-13 21:58:17] Ejecutando RES, ahora AC=0
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 310, valor 8100000
-[2026-01-13 21:58:17] COMP : AC == val == 0
-, CC=0[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 311, valor 10000009
-[2026-01-13 21:58:17] JMPNE: Condicion falsa (CC=0/Igual). Salto NO tomado.
-[2026-01-13 21:58:17] Leyendo memoria fisica: direccion 312, valor 13000000
-[2026-01-13 21:58:17] SVC: Solicitud de servicio al sistema.
-[2026-01-13 21:58:17] >> SOLICITUD INTERRUPCION: Codigo 2 detectada.
-[2026-01-13 21:58:17] SVC: Llamada al Sistema (Fin de programa temporal)
-[2026-01-13 21:58:30] DMA: finalizado exitosamente
-[2026-01-13 21:58:30] BUS: finalizado exitosamente
-=== LOG: Finalizado exitosamente. ===
+[2026-01-14 15:02:35] Log iniciado.
+[2026-01-14 15:02:35] === INICIANDO SISTEMA ===
+[2026-01-14 15:02:35] BUS: Inicializado exitosamente
+[2026-01-14 15:02:35] DMA: inicializado exitosamente
+[2026-01-14 15:02:35] CPU Inicializada.
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 0, valor 20
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 1, valor 20
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 2, valor 20
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 3, valor 20
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 4, valor 20
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 5, valor 20
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 6, valor 20
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 7, valor 20
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 8, valor 20
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 9, valor 20
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 10, valor 20
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 11, valor 20
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 12, valor 20
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 13, valor 20
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 14, valor 20
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 15, valor 20
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 16, valor 20
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 17, valor 20
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 18, valor 20
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 19, valor 20
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 20, valor 14000000
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 21, valor 0
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 22, valor 0
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 23, valor 0
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 24, valor 0
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 25, valor 0
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 26, valor 0
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 27, valor 0
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 28, valor 0
+[2026-01-14 15:02:35] Escribiendo memoria fisica: direccion 29, valor 0
+[2026-01-14 15:02:35] KERNEL: Vector de interrupciones inicializado.
+[2026-01-14 15:02:42] LOADER: Cargando /home/diego/Desktop/SO_II-2025/proyecto1/MiniKernel-SO-UCV/Casos de prueba/test_concurrent.txt en dir fisica 300...
+[2026-01-14 15:02:42] LOADER: Nombre del programa: test_conc
+[2026-01-14 15:02:42] LOADER: Palabras declaradas en header: 17
+[2026-01-14 15:02:42] LOADER: Punto de entrada (_start) relativo: 0
+[2026-01-14 15:02:42] Escribiendo memoria fisica: direccion 300, valor 4100999
+[2026-01-14 15:02:42] Escribiendo memoria fisica: direccion 301, valor 5000050
+[2026-01-14 15:02:42] Escribiendo memoria fisica: direccion 302, valor 28100001
+[2026-01-14 15:02:42] Escribiendo memoria fisica: direccion 303, valor 29100001
+[2026-01-14 15:02:42] Escribiendo memoria fisica: direccion 304, valor 30100001
+[2026-01-14 15:02:42] Escribiendo memoria fisica: direccion 305, valor 31100001
+[2026-01-14 15:02:42] Escribiendo memoria fisica: direccion 306, valor 32100050
+[2026-01-14 15:02:42] Escribiendo memoria fisica: direccion 307, valor 33000000
+[2026-01-14 15:02:42] Escribiendo memoria fisica: direccion 308, valor 4100100
+[2026-01-14 15:02:42] Escribiendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:42] Escribiendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:42] Escribiendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:42] Escribiendo memoria fisica: direccion 312, valor 13000000
+[2026-01-14 15:02:42] LOADER: Carga finalizada. 13 palabras escritas.
+[2026-01-14 15:02:42] CPU Inicializada.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 300, valor 4100999
+[2026-01-14 15:02:47] Ejecutando LOAD, AC cargado con 999
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 301, valor 5000050
+[2026-01-14 15:02:47] Escribiendo memoria fisica: direccion 350, valor 999
+[2026-01-14 15:02:47] Ejecutando STR, valor 999 escrito en dirección 350
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 302, valor 28100001
+[2026-01-14 15:02:47] DMA: Pista establecida en 1
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 303, valor 29100001
+[2026-01-14 15:02:47] DMA: Cilindro establecido en 1
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 304, valor 30100001
+[2026-01-14 15:02:47] DMA: Sector establecido en 1
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 305, valor 31100001
+[2026-01-14 15:02:47] DMA: Modo de operación establecido en 1 (0 = leer, 1 = escribir)
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 306, valor 32100050
+[2026-01-14 15:02:47] DMA: Dirección de memoria establecida en 350
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 307, valor 33000000
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 300, valor 4100999
+[2026-01-14 15:02:47] DMA: Iniciando operación E/S asíncrona...
+[2026-01-14 15:02:47] DMA: Hilo de transferencia iniciado
+[2026-01-14 15:02:47] DMA: Operación E/S con parámetros - PISTA=1, CILINDRO=1, SECTOR=1, IO=1, ADDRESS=350
+[2026-01-14 15:02:47] Leyendo en disco: pista 1, cilindro 1, sector 1, data: 
+[2026-01-14 15:02:47] DMA: Leído sector del disco. Contenido: ""
+[2026-01-14 15:02:47] DMA: Convertido a entero. Valor: 0
+[2026-01-14 15:02:47] Escribiendo memoria fisica: direccion 350, valor 0
+[2026-01-14 15:02:47] DMA: ÉXITO - Transferencia Disco->Memoria completada. Sector "" escrito en dirección 350 como valor 0
+[2026-01-14 15:02:47] DMA: Operación finalizada. Estado: 0 (0=éxito, 1=error).
+[2026-01-14 15:02:47] >> SOLICITUD INTERRUPCION: Codigo 4 detectada.
+[2026-01-14 15:02:47] DMA: Hilo de transferencia finalizado correctamente
+[2026-01-14 15:02:47] DMA: Transferencia iniciada en segundo plano (hilo creado)
+[2026-01-14 15:02:47] INT: Iniciando secuencia de interrupción 4...
+[2026-01-14 15:02:47] Escribiendo memoria fisica: direccion 298, valor 8
+[2026-01-14 15:02:47] Escribiendo memoria fisica: direccion 297, valor 999
+[2026-01-14 15:02:47] Escribiendo memoria fisica: direccion 296, valor 0
+[2026-01-14 15:02:47] Escribiendo memoria fisica: direccion 295, valor 300
+[2026-01-14 15:02:47] Escribiendo memoria fisica: direccion 294, valor 1999
+[2026-01-14 15:02:47] Escribiendo memoria fisica: direccion 293, valor 0
+[2026-01-14 15:02:47] Escribiendo memoria fisica: direccion 292, valor 0
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 4, valor 20
+[2026-01-14 15:02:47] INT: Contexto salvado. Saltando a manejador en dir 20
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 20, valor 14000000
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 292, valor 0
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 293, valor 0
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 294, valor 1999
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 295, valor 300
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 296, valor 0
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 297, valor 999
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 298, valor 8
+[2026-01-14 15:02:47] RETRN: Contexto restaurado. Volviendo a PC=8
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 308, valor 4100100
+[2026-01-14 15:02:47] Ejecutando LOAD, AC cargado con 100
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=99
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=98
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=97
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=96
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=95
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=94
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=93
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=92
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=91
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=90
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=89
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=88
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=87
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=86
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=85
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=84
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=83
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=82
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=81
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=80
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=79
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=78
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=77
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=76
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=75
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=74
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=73
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=72
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=71
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=70
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=69
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=68
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=67
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=66
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=65
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=64
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=63
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=62
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=61
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=60
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=59
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=58
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=57
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=56
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=55
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=54
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=53
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=52
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=51
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=50
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=49
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=48
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=47
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=46
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=45
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=44
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=43
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=42
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=41
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=40
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=39
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=38
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=37
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=36
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=35
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=34
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=33
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=32
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=31
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=30
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=29
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=28
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=27
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=26
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=25
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=24
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=23
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=22
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=21
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=20
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=19
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=18
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=17
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=16
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=15
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=14
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=13
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=12
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=11
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=10
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=9
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=8
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=7
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=6
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=5
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=4
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=3
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=2
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=1
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC > val == 0, CC=2[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion cumplida. Salto tomado a 9.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-01-14 15:02:47] Ejecutando RES, ahora AC=0
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-01-14 15:02:47] COMP : AC == val == 0, CC=0[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-01-14 15:02:47] JMPNE: Condicion falsa (CC=0/Igual). Salto NO tomado.
+[2026-01-14 15:02:47] Leyendo memoria fisica: direccion 312, valor 13000000
+[2026-01-14 15:02:47] SVC: Solicitud de servicio al sistema.
+[2026-01-14 15:02:47] >> SOLICITUD INTERRUPCION: Codigo 2 detectada.
+[2026-01-14 15:02:47] SVC: Llamada al Sistema (Fin de programa temporal)
+[2026-01-14 15:02:56] DMA: finalizado exitosamente
+[2026-01-14 15:02:56] BUS: finalizado exitosamente
+LOG: finalizado exitosamente.

@@ -24,10 +24,20 @@ extern CPU_Context context;
 
 void print_registers()
 {
+    /*
     printf("\n[ESTADO CPU] -----------------------------------\n");
     printf(" PC: %04d | IR: %08d | AC: %d\n", context.PSW.PC, context.IR, context.AC);
     printf(" RX: %d    | SP: %d       | Mode: %s\n", context.RX, context.SP, (context.PSW.Mode == 0 ? "USER" : "KERNEL"));
     printf(" RB: %d    | RL: %d       | CC: %d\n", context.RB, context.RL, context.PSW.CC);
+    printf("------------------------------------------------\n");
+    */
+    printf("\n[ESTADO CPU] -----------------------------------\n");
+    printf(" PC: %08d | IR: %08d | AC: %08d\n", 
+           context.PSW.PC, context.IR, context.AC);
+    printf(" RX: %08d | SP: %08d | Mode: %s\n", 
+           context.RX, context.SP, (context.PSW.Mode == 0 ? "USER" : "KERNEL"));
+    printf(" RB: %08d | RL: %08d | CC: %d\n", 
+           context.RB, context.RL, context.PSW.CC);
     printf("------------------------------------------------\n");
 }
 
