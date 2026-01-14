@@ -67,18 +67,23 @@ int dma_handler(int opcode, int value, unsigned int mode)
     {
     case OP_SDMAP:
         dma.TRACK = value;
+        write_log(0, "DMA: Pista establecida en %d\n", value);
         break;
     case OP_SDMAC:
         dma.CYLINDER = value;
+        write_log(0, "DMA: Cilindro establecido en %d\n", value);
         break;
     case OP_SDMAS:
         dma.SECTOR = value;
+        write_log(0, "DMA: Sector establecido en %d\n", value);
         break;
     case OP_SDMAIO:
         dma.IO = value;
+        write_log(0, "DMA: Modo de operación establecido en %d (0 = leer, 1 = escribir)\n", value);
         break;
     case OP_SDMAM:
         dma.ADDRESS = value;
+        write_log(0, "DMA: Dirección de memoria establecida en %d\n", value);
         break;
     case OP_SDMAON:
         // Iniciar la operacion de E/S
