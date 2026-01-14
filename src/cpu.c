@@ -325,12 +325,12 @@ int cpu()
             if (context.AC == val)
             {
                 context.PSW.CC = 0; // Igual
-                write_log(0, "COMP : AC == val == %d, CC=0", val);
+                write_log(0, "COMP : AC == val == %d, CC=0\n", val);
             }
             else if (context.AC < val)
             {
                 context.PSW.CC = 1; // Menor
-                write_log(0, "COMP : AC < val == %d, CC=1", val);
+                write_log(0, "COMP : AC < val == %d, CC=1\n", val);
             }
             else
             {
