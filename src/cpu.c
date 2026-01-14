@@ -6,6 +6,7 @@
 #include "dma.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 CPU_Context context;
 // Variables para gestión de interrupciones
@@ -222,8 +223,47 @@ int handle_interrupt()
     return 0;
 }
 
+// Convierte formato Signo-Magnitud (SM) a Entero de C
+int sm_to_int(int sm_val)
+{
+    int signo = sm_val / 10000000;    // Obtener el primer dígito (0 o 1)
+    int magnitud = sm_val % 10000000; // Obtener los 7 restantes
+
+    if (signo == 1)
+    {
+        return -magnitud;
+    }
+    return magnitud;
+}
+
+// Convierte Entero de C a formato Signo-Magnitud (SM)
+int int_to_sm(int int_val)
+{
+    int signo = 0;
+
+    if (int_val < 0)
+    {
+        signo = 1;
+        int_val = -int_val; // Convertir a positivo para obtener magnitud
+    }
+
+    // Verificación de desbordamiento (Solo caben 7 dígitos: 9,999,999)
+    if (int_val > 9999999)
+    {
+        write_log(1, "ALU: Overflow de magnitud (Máx 7 dígitos). Truncando.\n");
+        int_val = 9999999;
+        context.PSW.CC = 3; // Indicar overflow
+    }
+
+    return (signo * 10000000) + int_val;
+}
+
 int cpu()
 {
+    // --- SIMULACIÓN DE RELOJ ---
+    usleep(2000); // 2ms por ciclo de instrucción
+
+    // --- CICLO DE INSTRUCCIÓN ---
     // Solo atendemos si hay una pendiente Y las interrupciones están habilitadas
     if (interrupt_pending && context.PSW.Interrupts)
     {

@@ -8,8 +8,11 @@ void decode(Word instruction, int *opcode, int *mode, int *operand);
 // inicializa el procesador como queremos
 void cpu_init();
 
-// manejar interrupciones del cpu
+// notificar interrupciones del cpu
 void cpu_interrupt(int interrupt_code);
+
+// manejar interrupciones del cpu
+int handle_interrupt();
 
 // acciones normales del cpu, las 34 instruc
 int cpu();
