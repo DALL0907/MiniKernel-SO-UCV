@@ -204,6 +204,9 @@ void handle_interrupt()
 
 int cpu()
 {
+    // --- SIMULACIÓN DE RELOJ ---
+    usleep(2000); // 2ms por ciclo de instrucción
+
     // Solo atendemos si hay una pendiente Y las interrupciones están habilitadas
     if (interrupt_pending && context.PSW.Interrupts)
     {
