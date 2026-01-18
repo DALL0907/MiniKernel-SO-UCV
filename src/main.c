@@ -20,23 +20,16 @@
 // Referencia al contexto global (definido en cpu.c)
 extern CPU_Context context;
 
-// --- FUNCIONES DE UTILIDAD (Que faltaban) ---
+// --- FUNCIONES DE UTILIDAD ---
 
 void print_registers()
 {
-    /*
     printf("\n[ESTADO CPU] -----------------------------------\n");
-    printf(" PC: %04d | IR: %08d | AC: %d\n", context.PSW.PC, context.IR, context.AC);
-    printf(" RX: %d    | SP: %d       | Mode: %s\n", context.RX, context.SP, (context.PSW.Mode == 0 ? "USER" : "KERNEL"));
-    printf(" RB: %d    | RL: %d       | CC: %d\n", context.RB, context.RL, context.PSW.CC);
-    printf("------------------------------------------------\n");
-    */
-    printf("\n[ESTADO CPU] -----------------------------------\n");
-    printf(" PC: %08d | IR: %08d | AC: %08d\n", 
+    printf(" PC: %08d | IR: %08d | AC: %08d\n",
            context.PSW.PC, context.IR, context.AC);
-    printf(" RX: %08d | SP: %08d | Mode: %s\n", 
+    printf(" RX: %08d | SP: %08d | Mode: %s\n",
            context.RX, context.SP, (context.PSW.Mode == 0 ? "USER" : "KERNEL"));
-    printf(" RB: %08d | RL: %08d | CC: %d\n", 
+    printf(" RB: %08d | RL: %08d | CC: %d\n",
            context.RB, context.RL, context.PSW.CC);
     printf("------------------------------------------------\n");
 }
@@ -83,8 +76,86 @@ static void print_banner()
     printf("  salir             - Termina el simulador\n\n");
 }
 
-// --- MAIN LOOP ---
+// Función auxiliar para traducir Opcode a Texto en el Debugger
+const char *get_mnemonic(int opcode)
+{
+    switch (opcode)
+    {
+    case 0:
+        return "SUM";
+    case 1:
+        return "RES";
+    case 2:
+        return "MULT";
+    case 3:
+        return "DIVI";
+    case 4:
+        return "LOAD";
+    case 5:
+        return "STR";
+    case 6:
+        return "LOADRX";
+    case 7:
+        return "STRRX";
+    case 8:
+        return "COMP";
+    case 9:
+        return "JMPE";
+    case 10:
+        return "JMPNE";
+    case 11:
+        return "JMPLT";
+    case 12:
+        return "JMPLGT";
+    case 13:
+        return "SVC";
+    case 14:
+        return "RETRN";
+    case 15:
+        return "HAB";
+    case 16:
+        return "DHAB";
+    case 17:
+        return "TTI";
+    case 18:
+        return "CHMOD";
 
+    // --- FALTABAN ESTOS (Gestión de Registros) ---
+    case 19:
+        return "LOADRB";
+    case 20:
+        return "STRRB";
+    case 21:
+        return "LOADRL";
+    case 22:
+        return "STRRL";
+    case 23:
+        return "LOADSP";
+    case 24:
+        return "STRSP";
+        // ---------------------------------------------
+
+    case 25:
+        return "PSH";
+    case 26:
+        return "POP";
+    case 27:
+        return "J";
+
+    case 28:
+    case 29:
+    case 30:
+    case 31:
+    case 32:
+    case 33:
+        return "DMA_OP";
+
+    default:
+        return "UNKNOWN";
+    }
+}
+
+// --- MAIN LOOP ---
 int main()
 {
     int cargado = 0;
@@ -178,7 +249,7 @@ int main()
                 {
                     printf(">> CPU Detenida (Codigo: %d)\n", ret);
                     print_registers();
-                    // Opcional: cargado = 0; si se da opcion a recargar
+                    // No ponemos cargado=0 para permitir re-ejecutar sin recargar si se desea resetear manualmente
                     break;
                 }
             }
@@ -192,7 +263,6 @@ int main()
                 continue;
             }
             write_log(1, "=== MODO DEBUG ACTIVADO ===\n");
-            //printf("--- MODO DEBUG ACTIVADO ---\n");
             printf("Comandos: 'step' (realizar paso), 'regs' (ver registros), 'salir'\n");
             print_registers();
 
@@ -205,13 +275,32 @@ int main()
 
                 if (strcmp(comando, "step") == 0)
                 {
+                    // 1. Obtener información PREVIA a la ejecución
+                    int pc_actual = context.PSW.PC;
+                    int linea_archivo = pc_actual + 1; // Ajuste Base 0 -> Base 1
+
+                    // 2. Intentar "espiar" qué instrucción es
+                    int dir_fisica = pc_actual;
+                    if (context.PSW.Mode == USER_MODE)
+                        dir_fisica += context.RB;
+
+                    Word instruccion_raw;
+                    mem_read_physical(dir_fisica, &instruccion_raw);
+
+                    // Decodificar para mostrar el nombre
+                    int opcode = instruccion_raw / 1000000;
+
+                    printf("\n>> [DEBUG] Ejecutando LINEA %d (PC=%d) | Instr: %s\n",
+                           linea_archivo, pc_actual, get_mnemonic(opcode));
+
+                    // 3. Ejecutar un ciclo de CPU
                     int ret = cpu();
                     print_registers();
 
                     if (ret != 0)
                     {
-                        printf(">> Programa finalizado (Codigo: %d)\n", ret);
                         write_log(0, "=== MODO DEBUG DESACTIVADO ===\n");
+                        printf(">> Programa finalizado (Codigo: %d)\n", ret);
                         break; // Salir del debug
                     }
                 }
