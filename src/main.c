@@ -211,6 +211,7 @@ int main()
                     if (ret != 0)
                     {
                         printf(">> Programa finalizado (Codigo: %d)\n", ret);
+                        write_log(0, "=== MODO DEBUG DESACTIVADO ===\n");
                         break; // Salir del debug
                     }
                 }
