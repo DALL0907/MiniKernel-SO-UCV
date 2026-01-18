@@ -16,7 +16,10 @@ typedef struct
     pthread_mutex_t lock;   // semáforo del dma
 } DMA_t;
 
+// Inicia el modulo dma
 int dma_init();
+
+// Elimina el modulo dma
 void dma_destroy();
 
 // Recibe el código, el valor y el modo de ejecución (Kernel/Usuario) a usar con la instruccion

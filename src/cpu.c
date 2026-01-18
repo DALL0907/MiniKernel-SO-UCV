@@ -6,11 +6,14 @@
 #include "dma.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 CPU_Context context;
 // Variables para gestión de interrupciones
 static int interrupt_pending = 0;  // Bandera: 0=No, 1=Si
 static int interrupt_code_val = 0; // Cuál interrupción es
+static const int dma_busy_code = 99; // Código para saber si el DMA está ocupado
+static const int IO_ERROR = 500; // Código para error de E/S
 
 // Guarda un valor en la Pila del Sistema
 // Retorna 0 si éxito, -1 si desbordamiento (Stack Overflow)
@@ -156,9 +159,26 @@ void cpu_interrupt(int interrupt_code)
     write_log(1, ">> SOLICITUD INTERRUPCION: Codigo %d detectada.\n", interrupt_code);
 }
 
-void handle_interrupt()
+int handle_interrupt()
 {
     write_log(0, "INT: Iniciando secuencia de interrupción %d...\n", interrupt_code_val);
+
+    // Caso especial: Interrupción por finalización de E/S
+    if (interrupt_code_val == INT_IO_END)
+    {
+        // Verificar el estado del DMA
+        int dma_state = dma_get_state();
+        
+        if (dma_state != 0)
+        {
+            write_log(1, "INT: Operación DMA falló con estado %d\n", dma_state);
+            
+            // Si hay error en DMA, terminamos el programa
+            // Limpiamos la bandera de interrupción
+            interrupt_pending = 0;
+            return IO_ERROR;
+        }
+    }
 
     // 1. SALVAR CONTEXTO (Guardar registros en la Pila)
     // El orden es arbitrario, pero debe coincidir con el futuro "RETRN" (IRET)
@@ -200,6 +220,42 @@ void handle_interrupt()
 
     // Limpiamos la bandera
     interrupt_pending = 0;
+    return 0;
+}
+
+// Convierte formato Signo-Magnitud (SM) a Entero de C
+int sm_to_int(int sm_val)
+{
+    int signo = sm_val / 10000000;    // Obtener el primer dígito (0 o 1)
+    int magnitud = sm_val % 10000000; // Obtener los 7 restantes
+
+    if (signo == 1)
+    {
+        return -magnitud;
+    }
+    return magnitud;
+}
+
+// Convierte Entero de C a formato Signo-Magnitud (SM)
+int int_to_sm(int int_val)
+{
+    int signo = 0;
+
+    if (int_val < 0)
+    {
+        signo = 1;
+        int_val = -int_val; // Convertir a positivo para obtener magnitud
+    }
+
+    // Verificación de desbordamiento (Solo caben 7 dígitos: 9,999,999)
+    if (int_val > 9999999)
+    {
+        write_log(1, "ALU: Overflow de magnitud (Máx 7 dígitos). Truncando.\n");
+        int_val = 9999999;
+        context.PSW.CC = 3; // Indicar overflow
+    }
+
+    return (signo * 10000000) + int_val;
 }
 
 int cpu()
@@ -207,6 +263,10 @@ int cpu()
     // --- SIMULACIÓN DE RELOJ ---
     usleep(2000); // 2ms por ciclo de instrucción
 
+<<<<<<< HEAD
+=======
+    // --- CICLO DE INSTRUCCIÓN ---
+>>>>>>> cbe04a7d683cef8a6dc52811ca3f55ec3da90207
     // Solo atendemos si hay una pendiente Y las interrupciones están habilitadas
     if (interrupt_pending && context.PSW.Interrupts)
     {
@@ -247,35 +307,103 @@ int cpu()
     case OP_SUM: // 00
         if (get_value(mode, operand, &val) == 0)
         {
-            context.AC += val;
-            write_log(0, "Ejecutando SUM, Ahora AC=%d\n", context.AC);
+            // 1. Decodificar lo que hay en AC (Formato SM -> Int C)
+            int ac_real = sm_to_int(context.AC);
+            // 2. Decodificar el operando que vino de memoria (Formato SM -> Int C)
+            int val_real = sm_to_int(val);
+            // 3. Hacer la suma matemática real
+            long long resultado_temp = (long long)ac_real + val_real;
+            // 4. Actualizar CC basado en el resultado REAL (negativo real, positivo real)
+            if (resultado_temp == 0)
+                context.PSW.CC = 0;
+            else if (resultado_temp < 0)
+                context.PSW.CC = 1; // Negativo
+            else
+                context.PSW.CC = 2; // Positivo
+
+            // 5. Codificar el resultado de vuelta a Signo-Magnitud para guardarlo en AC
+            context.AC = int_to_sm((int)resultado_temp);
+
+            write_log(0, "ALU: SUM %d + %d = %d (Codificado en AC: %d)\n",
+                      ac_real, val_real, (int)resultado_temp, context.AC);
         }
         break;
     case OP_RES: // 01
         if (get_value(mode, operand, &val) == 0)
         {
-            context.AC -= val;
-            write_log(0, "Ejecutando RES, ahora AC=%d\n", context.AC);
+            // 1. Decodificar lo que hay en AC (Formato SM -> Int C)
+            int ac_real = sm_to_int(context.AC);
+            // 2. Decodificar el operando que vino de memoria (Formato SM -> Int C)
+            int val_real = sm_to_int(val);
+            // 3. Hacer la resta matemática real
+            long long resultado_temp = (long long)ac_real - val_real;
+            // 4. Actualizar CC basado en el resultado REAL (negativo real, positivo real)
+            if (resultado_temp == 0)
+                context.PSW.CC = 0;
+            else if (resultado_temp < 0)
+                context.PSW.CC = 1; // Negativo
+            else
+                context.PSW.CC = 2; // Positivo
+
+            // 5. Codificar el resultado de vuelta a Signo-Magnitud para guardarlo en AC
+            context.AC = int_to_sm((int)resultado_temp);
+
+            write_log(0, "ALU: RES %d - %d = %d (Codificado en AC: %d)\n",
+                      ac_real, val_real, (int)resultado_temp, context.AC);
         }
         break;
     case OP_MULT: // 02
         if (get_value(mode, operand, &val) == 0)
         {
-            context.AC *= val;
-            write_log(0, "Ejecutando MULT, ahora AC=%d\n", context.AC);
+            // 1. Decodificar lo que hay en AC (Formato SM -> Int C)
+            int ac_real = sm_to_int(context.AC);
+            // 2. Decodificar el operando que vino de memoria (Formato SM -> Int C)
+            int val_real = sm_to_int(val);
+            // 3. Hacer la multiplicación matemática real
+            long long resultado_temp = (long long)ac_real * val_real;
+            // 4. Actualizar CC basado en el resultado REAL (negativo real, positivo real)
+            if (resultado_temp == 0)
+                context.PSW.CC = 0;
+            else if (resultado_temp < 0)
+                context.PSW.CC = 1; // Negativo
+            else
+                context.PSW.CC = 2; // Positivo
+
+            // 5. Codificar el resultado de vuelta a Signo-Magnitud para guardarlo en AC
+            context.AC = int_to_sm((int)resultado_temp);
+
+            write_log(0, "ALU: MULT %d * %d = %d (Codificado en AC: %d)\n",
+                      ac_real, val_real, (int)resultado_temp, context.AC);
         }
         break;
     case OP_DIVI: // 03
         if (get_value(mode, operand, &val) == 0)
         {
-            if (val == 0)
+            // 1. Decodificar lo que hay en AC (Formato SM -> Int C)
+            int ac_real = sm_to_int(context.AC);
+            // 2. Decodificar el operando que vino de memoria (Formato SM -> Int C)
+            int val_real = sm_to_int(val);
+            if (val_real == 0)
             {
-                write_log(1, "ERROR: División por cero en DIVI\n");
-                cpu_interrupt(INT_INVALID_OP); // Interrupción 7
+                write_log(1, "ERROR ALU: División por CERO detectada.\n");
+                cpu_interrupt(INT_OVERFLOW); // Interrupción 8
                 return 1;
             }
-            context.AC /= val;
-            write_log(0, "Ejecutando DIVI, ahora AC=%d\n", context.AC);
+            // 3. Hacer la división matemática real
+            long long resultado_temp = (long long)ac_real / val_real;
+            // 4. Actualizar CC basado en el resultado REAL (negativo real, positivo real)
+            if (resultado_temp == 0)
+                context.PSW.CC = 0;
+            else if (resultado_temp < 0)
+                context.PSW.CC = 1; // Negativo
+            else
+                context.PSW.CC = 2; // Positivo
+
+            // 5. Codificar el resultado de vuelta a Signo-Magnitud para guardarlo en AC
+            context.AC = int_to_sm((int)resultado_temp);
+
+            write_log(0, "ALU: DIVI %d / %d = %d (Codificado en AC: %d)\n",
+                      ac_real, val_real, (int)resultado_temp, context.AC);
         }
         break;
 
@@ -337,21 +465,16 @@ int cpu()
     case OP_COMP: // 08
         if (get_value(mode, operand, &val) == 0)
         {
-            if (context.AC == val)
-            {
-                context.PSW.CC = 0; // Igual
-                write_log(0, "COMP : AC == val == %d, CC=0", val);
-            }
-            else if (context.AC < val)
-            {
-                context.PSW.CC = 1; // Menor
-                write_log(0, "COMP : AC < val == %d, CC=1", val);
-            }
+            // Comparar los valores REALES, no los codificados
+            int ac_real = sm_to_int(context.AC);
+            int val_real = sm_to_int(val);
+
+            if (ac_real == val_real)
+                context.PSW.CC = 0;
+            else if (ac_real < val_real)
+                context.PSW.CC = 1;
             else
-            {
-                context.PSW.CC = 2; // Mayor
-                write_log(0, "COMP : AC > val == %d, CC=2", val);
-            }
+                context.PSW.CC = 2;
         }
         break;
     case OP_JMPE: // 09 - Jump if Equal (CC == 0)
@@ -405,6 +528,15 @@ int cpu()
 
     // --- SISTEMA Y PILA ---
     case OP_SVC: // 13
+        // -----------------IMPORTANTE------------------
+        // Verificar que no haya operaciones DMA pendientes antes de SVC
+        // ---------------------------------------------
+        /*if (dma_is_busy()) {
+            write_log(0, "SVC: DMA ocupado. Esperando que termine antes de llamada al sistema...\n");
+            // Volver a ejecutar SVC en el siguiente ciclo
+            context.PSW.PC--; 
+            return 0; // Continuar ejecución sin llamar al sistema
+        }*/
         write_log(0, "SVC: Solicitud de servicio al sistema.\n");
         // Esto dispara una interrupción de software (Código 2 según brain.h)
         cpu_interrupt(INT_SYSCALL);
@@ -693,13 +825,20 @@ int cpu()
         // en dma.c se crea un hilo que realizará la operacion concurrentemente
         // llama a cpu_interrupt(INT_IO_END)
         // luego el handler deberia verificar el dma_get_state() para conocer el resultado
-        if (dma_handler(opcode, val, context.PSW.Mode) != 0)
+        int dma_result = dma_handler(opcode, val, context.PSW.Mode);
+        
+        if (dma_result == dma_busy_code)
         {
-            write_log(1, "ERROR: Fallo en dma_handler para opcode %d\n", opcode);
+            // DMA está ocupado - reintentar en siguiente ciclo
+            write_log(0, "CPU: DMA ocupado. Reintentando en siguiente ciclo...\n");
+            context.PSW.PC--; // Decrementar PC para volver a ejecutar esta instrucción
+        }
+        else if (dma_result != 0)
+        {
+            write_log(1, "ERROR: Fallo en dma_handler para opcode %d (código: %d)\n", opcode, dma_result);
             return 1;
         }
         break;
-
     default:
         write_log(1, "ERROR: Instruccion Ilegal (Opcode %d) en PC=%d\n", opcode, context.PSW.PC - 1);
         cpu_interrupt(INT_INV_INSTR); // Interrupción 5
