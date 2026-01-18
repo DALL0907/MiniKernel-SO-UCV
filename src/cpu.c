@@ -263,10 +263,14 @@ int cpu()
     // --- SIMULACIÓN DE RELOJ ---
     usleep(2000); // 2ms por ciclo de instrucción
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
     // --- CICLO DE INSTRUCCIÓN ---
 >>>>>>> cbe04a7d683cef8a6dc52811ca3f55ec3da90207
+=======
+    // --- CICLO DE INSTRUCCIÓN ---
+>>>>>>> Stashed changes
     // Solo atendemos si hay una pendiente Y las interrupciones están habilitadas
     if (interrupt_pending && context.PSW.Interrupts)
     {
