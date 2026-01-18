@@ -14,6 +14,20 @@ static DMA_t dma;
 static int dma_initialized = 0;    // Singleton (lo logico es que se trabaje con una sola instancia)
 static pthread_t dma_thread;       // Hilo
 static int dma_thread_running = 0; // Controla si el hilo está activo
+/*
+* 1. DMA debe recibir la operacion dma con su valor
+* 2. el dma_handler debe implementar la logica de la operacion
+*        SDMAP -> guardar la pista en dma.TRACK
+*        SDMAC -> guardar el cilindro en dma.CYLINDER
+*        SDMAS -> guardar el sector en dma.sector
+*        SDMAIO -> guardar 1 o 0 en dma.IO (0 = leer mem 1 = escribir mem)
+*        SDMAM -> guardar value en dma.ADDRESS
+*        SDMAON -> empezar la operacion de E/S
+*        tras cada caso escribir en log para indicar en qué paso se está
+*        ejemplo:
+*        write_log(0, "DMA: ")
+* 3. dma_perform_io realiza la operacion de E/S
+*/
 
 int dma_init()
 {
@@ -43,20 +57,6 @@ int dma_init()
 
 int dma_handler(int opcode, int value, unsigned int mode)
 {
-    /*
-     * 1. DMA debe recibir la operacion dma con su valor
-     * 2. el dma_handler debe implementar la logica de la operacion
-     *        SDMAP -> guardar la pista en dma.TRACK
-     *        SDMAC -> guardar el cilindro en dma.CYLINDER
-     *        SDMAS -> guardar el sector en dma.sector
-     *        SDMAIO -> guardar 1 o 0 en dma.IO (0 = leer mem 1 = escribir mem)
-     *        SDMAM -> guardar value en dma.ADDRESS
-     *        SDMAON -> empezar la operacion de E/S
-     *        tras cada caso escribir en log para indicar en qué paso se está
-     *        ejemplo:
-     *        write_log(0, "DMA: ")
-     * 3. dma_perform_io realiza la operacion de E/S
-     */
     if (!dma_initialized)
     {
         write_log(1, "DMA: no inicializado\n");
