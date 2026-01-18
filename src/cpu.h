@@ -1,6 +1,7 @@
 #ifndef CPU_H
 #define CPU_H
 
+// Traduce las direcciones logicas del programa a fisicas para compatibilidad con la ram
 int mmu_translate(int logical_addr);
 
 // Etapa decode del ciclo de instruccion del cpu
