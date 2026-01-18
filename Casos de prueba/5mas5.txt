@@ -1,0 +1,10 @@
+_start 1
+.NumeroPalabras 7
+.NombreProg 5mas5
+04100005 //load 5
+00100005 //sum 5
+25000000 //psh
+04100007 //load VALOR
+13000000 //svc
+04100007 //load VALOR
+13000000 //svc

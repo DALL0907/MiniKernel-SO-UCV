@@ -191,8 +191,8 @@ int main()
                 printf("Error: No hay programa cargado.\n");
                 continue;
             }
-
-            printf("--- MODO DEBUG ACTIVADO ---\n");
+            write_log(1, "=== MODO DEBUG ACTIVADO ===\n");
+            //printf("--- MODO DEBUG ACTIVADO ---\n");
             printf("Comandos: 'step' (realizar paso), 'regs' (ver registros), 'salir'\n");
             print_registers();
 
@@ -220,6 +220,7 @@ int main()
                 }
                 else if (strcmp(comando, "salir") == 0)
                 {
+                    write_log(0, "=== MODO DEBUG DESACTIVADO ===\n");
                     printf(">> Saliendo del Debugger.\n");
                     break;
                 }
