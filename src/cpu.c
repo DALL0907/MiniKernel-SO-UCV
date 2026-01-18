@@ -304,35 +304,103 @@ int cpu()
     case OP_SUM: // 00
         if (get_value(mode, operand, &val) == 0)
         {
-            context.AC += val;
-            write_log(0, "Ejecutando SUM, Ahora AC=%d\n", context.AC);
+            // 1. Decodificar lo que hay en AC (Formato SM -> Int C)
+            int ac_real = sm_to_int(context.AC);
+            // 2. Decodificar el operando que vino de memoria (Formato SM -> Int C)
+            int val_real = sm_to_int(val);
+            // 3. Hacer la suma matemática real
+            long long resultado_temp = (long long)ac_real + val_real;
+            // 4. Actualizar CC basado en el resultado REAL (negativo real, positivo real)
+            if (resultado_temp == 0)
+                context.PSW.CC = 0;
+            else if (resultado_temp < 0)
+                context.PSW.CC = 1; // Negativo
+            else
+                context.PSW.CC = 2; // Positivo
+
+            // 5. Codificar el resultado de vuelta a Signo-Magnitud para guardarlo en AC
+            context.AC = int_to_sm((int)resultado_temp);
+
+            write_log(0, "ALU: SUM %d + %d = %d (Codificado en AC: %d)\n",
+                      ac_real, val_real, (int)resultado_temp, context.AC);
         }
         break;
     case OP_RES: // 01
         if (get_value(mode, operand, &val) == 0)
         {
-            context.AC -= val;
-            write_log(0, "Ejecutando RES, ahora AC=%d\n", context.AC);
+            // 1. Decodificar lo que hay en AC (Formato SM -> Int C)
+            int ac_real = sm_to_int(context.AC);
+            // 2. Decodificar el operando que vino de memoria (Formato SM -> Int C)
+            int val_real = sm_to_int(val);
+            // 3. Hacer la resta matemática real
+            long long resultado_temp = (long long)ac_real - val_real;
+            // 4. Actualizar CC basado en el resultado REAL (negativo real, positivo real)
+            if (resultado_temp == 0)
+                context.PSW.CC = 0;
+            else if (resultado_temp < 0)
+                context.PSW.CC = 1; // Negativo
+            else
+                context.PSW.CC = 2; // Positivo
+
+            // 5. Codificar el resultado de vuelta a Signo-Magnitud para guardarlo en AC
+            context.AC = int_to_sm((int)resultado_temp);
+
+            write_log(0, "ALU: RES %d - %d = %d (Codificado en AC: %d)\n",
+                      ac_real, val_real, (int)resultado_temp, context.AC);
         }
         break;
     case OP_MULT: // 02
         if (get_value(mode, operand, &val) == 0)
         {
-            context.AC *= val;
-            write_log(0, "Ejecutando MULT, ahora AC=%d\n", context.AC);
+            // 1. Decodificar lo que hay en AC (Formato SM -> Int C)
+            int ac_real = sm_to_int(context.AC);
+            // 2. Decodificar el operando que vino de memoria (Formato SM -> Int C)
+            int val_real = sm_to_int(val);
+            // 3. Hacer la multiplicación matemática real
+            long long resultado_temp = (long long)ac_real * val_real;
+            // 4. Actualizar CC basado en el resultado REAL (negativo real, positivo real)
+            if (resultado_temp == 0)
+                context.PSW.CC = 0;
+            else if (resultado_temp < 0)
+                context.PSW.CC = 1; // Negativo
+            else
+                context.PSW.CC = 2; // Positivo
+
+            // 5. Codificar el resultado de vuelta a Signo-Magnitud para guardarlo en AC
+            context.AC = int_to_sm((int)resultado_temp);
+
+            write_log(0, "ALU: MULT %d * %d = %d (Codificado en AC: %d)\n",
+                      ac_real, val_real, (int)resultado_temp, context.AC);
         }
         break;
     case OP_DIVI: // 03
         if (get_value(mode, operand, &val) == 0)
         {
-            if (val == 0)
+            // 1. Decodificar lo que hay en AC (Formato SM -> Int C)
+            int ac_real = sm_to_int(context.AC);
+            // 2. Decodificar el operando que vino de memoria (Formato SM -> Int C)
+            int val_real = sm_to_int(val);
+            if (val_real == 0)
             {
-                write_log(1, "ERROR: División por cero en DIVI\n");
-                cpu_interrupt(INT_INVALID_OP); // Interrupción 7
+                write_log(1, "ERROR ALU: División por CERO detectada.\n");
+                cpu_interrupt(INT_OVERFLOW); // Interrupción 8
                 return 1;
             }
-            context.AC /= val;
-            write_log(0, "Ejecutando DIVI, ahora AC=%d\n", context.AC);
+            // 3. Hacer la división matemática real
+            long long resultado_temp = (long long)ac_real / val_real;
+            // 4. Actualizar CC basado en el resultado REAL (negativo real, positivo real)
+            if (resultado_temp == 0)
+                context.PSW.CC = 0;
+            else if (resultado_temp < 0)
+                context.PSW.CC = 1; // Negativo
+            else
+                context.PSW.CC = 2; // Positivo
+
+            // 5. Codificar el resultado de vuelta a Signo-Magnitud para guardarlo en AC
+            context.AC = int_to_sm((int)resultado_temp);
+
+            write_log(0, "ALU: DIVI %d / %d = %d (Codificado en AC: %d)\n",
+                      ac_real, val_real, (int)resultado_temp, context.AC);
         }
         break;
 
@@ -394,21 +462,16 @@ int cpu()
     case OP_COMP: // 08
         if (get_value(mode, operand, &val) == 0)
         {
-            if (context.AC == val)
-            {
-                context.PSW.CC = 0; // Igual
-                write_log(0, "COMP : AC == val == %d, CC=0", val);
-            }
-            else if (context.AC < val)
-            {
-                context.PSW.CC = 1; // Menor
-                write_log(0, "COMP : AC < val == %d, CC=1", val);
-            }
+            // Comparar los valores REALES, no los codificados
+            int ac_real = sm_to_int(context.AC);
+            int val_real = sm_to_int(val);
+
+            if (ac_real == val_real)
+                context.PSW.CC = 0;
+            else if (ac_real < val_real)
+                context.PSW.CC = 1;
             else
-            {
-                context.PSW.CC = 2; // Mayor
-                write_log(0, "COMP : AC > val == %d, CC=2", val);
-            }
+                context.PSW.CC = 2;
         }
         break;
     case OP_JMPE: // 09 - Jump if Equal (CC == 0)
