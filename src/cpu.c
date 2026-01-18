@@ -10,10 +10,10 @@
 
 CPU_Context context;
 // Variables para gestión de interrupciones
-static int interrupt_pending = 0;  // Bandera: 0=No, 1=Si
-static int interrupt_code_val = 0; // Cuál interrupción es
+static int interrupt_pending = 0;    // Bandera: 0=No, 1=Si
+static int interrupt_code_val = 0;   // Cuál interrupción es
 static const int dma_busy_code = 99; // Código para saber si el DMA está ocupado
-static const int IO_ERROR = 500; // Código para error de E/S
+static const int IO_ERROR = 500;     // Código para error de E/S
 
 // Guarda un valor en la Pila del Sistema
 // Retorna 0 si éxito, -1 si desbordamiento (Stack Overflow)
@@ -168,11 +168,11 @@ int handle_interrupt()
     {
         // Verificar el estado del DMA
         int dma_state = dma_get_state();
-        
+
         if (dma_state != 0)
         {
             write_log(1, "INT: Operación DMA falló con estado %d\n", dma_state);
-            
+
             // Si hay error en DMA, terminamos el programa
             // Limpiamos la bandera de interrupción
             interrupt_pending = 0;
@@ -531,7 +531,7 @@ int cpu()
         /*if (dma_is_busy()) {
             write_log(0, "SVC: DMA ocupado. Esperando que termine antes de llamada al sistema...\n");
             // Volver a ejecutar SVC en el siguiente ciclo
-            context.PSW.PC--; 
+            context.PSW.PC--;
             return 0; // Continuar ejecución sin llamar al sistema
         }*/
         write_log(0, "SVC: Solicitud de servicio al sistema.\n");
@@ -803,7 +803,7 @@ int cpu()
         }
         // Aquí se comunicará con el módulo dma.c
         int dma_result = dma_handler(opcode, val, context.PSW.Mode);
-        
+
         if (dma_result == dma_busy_code)
         {
             // DMA está ocupado - reintentar en siguiente ciclo
