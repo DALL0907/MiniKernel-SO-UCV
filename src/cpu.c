@@ -538,7 +538,7 @@ int cpu()
         // Esto dispara una interrupción de software (Código 2 según brain.h)
         cpu_interrupt(INT_SYSCALL);
         write_log(1, "SVC: Llamada al Sistema (Fin de programa temporal)\n");
-        return 1;  // Detener ejecución por ahora
+        return 0;  // Detener ejecución por ahora
     case OP_RETRN: // 14 //Retorno de interrupción
         if (context.PSW.Mode == USER_MODE)
         {

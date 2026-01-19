@@ -159,6 +159,7 @@ const char *get_mnemonic(int opcode)
 int main()
 {
     int cargado = 0;
+    loadParams info;
     log_init();
     system_init();
     print_banner();
@@ -206,7 +207,6 @@ int main()
                     filename[--len] = '\0';
                 }
 
-                loadParams info;
                 printf("Cargando '%s' en dir fisica %d...\n", filename, USER_PROGRAM_START);
 
                 // LLAMADA REAL AL CARGADOR
@@ -245,12 +245,26 @@ int main()
             {
                 int ret = cpu();
 
+                // Caso 1: Error fatal reportado por CPU
                 if (ret != 0)
                 {
                     printf(">> CPU Detenida (Codigo: %d)\n", ret);
                     print_registers();
-                    // No ponemos cargado=0 para permitir re-ejecutar sin recargar si se desea resetear manualmente
                     break;
+                }
+
+                // Caso 2: Fin de archivo (Usuario se quedó sin instrucciones)
+                // Solo verificamos esto si estamos en MODO USUARIO.
+                // Si estamos en KERNEL (atendiendo la SVC), dejamos que corra.
+                if (context.PSW.Mode == USER_MODE)
+                {
+                    // Si el PC apunta más allá de lo que cargamos, terminamos.
+                    if (context.PSW.PC >= info.n_words)
+                    {
+                        printf(">> Fin del programa: No hay más instrucciones (PC=%d).\n", context.PSW.PC);
+                        print_registers();
+                        break;
+                    }
                 }
             }
         }
