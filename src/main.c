@@ -233,14 +233,30 @@ int main()
             }
         }
         // --- COMANDO: EJECUTAR ---
-        else if (strcmp(comando, "ejecutar") == 0 || strcmp(comando, "run") == 0)
+        else if (strcmp(comando, "ejecutar") == 0)
         {
             if (!cargado)
             {
                 printf("Error: No hay programa cargado.\n");
                 continue;
             }
+            // === LÓGICA DE AUTO-REINICIO ===
+            // Si el programa ya había terminado (PC al final), lo reiniciamos desde el principio.
+            // Si estaba en medio (por un debug), lo dejamos continuar.
+            if (context.PSW.Mode == USER_MODE && context.PSW.PC >= info.n_words)
+            {
+                printf(">> Reiniciando programa desde el principio...\n");
+                cpu_init(); // Limpiar registros (AC, Flags...)
+
+                // Restaurar contexto
+                context.RB = info.load_address;
+                context.RL = 1999;
+                context.PSW.PC = info.index_start; // Volver al _start
+                context.SP = SYSTEM_STACK_START;
+                context.PSW.Mode = USER_MODE;
+            }
             printf("Ejecutando...\n");
+
             while (1)
             {
                 int ret = cpu();
