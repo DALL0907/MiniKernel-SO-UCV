@@ -4,18 +4,6 @@
 #include "brain.h"
 #include <pthread.h>
 
-typedef struct 
-{
-    int TRACK;     // pista del disco
-    int CYLINDER;  // cilindro del disco
-    int SECTOR;    // sector del disco
-    int IO;        // 0 = leer (mem -> disk), 1 = escribir (disk -> mem)
-    int ADDRESS;   // direccion fisica de la memoria a leer o escribir
-    int STATE;     // Resultado de la op E/S -> 0 = exito, 1 = fallo
-    int BUSY;      // 0 = libre, 1 = ocupado
-    pthread_mutex_t lock;   // semáforo del dma
-} DMA_t;
-
 // Inicia el modulo dma
 int dma_init();
 
