@@ -55,12 +55,28 @@ void init_kernel()
     write_log(0, "KERNEL: Vector de interrupciones inicializado.\n");
 }
 
-void system_init()
+int system_init()
 {
     write_log(0, "=== INICIANDO SISTEMA ===\n");
-    bus_init();    // Inicia memoria y mutex
-    disk_init();   // Inicia disco
-    dma_init();    // Inicia hilos DMA
+    // Inicia memoria y mutex
+    if(bus_init() != 0)
+    {
+        write_log(1,"FATAL: No se pudo iniciar el bus. Saliendo...\n");
+        return -1;
+    }
+    // Inicia disco
+    if(disk_init() != 0)
+    {
+        write_log(1,"FATAL: No se pudo iniciar el disco. Saliendo...\n");
+        return -1;
+    }
+    // Inicia el módulo DMA
+    if (dma_init() != 0)
+    {
+        write_log(1, "FATAL: No se pudo iniciar el DMA. Saliendo...\n");
+        return -1;
+    }
+    // Resetea registros
     cpu_init();    // Resetea registros
     init_kernel(); // Prepara memoria del SO
     printf("Sistema inicializado correctamente.\n");
@@ -176,7 +192,11 @@ int main()
     int cargado = 0;
     loadParams info;
     log_init();
-    system_init();
+    if (system_init())
+    {
+        write_log(1, "FATAL: No se pudo iniciar el sistema. Saliendo...\n");
+        return -1;
+    }
     print_banner();
 
     while (true)
