@@ -815,6 +815,7 @@ int cpu()
             write_log(1, "ERROR: Fallo en dma_handler para opcode %d (código: %d)\n", opcode, dma_result);
             return 1;
         }
+        usleep(20000); // Simular retardo de activación
         break;
     default:
         write_log(1, "ERROR: Instruccion Ilegal (Opcode %d) en PC=%d\n", opcode, context.PSW.PC - 1);

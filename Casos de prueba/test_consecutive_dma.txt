@@ -1,5 +1,5 @@
 .NombreProg test_consecutive_dma
-.NumeroPalabras 35
+.NumeroPalabras 30
 _start 1
 
 // === FASE 1: Preparación - Escribir 1 en disco ===
@@ -7,9 +7,9 @@ _start 1
 04100001  // LOAD inmediato 1 -> AC = 1
 
 // 2. STR 500 (Guardar el 1 en memoria[500] - dirección física)
-05000500  // STR directo a dirección 500 (dentro de límites usuario)
+05000500  // STR directo a dirección 500
 
-// === Configurar DMA para escribir memoria -> disco ===
+// === Configurar DMA para escribir memoria -> disco (IO=0) ===
 // 3. SDMAP 0 (Pista 0)
 28100000  // SDMAP inmediato 0 -> pista = 0
 
@@ -19,21 +19,21 @@ _start 1
 // 5. SDMAS 0 (Sector 0)
 30100000  // SDMAS inmediato 0 -> sector = 0
 
-// 6. SDMAIO 1 (Modo escritura: memoria -> disco)
-31100001  // SDMAIO inmediato 1 -> IO = 1 (escribir)
+// 6. SDMAIO 0 (Modo escritura: memoria -> disco)
+31100000  // SDMAIO inmediato 0 -> IO = 0 (memoria→disco)
 
 // 7. SDMAM 500 (Dirección física de memoria origen)
 32100500  // SDMAM inmediato 500 -> ADDRESS = 500
 
 // 8. SDMAON 0 (Iniciar transferencia)
-33000000  // SDMAON -> inicia DMA (espera en hilo)
+33000000  // SDMAON -> inicia DMA
 
-// 9. LOAD 0 (Pequeña espera pasiva - operación dummy)
+// 9. LOAD 0 (Pequeña espera pasiva)
 04100000  // LOAD inmediato 0
 
-// === FASE 2: Primera operación E/S - Traer dato del disco a memoria ===
-// 10. SDMAIO 0 (Modo lectura: disco -> memoria)
-31100000  // SDMAIO inmediato 0 -> IO = 0 (leer)
+// === FASE 2: Primera operación E/S - Traer dato del disco a memoria (IO=1) ===
+// 10. SDMAIO 1 (Modo lectura: disco -> memoria)
+31100001  // SDMAIO inmediato 1 -> IO = 1 (disco→memoria)
 
 // 11. SDMAM 600 (Dirección física destino en memoria)
 32100600  // SDMAM inmediato 600 -> ADDRESS = 600
@@ -41,7 +41,7 @@ _start 1
 // 12. SDMAON 0 (Iniciar segunda transferencia)
 33000000  // SDMAON -> inicia segunda operación DMA
 
-// 13. LOAD 0 (Espera dummy)
+// 13. LOAD 0 (Espera)
 04100000  // LOAD inmediato 0
 
 // 14. LOAD 600 (Cargar el valor traído del disco)
@@ -63,8 +63,8 @@ _start 1
 // 19. SDMAS 1 (Sector 1 - diferente al anterior)
 30100001  // SDMAS inmediato 1 -> sector = 1
 
-// 20. SDMAIO 1 (Modo escritura: memoria -> disco)
-31100001  // SDMAIO inmediato 1
+// 20. SDMAIO 0 (Modo escritura: memoria -> disco)
+31100000  // SDMAIO inmediato 0
 
 // 21. SDMAM 600 (Dirección física origen en memoria)
 32100600  // SDMAM inmediato 600
@@ -72,12 +72,12 @@ _start 1
 // 22. SDMAON 0 (Iniciar tercera transferencia)
 33000000  // SDMAON
 
-// 23. LOAD 0 (Espera dummy)
+// 23. LOAD 0 (Espera)
 04100000  // LOAD inmediato 0
 
 // === FASE 4: Traer el dato guardado a otra posición de memoria ===
-// 24. SDMAIO 0 (Modo lectura: disco -> memoria)
-31100000  // SDMAIO inmediato 0
+// 24. SDMAIO 1 (Modo lectura: disco -> memoria)
+31100001  // SDMAIO inmediato 1
 
 // 25. SDMAM 700 (Nueva dirección física destino)
 32100700  // SDMAM inmediato 700 -> ADDRESS = 700
@@ -85,7 +85,7 @@ _start 1
 // 26. SDMAON 0 (Iniciar cuarta transferencia)
 33000000  // SDMAON
 
-// 27. LOAD 0 (Espera dummy)
+// 27. LOAD 0 (Espera)
 04100000  // LOAD inmediato 0
 
 // 28. LOAD 700 (Cargar el valor traído)
@@ -94,21 +94,5 @@ _start 1
 // 29. SUM 1 (Sumar 1: 2 + 1 = 3)
 00100001  // SUM inmediato 1 -> AC = 3
 
-// 30. STR 700 (Guardar el 3 en memoria[700])
-05000700  // STR directo a dirección 700
-
-// === FASE 5: Verificación final (opcional) ===
-// 31. LOAD 700 (Cargar el resultado final)
-04000700  // LOAD directo desde memoria[700]
-
-// 32. STR 800 (Guardar copia en memoria[800] para verificación)
-05000800  // STR directo a dirección 800
-
-// 33. LOAD 999 (Código de éxito simbólico)
-04100999  // LOAD inmediato 999
-
-// 34. STR 900 (Guardar código de éxito)
-05000900  // STR directo a dirección 900
-
-// 35. SVC (Fin del programa)
+// 30. SVC (Fin del programa con AC = 3)
 13000000  // SVC
