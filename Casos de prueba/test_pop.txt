@@ -1,0 +1,21 @@
+.NombreProg test_pop
+.NumeroPalabras 6
+_start 1
+
+// 1. PSH 123 (Inmediato) -> Stack: [123]
+25100123  // PSH inmediato 123
+
+// 2. PSH 456 (Inmediato) -> Stack: [123, 456]
+25100456  // PSH inmediato 456
+
+// 3. POP 100 (Sacamos 456 y guardamos en memoria[100])
+26000100  // POP directo a dirección 100 -> Memoria[100] = 456
+
+// 4. POP 101 (Sacamos 123 y guardamos en memoria[101])
+26000101  // POP directo a dirección 101 -> Memoria[101] = 123
+
+// 5. LOAD 999 (Verificación: cargamos algo en AC)
+04100999  // LOAD inmediato 999
+
+// 6. SVC (Fin del programa)
+13000000  // SVC

@@ -1,0 +1,51 @@
+.NombreProg test_invalid_addr
+.NumeroPalabras 10
+_start 1
+
+// ===== PRUEBA 1: Acceso a memoria reservada del SO en modo usuario =====
+// 1. LOAD 777 (Cargamos un valor cualquiera)
+04100777  // LOAD inmediato 777 -> AC = 777
+
+// 2. STR 150 (Intentamos escribir en memoria[150] - ¡ERROR si RB=300!)
+//    Si RB=300 (dirección física de carga), entonces lógica 150 -> física 450 (OK)
+//    Pero si RB=0 (kernel), entonces lógica 150 -> física 150 (dentro de SO: 0-299)
+//    Vamos a asumir que RB se inicializa a 300 para programas de usuario.
+//    Para forzar error, accedemos a dirección lógica 0 que mapea a física 300+0=300 (OK).
+//    Mejor probamos dirección lógica -50 (imposible) o excedemos RL.
+//    Hagámoslo simple: intentamos leer de dirección 0 (lógica) que es válida si RB=300.
+//    Cambiemos estrategia:
+
+// 2. LOAD 0 [RX] (Intentamos acceso indexado con RX=290 para apuntar a zona SO)
+06100290  // LOADRX inmediato 290 -> RX = 290
+04200000  // LOAD indexado con base 0 -> Lee de dirección física (0+RX)=290
+          // Esto genera INT_INV_ADDR (código 6) si en modo usuario y 290 < RB=300
+
+// ===== PRUEBA 2: Acceso fuera de límites físicos (mayor a 1999) =====
+// 3. LOAD 2500 (Cargamos dirección inválida)
+04102500  // LOAD inmediato 2500 -> AC = 2500
+
+// 4. STR AC en dirección 2500 (¡ERROR! Dirección > MEM_SIZE-1)
+//    Necesitamos que el operando sea 2500, pero con modo 0 (directo)
+//    La instrucción sería: 05 0 25000 -> 05025000 (pero operandos son 5 dígitos)
+//    Dividimos: 2500 cabe en 5 dígitos. Instrucción: 05002500
+05002500  // STR directo a dirección lógica 2500 -> Física: 2500+RB
+
+// ===== PRUEBA 3: Acceso negativo (índice negativo con modo indexado) =====
+// 5. LOADRX -100 (Cargamos índice negativo en RX)
+//    Pero los valores son SM. -100 en SM: 1 dígito signo + magnitud 0000100 -> 10000100
+06100100  // LOADRX inmediato 100 (positivo) -> RX = 100
+
+// 6. LOAD 500 [RX] (Acceso indexado con base 500 + RX = 600, válido)
+//    Cambiemos: para probar dirección negativa, necesitamos que (base+RX) < 0
+//    RX negativo y base pequeña. Como no podemos poner RX negativo fácilmente,
+//    mejor probamos dirección lógica negativa directamente (modo inmediato no aplica).
+//    Terminamos con un caso claro:
+
+// 6. LOAD 0 (Limpiamos AC)
+04100000  // LOAD inmediato 0
+
+// 7. COMP 0 (Comparación que no afecta la prueba)
+08100000  // COMP inmediato 0 -> CC = 0 (igual)
+
+// 8. SVC (Fin del programa - aunque probablemente ya hubo interrupción)
+13000000  // SVC

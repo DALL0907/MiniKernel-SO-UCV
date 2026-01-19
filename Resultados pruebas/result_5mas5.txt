@@ -1,0 +1,91 @@
+[2026-01-18 21:34:10] Log iniciado.
+[2026-01-18 21:34:10] === INICIANDO SISTEMA ===
+[2026-01-18 21:34:10] BUS: Inicializado exitosamente
+[2026-01-18 21:34:10] DMA: inicializado exitosamente
+[2026-01-18 21:34:10] CPU Inicializada.
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 0, valor 20
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 1, valor 20
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 2, valor 20
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 3, valor 20
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 4, valor 20
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 5, valor 20
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 6, valor 20
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 7, valor 20
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 8, valor 20
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 9, valor 20
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 10, valor 20
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 11, valor 20
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 12, valor 20
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 13, valor 20
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 14, valor 20
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 15, valor 20
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 16, valor 20
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 17, valor 20
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 18, valor 20
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 19, valor 20
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 20, valor 14000000
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 21, valor 0
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 22, valor 0
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 23, valor 0
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 24, valor 0
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 25, valor 0
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 26, valor 0
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 27, valor 0
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 28, valor 0
+[2026-01-18 21:34:10] Escribiendo memoria fisica: direccion 29, valor 0
+[2026-01-18 21:34:10] KERNEL: Vector de interrupciones inicializado.
+[2026-01-18 21:34:31] LOADER: Cargando /home/diego/Desktop/SO_II-2025/proyecto1/MiniKernel-SO-UCV/Casos de prueba/5mas5.txt en dir fisica 300...
+[2026-01-18 21:34:31] LOADER: _start 1 detectado -> PC inicial ajustado a 0
+[2026-01-18 21:34:31] LOADER: Palabras declaradas en header: 7
+[2026-01-18 21:34:31] LOADER: Nombre del programa: 5mas5
+[2026-01-18 21:34:31] Escribiendo memoria fisica: direccion 300, valor 4100005
+[2026-01-18 21:34:31] Escribiendo memoria fisica: direccion 301, valor 100005
+[2026-01-18 21:34:31] Escribiendo memoria fisica: direccion 302, valor 25000000
+[2026-01-18 21:34:31] Escribiendo memoria fisica: direccion 303, valor 4100007
+[2026-01-18 21:34:31] Escribiendo memoria fisica: direccion 304, valor 13000000
+[2026-01-18 21:34:31] Escribiendo memoria fisica: direccion 305, valor 4100007
+[2026-01-18 21:34:31] Escribiendo memoria fisica: direccion 306, valor 13000000
+[2026-01-18 21:34:31] LOADER: Carga finalizada exitosamente. 7 palabras escritas.
+[2026-01-18 21:34:31] CPU Inicializada.
+[2026-01-18 21:34:34] Leyendo memoria fisica: direccion 300, valor 4100005
+[2026-01-18 21:34:34] Ejecutando LOAD, AC cargado con 5
+[2026-01-18 21:34:34] Leyendo memoria fisica: direccion 301, valor 100005
+[2026-01-18 21:34:34] ALU: SUM 5 + 5 = 10 (Codificado en AC: 10)
+[2026-01-18 21:34:34] Leyendo memoria fisica: direccion 302, valor 25000000
+[2026-01-18 21:34:34] Leyendo memoria fisica: direccion 300, valor 4100005
+[2026-01-18 21:34:34] Escribiendo memoria fisica: direccion 298, valor 4100005
+[2026-01-18 21:34:34] PSH: Guardado 4100005 en Stack (SP=298)
+[2026-01-18 21:34:34] Leyendo memoria fisica: direccion 303, valor 4100007
+[2026-01-18 21:34:34] Ejecutando LOAD, AC cargado con 7
+[2026-01-18 21:34:34] Leyendo memoria fisica: direccion 304, valor 13000000
+[2026-01-18 21:34:34] SVC: Solicitud de servicio al sistema.
+[2026-01-18 21:34:34] >> SOLICITUD INTERRUPCION: Codigo 2 detectada.
+[2026-01-18 21:34:34] SVC: Llamada al Sistema (Fin de programa temporal)
+[2026-01-18 21:34:34] INT: Iniciando secuencia de interrupción 2...
+[2026-01-18 21:34:34] Escribiendo memoria fisica: direccion 297, valor 5
+[2026-01-18 21:34:34] Escribiendo memoria fisica: direccion 296, valor 7
+[2026-01-18 21:34:34] Escribiendo memoria fisica: direccion 295, valor 0
+[2026-01-18 21:34:34] Escribiendo memoria fisica: direccion 294, valor 300
+[2026-01-18 21:34:34] Escribiendo memoria fisica: direccion 293, valor 1999
+[2026-01-18 21:34:34] Escribiendo memoria fisica: direccion 292, valor 2
+[2026-01-18 21:34:34] Escribiendo memoria fisica: direccion 291, valor 0
+[2026-01-18 21:34:34] Leyendo memoria fisica: direccion 2, valor 20
+[2026-01-18 21:34:34] INT: Contexto salvado. Saltando a manejador en dir 20
+[2026-01-18 21:34:34] Leyendo memoria fisica: direccion 20, valor 14000000
+[2026-01-18 21:34:34] Leyendo memoria fisica: direccion 291, valor 0
+[2026-01-18 21:34:34] Leyendo memoria fisica: direccion 292, valor 2
+[2026-01-18 21:34:34] Leyendo memoria fisica: direccion 293, valor 1999
+[2026-01-18 21:34:34] Leyendo memoria fisica: direccion 294, valor 300
+[2026-01-18 21:34:34] Leyendo memoria fisica: direccion 295, valor 0
+[2026-01-18 21:34:34] Leyendo memoria fisica: direccion 296, valor 7
+[2026-01-18 21:34:34] Leyendo memoria fisica: direccion 297, valor 5
+[2026-01-18 21:34:34] RETRN: Contexto restaurado. Volviendo a PC=5
+[2026-01-18 21:34:34] Leyendo memoria fisica: direccion 305, valor 4100007
+[2026-01-18 21:34:34] Ejecutando LOAD, AC cargado con 7
+[2026-01-18 21:34:34] Leyendo memoria fisica: direccion 306, valor 13000000
+[2026-01-18 21:34:34] SVC: Solicitud de servicio al sistema.
+[2026-01-18 21:34:34] >> SOLICITUD INTERRUPCION: Codigo 2 detectada.
+[2026-01-18 21:34:34] SVC: Llamada al Sistema (Fin de programa temporal)
+[2026-01-18 21:34:37] DMA: finalizado exitosamente
+[2026-01-18 21:34:37] BUS: finalizado exitosamente
+LOG: finalizado exitosamente.
