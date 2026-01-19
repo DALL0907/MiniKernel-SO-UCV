@@ -10,12 +10,18 @@ static char DISK[DISK_TRACKS][DISK_CYLINDERS][DISK_SECTORS][SECTOR_BYTES];
 // Se garantiza que solo un hilo accederá al disco a la vez mediante el bus
 static pthread_mutex_t disk_lock;
 
-void disk_init(void)
+int disk_init(void)
 {
     // Inicializar todas las posiciones con una cadena vacía con memset
     memset(DISK, '\0', sizeof(DISK));
     //Verificar errores que pueda arrojar esta funcion de abajo
-    pthread_mutex_init(&disk_lock, NULL);
+    if(pthread_mutex_init(&disk_lock, NULL))
+    {
+        write_log(1, "DISK: Error al inicializar el mutex del disco\n");
+        return -1;
+    }
+    write_log(0, "DISK: Disco inicializado correctamente\n");
+    return 0;
 }
 
 int disk_read_sector(int track, int cylinder, int sector, char *out_buf)

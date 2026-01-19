@@ -7,13 +7,13 @@
 static FILE *log_file = NULL;
 static pthread_mutex_t log_lock;
 
-void log_init()
+int log_init()
 {
     // Inicializamos el mutex
     if (pthread_mutex_init(&log_lock, NULL) != 0)
     {
         perror("Error fatal al iniciar mutex de log");
-        return;
+        return -1;
     }
     // Abre el archivo log.txt en modo escritura (sobrescribe si ya existe)
     log_file = fopen("log.txt", "w");
@@ -24,6 +24,7 @@ void log_init()
     else
     {
         write_log(0, "Log iniciado.\n");
+        return 0;
     }
 }
 

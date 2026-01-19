@@ -10,7 +10,7 @@
 #define SECTOR_BYTES 9 // Cada sector almacena exactamente 9 caracteres
 
 // Inicializa el disco. Devuelve 0 ok, -1 error
-void disk_init(void);
+int disk_init(void);
 
 // Elimina el semáforo/mutex del disco (eliminar el disco pues)
 void disk_destroy(void);

@@ -2,7 +2,7 @@
 #define LOG_H
 
 // abre el archivo log.txt
-void log_init();
+int log_init();
 
 // Cierra el archivo de log
 void log_close();
