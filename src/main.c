@@ -217,7 +217,7 @@ int main()
                     // CONFIGURACIÓN DE CONTEXTO (Vital para que corra)
                     cpu_init(); // Resetear registros base
                     context.RB = info.load_address;
-                    context.RL = 1999;
+                    context.RL = MEM_SIZE - 1;         // Límite al final de la memoria
                     context.PSW.PC = info.index_start; // Punto de entrada relativo
                     context.SP = SYSTEM_STACK_START;   // Pila del sistema
                     context.PSW.Mode = USER_MODE;
