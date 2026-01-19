@@ -108,4 +108,6 @@ typedef struct
     pthread_mutex_t lock;   // semáforo del dma
 } DMA_t;
 
+#define DMA_BUSY_CODE 99 // Código para saber si el DMA está ocupado al solicitar una operación E/S
+
 #endif

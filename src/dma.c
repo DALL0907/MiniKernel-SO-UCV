@@ -99,7 +99,7 @@ int dma_handler(int opcode, int value, unsigned int mode)
         {
             write_log(1, "DMA: (Handler) ERROR - DMA ocupado. Espere a que termine la transferencia actual\n");
             pthread_mutex_unlock(&dma.lock);
-            return 99;
+            return DMA_BUSY_CODE;
         }
 
         // Validar dirección de memoria

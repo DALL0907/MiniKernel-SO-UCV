@@ -12,7 +12,6 @@ CPU_Context context;
 // Variables para gestión de interrupciones
 static int interrupt_pending = 0;    // Bandera: 0=No, 1=Si
 static int interrupt_code_val = 0;   // Cuál interrupción es
-static const int dma_busy_code = 99; // Código para saber si el DMA está ocupado
 static const int IO_ERROR = 500;     // Código para error de E/S
 
 // Guarda un valor en la Pila del Sistema
@@ -804,7 +803,7 @@ int cpu()
         // Aquí se comunicará con el módulo dma.c
         int dma_result = dma_handler(opcode, val, context.PSW.Mode);
 
-        if (dma_result == dma_busy_code)
+        if (dma_result == DMA_BUSY_CODE)
         {
             // DMA está ocupado - reintentar en siguiente ciclo
             write_log(0, "CPU: DMA ocupado. Reintentando en siguiente ciclo...\n");
