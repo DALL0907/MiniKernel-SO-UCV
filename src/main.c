@@ -76,6 +76,21 @@ static void print_banner()
     printf("  salir             - Termina el simulador\n\n");
 }
 
+// Verifica si el programa terminó y lo reinicia si es necesario
+void reset(loadParams *info)
+{
+    if (context.PSW.Mode == USER_MODE && context.PSW.PC >= info->n_words)
+    {
+        cpu_init(); // Limpiar registros
+        // Restaurar contexto original
+        context.RB = info->load_address;
+        context.RL = 1999;
+        context.PSW.PC = info->index_start;
+        context.SP = SYSTEM_STACK_START;
+        context.PSW.Mode = USER_MODE;
+    }
+}
+
 // Función auxiliar para traducir Opcode a Texto en el Debugger
 const char *get_mnemonic(int opcode)
 {
@@ -240,27 +255,12 @@ int main()
                 printf("Error: No hay programa cargado.\n");
                 continue;
             }
-            // === LÓGICA DE AUTO-REINICIO ===
-            // Si el programa ya había terminado (PC al final), lo reiniciamos desde el principio.
-            // Si estaba en medio (por un debug), lo dejamos continuar.
-            if (context.PSW.Mode == USER_MODE && context.PSW.PC >= info.n_words)
-            {
-                printf(">> Reiniciando programa desde el principio...\n");
-                cpu_init(); // Limpiar registros (AC, Flags...)
-
-                // Restaurar contexto
-                context.RB = info.load_address;
-                context.RL = 1999;
-                context.PSW.PC = info.index_start; // Volver al _start
-                context.SP = SYSTEM_STACK_START;
-                context.PSW.Mode = USER_MODE;
-            }
+            reset(&info); // verifica reinicio
             printf("Ejecutando...\n");
 
             while (1)
             {
                 int ret = cpu();
-
                 // Caso 1: Error fatal reportado por CPU
                 if (ret != 0)
                 {
@@ -292,6 +292,7 @@ int main()
                 printf("Error: No hay programa cargado.\n");
                 continue;
             }
+            reset(&info); // verifica reinicio
             write_log(1, "=== MODO DEBUG ACTIVADO ===\n");
             printf("Comandos: 'step' (realizar paso), 'regs' (ver registros), 'salir'\n");
             print_registers();
@@ -305,6 +306,12 @@ int main()
 
                 if (strcmp(comando, "step") == 0)
                 {
+                    if (context.PSW.Mode == USER_MODE && context.PSW.PC >= info.n_words)
+                    {
+                        printf(">> [FIN] Programa finalizado. No hay más instrucciones que ejecutar.\n");
+                        printf(">> Escriba 'salir' y vuelva a entrar a debug para reiniciar.\n");
+                        continue; // Saltamos al inicio del bucle debug sin llamar a cpu()
+                    }
                     // 1. Obtener información PREVIA a la ejecución
                     int pc_actual = context.PSW.PC;
                     int linea_archivo = pc_actual + 1; // Ajuste Base 0 -> Base 1
