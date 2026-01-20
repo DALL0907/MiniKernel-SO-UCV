@@ -1,5 +1,5 @@
 .NombreProg test_invalid_pop
-.NumeroPalabras 6
+.NumeroPalabras 7
 _start 1
 
 04100010  // 1. LOAD inmediato 10 -> AC = 10
@@ -13,3 +13,5 @@ _start 1
 26000060  // 5. POP directo a dirección 60 (360) -> Mem[360] = 100, Stack: []
 
 26000070  // 6. POP directo a dirección 70 (370) ERROR
+
+04100001  // 7. LOAD inmediato 1 -> AC = 1

@@ -43,7 +43,7 @@ int push_stack(int value)
 // Saca un valor de la pila
 int pop_stack(int *value)
 {
-    if (context.SP >= 300)
+    if (context.SP >= 299)
     { // 300 es el inicio de usuario
         write_log(1, "ERROR: Stack Underflow\n");
         return -1;
