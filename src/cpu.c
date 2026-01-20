@@ -10,9 +10,9 @@
 
 CPU_Context context;
 // Variables para gestión de interrupciones
-static int interrupt_pending = 0;    // Bandera: 0=No, 1=Si
-static int interrupt_code_val = 0;   // Cuál interrupción es
-static const int IO_ERROR = 500;     // Código para error de E/S
+static int interrupt_pending = 0;  // Bandera: 0=No, 1=Si
+static int interrupt_code_val = 0; // Cuál interrupción es
+static const int IO_ERROR = 500;   // Código para error de E/S
 
 // Guarda un valor en la Pila del Sistema
 // Retorna 0 si éxito, -1 si desbordamiento (Stack Overflow)
@@ -162,6 +162,39 @@ int handle_interrupt()
 {
     write_log(0, "INT: Iniciando secuencia de interrupción %d...\n", interrupt_code_val);
 
+    // --- MATAR PROCESO EN ERRORES FATALES ---
+
+    // 1. Violación de Segmento
+    if (interrupt_code_val == INT_INV_ADDR)
+    {
+        write_log(1, "KERNEL: Violación de Segmento (SIGSEGV). Terminando proceso.\n");
+        interrupt_pending = 0;
+        return INT_INV_ADDR;
+    }
+
+    // 2. Stack Underflow
+    if (interrupt_code_val == INT_UNDERFLOW)
+    {
+        write_log(1, "KERNEL: Stack Underflow. Terminando proceso.\n");
+        interrupt_pending = 0;
+        return INT_UNDERFLOW;
+    }
+
+    // 3. Stack Overflow / División por Cero
+    if (interrupt_code_val == INT_OVERFLOW)
+    {
+        write_log(1, "KERNEL: Overflow Aritmético / Div por Cero. Terminando proceso.\n");
+        interrupt_pending = 0;
+        return INT_OVERFLOW;
+    }
+
+    // 4. Instrucción Ilegal
+    if (interrupt_code_val == INT_INV_INSTR)
+    {
+        write_log(1, "KERNEL: Instrucción Ilegal. Terminando proceso.\n");
+        interrupt_pending = 0;
+        return INT_INV_INSTR;
+    }
     // Caso especial: Interrupción por finalización de E/S
     if (interrupt_code_val == INT_IO_END)
     {
@@ -266,12 +299,17 @@ int cpu()
     // Solo atendemos si hay una pendiente Y las interrupciones están habilitadas
     if (interrupt_pending && context.PSW.Interrupts)
     {
-        if (handle_interrupt() != 0)
+        int int_result = handle_interrupt();
+        if (int_result != 0)
         {
-            write_log(1, "CPU CRASH: Fallo irrecuperable en manejo de interrupción. Deteniendo proceso.\n");
+            // Si devuelve un código > 0, es una interrupcion FATAL se acaba el programa
+            if (int_result > 0)
+                return int_result;
+
+            write_log(1, "CPU CRASH: Fallo en manejo de interrupción.\n");
             return -1;
-        };
-        return 0; // el ciclo  solo maneja la interrupción
+        }
+        return 0; // Ciclo consumido por la interrupción (sin fetch)
     }
     // Etapa Fetch
     context.MAR = context.PSW.PC;               // Cargar PC en MAR
