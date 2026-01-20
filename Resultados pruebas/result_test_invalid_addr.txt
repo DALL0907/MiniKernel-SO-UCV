@@ -1,0 +1,59 @@
+[2026-01-19 23:13:18] Log iniciado.
+[2026-01-19 23:13:18] === INICIANDO SISTEMA ===
+[2026-01-19 23:13:18] BUS: Inicializado exitosamente
+[2026-01-19 23:13:18] DISK: Disco inicializado correctamente
+[2026-01-19 23:13:18] DMA: inicializado exitosamente
+[2026-01-19 23:13:18] CPU Inicializada.
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 0, valor 20
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 1, valor 20
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 2, valor 20
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 3, valor 20
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 4, valor 20
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 5, valor 20
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 6, valor 20
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 7, valor 20
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 8, valor 20
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 9, valor 20
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 10, valor 20
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 11, valor 20
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 12, valor 20
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 13, valor 20
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 14, valor 20
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 15, valor 20
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 16, valor 20
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 17, valor 20
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 18, valor 20
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 19, valor 20
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 20, valor 14000000
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 21, valor 0
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 22, valor 0
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 23, valor 0
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 24, valor 0
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 25, valor 0
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 26, valor 0
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 27, valor 0
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 28, valor 0
+[2026-01-19 23:13:18] Escribiendo memoria fisica: direccion 29, valor 0
+[2026-01-19 23:13:18] KERNEL: Vector de interrupciones inicializado.
+[2026-01-19 23:13:21] LOADER: Cargando /home/diego/Desktop/SO_II-2025/proyecto1/MiniKernel-SO-UCV/Casos de prueba/test_invalid_addr.txt en dir fisica 300...
+[2026-01-19 23:13:21] LOADER: Nombre del programa: test_invalid_addr
+[2026-01-19 23:13:21] LOADER: Palabras declaradas en header: 6
+[2026-01-19 23:13:21] LOADER: _start 1 detectado -> PC inicial ajustado a 0
+[2026-01-19 23:13:21] Escribiendo memoria fisica: direccion 300, valor 4100777
+[2026-01-19 23:13:21] Escribiendo memoria fisica: direccion 301, valor 5002000
+[2026-01-19 23:13:21] Escribiendo memoria fisica: direccion 302, valor 4100123
+[2026-01-19 23:13:21] Escribiendo memoria fisica: direccion 303, valor 4000000
+[2026-01-19 23:13:21] Escribiendo memoria fisica: direccion 304, valor 100100
+[2026-01-19 23:13:21] Escribiendo memoria fisica: direccion 305, valor 13000000
+[2026-01-19 23:13:21] LOADER: Carga finalizada exitosamente. 6 palabras escritas.
+[2026-01-19 23:13:21] CPU Inicializada.
+[2026-01-19 23:13:24] Leyendo memoria fisica: direccion 300, valor 4100777
+[2026-01-19 23:13:24] Ejecutando LOAD, AC cargado con 777
+[2026-01-19 23:13:24] Leyendo memoria fisica: direccion 301, valor 5002000
+[2026-01-19 23:13:24] ERROR MMU: Violacion de Segmento. Logica:2000 -> Fisica:2300 (Limites RB:300 - RL:1999)
+[2026-01-19 23:13:24] >> SOLICITUD INTERRUPCION: Codigo 6 detectada.
+[2026-01-19 23:13:24] INT: Iniciando secuencia de interrupción 6...
+[2026-01-19 23:13:24] KERNEL: Violación de Segmento (SIGSEGV). Terminando proceso.
+[2026-01-19 23:13:29] DMA: finalizado exitosamente
+[2026-01-19 23:13:29] BUS: finalizado exitosamente
+LOG: finalizado exitosamente.
