@@ -80,6 +80,7 @@ int system_init()
     cpu_init();    // Resetea registros
     init_kernel(); // Prepara memoria del SO
     printf("Sistema inicializado correctamente.\n");
+    return 0;
 }
 
 static void print_banner()
@@ -192,7 +193,7 @@ int main()
     int cargado = 0;
     loadParams info;
     log_init();
-    if (system_init())
+    if (system_init() != 0)
     {
         write_log(1, "FATAL: No se pudo iniciar el sistema. Saliendo...\n");
         return -1;

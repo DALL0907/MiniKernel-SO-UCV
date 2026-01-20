@@ -2,6 +2,7 @@
 #define BRAIN_H
 
 #include <stdint.h>
+#include <pthread.h>
 
 // Constantes
 #define MEM_SIZE 2000

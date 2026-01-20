@@ -2,97 +2,62 @@
 .NumeroPalabras 30
 _start 1
 
-// === FASE 1: Preparación - Escribir 1 en disco ===
-// 1. LOAD 1 (Dato inicial)
-04100001  // LOAD inmediato 1 -> AC = 1
+04100001  // 1. LOAD inmediato 1 -> AC = 1
 
-// 2. STR 500 (Guardar el 1 en memoria[500] - dirección física)
-05000500  // STR directo a dirección 500
+05000500  // 2. STR directo a dirección 500 -> Mem[800] = AC = 1
 
-// === Configurar DMA para escribir memoria -> disco (IO=0) ===
-// 3. SDMAP 0 (Pista 0)
-28100000  // SDMAP inmediato 0 -> pista = 0
+28100000  // 3. SDMAP inmediato 0 -> pista = 0
 
-// 4. SDMAC 0 (Cilindro 0)
-29100000  // SDMAC inmediato 0 -> cilindro = 0
+29100000  // 4. SDMAC inmediato 0 -> cilindro = 0
 
-// 5. SDMAS 0 (Sector 0)
-30100000  // SDMAS inmediato 0 -> sector = 0
+30100000  // 5. SDMAS inmediato 0 -> sector = 0
 
-// 6. SDMAIO 0 (Modo escritura: memoria -> disco)
-31100000  // SDMAIO inmediato 0 -> IO = 0 (memoria→disco)
+31100000  // 6. SDMAIO inmediato 0 -> IO = 0 memoria->disco
 
-// 7. SDMAM 500 (Dirección física de memoria origen)
-32100500  // SDMAM inmediato 500 -> ADDRESS = 500
+32100500  // 7. SDMAM inmediato 500 -> ADDRESS = 800
 
-// 8. SDMAON 0 (Iniciar transferencia)
-33000000  // SDMAON -> inicia DMA
+33000000  // 8. SDMAON
 
-// 9. LOAD 0 (Pequeña espera pasiva)
-04100000  // LOAD inmediato 0
+04100000  // 9. LOAD inmediato 0
 
-// === FASE 2: Primera operación E/S - Traer dato del disco a memoria (IO=1) ===
-// 10. SDMAIO 1 (Modo lectura: disco -> memoria)
-31100001  // SDMAIO inmediato 1 -> IO = 1 (disco→memoria)
+31100001  // 10. SDMAIO inmediato 1 -> IO = 1 disco->memoria
 
-// 11. SDMAM 600 (Dirección física destino en memoria)
-32100600  // SDMAM inmediato 600 -> ADDRESS = 600
+32100600  // 11. SDMAM inmediato 600 -> ADDRESS = 900
 
-// 12. SDMAON 0 (Iniciar segunda transferencia)
-33000000  // SDMAON -> inicia segunda operación DMA
+33000000  // 12. SDMAON
 
-// 13. LOAD 0 (Espera)
-04100000  // LOAD inmediato 0
+04100000  // 13. LOAD inmediato 0
 
-// 14. LOAD 600 (Cargar el valor traído del disco)
-04000600  // LOAD directo desde memoria[600] -> AC = 1
+04000600  // 14. LOAD directo desde memoria[900] -> AC = 1
 
-// 15. SUM 1 (Sumar 1: 1 + 1 = 2)
-00100001  // SUM inmediato 1 -> AC = 2
+00100001  // 15. SUM inmediato 1 -> AC = 1 + 1 = 2
 
-// 16. STR 600 (Guardar el resultado 2 en memoria[600])
-05000600  // STR directo a dirección 600
+05000600  // 16. STR directo a dirección 600 -> Mem[900]
 
-// === FASE 3: Segunda operación E/S - Guardar resultado en otra posición del disco ===
-// 17. SDMAP 0 (Pista 0)
-28100000  // SDMAP inmediato 0
+28100000  // 17. SDMAP inmediato 0
 
-// 18. SDMAC 0 (Cilindro 0)
-29100000  // SDMAC inmediato 0
+29100000  // 18. SDMAC inmediato 0
 
-// 19. SDMAS 1 (Sector 1 - diferente al anterior)
-30100001  // SDMAS inmediato 1 -> sector = 1
+30100001  // 19. SDMAS inmediato 1 -> sector = 1
 
-// 20. SDMAIO 0 (Modo escritura: memoria -> disco)
-31100000  // SDMAIO inmediato 0
+31100000  // 20. SDMAIO inmediato 0
 
-// 21. SDMAM 600 (Dirección física origen en memoria)
-32100600  // SDMAM inmediato 600
+32100600  // 21. SDMAM inmediato 600 -> Mem[900]
 
-// 22. SDMAON 0 (Iniciar tercera transferencia)
-33000000  // SDMAON
+33000000  // 22. SDMAON
 
-// 23. LOAD 0 (Espera)
-04100000  // LOAD inmediato 0
+04100000  // 23. LOAD inmediato 0
 
-// === FASE 4: Traer el dato guardado a otra posición de memoria ===
-// 24. SDMAIO 1 (Modo lectura: disco -> memoria)
-31100001  // SDMAIO inmediato 1
+31100001  // 24. SDMAIO inmediato 1
 
-// 25. SDMAM 700 (Nueva dirección física destino)
-32100700  // SDMAM inmediato 700 -> ADDRESS = 700
+32100700  // 25. SDMAM inmediato 700 -> ADDRESS = 1000
 
-// 26. SDMAON 0 (Iniciar cuarta transferencia)
-33000000  // SDMAON
+33000000  // 26. SDMAON
 
-// 27. LOAD 0 (Espera)
-04100000  // LOAD inmediato 0
+04100000  // 27. LOAD inmediato 0
 
-// 28. LOAD 700 (Cargar el valor traído)
-04000700  // LOAD directo desde memoria[700] -> AC = 2
+04000700  // 28. LOAD directo desde memoria[1000] -> AC = 2
 
-// 29. SUM 1 (Sumar 1: 2 + 1 = 3)
-00100001  // SUM inmediato 1 -> AC = 3
+00100001  // 29. SUM inmediato 1 -> AC = 2 + 1 = 3
 
-// 30. SVC (Fin del programa con AC = 3)
 13000000  // SVC

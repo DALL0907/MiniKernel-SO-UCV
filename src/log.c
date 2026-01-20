@@ -24,8 +24,8 @@ int log_init()
     else
     {
         write_log(0, "Log iniciado.\n");
-        return 0;
     }
+    return 0;
 }
 
 void log_close()

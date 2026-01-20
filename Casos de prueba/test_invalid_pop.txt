@@ -2,20 +2,14 @@
 .NumeroPalabras 6
 _start 1
 
-// 1. LOAD 10 (Operación sencilla previa)
-04100010  // LOAD inmediato 10 -> AC = 10
+04100010  // 1. LOAD inmediato 10 -> AC = 10
 
-// 2. STR 50 (Guardamos el 10 en memoria[50])
-05000050  // STR directo en dirección 50
+05000050  // 2. STR directo a dirección 50 (350) -> Mem[350] = 10
 
-// 3. LOAD 999 (Otro dato cualquiera)
-04100999  // LOAD inmediato 999 -> AC = 999
+04100999  // 3. LOAD inmediato 999 -> AC = 999
 
-// 4. PSH 100 (Hacemos un PUSH para tener algo en la pila)
-25100100  // PSH inmediato 100 -> Stack: [100]
+25100100  // 4. PSH inmediato 100 -> Stack: [100]
 
-// 5. POP 60 (Sacamos el 100 y lo guardamos en memoria[60])
-26000060  // POP directo a dirección 60 -> Stack vacía
+26000060  // 5. POP directo a dirección 60 (360) -> Mem[360] = 100, Stack: []
 
-// 6. POP 70 (¡ERROR! Underflow - intentamos POP con pila vacía)
-26000070  // POP directo a dirección 70 -> Genera INT_UNDERFLOW (código 7)
+26000070  // 6. POP directo a dirección 70 (370) ERROR
