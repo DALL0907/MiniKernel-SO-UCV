@@ -1,17 +1,15 @@
 .NombreProg break_stack
-.NumeroPalabras 5
+.NumeroPalabras 4
 _start 0
 
 // Bucle infinito de PUSH
-// 1. LOAD 999 (Dato basura)
-04100999
+
+04100999 // 1. LOAD 999 (Dato basura)
 
 // --- BUCLE (Dir 1) ---
-// 2. PSH 999 (Llenar pila)
-25100999
 
-// 3. J 1 (Repetir eternamente)
-27000001
+25100999 // 2. PSH 999 (Llenar pila)
 
-// 4. SVC (Nunca llega aquí)
-13000000
+27000001 // 3. J 1 (Repetir eternamente)
+
+13000000 // 4. SVC (Nunca llega aquí)

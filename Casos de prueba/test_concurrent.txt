@@ -1,5 +1,5 @@
 .NombreProg test_conc
-.NumeroPalabras 17
+.NumeroPalabras 13
 _start 0
 
 // 1. Preparar Datos: Guardar 999 en Mem[50]

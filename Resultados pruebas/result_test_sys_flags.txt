@@ -1,50 +1,63 @@
-[2026-01-12 23:02:16] Log iniciado.
-[2026-01-12 23:02:16] === INICIANDO SISTEMA ===
-[2026-01-12 23:02:16] BUS: Inicializado exitosamente
-[2026-01-12 23:02:16] DMA: inicializado exitosamente
-[2026-01-12 23:02:16] CPU Inicializada.
-[2026-01-12 23:02:16] Escribiendo memoria fisica: direccion 0, valor 100
-[2026-01-12 23:02:16] Escribiendo memoria fisica: direccion 1, valor 100
-[2026-01-12 23:02:16] Escribiendo memoria fisica: direccion 2, valor 100
-[2026-01-12 23:02:16] Escribiendo memoria fisica: direccion 3, valor 100
-[2026-01-12 23:02:16] Escribiendo memoria fisica: direccion 4, valor 100
-[2026-01-12 23:02:16] Escribiendo memoria fisica: direccion 5, valor 100
-[2026-01-12 23:02:16] Escribiendo memoria fisica: direccion 6, valor 100
-[2026-01-12 23:02:16] Escribiendo memoria fisica: direccion 7, valor 100
-[2026-01-12 23:02:16] Escribiendo memoria fisica: direccion 8, valor 100
-[2026-01-12 23:02:16] Escribiendo memoria fisica: direccion 9, valor 100
-[2026-01-12 23:02:16] Escribiendo memoria fisica: direccion 10, valor 100
-[2026-01-12 23:02:16] Escribiendo memoria fisica: direccion 11, valor 100
-[2026-01-12 23:02:16] Escribiendo memoria fisica: direccion 12, valor 100
-[2026-01-12 23:02:16] Escribiendo memoria fisica: direccion 13, valor 100
-[2026-01-12 23:02:16] Escribiendo memoria fisica: direccion 14, valor 100
-[2026-01-12 23:02:16] Escribiendo memoria fisica: direccion 15, valor 100
-[2026-01-12 23:02:16] Escribiendo memoria fisica: direccion 16, valor 100
-[2026-01-12 23:02:16] Escribiendo memoria fisica: direccion 17, valor 100
-[2026-01-12 23:02:16] Escribiendo memoria fisica: direccion 18, valor 100
-[2026-01-12 23:02:16] Escribiendo memoria fisica: direccion 19, valor 100
-[2026-01-12 23:02:16] Escribiendo memoria fisica: direccion 100, valor 14000000
-[2026-01-12 23:02:16] KERNEL: Vector de interrupciones inicializado.
-[2026-01-12 23:02:28] LOADER: Cargando test_sys_flags.txt en dir fisica 300...
-[2026-01-12 23:02:28] LOADER: Nombre del programa: test_sys_flags
-[2026-01-12 23:02:28] LOADER: Palabras declaradas en header: 5
-[2026-01-12 23:02:28] LOADER: Punto de entrada (_start) relativo: 0
-[2026-01-12 23:02:28] Escribiendo memoria fisica: direccion 300, valor 17000000
-[2026-01-12 23:02:28] Escribiendo memoria fisica: direccion 301, valor 16000000
-[2026-01-12 23:02:28] Escribiendo memoria fisica: direccion 302, valor 4100010
-[2026-01-12 23:02:28] Escribiendo memoria fisica: direccion 303, valor 15000000
-[2026-01-12 23:02:28] Escribiendo memoria fisica: direccion 304, valor 13000000
-[2026-01-12 23:02:28] LOADER: Carga finalizada. 5 palabras escritas.
-[2026-01-12 23:02:28] CPU Inicializada.
-[2026-01-12 23:02:34] Leyendo memoria fisica: direccion 300, valor 17000000
-[2026-01-12 23:02:34] TTI: Checkpoint de Timer ejecutado.
-[2026-01-12 23:02:34] Leyendo memoria fisica: direccion 301, valor 16000000
-[2026-01-12 23:02:34] Ejecutando DHAB (Deshabilitar Int)
-[2026-01-12 23:02:34] Leyendo memoria fisica: direccion 302, valor 4100010
-[2026-01-12 23:02:34] Ejecutando LOAD, AC cargado con 10
-[2026-01-12 23:02:34] Leyendo memoria fisica: direccion 303, valor 15000000
-[2026-01-12 23:02:34] Ejecutando HAB (Habilitar Int)
-[2026-01-12 23:02:34] Leyendo memoria fisica: direccion 304, valor 13000000
-[2026-01-12 23:02:34] SVC: Solicitud de servicio al sistema.
-[2026-01-12 23:02:34] >> SOLICITUD INTERRUPCION: Codigo 2 detectada.
-[2026-01-12 23:02:34] SVC: Llamada al Sistema (Fin de programa temporal)
+[2026-01-19 23:06:27] Log iniciado.
+[2026-01-19 23:06:27] === INICIANDO SISTEMA ===
+[2026-01-19 23:06:27] BUS: Inicializado exitosamente
+[2026-01-19 23:06:27] DISK: Disco inicializado correctamente
+[2026-01-19 23:06:27] DMA: inicializado exitosamente
+[2026-01-19 23:06:27] CPU Inicializada.
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 0, valor 20
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 1, valor 20
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 2, valor 20
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 3, valor 20
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 4, valor 20
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 5, valor 20
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 6, valor 20
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 7, valor 20
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 8, valor 20
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 9, valor 20
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 10, valor 20
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 11, valor 20
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 12, valor 20
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 13, valor 20
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 14, valor 20
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 15, valor 20
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 16, valor 20
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 17, valor 20
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 18, valor 20
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 19, valor 20
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 20, valor 14000000
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 21, valor 0
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 22, valor 0
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 23, valor 0
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 24, valor 0
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 25, valor 0
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 26, valor 0
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 27, valor 0
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 28, valor 0
+[2026-01-19 23:06:27] Escribiendo memoria fisica: direccion 29, valor 0
+[2026-01-19 23:06:27] KERNEL: Vector de interrupciones inicializado.
+[2026-01-19 23:06:30] LOADER: Cargando /home/diego/Desktop/SO_II-2025/proyecto1/MiniKernel-SO-UCV/Casos de prueba/test_sys_flags.txt en dir fisica 300...
+[2026-01-19 23:06:30] LOADER: Nombre del programa: test_sys_flags
+[2026-01-19 23:06:30] LOADER: Palabras declaradas en header: 5
+[2026-01-19 23:06:30] LOADER: _start 0 detectado -> PC inicial ajustado a 0
+[2026-01-19 23:06:30] Escribiendo memoria fisica: direccion 300, valor 17000000
+[2026-01-19 23:06:30] Escribiendo memoria fisica: direccion 301, valor 16000000
+[2026-01-19 23:06:30] Escribiendo memoria fisica: direccion 302, valor 4100010
+[2026-01-19 23:06:30] Escribiendo memoria fisica: direccion 303, valor 15000000
+[2026-01-19 23:06:30] Escribiendo memoria fisica: direccion 304, valor 13000000
+[2026-01-19 23:06:30] LOADER: Carga finalizada exitosamente. 5 palabras escritas.
+[2026-01-19 23:06:30] CPU Inicializada.
+[2026-01-19 23:06:32] Leyendo memoria fisica: direccion 300, valor 17000000
+[2026-01-19 23:06:32] TTI: Checkpoint de Timer ejecutado.
+[2026-01-19 23:06:32] Leyendo memoria fisica: direccion 301, valor 16000000
+[2026-01-19 23:06:32] Ejecutando DHAB (Deshabilitar Int)
+[2026-01-19 23:06:32] Leyendo memoria fisica: direccion 302, valor 4100010
+[2026-01-19 23:06:32] Ejecutando LOAD, AC cargado con 10
+[2026-01-19 23:06:32] Leyendo memoria fisica: direccion 303, valor 15000000
+[2026-01-19 23:06:32] Ejecutando HAB (Habilitar Int)
+[2026-01-19 23:06:32] Leyendo memoria fisica: direccion 304, valor 13000000
+[2026-01-19 23:06:32] SVC: Solicitud de servicio al sistema.
+[2026-01-19 23:06:32] >> SOLICITUD INTERRUPCION: Codigo 2 detectada.
+[2026-01-19 23:06:32] SVC: Llamada al Sistema (Fin de programa temporal)
+[2026-01-19 23:06:51] DMA: finalizado exitosamente
+[2026-01-19 23:06:51] BUS: finalizado exitosamente
+LOG: finalizado exitosamente.

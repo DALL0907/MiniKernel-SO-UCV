@@ -2,14 +2,10 @@
 .NumeroPalabras 4
 _start 0
 
-// 1. LOAD 100
-04100100
+04100100 // 1. LOAD 100
 
-// 2. DIVI 0 (¡Prohibido!)
-03100000
+03100000 // 2. DIVI 0 (¡Prohibido!)
 
-// 3. STR 10 (Si llega aquí, falló la protección)
-05000010
+05000010 // 3. STR 10 (Si llega aquí, falló la protección)
 
-// 4. SVC
-13000000
+13000000 // 4. SVC

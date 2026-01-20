@@ -1,60 +1,73 @@
-[2026-01-12 22:57:16] Log iniciado.
-[2026-01-12 22:57:16] === INICIANDO SISTEMA ===
-[2026-01-12 22:57:16] BUS: Inicializado exitosamente
-[2026-01-12 22:57:16] DMA: inicializado exitosamente
-[2026-01-12 22:57:16] CPU Inicializada.
-[2026-01-12 22:57:16] Escribiendo memoria fisica: direccion 0, valor 100
-[2026-01-12 22:57:16] Escribiendo memoria fisica: direccion 1, valor 100
-[2026-01-12 22:57:16] Escribiendo memoria fisica: direccion 2, valor 100
-[2026-01-12 22:57:16] Escribiendo memoria fisica: direccion 3, valor 100
-[2026-01-12 22:57:16] Escribiendo memoria fisica: direccion 4, valor 100
-[2026-01-12 22:57:16] Escribiendo memoria fisica: direccion 5, valor 100
-[2026-01-12 22:57:16] Escribiendo memoria fisica: direccion 6, valor 100
-[2026-01-12 22:57:16] Escribiendo memoria fisica: direccion 7, valor 100
-[2026-01-12 22:57:16] Escribiendo memoria fisica: direccion 8, valor 100
-[2026-01-12 22:57:16] Escribiendo memoria fisica: direccion 9, valor 100
-[2026-01-12 22:57:16] Escribiendo memoria fisica: direccion 10, valor 100
-[2026-01-12 22:57:16] Escribiendo memoria fisica: direccion 11, valor 100
-[2026-01-12 22:57:16] Escribiendo memoria fisica: direccion 12, valor 100
-[2026-01-12 22:57:16] Escribiendo memoria fisica: direccion 13, valor 100
-[2026-01-12 22:57:16] Escribiendo memoria fisica: direccion 14, valor 100
-[2026-01-12 22:57:16] Escribiendo memoria fisica: direccion 15, valor 100
-[2026-01-12 22:57:16] Escribiendo memoria fisica: direccion 16, valor 100
-[2026-01-12 22:57:16] Escribiendo memoria fisica: direccion 17, valor 100
-[2026-01-12 22:57:16] Escribiendo memoria fisica: direccion 18, valor 100
-[2026-01-12 22:57:16] Escribiendo memoria fisica: direccion 19, valor 100
-[2026-01-12 22:57:16] Escribiendo memoria fisica: direccion 100, valor 14000000
-[2026-01-12 22:57:16] KERNEL: Vector de interrupciones inicializado.
-[2026-01-12 22:57:59] LOADER: Cargando test_stack.txt en dir fisica 300...
-[2026-01-12 22:57:59] LOADER: Nombre del programa: test_stack
-[2026-01-12 22:57:59] LOADER: Palabras declaradas en header: 6
-[2026-01-12 22:57:59] LOADER: Punto de entrada (_start) relativo: 0
-[2026-01-12 22:57:59] Escribiendo memoria fisica: direccion 300, valor 25100111
-[2026-01-12 22:57:59] Escribiendo memoria fisica: direccion 301, valor 25100222
-[2026-01-12 22:57:59] Escribiendo memoria fisica: direccion 302, valor 25100333
-[2026-01-12 22:57:59] Escribiendo memoria fisica: direccion 303, valor 26000010
-[2026-01-12 22:57:59] Escribiendo memoria fisica: direccion 304, valor 26000011
-[2026-01-12 22:57:59] Escribiendo memoria fisica: direccion 305, valor 13000000
-[2026-01-12 22:57:59] LOADER: Carga finalizada. 6 palabras escritas.
-[2026-01-12 22:57:59] CPU Inicializada.
-[2026-01-12 22:58:02] Leyendo memoria fisica: direccion 300, valor 25100111
-[2026-01-12 22:58:02] Escribiendo memoria fisica: direccion 298, valor 111
-[2026-01-12 22:58:02] PSH: Guardado 111 en Stack (SP=298)
-[2026-01-12 22:58:02] Leyendo memoria fisica: direccion 301, valor 25100222
-[2026-01-12 22:58:02] Escribiendo memoria fisica: direccion 297, valor 222
-[2026-01-12 22:58:02] PSH: Guardado 222 en Stack (SP=297)
-[2026-01-12 22:58:02] Leyendo memoria fisica: direccion 302, valor 25100333
-[2026-01-12 22:58:02] Escribiendo memoria fisica: direccion 296, valor 333
-[2026-01-12 22:58:02] PSH: Guardado 333 en Stack (SP=296)
-[2026-01-12 22:58:02] Leyendo memoria fisica: direccion 303, valor 26000010
-[2026-01-12 22:58:02] Leyendo memoria fisica: direccion 296, valor 333
-[2026-01-12 22:58:02] Escribiendo memoria fisica: direccion 310, valor 333
-[2026-01-12 22:58:02] POP: Recuperado 333 y guardado en Mem[310]
-[2026-01-12 22:58:02] Leyendo memoria fisica: direccion 304, valor 26000011
-[2026-01-12 22:58:02] Leyendo memoria fisica: direccion 297, valor 222
-[2026-01-12 22:58:02] Escribiendo memoria fisica: direccion 311, valor 222
-[2026-01-12 22:58:02] POP: Recuperado 222 y guardado en Mem[311]
-[2026-01-12 22:58:02] Leyendo memoria fisica: direccion 305, valor 13000000
-[2026-01-12 22:58:02] SVC: Solicitud de servicio al sistema.
-[2026-01-12 22:58:02] >> SOLICITUD INTERRUPCION: Codigo 2 detectada.
-[2026-01-12 22:58:02] SVC: Llamada al Sistema (Fin de programa temporal)
+[2026-01-19 23:05:21] Log iniciado.
+[2026-01-19 23:05:21] === INICIANDO SISTEMA ===
+[2026-01-19 23:05:21] BUS: Inicializado exitosamente
+[2026-01-19 23:05:21] DISK: Disco inicializado correctamente
+[2026-01-19 23:05:21] DMA: inicializado exitosamente
+[2026-01-19 23:05:21] CPU Inicializada.
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 0, valor 20
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 1, valor 20
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 2, valor 20
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 3, valor 20
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 4, valor 20
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 5, valor 20
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 6, valor 20
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 7, valor 20
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 8, valor 20
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 9, valor 20
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 10, valor 20
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 11, valor 20
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 12, valor 20
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 13, valor 20
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 14, valor 20
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 15, valor 20
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 16, valor 20
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 17, valor 20
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 18, valor 20
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 19, valor 20
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 20, valor 14000000
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 21, valor 0
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 22, valor 0
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 23, valor 0
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 24, valor 0
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 25, valor 0
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 26, valor 0
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 27, valor 0
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 28, valor 0
+[2026-01-19 23:05:21] Escribiendo memoria fisica: direccion 29, valor 0
+[2026-01-19 23:05:21] KERNEL: Vector de interrupciones inicializado.
+[2026-01-19 23:05:24] LOADER: Cargando /home/diego/Desktop/SO_II-2025/proyecto1/MiniKernel-SO-UCV/Casos de prueba/test_stack.txt en dir fisica 300...
+[2026-01-19 23:05:24] LOADER: Nombre del programa: test_stack
+[2026-01-19 23:05:24] LOADER: Palabras declaradas en header: 6
+[2026-01-19 23:05:24] LOADER: _start 0 detectado -> PC inicial ajustado a 0
+[2026-01-19 23:05:24] Escribiendo memoria fisica: direccion 300, valor 25100111
+[2026-01-19 23:05:24] Escribiendo memoria fisica: direccion 301, valor 25100222
+[2026-01-19 23:05:24] Escribiendo memoria fisica: direccion 302, valor 25100333
+[2026-01-19 23:05:24] Escribiendo memoria fisica: direccion 303, valor 26000010
+[2026-01-19 23:05:24] Escribiendo memoria fisica: direccion 304, valor 26000011
+[2026-01-19 23:05:24] Escribiendo memoria fisica: direccion 305, valor 13000000
+[2026-01-19 23:05:24] LOADER: Carga finalizada exitosamente. 6 palabras escritas.
+[2026-01-19 23:05:24] CPU Inicializada.
+[2026-01-19 23:05:28] Leyendo memoria fisica: direccion 300, valor 25100111
+[2026-01-19 23:05:28] Escribiendo memoria fisica: direccion 298, valor 111
+[2026-01-19 23:05:28] PSH: Guardado 111 en Stack (SP=298)
+[2026-01-19 23:05:28] Leyendo memoria fisica: direccion 301, valor 25100222
+[2026-01-19 23:05:28] Escribiendo memoria fisica: direccion 297, valor 222
+[2026-01-19 23:05:28] PSH: Guardado 222 en Stack (SP=297)
+[2026-01-19 23:05:28] Leyendo memoria fisica: direccion 302, valor 25100333
+[2026-01-19 23:05:28] Escribiendo memoria fisica: direccion 296, valor 333
+[2026-01-19 23:05:28] PSH: Guardado 333 en Stack (SP=296)
+[2026-01-19 23:05:28] Leyendo memoria fisica: direccion 303, valor 26000010
+[2026-01-19 23:05:28] Leyendo memoria fisica: direccion 296, valor 333
+[2026-01-19 23:05:28] Escribiendo memoria fisica: direccion 310, valor 333
+[2026-01-19 23:05:28] POP: Recuperado 333 y guardado en Mem[310]
+[2026-01-19 23:05:28] Leyendo memoria fisica: direccion 304, valor 26000011
+[2026-01-19 23:05:28] Leyendo memoria fisica: direccion 297, valor 222
+[2026-01-19 23:05:28] Escribiendo memoria fisica: direccion 311, valor 222
+[2026-01-19 23:05:28] POP: Recuperado 222 y guardado en Mem[311]
+[2026-01-19 23:05:28] Leyendo memoria fisica: direccion 305, valor 13000000
+[2026-01-19 23:05:28] SVC: Solicitud de servicio al sistema.
+[2026-01-19 23:05:28] >> SOLICITUD INTERRUPCION: Codigo 2 detectada.
+[2026-01-19 23:05:28] SVC: Llamada al Sistema (Fin de programa temporal)
+[2026-01-19 23:05:32] DMA: finalizado exitosamente
+[2026-01-19 23:05:32] BUS: finalizado exitosamente
+LOG: finalizado exitosamente.

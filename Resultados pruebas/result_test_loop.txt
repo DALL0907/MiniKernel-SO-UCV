@@ -1,91 +1,101 @@
-[2026-01-12 23:34:12] Log iniciado.
-[2026-01-12 23:34:12] === INICIANDO SISTEMA ===
-[2026-01-12 23:34:12] BUS: Inicializado exitosamente
-[2026-01-12 23:34:12] DMA: inicializado exitosamente
-[2026-01-12 23:34:12] CPU Inicializada.
-[2026-01-12 23:34:12] Escribiendo memoria fisica: direccion 0, valor 100
-[2026-01-12 23:34:12] Escribiendo memoria fisica: direccion 1, valor 100
-[2026-01-12 23:34:12] Escribiendo memoria fisica: direccion 2, valor 100
-[2026-01-12 23:34:12] Escribiendo memoria fisica: direccion 3, valor 100
-[2026-01-12 23:34:12] Escribiendo memoria fisica: direccion 4, valor 100
-[2026-01-12 23:34:12] Escribiendo memoria fisica: direccion 5, valor 100
-[2026-01-12 23:34:12] Escribiendo memoria fisica: direccion 6, valor 100
-[2026-01-12 23:34:12] Escribiendo memoria fisica: direccion 7, valor 100
-[2026-01-12 23:34:12] Escribiendo memoria fisica: direccion 8, valor 100
-[2026-01-12 23:34:12] Escribiendo memoria fisica: direccion 9, valor 100
-[2026-01-12 23:34:12] Escribiendo memoria fisica: direccion 10, valor 100
-[2026-01-12 23:34:12] Escribiendo memoria fisica: direccion 11, valor 100
-[2026-01-12 23:34:12] Escribiendo memoria fisica: direccion 12, valor 100
-[2026-01-12 23:34:12] Escribiendo memoria fisica: direccion 13, valor 100
-[2026-01-12 23:34:12] Escribiendo memoria fisica: direccion 14, valor 100
-[2026-01-12 23:34:12] Escribiendo memoria fisica: direccion 15, valor 100
-[2026-01-12 23:34:12] Escribiendo memoria fisica: direccion 16, valor 100
-[2026-01-12 23:34:12] Escribiendo memoria fisica: direccion 17, valor 100
-[2026-01-12 23:34:12] Escribiendo memoria fisica: direccion 18, valor 100
-[2026-01-12 23:34:12] Escribiendo memoria fisica: direccion 19, valor 100
-[2026-01-12 23:34:12] Escribiendo memoria fisica: direccion 100, valor 14000000
-[2026-01-12 23:34:12] KERNEL: Vector de interrupciones inicializado.
-[2026-01-12 23:34:23] LOADER: Cargando test_loop.txt en dir fisica 300...
-[2026-01-12 23:34:23] LOADER: Nombre del programa: test_loop
-[2026-01-12 23:34:23] LOADER: Palabras declaradas en header: 9
-[2026-01-12 23:34:23] LOADER: Punto de entrada (_start) relativo: 0
-[2026-01-12 23:34:23] Escribiendo memoria fisica: direccion 300, valor 4100003
-[2026-01-12 23:34:23] Escribiendo memoria fisica: direccion 301, valor 5000020
-[2026-01-12 23:34:23] Escribiendo memoria fisica: direccion 302, valor 4000020
-[2026-01-12 23:34:23] Escribiendo memoria fisica: direccion 303, valor 1100001
-[2026-01-12 23:34:23] Escribiendo memoria fisica: direccion 304, valor 5000020
-[2026-01-12 23:34:23] Escribiendo memoria fisica: direccion 305, valor 8100000
-[2026-01-12 23:34:23] Escribiendo memoria fisica: direccion 306, valor 9000008
-[2026-01-12 23:34:23] Escribiendo memoria fisica: direccion 307, valor 27000002
-[2026-01-12 23:34:23] Escribiendo memoria fisica: direccion 308, valor 13000000
-[2026-01-12 23:34:23] LOADER: Carga finalizada. 9 palabras escritas.
-[2026-01-12 23:34:23] CPU Inicializada.
-[2026-01-12 23:34:30] Leyendo memoria fisica: direccion 300, valor 4100003
-[2026-01-12 23:34:30] Ejecutando LOAD, AC cargado con 3
-[2026-01-12 23:34:30] Leyendo memoria fisica: direccion 301, valor 5000020
-[2026-01-12 23:34:30] Escribiendo memoria fisica: direccion 320, valor 3
-[2026-01-12 23:34:30] Ejecutando STR, valor 3 escrito en dirección 320
-[2026-01-12 23:34:30] Leyendo memoria fisica: direccion 302, valor 4000020
-[2026-01-12 23:34:30] Leyendo memoria fisica: direccion 320, valor 3
-[2026-01-12 23:34:30] Ejecutando LOAD, AC cargado con 3
-[2026-01-12 23:34:30] Leyendo memoria fisica: direccion 303, valor 1100001
-[2026-01-12 23:34:30] Ejecutando RES, ahora AC=2
-[2026-01-12 23:34:30] Leyendo memoria fisica: direccion 304, valor 5000020
-[2026-01-12 23:34:30] Escribiendo memoria fisica: direccion 320, valor 2
-[2026-01-12 23:34:30] Ejecutando STR, valor 2 escrito en dirección 320
-[2026-01-12 23:34:30] Leyendo memoria fisica: direccion 305, valor 8100000
-[2026-01-12 23:34:30] COMP : AC > val == 0
-, CC=2[2026-01-12 23:34:30] Leyendo memoria fisica: direccion 306, valor 9000008
-[2026-01-12 23:34:30] JMPE: Condicion falsa (CC=2). Salto NO tomado.
-[2026-01-12 23:34:30] Leyendo memoria fisica: direccion 307, valor 27000002
-[2026-01-12 23:34:30] J: Salto incondicional a 2
-[2026-01-12 23:34:30] Leyendo memoria fisica: direccion 302, valor 4000020
-[2026-01-12 23:34:30] Leyendo memoria fisica: direccion 320, valor 2
-[2026-01-12 23:34:30] Ejecutando LOAD, AC cargado con 2
-[2026-01-12 23:34:30] Leyendo memoria fisica: direccion 303, valor 1100001
-[2026-01-12 23:34:30] Ejecutando RES, ahora AC=1
-[2026-01-12 23:34:30] Leyendo memoria fisica: direccion 304, valor 5000020
-[2026-01-12 23:34:30] Escribiendo memoria fisica: direccion 320, valor 1
-[2026-01-12 23:34:30] Ejecutando STR, valor 1 escrito en dirección 320
-[2026-01-12 23:34:30] Leyendo memoria fisica: direccion 305, valor 8100000
-[2026-01-12 23:34:30] COMP : AC > val == 0
-, CC=2[2026-01-12 23:34:30] Leyendo memoria fisica: direccion 306, valor 9000008
-[2026-01-12 23:34:30] JMPE: Condicion falsa (CC=2). Salto NO tomado.
-[2026-01-12 23:34:30] Leyendo memoria fisica: direccion 307, valor 27000002
-[2026-01-12 23:34:30] J: Salto incondicional a 2
-[2026-01-12 23:34:30] Leyendo memoria fisica: direccion 302, valor 4000020
-[2026-01-12 23:34:30] Leyendo memoria fisica: direccion 320, valor 1
-[2026-01-12 23:34:30] Ejecutando LOAD, AC cargado con 1
-[2026-01-12 23:34:30] Leyendo memoria fisica: direccion 303, valor 1100001
-[2026-01-12 23:34:30] Ejecutando RES, ahora AC=0
-[2026-01-12 23:34:30] Leyendo memoria fisica: direccion 304, valor 5000020
-[2026-01-12 23:34:30] Escribiendo memoria fisica: direccion 320, valor 0
-[2026-01-12 23:34:30] Ejecutando STR, valor 0 escrito en dirección 320
-[2026-01-12 23:34:30] Leyendo memoria fisica: direccion 305, valor 8100000
-[2026-01-12 23:34:30] COMP : AC == val == 0
-, CC=0[2026-01-12 23:34:30] Leyendo memoria fisica: direccion 306, valor 9000008
-[2026-01-12 23:34:30] JMPE: Condicion cumplida (CC=0). Salto tomado a 8.
-[2026-01-12 23:34:30] Leyendo memoria fisica: direccion 308, valor 13000000
-[2026-01-12 23:34:30] SVC: Solicitud de servicio al sistema.
-[2026-01-12 23:34:30] >> SOLICITUD INTERRUPCION: Codigo 2 detectada.
-[2026-01-12 23:34:30] SVC: Llamada al Sistema (Fin de programa temporal)
+[2026-01-19 23:03:02] Log iniciado.
+[2026-01-19 23:03:02] === INICIANDO SISTEMA ===
+[2026-01-19 23:03:02] BUS: Inicializado exitosamente
+[2026-01-19 23:03:02] DISK: Disco inicializado correctamente
+[2026-01-19 23:03:02] DMA: inicializado exitosamente
+[2026-01-19 23:03:02] CPU Inicializada.
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 0, valor 20
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 1, valor 20
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 2, valor 20
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 3, valor 20
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 4, valor 20
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 5, valor 20
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 6, valor 20
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 7, valor 20
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 8, valor 20
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 9, valor 20
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 10, valor 20
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 11, valor 20
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 12, valor 20
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 13, valor 20
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 14, valor 20
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 15, valor 20
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 16, valor 20
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 17, valor 20
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 18, valor 20
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 19, valor 20
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 20, valor 14000000
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 21, valor 0
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 22, valor 0
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 23, valor 0
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 24, valor 0
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 25, valor 0
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 26, valor 0
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 27, valor 0
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 28, valor 0
+[2026-01-19 23:03:02] Escribiendo memoria fisica: direccion 29, valor 0
+[2026-01-19 23:03:02] KERNEL: Vector de interrupciones inicializado.
+[2026-01-19 23:03:08] LOADER: Cargando /home/diego/Desktop/SO_II-2025/proyecto1/MiniKernel-SO-UCV/Casos de prueba/test_loop.txt en dir fisica 300...
+[2026-01-19 23:03:08] LOADER: Nombre del programa: test_loop
+[2026-01-19 23:03:08] LOADER: Palabras declaradas en header: 9
+[2026-01-19 23:03:08] LOADER: _start 0 detectado -> PC inicial ajustado a 0
+[2026-01-19 23:03:08] Escribiendo memoria fisica: direccion 300, valor 4100003
+[2026-01-19 23:03:08] Escribiendo memoria fisica: direccion 301, valor 5000020
+[2026-01-19 23:03:08] Escribiendo memoria fisica: direccion 302, valor 4000020
+[2026-01-19 23:03:08] Escribiendo memoria fisica: direccion 303, valor 1100001
+[2026-01-19 23:03:08] Escribiendo memoria fisica: direccion 304, valor 5000020
+[2026-01-19 23:03:08] Escribiendo memoria fisica: direccion 305, valor 8100000
+[2026-01-19 23:03:08] Escribiendo memoria fisica: direccion 306, valor 9000008
+[2026-01-19 23:03:08] Escribiendo memoria fisica: direccion 307, valor 27000002
+[2026-01-19 23:03:08] Escribiendo memoria fisica: direccion 308, valor 13000000
+[2026-01-19 23:03:08] LOADER: Carga finalizada exitosamente. 9 palabras escritas.
+[2026-01-19 23:03:08] CPU Inicializada.
+[2026-01-19 23:03:11] Leyendo memoria fisica: direccion 300, valor 4100003
+[2026-01-19 23:03:11] Ejecutando LOAD, AC cargado con 3
+[2026-01-19 23:03:11] Leyendo memoria fisica: direccion 301, valor 5000020
+[2026-01-19 23:03:11] Escribiendo memoria fisica: direccion 320, valor 3
+[2026-01-19 23:03:11] Ejecutando STR, valor 3 escrito en dirección 320
+[2026-01-19 23:03:11] Leyendo memoria fisica: direccion 302, valor 4000020
+[2026-01-19 23:03:11] Leyendo memoria fisica: direccion 320, valor 3
+[2026-01-19 23:03:11] Ejecutando LOAD, AC cargado con 3
+[2026-01-19 23:03:11] Leyendo memoria fisica: direccion 303, valor 1100001
+[2026-01-19 23:03:11] ALU: RES 3 - 1 = 2 (Codificado en AC: 2)
+[2026-01-19 23:03:11] Leyendo memoria fisica: direccion 304, valor 5000020
+[2026-01-19 23:03:11] Escribiendo memoria fisica: direccion 320, valor 2
+[2026-01-19 23:03:11] Ejecutando STR, valor 2 escrito en dirección 320
+[2026-01-19 23:03:11] Leyendo memoria fisica: direccion 305, valor 8100000
+[2026-01-19 23:03:11] Leyendo memoria fisica: direccion 306, valor 9000008
+[2026-01-19 23:03:11] JMPE: Condicion falsa (CC=2). Salto NO tomado.
+[2026-01-19 23:03:11] Leyendo memoria fisica: direccion 307, valor 27000002
+[2026-01-19 23:03:11] J: Salto incondicional a 2
+[2026-01-19 23:03:11] Leyendo memoria fisica: direccion 302, valor 4000020
+[2026-01-19 23:03:11] Leyendo memoria fisica: direccion 320, valor 2
+[2026-01-19 23:03:11] Ejecutando LOAD, AC cargado con 2
+[2026-01-19 23:03:11] Leyendo memoria fisica: direccion 303, valor 1100001
+[2026-01-19 23:03:11] ALU: RES 2 - 1 = 1 (Codificado en AC: 1)
+[2026-01-19 23:03:11] Leyendo memoria fisica: direccion 304, valor 5000020
+[2026-01-19 23:03:11] Escribiendo memoria fisica: direccion 320, valor 1
+[2026-01-19 23:03:11] Ejecutando STR, valor 1 escrito en dirección 320
+[2026-01-19 23:03:11] Leyendo memoria fisica: direccion 305, valor 8100000
+[2026-01-19 23:03:11] Leyendo memoria fisica: direccion 306, valor 9000008
+[2026-01-19 23:03:11] JMPE: Condicion falsa (CC=2). Salto NO tomado.
+[2026-01-19 23:03:11] Leyendo memoria fisica: direccion 307, valor 27000002
+[2026-01-19 23:03:11] J: Salto incondicional a 2
+[2026-01-19 23:03:11] Leyendo memoria fisica: direccion 302, valor 4000020
+[2026-01-19 23:03:11] Leyendo memoria fisica: direccion 320, valor 1
+[2026-01-19 23:03:11] Ejecutando LOAD, AC cargado con 1
+[2026-01-19 23:03:11] Leyendo memoria fisica: direccion 303, valor 1100001
+[2026-01-19 23:03:11] ALU: RES 1 - 1 = 0 (Codificado en AC: 0)
+[2026-01-19 23:03:11] Leyendo memoria fisica: direccion 304, valor 5000020
+[2026-01-19 23:03:11] Escribiendo memoria fisica: direccion 320, valor 0
+[2026-01-19 23:03:11] Ejecutando STR, valor 0 escrito en dirección 320
+[2026-01-19 23:03:11] Leyendo memoria fisica: direccion 305, valor 8100000
+[2026-01-19 23:03:11] Leyendo memoria fisica: direccion 306, valor 9000008
+[2026-01-19 23:03:11] JMPE: Condicion cumplida (CC=0). Salto tomado a 8.
+[2026-01-19 23:03:11] Leyendo memoria fisica: direccion 308, valor 13000000
+[2026-01-19 23:03:11] SVC: Solicitud de servicio al sistema.
+[2026-01-19 23:03:11] >> SOLICITUD INTERRUPCION: Codigo 2 detectada.
+[2026-01-19 23:03:11] SVC: Llamada al Sistema (Fin de programa temporal)
+[2026-01-19 23:03:14] DMA: finalizado exitosamente
+[2026-01-19 23:03:14] BUS: finalizado exitosamente
+LOG: finalizado exitosamente.

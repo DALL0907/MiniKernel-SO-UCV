@@ -2,35 +2,23 @@
 .NumeroPalabras 10
 _start 0
 
-// 1. LOAD 10 (Carga inicial) -> AC = 10
-04100010
+04100010 // 1. LOAD 10 (Carga inicial) -> AC = 10
 
-// 2. MULT 5 (Multiplicar) -> AC = 50
-02100005
+02100005 // 2. MULT 5 (Multiplicar) -> AC = 50
 
-// 3. STR 100 (Guardamos el 50 en Memoria[100] temporalmente)
-05000100
+05000100 // 3. STR 100 (Guardamos el 50 en Memoria[100] temporalmente)
 
-// 4. PSH 100 (Metemos el valor de Memoria[100] a la PILA) -> Stack: [50]
 // Usamos modo 0 (Directo) porque PSH lee de memoria, no del AC
-25000100
+25000100 // 4. PSH 100 (Metemos el valor de Memoria[100] a la PILA) -> Stack: [50]
 
-// 5. LOAD 20 (Cargamos nuevo valor para segunda operación) -> AC = 20
-04100020
+04100020 // 5. LOAD 20 (Cargamos nuevo valor para segunda operación) -> AC = 20
 
-// 6. RES 5 (Restamos 5) -> AC = 15
-01100005
+01100005 // 6. RES 5 (Restamos 5) -> AC = 15
 
-// 7. POP 101 (Recuperamos el 50 de la pila y lo guardamos en Memoria[101])
-// Ahora Memoria[101] = 50
-26000101
+26000101 // 7. POP 101 (Recuperamos el 50 de la pila y lo guardamos en Memoria[101])
 
-// 8. SUM 101 (Sumamos el valor recuperado al AC actual) -> 15 + 50 = 65
-// AC = 65
-00000101
+00000101 // 8. SUM 101 (Sumamos el valor recuperado al AC actual) -> 15 + 50 = 65
 
-// 9. STR 200 (Guardamos el resultado final en Memoria[200])
-05000200
+05000200 // 9. STR 200 (Guardamos el resultado final en Memoria[200])
 
-// 10. SVC (Fin del programa)
-13000000
+13000000 // 10. SVC (Fin del programa)
