@@ -183,15 +183,15 @@ int handle_interrupt()
     // 3. Stack Overflow / División por Cero
     if (interrupt_code_val == INT_OVERFLOW)
     {
-        write_log(1, "KERNEL: Overflow Aritmético / Div por Cero. Terminando proceso.\n");
+        write_log(1, "KERNEL: Stack Overflow. Terminando proceso.\n");
         interrupt_pending = 0;
         return INT_OVERFLOW;
     }
 
-    // 4. Instrucción Ilegal
+    // 4. Instrucción Ilegal o error generado por esta, ej. div por cero
     if (interrupt_code_val == INT_INV_INSTR)
     {
-        write_log(1, "KERNEL: Instrucción Ilegal. Terminando proceso.\n");
+        write_log(1, "KERNEL: Error fatal en instruccion. Terminando proceso.\n");
         interrupt_pending = 0;
         return INT_INV_INSTR;
     }
@@ -420,7 +420,7 @@ int cpu()
             if (val_real == 0)
             {
                 write_log(1, "ERROR ALU: División por CERO detectada.\n");
-                cpu_interrupt(INT_OVERFLOW); // Interrupción 8
+                cpu_interrupt(INT_INV_INSTR); // Interrupción
                 return 1;
             }
             // 3. Hacer la división matemática real
