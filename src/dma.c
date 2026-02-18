@@ -15,7 +15,6 @@ static int dma_initialized = 0;    // Singleton (lo logico es que se trabaje con
 static pthread_t dma_thread;       // Hilo
 static int dma_thread_running = 0; // Controla si el hilo está activo
 /*
-<<<<<<< HEAD
  * 1. DMA debe recibir la operacion dma con su valor
  * 2. el dma_handler debe implementar la logica de la operacion
  *        SDMAP -> guardar la pista en dma.TRACK
@@ -29,21 +28,6 @@ static int dma_thread_running = 0; // Controla si el hilo está activo
  *        write_log(0, "DMA: ")
  * 3. dma_perform_io realiza la operacion de E/S
  */
-=======
-* 1. DMA debe recibir la operacion dma con su valor
-* 2. el dma_handler debe implementar la logica de la operacion
-*        SDMAP -> guardar la pista en dma.TRACK
-*        SDMAC -> guardar el cilindro en dma.CYLINDER
-*        SDMAS -> guardar el sector en dma.sector
-*        SDMAIO -> guardar 1 o 0 en dma.IO (0 = leer mem 1 = escribir mem)
-*        SDMAM -> guardar value en dma.ADDRESS
-*        SDMAON -> empezar la operacion de E/S
-*        tras cada caso escribir en log para indicar en qué paso se está
-*        ejemplo:
-*        write_log(0, "DMA: ")
-* 3. dma_perform_io realiza la operacion de E/S
-*/
->>>>>>> ce631ee87a803d8f1aa738f1caab46927e0f1124
 
 int dma_init()
 {
@@ -79,16 +63,6 @@ int dma_handler(int opcode, int value, unsigned int mode)
         return -1;
     }
     pthread_mutex_lock(&dma.lock);
-<<<<<<< HEAD
-=======
-    // Aquí creo que deberia ir la comprobacion de que el DMA no esté ocupado
-    /*if (dma.BUSY)
-        {
-            write_log(1, "DMA: (Handler) ERROR - DMA ocupado. Espere a que termine la transferencia actual\n");
-            pthread_mutex_unlock(&dma.lock);
-            return 99;
-        }*/
->>>>>>> ce631ee87a803d8f1aa738f1caab46927e0f1124
     switch (opcode)
     {
     case OP_SDMAP:
@@ -166,11 +140,7 @@ int dma_handler(int opcode, int value, unsigned int mode)
 
             return -1;
         }
-<<<<<<< HEAD
         // write_log(0, "DMA: (Handler) Transferencia iniciada en segundo plano (hilo creado)\n");
-=======
-        //write_log(0, "DMA: (Handler) Transferencia iniciada en segundo plano (hilo creado)\n");
->>>>>>> ce631ee87a803d8f1aa738f1caab46927e0f1124
         usleep(2);
         return 0; // Éxito - hilo creado correctamente
         break;
@@ -187,11 +157,6 @@ void *dma_perform_io(void *arg)
 {
     char buffer[SECTOR_BYTES]; // Buffer para datos del disco (9 bytes = 8 dígitos + '\0')
     int result;                // Variable para resultados de operaciones de disco
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> ce631ee87a803d8f1aa738f1caab46927e0f1124
     write_log(0, "DMA: Hilo de transferencia iniciado\n");
 
     // Simular Latencia de Disco
@@ -326,11 +291,7 @@ void *dma_perform_io(void *arg)
     pthread_mutex_unlock(&dma.lock);
 
     // 4. Simular retardo de transferencia
-<<<<<<< HEAD
     // sleep(1);
-=======
-    //sleep(1);
->>>>>>> ce631ee87a803d8f1aa738f1caab46927e0f1124
 
     // 5. Notificar a la CPU
     write_log(0, "DMA: Operación finalizada. Estado: %d (0=éxito, 1=error).\n", dma.STATE);

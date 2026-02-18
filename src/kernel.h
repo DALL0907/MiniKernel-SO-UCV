@@ -65,7 +65,7 @@ extern bool partitions_bitmap[NUM_PARTITIONS]; // Mapa de bits: 0=Libre, 1=Ocupa
 void kernel_init_structures();
 
 // Gestión de Procesos
-int create_process(const char *name, int track, int sector, int size);
+int create_process(const char *name, int track, int cylinder, int sector, int size);
 
 PCB *get_pcb(int pid);
 

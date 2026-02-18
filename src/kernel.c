@@ -33,7 +33,7 @@ void kernel_init_structures()
 
 // Busca un slot libre en la tabla y crea un PCB básico (Estado NEW)
 // Retorna el PID asignado o -1 si la tabla está llena.
-int create_process(const char *name, int track, int sector, int size)
+int create_process(const char *name, int track, int cylinder, int sector, int size)
 {
     int free_slot = -1;
 
@@ -62,6 +62,7 @@ int create_process(const char *name, int track, int sector, int size)
 
     // Datos de disco (para cargarlo más tarde)
     new_proc->disk_track = track;
+    new_proc->disk_cylinder = cylinder;
     new_proc->disk_sector = sector;
     new_proc->prog_size = size;
 
