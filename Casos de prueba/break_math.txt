@@ -1,0 +1,11 @@
+.NombreProg break_math
+.NumeroPalabras 4
+_start 0
+
+04100100 // 1. LOAD 100
+
+03100000 // 2. DIVI 0 (¡Prohibido!)
+
+05000010 // 3. STR 10 (Si llega aquí, falló la protección)
+
+13000000 // 4. SVC

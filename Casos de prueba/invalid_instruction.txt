@@ -1,0 +1,11 @@
+.NombreProg invalid_instruction
+.NumeroPalabras 4
+_start 1
+
+04100010  // 1. LOAD inmediato 10 -> AC = 10
+
+00100005  // 2. SUM inmediato 5 -> AC = 15
+
+99999999  // 3. Instrucción invalida 
+
+13000000  // 4. SVC

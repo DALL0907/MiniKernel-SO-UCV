@@ -1,0 +1,26 @@
+.NombreProg test_index
+.NumeroPalabras 6
+_start 0
+
+// 1. LOADRX 5 (Cargamos el índice 5 en el registro RX)
+// Opcode 06, Modo 1 (Inmediato), Valor 5
+06100005
+
+// 2. LOAD 99 (Cargamos un valor de dato en AC)
+04100099
+
+// 3. STR 100 [RX] (Guardamos 99 en la dirección base 100 + RX)
+// Opcode 05, Modo 2 (Indexado), Dir Base 100
+// Resultado esperado: Escribir en dirección relativa 105 (100+5)
+05200100
+
+// 4. LOAD 0 (Limpiamos AC para probar la lectura)
+04100000
+
+// 5. LOAD 100 [RX] (Recuperamos el valor usando el índice)
+// Opcode 04, Modo 2 (Indexado), Dir Base 100
+// Debería leer de 105 y poner 99 en AC
+04200100
+
+// 6. SVC
+13000000

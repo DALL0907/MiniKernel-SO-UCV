@@ -1,0 +1,261 @@
+[2026-01-18 23:24:14] Log iniciado.
+[2026-01-18 23:24:14] === INICIANDO SISTEMA ===
+[2026-01-18 23:24:14] BUS: Inicializado exitosamente
+[2026-01-18 23:24:14] DMA: inicializado exitosamente
+[2026-01-18 23:24:14] CPU Inicializada.
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 0, valor 20
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 1, valor 20
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 2, valor 20
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 3, valor 20
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 4, valor 20
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 5, valor 20
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 6, valor 20
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 7, valor 20
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 8, valor 20
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 9, valor 20
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 10, valor 20
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 11, valor 20
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 12, valor 20
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 13, valor 20
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 14, valor 20
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 15, valor 20
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 16, valor 20
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 17, valor 20
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 18, valor 20
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 19, valor 20
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 20, valor 14000000
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 21, valor 0
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 22, valor 0
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 23, valor 0
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 24, valor 0
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 25, valor 0
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 26, valor 0
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 27, valor 0
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 28, valor 0
+[2026-01-18 23:24:14] Escribiendo memoria fisica: direccion 29, valor 0
+[2026-01-18 23:24:14] KERNEL: Vector de interrupciones inicializado.
+[2026-01-18 23:24:20] LOADER: Cargando /home/diego/Desktop/SO_II-2025/proyecto1/MiniKernel-SO-UCV/Casos de prueba/test_consecutive_dma.txt en dir fisica 300...
+[2026-01-18 23:24:20] LOADER: Nombre del programa: test_consecutive_dma
+[2026-01-18 23:24:20] LOADER: Palabras declaradas en header: 30
+[2026-01-18 23:24:20] LOADER: _start 1 detectado -> PC inicial ajustado a 0
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 300, valor 4100001
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 301, valor 5000500
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 302, valor 28100000
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 303, valor 29100000
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 304, valor 30100000
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 305, valor 31100000
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 306, valor 32100500
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 307, valor 33000000
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 308, valor 4100000
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 309, valor 31100001
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 310, valor 32100600
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 311, valor 33000000
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 312, valor 4100000
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 313, valor 4000600
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 314, valor 100001
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 315, valor 5000600
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 316, valor 28100000
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 317, valor 29100000
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 318, valor 30100001
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 319, valor 31100000
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 320, valor 32100600
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 321, valor 33000000
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 322, valor 4100000
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 323, valor 31100001
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 324, valor 32100700
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 325, valor 33000000
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 326, valor 4100000
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 327, valor 4000700
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 328, valor 100001
+[2026-01-18 23:24:20] Escribiendo memoria fisica: direccion 329, valor 13000000
+[2026-01-18 23:24:20] LOADER: Carga finalizada exitosamente. 30 palabras escritas.
+[2026-01-18 23:24:20] CPU Inicializada.
+[2026-01-18 23:24:32] Leyendo memoria fisica: direccion 300, valor 4100001
+[2026-01-18 23:24:32] Ejecutando LOAD, AC cargado con 1
+[2026-01-18 23:24:32] Leyendo memoria fisica: direccion 301, valor 5000500
+[2026-01-18 23:24:32] Escribiendo memoria fisica: direccion 800, valor 1
+[2026-01-18 23:24:32] Ejecutando STR, valor 1 escrito en dirección 800
+[2026-01-18 23:24:32] Leyendo memoria fisica: direccion 302, valor 28100000
+[2026-01-18 23:24:32] DMA: (Handler) Pista establecida en 0
+[2026-01-18 23:24:32] Leyendo memoria fisica: direccion 303, valor 29100000
+[2026-01-18 23:24:32] DMA: (Handler) Cilindro establecido en 0
+[2026-01-18 23:24:32] Leyendo memoria fisica: direccion 304, valor 30100000
+[2026-01-18 23:24:32] DMA: (Handler) Sector establecido en 0
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 305, valor 31100000
+[2026-01-18 23:24:33] DMA: (Handler) Modo de operación establecido en 0 (0 = leer, 1 = escribir)
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 306, valor 32100500
+[2026-01-18 23:24:33] DMA: (Handler) Dirección de memoria establecida en 800
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 307, valor 33000000
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 300, valor 4100001
+[2026-01-18 23:24:33] DMA: (Handler) Iniciando operación E/S asíncrona...
+[2026-01-18 23:24:33] DMA: Hilo de transferencia iniciado
+[2026-01-18 23:24:33] DMA: Operación E/S con parámetros - PISTA=0, CILINDRO=0, SECTOR=0, IO=0, ADDRESS=800
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 800, valor 1
+[2026-01-18 23:24:33] DMA: Palabra de memoria leída. Valor: 1
+[2026-01-18 23:24:33] DMA: Formateado para disco. Cadena: "00000001"
+[2026-01-18 23:24:33] Escribiendo en disco: pista 0, cilindro 0, sector 0, data: 00000001
+[2026-01-18 23:24:33] DMA: ÉXITO - Transferencia Memoria->Disco completada. Word=1 escrito en sector "00000001"
+[2026-01-18 23:24:33] DMA: Operación finalizada. Estado: 0 (0=éxito, 1=error).
+[2026-01-18 23:24:33] >> SOLICITUD INTERRUPCION: Codigo 4 detectada.
+[2026-01-18 23:24:33] DMA: Hilo de transferencia finalizado correctamente
+[2026-01-18 23:24:33] INT: Iniciando secuencia de interrupción 4...
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 298, valor 8
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 297, valor 1
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 296, valor 0
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 295, valor 300
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 294, valor 1999
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 293, valor 0
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 292, valor 0
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 4, valor 20
+[2026-01-18 23:24:33] INT: Contexto salvado. Saltando a manejador en dir 20
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 20, valor 14000000
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 292, valor 0
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 293, valor 0
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 294, valor 1999
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 295, valor 300
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 296, valor 0
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 297, valor 1
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 298, valor 8
+[2026-01-18 23:24:33] RETRN: Contexto restaurado. Volviendo a PC=8
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 308, valor 4100000
+[2026-01-18 23:24:33] Ejecutando LOAD, AC cargado con 0
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 309, valor 31100001
+[2026-01-18 23:24:33] DMA: (Handler) Modo de operación establecido en 1 (0 = leer, 1 = escribir)
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 310, valor 32100600
+[2026-01-18 23:24:33] DMA: (Handler) Dirección de memoria establecida en 900
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 311, valor 33000000
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 300, valor 4100001
+[2026-01-18 23:24:33] DMA: (Handler) Iniciando operación E/S asíncrona...
+[2026-01-18 23:24:33] DMA: Hilo de transferencia iniciado
+[2026-01-18 23:24:33] DMA: Operación E/S con parámetros - PISTA=0, CILINDRO=0, SECTOR=0, IO=1, ADDRESS=900
+[2026-01-18 23:24:33] Leyendo en disco: pista 0, cilindro 0, sector 0, data: 00000001
+[2026-01-18 23:24:33] DMA: Leído sector del disco. Contenido: "00000001"
+[2026-01-18 23:24:33] DMA: Convertido a entero. Valor: 1
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 900, valor 1
+[2026-01-18 23:24:33] DMA: ÉXITO - Transferencia Disco->Memoria completada. Sector "00000001" escrito en dirección 900 como valor 1
+[2026-01-18 23:24:33] DMA: Operación finalizada. Estado: 0 (0=éxito, 1=error).
+[2026-01-18 23:24:33] >> SOLICITUD INTERRUPCION: Codigo 4 detectada.
+[2026-01-18 23:24:33] DMA: Hilo de transferencia finalizado correctamente
+[2026-01-18 23:24:33] INT: Iniciando secuencia de interrupción 4...
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 298, valor 12
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 297, valor 0
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 296, valor 0
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 295, valor 300
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 294, valor 1999
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 293, valor 0
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 292, valor 0
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 4, valor 20
+[2026-01-18 23:24:33] INT: Contexto salvado. Saltando a manejador en dir 20
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 20, valor 14000000
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 292, valor 0
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 293, valor 0
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 294, valor 1999
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 295, valor 300
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 296, valor 0
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 297, valor 0
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 298, valor 12
+[2026-01-18 23:24:33] RETRN: Contexto restaurado. Volviendo a PC=12
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 312, valor 4100000
+[2026-01-18 23:24:33] Ejecutando LOAD, AC cargado con 0
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 313, valor 4000600
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 900, valor 1
+[2026-01-18 23:24:33] Ejecutando LOAD, AC cargado con 1
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 314, valor 100001
+[2026-01-18 23:24:33] ALU: SUM 1 + 1 = 2 (Codificado en AC: 2)
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 315, valor 5000600
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 900, valor 2
+[2026-01-18 23:24:33] Ejecutando STR, valor 2 escrito en dirección 900
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 316, valor 28100000
+[2026-01-18 23:24:33] DMA: (Handler) Pista establecida en 0
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 317, valor 29100000
+[2026-01-18 23:24:33] DMA: (Handler) Cilindro establecido en 0
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 318, valor 30100001
+[2026-01-18 23:24:33] DMA: (Handler) Sector establecido en 1
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 319, valor 31100000
+[2026-01-18 23:24:33] DMA: (Handler) Modo de operación establecido en 0 (0 = leer, 1 = escribir)
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 320, valor 32100600
+[2026-01-18 23:24:33] DMA: (Handler) Dirección de memoria establecida en 900
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 321, valor 33000000
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 300, valor 4100001
+[2026-01-18 23:24:33] DMA: (Handler) Iniciando operación E/S asíncrona...
+[2026-01-18 23:24:33] DMA: Hilo de transferencia iniciado
+[2026-01-18 23:24:33] DMA: Operación E/S con parámetros - PISTA=0, CILINDRO=0, SECTOR=1, IO=0, ADDRESS=900
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 900, valor 2
+[2026-01-18 23:24:33] DMA: Palabra de memoria leída. Valor: 2
+[2026-01-18 23:24:33] DMA: Formateado para disco. Cadena: "00000002"
+[2026-01-18 23:24:33] Escribiendo en disco: pista 0, cilindro 0, sector 1, data: 00000002
+[2026-01-18 23:24:33] DMA: ÉXITO - Transferencia Memoria->Disco completada. Word=2 escrito en sector "00000002"
+[2026-01-18 23:24:33] DMA: Operación finalizada. Estado: 0 (0=éxito, 1=error).
+[2026-01-18 23:24:33] >> SOLICITUD INTERRUPCION: Codigo 4 detectada.
+[2026-01-18 23:24:33] DMA: Hilo de transferencia finalizado correctamente
+[2026-01-18 23:24:33] INT: Iniciando secuencia de interrupción 4...
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 298, valor 22
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 297, valor 2
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 296, valor 0
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 295, valor 300
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 294, valor 1999
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 293, valor 2
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 292, valor 0
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 4, valor 20
+[2026-01-18 23:24:33] INT: Contexto salvado. Saltando a manejador en dir 20
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 20, valor 14000000
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 292, valor 0
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 293, valor 2
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 294, valor 1999
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 295, valor 300
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 296, valor 0
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 297, valor 2
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 298, valor 22
+[2026-01-18 23:24:33] RETRN: Contexto restaurado. Volviendo a PC=22
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 322, valor 4100000
+[2026-01-18 23:24:33] Ejecutando LOAD, AC cargado con 0
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 323, valor 31100001
+[2026-01-18 23:24:33] DMA: (Handler) Modo de operación establecido en 1 (0 = leer, 1 = escribir)
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 324, valor 32100700
+[2026-01-18 23:24:33] DMA: (Handler) Dirección de memoria establecida en 1000
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 325, valor 33000000
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 300, valor 4100001
+[2026-01-18 23:24:33] DMA: (Handler) Iniciando operación E/S asíncrona...
+[2026-01-18 23:24:33] DMA: Hilo de transferencia iniciado
+[2026-01-18 23:24:33] DMA: Operación E/S con parámetros - PISTA=0, CILINDRO=0, SECTOR=1, IO=1, ADDRESS=1000
+[2026-01-18 23:24:33] Leyendo en disco: pista 0, cilindro 0, sector 1, data: 00000002
+[2026-01-18 23:24:33] DMA: Leído sector del disco. Contenido: "00000002"
+[2026-01-18 23:24:33] DMA: Convertido a entero. Valor: 2
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 1000, valor 2
+[2026-01-18 23:24:33] DMA: ÉXITO - Transferencia Disco->Memoria completada. Sector "00000002" escrito en dirección 1000 como valor 2
+[2026-01-18 23:24:33] DMA: Operación finalizada. Estado: 0 (0=éxito, 1=error).
+[2026-01-18 23:24:33] >> SOLICITUD INTERRUPCION: Codigo 4 detectada.
+[2026-01-18 23:24:33] DMA: Hilo de transferencia finalizado correctamente
+[2026-01-18 23:24:33] INT: Iniciando secuencia de interrupción 4...
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 298, valor 26
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 297, valor 0
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 296, valor 0
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 295, valor 300
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 294, valor 1999
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 293, valor 2
+[2026-01-18 23:24:33] Escribiendo memoria fisica: direccion 292, valor 0
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 4, valor 20
+[2026-01-18 23:24:33] INT: Contexto salvado. Saltando a manejador en dir 20
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 20, valor 14000000
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 292, valor 0
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 293, valor 2
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 294, valor 1999
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 295, valor 300
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 296, valor 0
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 297, valor 0
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 298, valor 26
+[2026-01-18 23:24:33] RETRN: Contexto restaurado. Volviendo a PC=26
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 326, valor 4100000
+[2026-01-18 23:24:33] Ejecutando LOAD, AC cargado con 0
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 327, valor 4000700
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 1000, valor 2
+[2026-01-18 23:24:33] Ejecutando LOAD, AC cargado con 2
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 328, valor 100001
+[2026-01-18 23:24:33] ALU: SUM 2 + 1 = 3 (Codificado en AC: 3)
+[2026-01-18 23:24:33] Leyendo memoria fisica: direccion 329, valor 13000000
+[2026-01-18 23:24:33] SVC: Solicitud de servicio al sistema.
+[2026-01-18 23:24:33] >> SOLICITUD INTERRUPCION: Codigo 2 detectada.
+[2026-01-18 23:24:33] SVC: Llamada al Sistema (Fin de programa temporal)
+[2026-01-18 23:24:38] DMA: finalizado exitosamente
+[2026-01-18 23:24:38] BUS: finalizado exitosamente
+LOG: finalizado exitosamente.

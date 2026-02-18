@@ -1,0 +1,63 @@
+.NombreProg test_consecutive_dma
+.NumeroPalabras 30
+_start 1
+
+04100001  // 1. LOAD inmediato 1 -> AC = 1
+
+05000500  // 2. STR directo a dirección 500 -> Mem[800] = AC = 1
+
+28100000  // 3. SDMAP inmediato 0 -> pista = 0
+
+29100000  // 4. SDMAC inmediato 0 -> cilindro = 0
+
+30100000  // 5. SDMAS inmediato 0 -> sector = 0
+
+31100000  // 6. SDMAIO inmediato 0 -> IO = 0 memoria->disco
+
+32100500  // 7. SDMAM inmediato 500 -> ADDRESS = 800
+
+33000000  // 8. SDMAON
+
+04100000  // 9. LOAD inmediato 0
+
+31100001  // 10. SDMAIO inmediato 1 -> IO = 1 disco->memoria
+
+32100600  // 11. SDMAM inmediato 600 -> ADDRESS = 900
+
+33000000  // 12. SDMAON
+
+04100000  // 13. LOAD inmediato 0
+
+04000600  // 14. LOAD directo desde memoria[900] -> AC = 1
+
+00100001  // 15. SUM inmediato 1 -> AC = 1 + 1 = 2
+
+05000600  // 16. STR directo a dirección 600 -> Mem[900]
+
+28100000  // 17. SDMAP inmediato 0
+
+29100000  // 18. SDMAC inmediato 0
+
+30100001  // 19. SDMAS inmediato 1 -> sector = 1
+
+31100000  // 20. SDMAIO inmediato 0
+
+32100600  // 21. SDMAM inmediato 600 -> Mem[900]
+
+33000000  // 22. SDMAON
+
+04100000  // 23. LOAD inmediato 0
+
+31100001  // 24. SDMAIO inmediato 1
+
+32100700  // 25. SDMAM inmediato 700 -> ADDRESS = 1000
+
+33000000  // 26. SDMAON
+
+04100000  // 27. LOAD inmediato 0
+
+04000700  // 28. LOAD directo desde memoria[1000] -> AC = 2
+
+00100001  // 29. SUM inmediato 1 -> AC = 2 + 1 = 3
+
+13000000  // SVC

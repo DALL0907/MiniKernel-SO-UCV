@@ -1,0 +1,15 @@
+.NombreProg test_pop
+.NumeroPalabras 6
+_start 1
+
+25100123  // 1. PSH inmediato 123 -> Stack: [123]
+
+25100456  // 2. PSH inmediato 456 -> Stack: [123, 456]
+
+26000100  // 3. POP directo a dirección 100 (400) -> Memoria[100] = 456, Stack: [123]
+
+26000101  // 4. POP directo a dirección 101 (401)-> Memoria[101] = 123, Stack: []
+
+04100999  // 5. LOAD inmediato 999
+
+13000000  // SVC

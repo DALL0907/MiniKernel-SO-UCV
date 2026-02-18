@@ -1,0 +1,24 @@
+.NombreProg test_math
+.NumeroPalabras 7
+_start 0
+
+// 1. LOAD 10
+04100010
+
+// 2. SUM 10 (10 + 10 = 20)
+00100010
+
+// 3. MULT 5 (20 * 5 = 100)
+02100005
+
+// 4. DIVI 2 (100 / 2 = 50)
+03100002
+
+// 5. RES 8 (50 - 8 = 42)
+01100008
+
+// 6. STR 10 (Guardar 42 en dir relativa 10)
+05000010
+
+// 7. SVC (Fin)
+13000000

@@ -1,0 +1,17 @@
+.NombreProg test_invalid_pop
+.NumeroPalabras 7
+_start 1
+
+04100010  // 1. LOAD inmediato 10 -> AC = 10
+
+05000050  // 2. STR directo a dirección 50 (350) -> Mem[350] = 10
+
+04100999  // 3. LOAD inmediato 999 -> AC = 999
+
+25100100  // 4. PSH inmediato 100 -> Stack: [100]
+
+26000060  // 5. POP directo a dirección 60 (360) -> Mem[360] = 100, Stack: []
+
+26000070  // 6. POP directo a dirección 70 (370) ERROR
+
+04100001  // 7. LOAD inmediato 1 -> AC = 1

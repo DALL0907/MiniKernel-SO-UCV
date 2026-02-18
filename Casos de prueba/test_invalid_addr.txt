@@ -1,0 +1,15 @@
+.NombreProg test_invalid_addr
+.NumeroPalabras 6
+_start 1
+
+04100777  // 1. LOAD inmediato 777 -> AC = 777
+
+05002000  // 2. STR directo a dirección 2000 (2300) ERROR
+
+04100123  // 3. LOAD inmediato 123 -> AC = 123
+
+04000000  // 4. LOAD directo desde dirección 0 (300) -> Mem[300]
+
+00100100  // 5. SUM inmediato 100 -> AC = AC + 100
+
+13000000  // 6. SVC
