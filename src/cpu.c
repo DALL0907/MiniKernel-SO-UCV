@@ -1,4 +1,5 @@
 #include "brain.h"
+#include "kernel.h"
 #include "cpu.h"
 #include "bus.h"
 #include "memory.h"
@@ -148,6 +149,32 @@ void cpu_init()
     write_log(0, "CPU Inicializada.\n");
 }
 
+void dispatch(int nuevo_pid)
+{
+    // 1. Si había un proceso corriendo, lo pasamos a LISTO (a menos que haya terminado o dormido)
+    if (current_pid != NULL_PID && process_table[current_pid].state == STATE_RUNNING)
+    {
+        process_table[current_pid].state = STATE_READY;
+    }
+
+    // 2. Actualizamos el PID actual
+    current_pid = nuevo_pid;
+
+    // 3. Pasamos el nuevo proceso a estado RUNNING
+    process_table[current_pid].state = STATE_RUNNING;
+
+    // 4. CARGAR CONTEXTO
+    // Copiamos todos los registros del PCB a la CPU global
+    context = process_table[current_pid].context;
+
+    // Aseguramos que corra en modo usuario y con interrupciones habilitadas
+    context.PSW.Mode = USER_MODE;
+    context.PSW.Interrupts = 1;
+
+    write_log(0, ">> PLANIFICADOR: Cambio de contexto -> Entra PID %d (%s) a ejecutar.\n",
+              current_pid, process_table[current_pid].name);
+}
+
 void cpu_interrupt(int interrupt_code)
 {
 
@@ -212,24 +239,13 @@ int handle_interrupt()
         }
     }
 
-    // 1. SALVAR CONTEXTO (Guardar registros en la Pila)
-    // El orden es arbitrario, pero debe coincidir con el futuro "RETRN" (IRET)
-    if (push_stack(context.PSW.PC) != 0)
-        return -1; // Guardar dónde íbamos
-    if (push_stack(context.AC) != 0)
-        return -1; // Guardar Acumulador
-    if (push_stack(context.RX) != 0)
-        return -1; // Guardar Registro Auxiliar
-    if (push_stack(context.RB) != 0)
-        return -1; // Guardar Base
-    if (push_stack(context.RL) != 0)
-        return -1; // Guardar Límite
-    if (push_stack(context.PSW.CC) != 0)
-        return -1; // Guardar Estado de comparación
-
-    // Guardamos el Modo anterior para poder volver a él
-    if (push_stack(context.PSW.Mode) != 0)
-        return -1;
+    // 1. SALVAR CONTEXTO EN EL PCB
+    // Si hay un proceso corriendo actualmente, guardamos su estado exacto.
+    if (current_pid != NULL_PID)
+    {
+        process_table[current_pid].context = context;
+        write_log(0, "DISPATCHER: Contexto salvado para PID=%d (PC=%d)\n", current_pid, context.PSW.PC);
+    }
 
     // 2. CAMBIAR A MODO KERNEL
     context.PSW.Mode = KERNEL_MODE; // Ahora somos omnipotentes
@@ -577,35 +593,25 @@ int cpu()
         cpu_interrupt(INT_SYSCALL);
         write_log(1, "SVC: Llamada al Sistema (Fin de programa temporal)\n");
         return 0;  // Detener ejecución por ahora
-    case OP_RETRN: // 14 //Retorno de interrupción
+    case OP_RETRN: // 14
         if (context.PSW.Mode == USER_MODE)
         {
             write_log(1, "ERROR: Intento de RETRN en Modo Usuario.\n");
-            cpu_interrupt(INT_INVALID_OP); // Protección
+            cpu_interrupt(INT_INVALID_OP);
         }
         else
         {
-            // Recuperar contexto en ORDEN INVERSO al guardado en handle_interrupt
-            // Orden guardado: PC, AC, RX, RB, RL, CC, Mode
-            // Orden recuperación: Mode, CC, RL, RB, RX, AC, PC
-            int temp;
-            pop_stack(&temp);
-            context.PSW.Mode = temp;
-            pop_stack(&temp);
-            context.PSW.CC = temp;
-            pop_stack(&temp);
-            context.RL = temp;
-            pop_stack(&temp);
-            context.RB = temp;
-            pop_stack(&temp);
-            context.RX = temp;
-            pop_stack(&temp);
-            context.AC = temp;
-            pop_stack(&temp);
-            context.PSW.PC = temp;
-
-            context.PSW.Interrupts = 1; // Volver a habilitar interrupciones
-            write_log(0, "RETRN: Contexto restaurado. Volviendo a PC=%d\n", context.PSW.PC);
+            // El Kernel terminó su trabajo.
+            // Restauramos el proceso que deba correr
+            if (current_pid != NULL_PID)
+            {
+                dispatch(current_pid); // Esto sobreescribe los registros actuales de la CPU con los del PCB
+            }
+            else
+            {
+                write_log(1, "KERNEL PANIC: RETRN sin un proceso válido para despachar.\n");
+                return 1; // Detener CPU
+            }
         }
         break;
     case OP_HAB: // 15
