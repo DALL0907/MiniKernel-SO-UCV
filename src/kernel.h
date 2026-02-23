@@ -74,4 +74,6 @@ const char *state_to_string(ProcessState s);
 
 int find_free_partition();
 
+void kernel_handle_interrupt(int interrupt_code);
+
 #endif

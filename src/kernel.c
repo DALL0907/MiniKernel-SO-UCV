@@ -9,6 +9,40 @@ int current_pid = NULL_PID;
 int system_ticks = 0;
 bool partitions_bitmap[NUM_PARTITIONS];
 
+// --- COLA DE LISTOS (READY QUEUE) ---
+int ready_queue[MAX_PROCESSES];
+int rq_head = 0;
+int rq_aux = 0;
+int rq_count = 0;
+
+// Encola un proceso al final de la cola de listos
+void enqueue_ready(int pid)
+{
+    if (rq_count < MAX_PROCESSES)
+    {
+        ready_queue[rq_aux] = pid;
+        rq_aux = (rq_aux + 1) % MAX_PROCESSES;
+        rq_count++;
+        process_table[pid].state = STATE_READY;
+    }
+    else
+    {
+        write_log(1, "KERNEL PANIC: Cola de listos desbordada.\n");
+    }
+}
+
+// Desencola el primer proceso de la cola de listos
+int dequeue_ready()
+{
+    if (rq_count == 0)
+        return NULL_PID;
+
+    int pid = ready_queue[rq_head];
+    rq_head = (rq_head + 1) % MAX_PROCESSES;
+    rq_count--;
+    return pid;
+}
+
 // Inicializa todas las tablas en 0/Vacío
 void kernel_init_structures()
 {
@@ -118,5 +152,109 @@ const char *state_to_string(ProcessState s)
         return "TERMINATED";
     default:
         return "UNKNOWN";
+    }
+}
+
+extern void dispatch(int nuevo_pid);
+
+void schedule()
+{
+    int outgoing_pid = current_pid;
+
+    // Manejar el proceso actual (si hay uno)
+    if (outgoing_pid != NULL_PID)
+    {
+        if (process_table[outgoing_pid].state == STATE_RUNNING)
+        {
+            // Si estaba corriendo y se llamó al scheduler, es porque se le acabó el quantum.
+            // Lo devolvemos a la cola de listos.
+            enqueue_ready(outgoing_pid);
+        }
+    }
+
+    // Seleccionar el siguiente proceso
+    int incoming_pid = dequeue_ready();
+
+    if (incoming_pid == NULL_PID)
+    {
+        // No hay más procesos en la cola
+        if (outgoing_pid != NULL_PID && process_table[outgoing_pid].state == STATE_READY)
+        {
+            // El único que hay es el mismo. Lo volvemos a sacar.
+            incoming_pid = dequeue_ready();
+        }
+        else
+        {
+            // La CPU se queda ociosa
+            current_pid = NULL_PID;
+            return;
+        }
+    }
+
+    // REGISTRO EN EL LOG
+    if (outgoing_pid != incoming_pid && outgoing_pid != NULL_PID)
+    {
+        write_log(0, "PLANIFICADOR: Quantum agotado. Sale PID %d (%s), Entra PID %d (%s)\n",
+                  outgoing_pid, process_table[outgoing_pid].name,
+                  incoming_pid, process_table[incoming_pid].name);
+    }
+
+    // Reiniciar su contador de quantum y despacharlo
+    process_table[incoming_pid].quantum_counter = 0;
+    dispatch(incoming_pid);
+}
+
+// Atiende las interrupciones desde el punto de vista del Sistema Operativo
+void kernel_handle_interrupt(int interrupt_code)
+{
+    if (current_pid == NULL_PID)
+        return;
+    // --- MANEJO DE RELOJ (Round Robin) --- //si ocurre es porque se le acabo su tiempo a un proceso
+    if (interrupt_code == INT_CLOCK)
+    {
+        system_ticks++;
+        process_table[current_pid].quantum_counter++;
+
+        if (process_table[current_pid].quantum_counter >= QUANTUM_TICKS)
+        {
+            write_log(0, "KERNEL: PID %d agotó su quantum de %d ticks.\n", current_pid, QUANTUM_TICKS);
+            schedule();
+        }
+    }
+    // --- MANEJO DE ERRORES FATALES ---
+    else if (interrupt_code == INT_INV_ADDR || interrupt_code == INT_UNDERFLOW ||
+             interrupt_code == INT_OVERFLOW || interrupt_code == INT_INV_INSTR)
+    {
+
+        write_log(1, "KERNEL: Error fatal (Cod %d) en PID %d. Terminando proceso.\n",
+                  interrupt_code, current_pid);
+
+        // 1. Cambiamos el estado a TERMINADO
+        process_table[current_pid].state = STATE_TERMINATED;
+
+        // 2. Liberamos su memoria en el mapa de particiones
+        if (process_table[current_pid].partition_id != -1)
+        {
+            partitions_bitmap[process_table[current_pid].partition_id] = false;
+        }
+
+        // 3. Llamamos al planificador para que meta al siguiente proceso
+        schedule();
+    }
+    // --- CASO DMA ERROR ---
+    else if (interrupt_code == INT_IO_END)
+    {
+        // Aquí luego agregaremos la lógica de desbloquear procesos que esperaban disco
+        int dma_state = dma_get_state();
+        if (dma_state != 0)
+        {
+            write_log(1, "KERNEL: Fallo crítico de DMA en PID %d. Terminando proceso.\n", current_pid);
+            process_table[current_pid].state = STATE_TERMINATED;
+            if (process_table[current_pid].partition_id != -1)
+            {
+                partitions_bitmap[process_table[current_pid].partition_id] = false;
+            }
+            schedule();
+        }
     }
 }

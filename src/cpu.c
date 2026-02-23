@@ -189,57 +189,7 @@ int handle_interrupt()
 {
     write_log(0, "INT: Iniciando secuencia de interrupción %d...\n", interrupt_code_val);
 
-    // --- MATAR PROCESO EN ERRORES FATALES ---
-
-    // 1. Violación de Segmento
-    if (interrupt_code_val == INT_INV_ADDR)
-    {
-        write_log(1, "KERNEL: Violación de Segmento (SIGSEGV). Terminando proceso.\n");
-        interrupt_pending = 0;
-        return INT_INV_ADDR;
-    }
-
-    // 2. Stack Underflow
-    if (interrupt_code_val == INT_UNDERFLOW)
-    {
-        write_log(1, "KERNEL: Stack Underflow. Terminando proceso.\n");
-        interrupt_pending = 0;
-        return INT_UNDERFLOW;
-    }
-
-    // 3. Stack Overflow / División por Cero
-    if (interrupt_code_val == INT_OVERFLOW)
-    {
-        write_log(1, "KERNEL: Stack Overflow. Terminando proceso.\n");
-        interrupt_pending = 0;
-        return INT_OVERFLOW;
-    }
-
-    // 4. Instrucción Ilegal o error generado por esta, ej. div por cero
-    if (interrupt_code_val == INT_INV_INSTR)
-    {
-        write_log(1, "KERNEL: Error fatal en instruccion. Terminando proceso.\n");
-        interrupt_pending = 0;
-        return INT_INV_INSTR;
-    }
-    // Caso especial: Interrupción por finalización de E/S
-    if (interrupt_code_val == INT_IO_END)
-    {
-        // Verificar el estado del DMA
-        int dma_state = dma_get_state();
-
-        if (dma_state != 0)
-        {
-            write_log(1, "INT: Operación DMA falló con estado %d\n", dma_state);
-
-            // Si hay error en DMA, terminamos el programa
-            // Limpiamos la bandera de interrupción
-            interrupt_pending = 0;
-            return IO_ERROR;
-        }
-    }
-
-    // 1. SALVAR CONTEXTO EN EL PCB
+    // 1. SALVAR CONTEXTO EN EL PCB (Dispatcher)
     // Si hay un proceso corriendo actualmente, guardamos su estado exacto.
     if (current_pid != NULL_PID)
     {
@@ -249,25 +199,17 @@ int handle_interrupt()
 
     // 2. CAMBIAR A MODO KERNEL
     context.PSW.Mode = KERNEL_MODE; // Ahora somos omnipotentes
-    context.PSW.Interrupts = 0;     // Deshabilitar int anidadas (para no interrumpir al manejador)
+    context.PSW.Interrupts = 0;     // Deshabilitar int anidadas
 
-    // 3. SALTO AL MANEJADOR (Vector de Interrupciones)
-    // Leemos la dirección de memoria física donde está el código para esta interrupción.
-    // Asumimos que el Vector está en las direcciones 0, 1, 2... de la RAM física.
-    Word handler_address;
-    if (bus_read(interrupt_code_val, &handler_address, 0) == 0)
-    {
-        context.PSW.PC = handler_address;
-        write_log(0, "INT: Contexto salvado. Saltando a manejador en dir %d\n", handler_address);
-    }
-    else
-    {
-        write_log(1, "INT FATAL: No se pudo leer el Vector de Interrupciones.\n");
-        return -1;
-    }
+    // 3. PASAR EL CONTROL AL KERNEL
+    // Le pasamos CUALQUIER interrupción al Sistema Operativo (incluso los errores fatales).
+    // La rutina manejadora está implementada en el código fuente
+    kernel_handle_interrupt(interrupt_code_val);
 
-    // Limpiamos la bandera
+    // 4. Limpiamos la bandera
     interrupt_pending = 0;
+    // Siempre retornamos 0 para que el ciclo de la CPU en main.c siga vivo
+    // ejecutando el siguiente proceso que el planificador haya elegido.
     return 0;
 }
 
@@ -308,6 +250,19 @@ int int_to_sm(int int_val)
 
 int cpu()
 {
+    static int cycle_counter = 0;
+    cycle_counter++;
+
+    // Cada 2 ciclos de CPU simulamos 1 quantum
+    if (cycle_counter >= 2)
+    {
+        cycle_counter = 0;
+        // Solo lanzamos interrupción de reloj si las interrupciones están habilitadas
+        if (context.PSW.Interrupts)
+        {
+            cpu_interrupt(INT_CLOCK); // Código 3
+        }
+    }
     // --- SIMULACIÓN DE RELOJ ---
     usleep(2000); // 2ms por ciclo de instrucción
 
