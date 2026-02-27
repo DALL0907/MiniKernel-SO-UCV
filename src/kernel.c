@@ -1,3 +1,5 @@
+#include "cpu.h"
+#include "bus.h"
 #include "kernel.h"
 #include "log.h"
 #include <string.h>
@@ -257,4 +259,112 @@ void kernel_handle_interrupt(int interrupt_code)
             schedule();
         }
     }
+    // --- MANEJO DE LLAMADAS AL SISTEMA (SYSCALLS) ---
+    else if (interrupt_code == INT_SYSCALL)
+    {
+
+        // 1. El código de la llamada viene en el Acumulador (AC).
+        // Convertimos de Signo-Magnitud a Entero C para poder usar el switch.
+        int syscall_code = sm_to_int(process_table[current_pid].context.AC);
+
+        int param_raw = 0;  // Valor en signo magnitud
+        int param_real = 0; // Valor convertido a Entero C
+
+        switch (syscall_code)
+        {
+        case 1: // termina_prog (estado)
+            if (kernel_pop_stack(current_pid, &param_raw) == 0)
+            {
+                param_real = sm_to_int(param_raw);
+
+                write_log(0, "SYSCALL 1: Proceso %d solicita terminar con estado %d.\n", current_pid, param_real);
+
+                // Matamos el proceso
+                process_table[current_pid].state = STATE_TERMINATED;
+
+                // Liberamos su memoria para que otro proceso la pueda usar
+                if (process_table[current_pid].partition_id != -1)
+                {
+                    partitions_bitmap[process_table[current_pid].partition_id] = false;
+                }
+
+                // Llamamos al planificador para que asigne la CPU al siguiente en la cola
+                schedule();
+            }
+            else
+            {
+                write_log(1, "KERNEL ERROR: Fallo al leer pila en Syscall termina_prog.\n");
+                // Podríamos matarlo forzosamente aquí
+            }
+            break;
+
+        case 2: // imprime_pantalla (valor)
+            if (kernel_pop_stack(current_pid, &param_raw) == 0)
+            {
+
+                // Convertimos a entero C antes de imprimir en la terminal
+                param_real = sm_to_int(param_raw);
+
+                printf("\n[SALIDA PROCESO %d]> %d\n", current_pid, param_real);
+                write_log(0, "SYSCALL 2: Proceso %d imprimió en pantalla el valor %d.\n", current_pid, param_real);
+
+                // El proceso sigue RUNNING, no llamamos a schedule()
+            }
+            else
+            {
+                write_log(1, "KERNEL ERROR: Fallo al leer pila en Syscall imprime_pantalla.\n");
+            }
+            break;
+
+        case 3: // leer_pantalla ()
+        {
+            printf("\n[ENTRADA PROCESO %d]> Ingrese un entero: ", current_pid);
+            int input_val;
+            if (scanf("%d", &input_val) == 1)
+            {
+
+                // Convertimos el número ingresado por el usuario a SM
+                int input_sm = int_to_sm(input_val);
+
+                // Guardamos el resultado en el AC del proceso pausado
+                process_table[current_pid].context.AC = input_sm;
+
+                write_log(0, "SYSCALL 3: Proceso %d leyó el valor %d (Codificado AC: %d).\n",
+                          current_pid, input_val, input_sm);
+            }
+            else
+            {
+                write_log(1, "KERNEL ERROR: Entrada de usuario inválida.\n");
+                // Limpiar el buffer de entrada si el usuario tecleó letras
+                while (getchar() != '\n')
+                    ;
+                // Dejamos el AC intacto o le ponemos 0 por defecto
+                process_table[current_pid].context.AC = int_to_sm(0);
+            }
+        }
+        break;
+
+        default:
+            write_log(1, "KERNEL ERROR: Código de Syscall desconocido (%d) del PID %d.\n", syscall_code, current_pid);
+            break;
+        }
+    }
+}
+
+// Extrae un valor de la pila del proceso actual sin modificar los registros reales de la CPU,
+// solo modificando el PCB (ya que el proceso está pausado).
+int kernel_pop_stack(int pid, int *value)
+{
+    int sp = process_table[pid].context.SP;
+
+    // Leemos la memoria física donde apunta el SP actual del proceso
+    if (bus_read(sp, value, 0) != 0)
+    {
+        return -1; // Fallo de lectura
+    }
+
+    // Incrementamos el SP en el PCB porque hicimos "pop" (la pila crece hacia abajo)
+    process_table[pid].context.SP++;
+
+    return 0;
 }
