@@ -211,16 +211,53 @@ void kernel_handle_interrupt(int interrupt_code)
 {
     if (current_pid == NULL_PID)
         return;
-    // --- MANEJO DE RELOJ (Round Robin) --- //si ocurre es porque se le acabo su tiempo a un proceso
+
+    // --- MANEJO DE RELOJ (Round Robin y Despertador) ---
     if (interrupt_code == INT_CLOCK)
     {
-        system_ticks++;
-        process_table[current_pid].quantum_counter++;
+        system_ticks++; // El tiempo global avanza
 
-        if (process_table[current_pid].quantum_counter >= QUANTUM_TICKS)
+        // 1. EL DESPERTADOR: Revisar si algún proceso dormido debe despertar
+        for (int i = 0; i < MAX_PROCESSES; i++)
         {
-            write_log(0, "KERNEL: PID %d agotó su quantum de %d ticks.\n", current_pid, QUANTUM_TICKS);
-            schedule();
+            // Buscamos procesos válidos en estado BLOCKED
+            if (process_table[i].pid != -1 && process_table[i].state == STATE_BLOCKED)
+            {
+                // Si el tiempo actual alcanzó o superó su tiempo de despertar
+                if (process_table[i].wake_time > 0 && system_ticks >= process_table[i].wake_time)
+                {
+
+                    write_log(0, "KERNEL: Proceso %d despertó (Tick actual: %d). Pasa a LISTO.\n", i, system_ticks);
+
+                    // Reseteamos su alarma
+                    process_table[i].wake_time = 0;
+
+                    // Lo metemos al final de la cola de listos
+                    enqueue_ready(i);
+                }
+            }
+        }
+
+        // 2. EL PLANIFICADOR (Round Robin)
+        // Solo verificamos quantum si hay un proceso corriendo
+        if (current_pid != NULL_PID)
+        {
+            process_table[current_pid].quantum_counter++;
+
+            if (process_table[current_pid].quantum_counter >= QUANTUM_TICKS)
+            {
+                write_log(0, "KERNEL: PID %d agotó su quantum de %d tics.\n", current_pid, QUANTUM_TICKS);
+                schedule();
+            }
+        }
+        else
+        {
+            // Si la CPU estaba inactiva pero acabamos de despertar a alguien,
+            // llamamos al planificador para que le asigne la CPU inmediatamente.
+            if (rq_count > 0)
+            {
+                schedule();
+            }
         }
     }
     // --- MANEJO DE ERRORES FATALES ---
@@ -342,7 +379,36 @@ void kernel_handle_interrupt(int interrupt_code)
                 process_table[current_pid].context.AC = int_to_sm(0);
             }
         }
-        break;
+        case 4: // Dormir (tics)
+            if (kernel_pop_stack(current_pid, &param_raw) == 0)
+            {
+                param_real = sm_to_int(param_raw);
+
+                if (param_real > 0)
+                {
+                    write_log(0, "SYSCALL 4: Proceso %d a dormir por %d tics (Actual: %d, Despertará: %d).\n",
+                              current_pid, param_real, system_ticks, system_ticks + param_real);
+
+                    // 1. Cambiamos el estado a bloqueado (DORMIDO)
+                    process_table[current_pid].state = STATE_BLOCKED;
+
+                    // 2. Calculamos y guardamos el tick en el que debe despertar
+                    process_table[current_pid].wake_time = system_ticks + param_real;
+
+                    // 3. Llamamos al planificador para que otro proceso use la CPU
+                    schedule();
+                }
+                else
+                {
+                    write_log(1, "KERNEL WARN: Syscall Dormir con tics <= 0. Ignorando.\n");
+                    // Si mandó 0 o negativo, lo ignoramos y sigue su ejecución normal
+                }
+            }
+            else
+            {
+                write_log(1, "KERNEL ERROR: Fallo al leer pila en Syscall Dormir.\n");
+            }
+            break;
 
         default:
             write_log(1, "KERNEL ERROR: Código de Syscall desconocido (%d) del PID %d.\n", syscall_code, current_pid);
