@@ -5,8 +5,10 @@
 #include <string.h>
 #include <stdio.h>
 
-// Definición de variables globales
+// --- DEFINICIÓN DE VARIABLES GLOBALES ---
 PCB process_table[MAX_PROCESSES];
+FileTableEntry file_table[MAX_FILE_TABLE];
+int file_table_count = 0;
 int current_pid = NULL_PID;
 int system_ticks = 0;
 bool partitions_bitmap[NUM_PARTITIONS];
@@ -45,15 +47,31 @@ int dequeue_ready()
     return pid;
 }
 
-// Inicializa todas las tablas en 0/Vacío
+//Inicializa todas las tablas y estructuras del kernel
 void kernel_init_structures()
 {
+    // Inicializar tabla de procesos
     for (int i = 0; i < MAX_PROCESSES; i++)
     {
-        process_table[i].pid = -1;                 // -1 indica que no tiene aun
-        process_table[i].state = STATE_TERMINATED; // por defeto TERMINATED para sencillez
-        process_table[i].partition_id = -1;        // No asignada a ninguna partición
+        process_table[i].pid = -1;
+        process_table[i].state = STATE_TERMINATED;
+        process_table[i].partition_id = -1;
     }
+
+    // Inicializar tabla de archivos
+    for (int i = 0; i < MAX_FILE_TABLE; i++)
+    {
+        file_table[i].program_name[0] = '\0';
+        file_table[i].pid = -1;
+        file_table[i].partition_id = -1;
+        file_table[i].state = FILE_STATE_DISK;
+        file_table[i].track = -1;
+        file_table[i].cylinder = -1;
+        file_table[i].sector_initial = -1;
+        file_table[i].size_words = 0;
+        file_table[i].n_start = 0;
+    }
+    file_table_count = 0;
 
     // Inicializar particiones como libres
     for (int i = 0; i < NUM_PARTITIONS; i++)
@@ -64,16 +82,133 @@ void kernel_init_structures()
     current_pid = NULL_PID;
     system_ticks = 0;
 
-    write_log(0, "KERNEL: Estructuras de datos inicializadas (Tabla de Procesos y Mapa de Memoria).\n");
+    write_log(0, "KERNEL: Estructuras inicializadas (Procesos, Archivos, Memoria).\n");
 }
 
-// Busca un slot libre en la tabla y crea un PCB básico (Estado NEW)
-// Retorna el PID asignado o -1 si la tabla está llena.
+// ============================================================
+// === FUNCIONES DE GESTIÓN DE TABLA DE ARCHIVOS ===
+// ============================================================
+
+/**
+ * Busca un programa en la tabla de archivos por nombre
+ * 
+ * Se usa principalmente para:
+ *   - El comando CARGAR: verifica que no exista ya y esa broma
+ *   - El comando EJECUTAR: obtiene los datos del programa en disco
+ * 
+ * Retorna: índice en file_table, o -1 si no existe
+ */
+int file_table_search_by_name(const char *program_name)
+{
+    for (int i = 0; i < file_table_count; i++)
+    {
+        if (strcmp(file_table[i].program_name, program_name) == 0)
+        {
+            write_log(0, "FILE TABLE: Programa '%s' encontrado en índice %d.\n", program_name, i);
+            return i;
+        }
+    }
+    write_log(0, "FILE TABLE: Programa '%s' NO encontrado.\n", program_name);
+    return -1;
+}
+
+/**
+ * Busca un programa en la tabla de archivos por PID
+ * 
+ * Se usa principalmente para:
+ *   - Cuando un proceso TERMINA (kernel_handle_interrupt)
+ *   - Cuando el SCHEDULER cambia de proceso
+ *   - Para actualizar el estado del archivo en la tabla
+ * 
+ * Retorna: índice en file_table, o -1 si no existe
+ */
+int file_table_find_by_pid(int pid)
+{
+    for (int i = 0; i < file_table_count; i++)
+    {
+        if (file_table[i].pid == pid)
+        {
+            write_log(0, "FILE TABLE: Archivo con PID %d encontrado en índice %d.\n", pid, i);
+            return i;
+        }
+    }
+    write_log(0, "FILE TABLE: NO hay archivo con PID %d.\n", pid);
+    return -1;
+}
+
+/**
+ * Obtiene un puntero a una entrada de la tabla
+ * Valida que el índice 
+ * 
+ * Retorna: puntero a FileTableEntry, o NULL si índice inválido
+ */
+FileTableEntry* get_file_table_entry(int index)
+{
+    if (index < 0 || index >= file_table_count)
+    {
+        write_log(1, "FILE TABLE ERROR: Índice %d fuera de rango [0, %d).\n", index, file_table_count);
+        return NULL;
+    }
+    return &file_table[index];
+}
+
+/**
+ * Agrega un nuevo programa a la tabla de archivos.
+ * Se llama desde load_program después de escribir en disco.
+ * 
+ * Parámetros:
+ *   - program_name: nombre del programa (ej: "prog1.txt")
+ *   - track, cylinder, sector: ubicación en disco
+ *   - size: cantidad de palabras
+ *   - n_start: índice _start leído del archivo
+ * 
+ * Retorna: índice en file_table, o -1 si error
+ */
+int file_table_add_entry(const char *program_name, int track, int cylinder, int sector, int size, int n_start)
+{
+    // Validar que la tabla no esté llena
+    if (file_table_count >= MAX_FILE_TABLE)
+    {
+        write_log(1, "FILE TABLE ERROR: Tabla llena. No se puede agregar '%s'.\n", program_name);
+        return -1;
+    }
+
+    // Verificar que no exista un programa con el mismo nombre
+    if (file_table_search_by_name(program_name) != -1)
+    {
+        write_log(1, "FILE TABLE ERROR: Programa '%s' ya existe.\n", program_name);
+        return -1;
+    }
+
+    // Agregar la nueva entrada
+    FileTableEntry *entry = &file_table[file_table_count];
+    
+    strncpy(entry->program_name, program_name, 49);
+    entry->program_name[49] = '\0'; // Garantizar null-termination
+    
+    entry->track = track;
+    entry->cylinder = cylinder;
+    entry->sector_initial = sector;
+    entry->size_words = size;
+    entry->n_start = n_start;
+    entry->pid = -1;                    // Sin PID aún (en disco)
+    entry->partition_id = -1;           // Sin partición aún (en disco)
+    entry->state = FILE_STATE_DISK;     // Estado inicial: en disco
+
+    write_log(0, "FILE TABLE: Entrada %d agregada: '%s' [Track=%d, Cyl=%d, Sec=%d, Size=%d, n_start=%d]\n",
+              file_table_count, program_name, track, cylinder, sector, size, n_start);
+
+    file_table_count++;
+    return file_table_count - 1;
+}
+
+
+// Crea un PCB básico para un nuevo proceso (Estado NEW en disco)
+
 int create_process(const char *name, int track, int cylinder, int sector, int size)
 {
     int free_slot = -1;
 
-    // 1. Buscar slot en la tabla de procesos (Máximo 20)
     for (int i = 0; i < MAX_PROCESSES; i++)
     {
         if (process_table[i].pid == -1 || process_table[i].state == STATE_TERMINATED)
@@ -89,32 +224,26 @@ int create_process(const char *name, int track, int cylinder, int sector, int si
         return -1;
     }
 
-    // 2. Inicializar PCB
     PCB *new_proc = &process_table[free_slot];
 
-    new_proc->pid = free_slot; // Usamos el índice como PID
+    new_proc->pid = free_slot;
     strncpy(new_proc->name, name, 49);
-    new_proc->state = STATE_NEW; // Inicialmente NEW (no cargado en RAM)
+    new_proc->state = STATE_NEW;
 
-    // Datos de disco (para cargarlo más tarde)
     new_proc->disk_track = track;
     new_proc->disk_cylinder = cylinder;
     new_proc->disk_sector = sector;
     new_proc->prog_size = size;
 
-    // Datos de memoria (Aún no asignados)
-    new_proc->base_address = -1;
-    new_proc->limit_address = -1;
     new_proc->partition_id = -1;
 
-    // Contexto (Se llenará cuando pase a READY)
     memset(&new_proc->context, 0, sizeof(CPU_Context));
 
     write_log(0, "KERNEL: Proceso creado PID=%d, (%s) en estado NEW.\n", free_slot, name);
     return free_slot;
 }
 
-// Retorna puntero al PCB o NULL si error
+// Obtiene el PCB de un proceso
 PCB *get_pcb(int pid)
 {
     if (pid < 0 || pid >= MAX_PROCESSES)
@@ -124,18 +253,22 @@ PCB *get_pcb(int pid)
     return &process_table[pid];
 }
 
-// Busca una partición de memoria libre
-// Retorna el ID de partición (0-4) o -1 si no hay memoria.
+/**
+ * Encuentra una partición de RAM libre
+ * Retorna: ID de partición (0-4), o -1 si todas están ocupadas
+ */
 int find_free_partition()
 {
     for (int i = 0; i < NUM_PARTITIONS; i++)
     {
         if (!partitions_bitmap[i])
         {
+            write_log(0, "KERNEL: Partición %d está libre.\n", i);
             return i;
         }
     }
-    return -1; // Memoria llena
+    write_log(1, "KERNEL ERROR: Todas las particiones están ocupadas.\n");
+    return -1;
 }
 
 const char *state_to_string(ProcessState s)
@@ -163,37 +296,29 @@ void schedule()
 {
     int outgoing_pid = current_pid;
 
-    // Manejar el proceso actual (si hay uno)
     if (outgoing_pid != NULL_PID)
     {
         if (process_table[outgoing_pid].state == STATE_RUNNING)
         {
-            // Si estaba corriendo y se llamó al scheduler, es porque se le acabó el quantum.
-            // Lo devolvemos a la cola de listos.
             enqueue_ready(outgoing_pid);
         }
     }
 
-    // Seleccionar el siguiente proceso
     int incoming_pid = dequeue_ready();
 
     if (incoming_pid == NULL_PID)
     {
-        // No hay más procesos en la cola
         if (outgoing_pid != NULL_PID && process_table[outgoing_pid].state == STATE_READY)
         {
-            // El único que hay es el mismo. Lo volvemos a sacar.
             incoming_pid = dequeue_ready();
         }
         else
         {
-            // La CPU se queda ociosa
             current_pid = NULL_PID;
             return;
         }
     }
 
-    // REGISTRO EN EL LOG
     if (outgoing_pid != incoming_pid && outgoing_pid != NULL_PID)
     {
         write_log(0, "PLANIFICADOR: Quantum agotado. Sale PID %d (%s), Entra PID %d (%s)\n",
@@ -201,93 +326,71 @@ void schedule()
                   incoming_pid, process_table[incoming_pid].name);
     }
 
-    // Reiniciar su contador de quantum y despacharlo
     process_table[incoming_pid].quantum_counter = 0;
     dispatch(incoming_pid);
 }
 
-// Atiende las interrupciones desde el punto de vista del Sistema Operativo
 void kernel_handle_interrupt(int interrupt_code)
 {
     if (current_pid == NULL_PID)
         return;
 
-    // --- MANEJO DE RELOJ (Round Robin y Despertador) ---
     if (interrupt_code == INT_CLOCK)
     {
-        system_ticks++; // El tiempo global avanza
+        system_ticks++;
 
-        // 1. EL DESPERTADOR: Revisar si algún proceso dormido debe despertar
         for (int i = 0; i < MAX_PROCESSES; i++)
         {
-            // Buscamos procesos válidos en estado BLOCKED
             if (process_table[i].pid != -1 && process_table[i].state == STATE_BLOCKED)
             {
-                // Si el tiempo actual alcanzó o superó su tiempo de despertar
                 if (process_table[i].wake_time > 0 && system_ticks >= process_table[i].wake_time)
                 {
-
-                    write_log(0, "KERNEL: Proceso %d despertó (Tick actual: %d). Pasa a LISTO.\n", i, system_ticks);
-
-                    // Reseteamos su alarma
+                    write_log(0, "KERNEL: Proceso %d despertó. Pasa a LISTO.\n", i);
                     process_table[i].wake_time = 0;
-
-                    // Lo metemos al final de la cola de listos
                     enqueue_ready(i);
                 }
             }
         }
 
-        // 2. EL PLANIFICADOR (Round Robin)
-        // Solo verificamos quantum si hay un proceso corriendo
         if (current_pid != NULL_PID)
         {
             process_table[current_pid].quantum_counter++;
 
             if (process_table[current_pid].quantum_counter >= QUANTUM_TICKS)
             {
-                write_log(0, "KERNEL: PID %d agotó su quantum de %d tics.\n", current_pid, QUANTUM_TICKS);
+                write_log(0, "KERNEL: PID %d agotó su quantum.\n", current_pid);
                 schedule();
             }
         }
         else
         {
-            // Si la CPU estaba inactiva pero acabamos de despertar a alguien,
-            // llamamos al planificador para que le asigne la CPU inmediatamente.
             if (rq_count > 0)
             {
                 schedule();
             }
         }
     }
-    // --- MANEJO DE ERRORES FATALES ---
     else if (interrupt_code == INT_INV_ADDR || interrupt_code == INT_UNDERFLOW ||
              interrupt_code == INT_OVERFLOW || interrupt_code == INT_INV_INSTR)
     {
-
-        write_log(1, "KERNEL: Error fatal (Cod %d) en PID %d. Terminando proceso.\n",
+        write_log(1, "KERNEL: Error fatal (Cod %d) en PID %d. Terminando.\n",
                   interrupt_code, current_pid);
 
-        // 1. Cambiamos el estado a TERMINADO
         process_table[current_pid].state = STATE_TERMINATED;
 
-        // 2. Liberamos su memoria en el mapa de particiones
         if (process_table[current_pid].partition_id != -1)
         {
             partitions_bitmap[process_table[current_pid].partition_id] = false;
         }
 
-        // 3. Llamamos al planificador para que meta al siguiente proceso
         schedule();
     }
-    // --- CASO DMA ERROR ---
     else if (interrupt_code == INT_IO_END)
     {
-        // Aquí luego agregaremos la lógica de desbloquear procesos que esperaban disco
         int dma_state = dma_get_state();
         if (dma_state != 0)
         {
-            write_log(1, "KERNEL: Fallo crítico de DMA en PID %d. Terminando proceso.\n", current_pid);
+            write_log(1, "KERNEL: Error DMA en PID %d. Terminando.\n", current_pid);
             process_table[current_pid].state = STATE_TERMINATED;
             if (process_table[current_pid].partition_id != -1)
             {
@@ -296,140 +399,84 @@ void kernel_handle_interrupt(int interrupt_code)
             schedule();
         }
     }
-    // --- MANEJO DE LLAMADAS AL SISTEMA (SYSCALLS) ---
     else if (interrupt_code == INT_SYSCALL)
     {
-
-        // 1. El código de la llamada viene en el Acumulador (AC).
-        // Convertimos de Signo-Magnitud a Entero C para poder usar el switch.
         int syscall_code = sm_to_int(process_table[current_pid].context.AC);
-
-        int param_raw = 0;  // Valor en signo magnitud
-        int param_real = 0; // Valor convertido a Entero C
+        int param_raw = 0;
+        int param_real = 0;
 
         switch (syscall_code)
         {
-        case 1: // termina_prog (estado)
+        case 1:
             if (kernel_pop_stack(current_pid, &param_raw) == 0)
             {
                 param_real = sm_to_int(param_raw);
-
-                write_log(0, "SYSCALL 1: Proceso %d solicita terminar con estado %d.\n", current_pid, param_real);
-
-                // Matamos el proceso
+                write_log(0, "SYSCALL 1: Proceso %d termina con estado %d.\n", current_pid, param_real);
                 process_table[current_pid].state = STATE_TERMINATED;
-
-                // Liberamos su memoria para que otro proceso la pueda usar
                 if (process_table[current_pid].partition_id != -1)
                 {
                     partitions_bitmap[process_table[current_pid].partition_id] = false;
                 }
-
-                // Llamamos al planificador para que asigne la CPU al siguiente en la cola
                 schedule();
             }
-            else
-            {
-                write_log(1, "KERNEL ERROR: Fallo al leer pila en Syscall termina_prog.\n");
-                // Podríamos matarlo forzosamente aquí
-            }
             break;
 
-        case 2: // imprime_pantalla (valor)
+        case 2:
             if (kernel_pop_stack(current_pid, &param_raw) == 0)
             {
-
-                // Convertimos a entero C antes de imprimir en la terminal
                 param_real = sm_to_int(param_raw);
-
-                printf("\n[SALIDA PROCESO %d]> %d\n", current_pid, param_real);
-                write_log(0, "SYSCALL 2: Proceso %d imprimió en pantalla el valor %d.\n", current_pid, param_real);
-
-                // El proceso sigue RUNNING, no llamamos a schedule()
-            }
-            else
-            {
-                write_log(1, "KERNEL ERROR: Fallo al leer pila en Syscall imprime_pantalla.\n");
+                printf("\n[PROCESO %d]> %d\n", current_pid, param_real);
+                write_log(0, "SYSCALL 2: Proceso %d imprime %d.\n", current_pid, param_real);
             }
             break;
 
-        case 3: // leer_pantalla ()
-        {
-            printf("\n[ENTRADA PROCESO %d]> Ingrese un entero: ", current_pid);
+        case 3:
+            printf("\n[ENTRADA %d]> Ingrese un entero: ", current_pid);
             int input_val;
             if (scanf("%d", &input_val) == 1)
             {
-
-                // Convertimos el número ingresado por el usuario a SM
                 int input_sm = int_to_sm(input_val);
-
-                // Guardamos el resultado en el AC del proceso pausado
                 process_table[current_pid].context.AC = input_sm;
-
-                write_log(0, "SYSCALL 3: Proceso %d leyó el valor %d (Codificado AC: %d).\n",
-                          current_pid, input_val, input_sm);
+                write_log(0, "SYSCALL 3: Proceso %d leyó %d.\n", current_pid, input_val);
             }
             else
             {
-                write_log(1, "KERNEL ERROR: Entrada de usuario inválida.\n");
-                // Limpiar el buffer de entrada si el usuario tecleó letras
-                while (getchar() != '\n')
-                    ;
-                // Dejamos el AC intacto o le ponemos 0 por defecto
+                write_log(1, "KERNEL ERROR: Entrada inválida.\n");
+                while (getchar() != '\n');
                 process_table[current_pid].context.AC = int_to_sm(0);
             }
-        }
-        case 4: // Dormir (tics)
+            break;
+
+        case 4:
             if (kernel_pop_stack(current_pid, &param_raw) == 0)
             {
                 param_real = sm_to_int(param_raw);
-
                 if (param_real > 0)
                 {
-                    write_log(0, "SYSCALL 4: Proceso %d a dormir por %d tics (Actual: %d, Despertará: %d).\n",
-                              current_pid, param_real, system_ticks, system_ticks + param_real);
-
-                    // 1. Cambiamos el estado a bloqueado (DORMIDO)
+                    write_log(0, "SYSCALL 4: Proceso %d duerme %d tics.\n", current_pid, param_real);
                     process_table[current_pid].state = STATE_BLOCKED;
-
-                    // 2. Calculamos y guardamos el tick en el que debe despertar
                     process_table[current_pid].wake_time = system_ticks + param_real;
-
-                    // 3. Llamamos al planificador para que otro proceso use la CPU
                     schedule();
                 }
-                else
-                {
-                    write_log(1, "KERNEL WARN: Syscall Dormir con tics <= 0. Ignorando.\n");
-                    // Si mandó 0 o negativo, lo ignoramos y sigue su ejecución normal
-                }
-            }
-            else
-            {
-                write_log(1, "KERNEL ERROR: Fallo al leer pila en Syscall Dormir.\n");
             }
             break;
 
         default:
-            write_log(1, "KERNEL ERROR: Código de Syscall desconocido (%d) del PID %d.\n", syscall_code, current_pid);
+            write_log(1, "KERNEL ERROR: Syscall desconocida (%d) del PID %d.\n", syscall_code, current_pid);
             break;
         }
     }
 }
 
-// Extrae un valor de la pila del proceso actual sin modificar los registros reales de la CPU,
-// solo modificando el PCB (ya que el proceso está pausado).
 int kernel_pop_stack(int pid, int *value)
 {
     int sp = process_table[pid].context.SP;
 
-    // Leemos la memoria física donde apunta el SP actual del proceso
     if (bus_read(sp, value, 0) != 0)
     {
-        return -1; // Fallo de lectura
+        return -1;
     }
 
-    // Incrementamos el SP en el PCB porque hicimos "pop" (la pila crece hacia abajo)
     process_table[pid].context.SP++;
 
     return 0;
