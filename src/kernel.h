@@ -101,7 +101,7 @@ int find_free_partition();
 // Manejo de interrupciones
 void kernel_handle_interrupt(int interrupt_code);
 void schedule();
-void kernel_pop_stack(int pid, int *value);
+int kernel_pop_stack(int pid, int *value);
 void enqueue_ready(int pid);
 int dequeue_ready();
 
