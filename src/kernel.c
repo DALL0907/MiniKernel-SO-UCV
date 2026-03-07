@@ -1,3 +1,4 @@
+#include "brain.h"
 #include "cpu.h"
 #include "bus.h"
 #include "kernel.h"
@@ -19,6 +20,9 @@ int ready_queue[MAX_PROCESSES];
 int rq_head = 0;
 int rq_aux = 0;
 int rq_count = 0;
+
+extern void dispatch(int nuevo_pid);
+int kernel_pop_stack(int pid, int *value);
 
 // Encola un proceso al final de la cola de listos
 void enqueue_ready(int pid)
@@ -289,8 +293,6 @@ const char *state_to_string(ProcessState s)
         return "UNKNOWN";
     }
 }
-
-extern void dispatch(int nuevo_pid);
 
 void schedule()
 {

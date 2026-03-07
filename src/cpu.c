@@ -13,7 +13,6 @@ CPU_Context context;
 // Variables para gestión de interrupciones
 static int interrupt_pending = 0;  // Bandera: 0=No, 1=Si
 static int interrupt_code_val = 0; // Cuál interrupción es
-static const int IO_ERROR = 500;   // Código para error de E/S
 
 // Guarda un valor en la Pila del Sistema
 // Retorna 0 si éxito, -1 si desbordamiento (Stack Overflow)
