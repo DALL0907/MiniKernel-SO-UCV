@@ -13,6 +13,7 @@
 #include "dma.h"
 #include "load.h"
 #include "log.h"
+#include "kernel.h"
 
 #define USER_PROGRAM_START 300
 #define SYSTEM_STACK_START 299
@@ -21,7 +22,6 @@
 extern CPU_Context context;
 
 // --- FUNCIONES DE UTILIDAD ---
-
 void print_registers()
 {
     printf("\n[ESTADO CPU] -----------------------------------\n");
@@ -59,15 +59,15 @@ int system_init()
 {
     write_log(0, "=== INICIANDO SISTEMA ===\n");
     // Inicia memoria y mutex
-    if(bus_init() != 0)
+    if (bus_init() != 0)
     {
-        write_log(1,"FATAL: No se pudo iniciar el bus. Saliendo...\n");
+        write_log(1, "FATAL: No se pudo iniciar el bus. Saliendo...\n");
         return -1;
     }
     // Inicia disco
-    if(disk_init() != 0)
+    if (disk_init() != 0)
     {
-        write_log(1,"FATAL: No se pudo iniciar el disco. Saliendo...\n");
+        write_log(1, "FATAL: No se pudo iniciar el disco. Saliendo...\n");
         return -1;
     }
     // Inicia el módulo DMA
@@ -85,119 +85,326 @@ int system_init()
 
 static void print_banner()
 {
-    printf("\nShell\n");
-    printf("Comandos:\n");
-    printf("  cargar <archivo>  - Carga un programa en memoria\n");
-    printf("  ejecutar          - Ejecuta el programa cargado (run)\n");
-    printf("  debug             - Modo paso a paso con estado\n");
-    printf("  salir             - Termina el simulador\n\n");
+    printf("\n==============================================\n");
+    printf("Comandos disponibles:\n");
+    printf("  ejecutar <prog1> <prog2> ... <progN>  - Carga y ejecuta una lista de programas\n");
+    printf("  ps                                     - Muestra el estado de los procesos\n");
+    printf("  apagar                                 - Apaga el sistema y cierra el simulador\n");
+    printf("  reiniciar                              - Reinicia el sistema sin cerrar\n");
+    printf("==============================================\n\n");
 }
 
-// Verifica si el programa terminó y lo reinicia si es necesario
-void reset(loadParams *info)
+// Comando APAGAR: Apaga el sistema de forma ordenada
+void cmd_apagar()
 {
-    if (context.PSW.Mode == USER_MODE && context.PSW.PC >= info->n_words)
-    {
-        cpu_init(); // Limpiar registros
-        // Restaurar contexto original
-        context.RB = info->load_address;
-        context.RL = 1999;
-        context.PSW.PC = info->index_start;
-        context.SP = SYSTEM_STACK_START;
-        context.PSW.Mode = USER_MODE;
-    }
+    printf("Apagando sistema...\n");
+
+    // Liberar recursos en orden específico
+    dma_destroy();
+    disk_destroy();
+    bus_destroy();
+    log_close();
 }
 
-// Función auxiliar para traducir Opcode a Texto en el Debugger
-const char *get_mnemonic(int opcode)
+// Comando REINICIAR: Reinicia el sistema sin cerrar el programa
+void cmd_reiniciar()
 {
-    switch (opcode)
+    printf("Reiniciando sistema...\n");
+
+    // Limpiar memoria RAM
+    mem_init();
+
+    // Resetear registros del CPU
+    cpu_init();
+
+    // Reinicializar estructuras del kernel
+    kernel_init_structures();
+
+    // Reinicializar disco virtual
+    disk_init();
+
+    // Reinicializar controlador DMA
+    dma_init();
+
+    // Reinicializar vector de interrupciones
+    init_kernel();
+
+    printf("Sistema reiniciado correctamente.\n");
+}
+
+// Comando MEMESTAT: Muestra el estado de las particiones de memoria RAM
+void cmd_memestat()
+{
+    printf("\n============== ESTADO DE LA MEMORIA RAM ==============\n");
+    printf(" Memoria Total  : %d palabras\n", MEM_SIZE);
+
+    // Memoria del SO (Dir 0 a 299)
+    float so_percent = ((float)MEM_USER_START / (float)MEM_SIZE) * 100.0f;
+    printf(" [Dir %04d a %04d] SISTEMA OPERATIVO - Ocupada - %5.1f%%\n", 0, MEM_USER_START - 1, so_percent);
+
+    // Particiones de Usuario
+    float part_percent = ((float)PARTITION_SIZE / (float)MEM_SIZE) * 100.0f;
+
+    for (int i = 0; i < NUM_PARTITIONS; i++)
     {
-    case 0:
-        return "SUM";
-    case 1:
-        return "RES";
-    case 2:
-        return "MULT";
-    case 3:
-        return "DIVI";
-    case 4:
-        return "LOAD";
-    case 5:
-        return "STR";
-    case 6:
-        return "LOADRX";
-    case 7:
-        return "STRRX";
-    case 8:
-        return "COMP";
-    case 9:
-        return "JMPE";
-    case 10:
-        return "JMPNE";
-    case 11:
-        return "JMPLT";
-    case 12:
-        return "JMPLGT";
-    case 13:
-        return "SVC";
-    case 14:
-        return "RETRN";
-    case 15:
-        return "HAB";
-    case 16:
-        return "DHAB";
-    case 17:
-        return "TTI";
-    case 18:
-        return "CHMOD";
+        int base = MEM_USER_START + (i * PARTITION_SIZE);
+        int limit = base + PARTITION_SIZE - 1;
 
-    // --- FALTABAN ESTOS (Gestión de Registros) ---
-    case 19:
-        return "LOADRB";
-    case 20:
-        return "STRRB";
-    case 21:
-        return "LOADRL";
-    case 22:
-        return "STRRL";
-    case 23:
-        return "LOADSP";
-    case 24:
-        return "STRSP";
-        // ---------------------------------------------
-
-    case 25:
-        return "PSH";
-    case 26:
-        return "POP";
-    case 27:
-        return "J";
-
-    case 28:
-    case 29:
-    case 30:
-    case 31:
-    case 32:
-    case 33:
-        return "DMA_OP";
-
-    default:
-        return "UNKNOWN";
+        if (partitions_bitmap[i])
+        {
+            // Opcional: Buscar qué PID es dueño de esta partición
+            int owner_pid = -1;
+            for (int j = 0; j < MAX_PROCESSES; j++)
+            {
+                PCB *p = get_pcb(j);
+                if (p != NULL && p->partition_id == i && p->state != STATE_TERMINATED)
+                {
+                    owner_pid = p->pid;
+                    break;
+                }
+            }
+            printf(" [Dir %04d a %04d] PARTICIÓN %d        - OCUPADA (PID %2d) - %5.1f%%\n",
+                   base, limit, i, owner_pid, part_percent);
+        }
+        else
+        {
+            printf(" [Dir %04d a %04d] PARTICIÓN %d        - LIBRE             - %5.1f%%\n",
+                   base, limit, i, part_percent);
+        }
     }
+    printf("======================================================\n\n");
+}
+
+// Comando PS: Muestra el estado de todos los procesos
+void cmd_ps()
+{
+    // Contar procesos activos
+    int count = 0;
+    for (int i = 0; i < MAX_PROCESSES; i++)
+    {
+        PCB *pcb = get_pcb(i);
+        if (pcb != NULL)
+        {
+            count++;
+        }
+    }
+
+    if (count == 0)
+    {
+        printf("No hay procesos en el sistema.\n");
+        return;
+    }
+
+    // Mostrar encabezado
+    printf("\n%-5s | %-20s | %-12s | %-10s\n",
+           "PID", "NOMBRE", "ESTADO", "MEMORIA%");
+    printf("------+----------------------+--------------+------------\n");
+
+    // Mostrar cada proceso
+    for (int i = 0; i < MAX_PROCESSES; i++)
+    {
+        PCB *pcb = get_pcb(i);
+
+        if (pcb != NULL)
+        {
+            // Calcular porcentaje de memoria basado en el tamaño real del programa
+            float mem_percent = 0.0f;
+            // Si el proceso ya está en RAM (no está solo en el disco)
+            if (pcb->state == STATE_READY || pcb->state == STATE_RUNNING || pcb->state == STATE_BLOCKED)
+            {
+                mem_percent = ((float)PARTITION_SIZE / (float)MEM_SIZE) * 100.0f;
+            }
+
+            // Obtener estado como string
+            const char *estado = state_to_string(pcb->state);
+
+            // Mostrar fila
+            printf("%-5d | %-20s | %-12s | %9.1f%%\n",
+                   pcb->pid, pcb->name, estado, mem_percent);
+        }
+    }
+
+    printf("\n");
+}
+
+// Función auxiliar: Verifica si hay procesos activos en el sistema
+bool hay_procesos_activos()
+{
+    for (int i = 0; i < MAX_PROCESSES; i++)
+    {
+        PCB *pcb = get_pcb(i);
+        if (pcb != NULL &&
+            (pcb->state == STATE_READY || pcb->state == STATE_RUNNING || pcb->state == STATE_BLOCKED))
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+// Comando EJECUTAR: Carga y ejecuta una lista de programas
+void cmd_ejecutar(const char *program_list_arg)
+{
+    // Paso 1: Validar entrada
+    const char *p = program_list_arg;
+
+    // Saltar espacios iniciales
+    while (*p == ' ')
+        p++;
+
+    if (*p == '\0')
+    {
+        printf("Uso: ejecutar <prog1> <prog2> ... <progN>\n");
+        return;
+    }
+
+    // Paso 2: Parsear y cargar cada programa
+    char program_names[256];
+    strncpy(program_names, p, sizeof(program_names) - 1);
+    program_names[sizeof(program_names) - 1] = '\0';
+
+    // Tokenizar la lista de programas
+    char *token = strtok(program_names, " \t");
+    int programs_loaded = 0;
+    static int proxima_pista_libre = 0;
+
+    while (token != NULL)
+    {
+        char program_name[256];
+        strncpy(program_name, token, sizeof(program_name) - 1);
+        program_name[sizeof(program_name) - 1] = '\0';
+
+        printf("\n--- Cargando programa: %s ---\n", program_name);
+
+        // Paso 3: Verificar si existe en File_Table
+        int file_index = file_table_search_by_name(program_name);
+        int pid = -1;
+
+        if (file_index == -1)
+        {
+            // Paso 4: No existe, cargar desde PC real a Disco
+            printf("Programa no encontrado en disco. Cargando desde archivo...\n");
+
+            // Construir ruta del archivo (en carpeta src/)
+            char filepath[300];
+            snprintf(filepath, sizeof(filepath), "%s", program_name);
+
+            // Cargar a disco (track=0, cylinder=0, sector=0 por defecto)
+            pid = load_program_to_disk(filepath, program_name, proxima_pista_libre, 0, 0);
+
+            if (pid != -1)
+            {
+                proxima_pista_libre++; // Avanzamos a la siguiente pista para el próximo programa
+            }
+
+            printf("Programa cargado a disco con PID %d.\n", pid);
+
+            // Actualizar file_index después de cargar
+            file_index = file_table_search_by_name(program_name);
+        }
+        else
+        {
+            // Paso 5: Ya existe en disco, crear nuevo PCB
+            FileTableEntry *entry = get_file_table_entry(file_index);
+
+            if (entry == NULL)
+            {
+                printf("Error: No se pudo obtener información del programa '%s'.\n", program_name);
+                token = strtok(NULL, " \t");
+                continue;
+            }
+
+            pid = create_process(program_name, entry->track, entry->cylinder,
+                                 entry->sector_initial, entry->size_words);
+
+            if (pid == -1)
+            {
+                printf("Error: No se pudo crear el proceso para '%s'.\n", program_name);
+                token = strtok(NULL, " \t");
+                continue;
+            }
+
+            printf("Proceso creado con PID %d.\n", pid);
+        }
+
+        // Paso 6: Buscar partición libre
+        int partition_id = find_free_partition();
+
+        if (partition_id == -1)
+        {
+            printf("Error: No hay memoria RAM disponible para '%s'.\n", program_name);
+            token = strtok(NULL, " \t");
+            continue;
+        }
+
+        printf("Partición %d asignada.\n", partition_id);
+
+        // Paso 7: Cargar a RAM
+        if (load_program_to_ram(pid, partition_id, file_index) != 0)
+        {
+            printf("Error: No se pudo cargar '%s' a memoria RAM.\n", program_name);
+            token = strtok(NULL, " \t");
+            continue;
+        }
+
+        printf("Programa '%s' cargado en RAM.\n", program_name);
+
+        // Paso 8: Dispatch
+        printf("Proceso %d (%s) listo para ejecutar.\n", pid, program_name);
+
+        programs_loaded++;
+
+        // Siguiente programa
+        token = strtok(NULL, " \t");
+    }
+
+    if (programs_loaded == 0)
+    {
+        printf("No se pudo cargar ningún programa.\n");
+        return;
+    }
+
+    printf("\n--- Ejecutando %d programa(s) ---\n", programs_loaded);
+    // Dejamos que el planificador elija al primer proceso de la cola
+    schedule();
+
+    // Paso 9: Bucle de ejecución CPU
+    while (1)
+    {
+        int ret = cpu();
+
+        // Caso 1: Error fatal reportado por CPU
+        if (ret != 0)
+        {
+            printf(">> CPU Detenida (Codigo: %d)\n", ret);
+            print_registers();
+            break;
+        }
+
+        // Caso 2: Verificar si hay procesos activos
+        if (!hay_procesos_activos())
+        {
+            printf(">> No hay más procesos activos.\n");
+            break;
+        }
+    }
+
+    printf("\nEjecución completada.\n");
 }
 
 // --- MAIN LOOP ---
 int main()
 {
-    int cargado = 0;
-    loadParams info;
     log_init();
     if (system_init() != 0)
     {
         write_log(1, "FATAL: No se pudo iniciar el sistema. Saliendo...\n");
         return -1;
     }
+
+    // Inicializar estructuras del kernel
+    kernel_init_structures();
+
     print_banner();
 
     while (true)
@@ -209,176 +416,39 @@ int main()
 
         comando[strcspn(comando, "\n")] = '\0'; // Elimina salto de línea
 
-        // --- COMANDO: SALIR ---
-        if (strcmp(comando, "salir") == 0)
+        // --- COMANDO: APAGAR ---
+        if (strcmp(comando, "apagar") == 0)
         {
-            printf("Apagando sistema...\n");
-            // Limpieza de recursos (IMPORTANTE)
-            dma_destroy();
-            disk_destroy();
-            bus_destroy();
-            log_close();
+            cmd_apagar();
             break;
         }
-        // --- COMANDO: CARGAR ---
-        else if (strncmp(comando, "cargar ", 7) == 0)
+        // --- COMANDO: REINICIAR ---
+        else if (strcmp(comando, "reiniciar") == 0)
         {
-            char filename[248];
-            const char *p = comando + 7;
-            while (*p == ' ')
-                p++;
-
-            if (*p == '\0')
-            {
-                printf("Uso: cargar <archivo.txt>\n");
-                continue;
-            }
-
-            if (sscanf(p, "%247[^\n]", filename) == 1)
-            {
-                // Trim espacios finales
-                size_t len = strlen(filename);
-                while (len > 0 && isspace((unsigned char)filename[len - 1]))
-                {
-                    filename[--len] = '\0';
-                }
-
-                printf("Cargando '%s' en dir fisica %d...\n", filename, USER_PROGRAM_START);
-
-                // LLAMADA REAL AL CARGADOR
-                if (load_program(filename, USER_PROGRAM_START, &info) == 0)
-                {
-                    printf("Programa cargado exitosamente.\n");
-
-                    // CONFIGURACIÓN DE CONTEXTO (Vital para que corra)
-                    cpu_init(); // Resetear registros base
-                    context.RB = info.load_address;
-                    context.RL = MEM_SIZE - 1;         // Límite al final de la memoria
-                    context.PSW.PC = info.index_start; // Punto de entrada relativo
-                    context.SP = SYSTEM_STACK_START;   // Pila del sistema
-                    context.PSW.Mode = USER_MODE;
-
-                    printf("Proceso listo: PC=%d, RB=%d, RL=%d\n", context.PSW.PC, context.RB, context.RL);
-                    cargado = 1;
-                }
-                else
-                {
-                    printf("Error: No se pudo cargar el programa.\n");
-                    cargado = 0;
-                }
-            }
+            cmd_reiniciar();
+        }
+        // --- COMANDO: PS ---
+        else if (strcmp(comando, "ps") == 0)
+        {
+            cmd_ps();
+        }
+        else if (strcmp(comando, "memestat") == 0)
+        {
+            cmd_memestat();
         }
         // --- COMANDO: EJECUTAR ---
-        else if (strcmp(comando, "ejecutar") == 0)
+        else if (strncmp(comando, "ejecutar ", 9) == 0)
         {
-            if (!cargado)
-            {
-                printf("Error: No hay programa cargado.\n");
-                continue;
-            }
-            reset(&info); // verifica reinicio
-            printf("Ejecutando...\n");
-
-            while (1)
-            {
-                int ret = cpu();
-                // Caso 1: Error fatal reportado por CPU
-                if (ret != 0)
-                {
-                    printf(">> CPU Detenida (Codigo: %d)\n", ret);
-                    print_registers();
-                    break;
-                }
-
-                // Caso 2: Fin de archivo (Usuario se quedó sin instrucciones)
-                // Solo verificamos esto si estamos en MODO USUARIO.
-                // Si estamos en KERNEL (atendiendo la SVC), dejamos que corra.
-                if (context.PSW.Mode == USER_MODE)
-                {
-                    // Si el PC apunta más allá de lo que cargamos, terminamos.
-                    if (context.PSW.PC >= info.n_words)
-                    {
-                        printf(">> Fin del programa: No hay más instrucciones (PC=%d).\n", context.PSW.PC);
-                        print_registers();
-                        break;
-                    }
-                }
-            }
+            cmd_ejecutar(comando + 9);
         }
-        // --- COMANDO: DEBUG ---
-        else if (strcmp(comando, "debug") == 0)
+        // --- LÍNEA VACÍA ---
+        else if (strlen(comando) == 0)
         {
-            if (!cargado)
-            {
-                printf("Error: No hay programa cargado.\n");
-                continue;
-            }
-            reset(&info); // verifica reinicio
-            write_log(1, "=== MODO DEBUG ACTIVADO ===\n");
-            printf("Comandos: 'step' (realizar paso), 'regs' (ver registros), 'salir'\n");
-            print_registers();
-
-            while (1)
-            {
-                printf("Debug> ");
-                if (fgets(comando, sizeof(comando), stdin) == NULL)
-                    break;
-                comando[strcspn(comando, "\n")] = 0;
-
-                if (strcmp(comando, "step") == 0)
-                {
-                    if (context.PSW.Mode == USER_MODE && context.PSW.PC >= info.n_words)
-                    {
-                        printf(">> [FIN] Programa finalizado. No hay más instrucciones que ejecutar.\n");
-                        printf(">> Escriba 'salir' y vuelva a entrar a debug para reiniciar.\n");
-                        continue; // Saltamos al inicio del bucle debug sin llamar a cpu()
-                    }
-                    // 1. Obtener información PREVIA a la ejecución
-                    int pc_actual = context.PSW.PC;
-                    int linea_archivo = pc_actual + 1; // Ajuste Base 0 -> Base 1
-
-                    // 2. Intentar "espiar" qué instrucción es
-                    int dir_fisica = pc_actual;
-                    if (context.PSW.Mode == USER_MODE)
-                        dir_fisica += context.RB;
-
-                    Word instruccion_raw;
-                    mem_read_physical(dir_fisica, &instruccion_raw);
-
-                    // Decodificar para mostrar el nombre
-                    int opcode = instruccion_raw / 1000000;
-
-                    printf("\n>> [DEBUG] Ejecutando LINEA %d (PC=%d) | Instr: %s\n",
-                           linea_archivo, pc_actual, get_mnemonic(opcode));
-
-                    // 3. Ejecutar un ciclo de CPU
-                    int ret = cpu();
-                    print_registers();
-
-                    if (ret != 0)
-                    {
-                        write_log(0, "=== MODO DEBUG DESACTIVADO ===\n");
-                        printf(">> Programa finalizado (Codigo: %d)\n", ret);
-                        break; // Salir del debug
-                    }
-                }
-                else if (strcmp(comando, "regs") == 0)
-                {
-                    print_registers();
-                }
-                else if (strcmp(comando, "salir") == 0)
-                {
-                    write_log(0, "=== MODO DEBUG DESACTIVADO ===\n");
-                    printf(">> Saliendo del Debugger.\n");
-                    break;
-                }
-                else
-                {
-                    printf("Comando desconocido en debug.\n");
-                }
-            }
+            // Ignorar líneas vacías sin mostrar error
+            continue;
         }
-        else if (strlen(comando) > 0)
+        // --- COMANDO NO RECONOCIDO ---
+        else
         {
             printf("Comando no reconocido.\n");
         }

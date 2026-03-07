@@ -4,6 +4,7 @@
 #include "log.h"
 #include <string.h>
 #include <stdio.h>
+#include "dma.h"
 
 // --- DEFINICIÓN DE VARIABLES GLOBALES ---
 PCB process_table[MAX_PROCESSES];
@@ -47,7 +48,7 @@ int dequeue_ready()
     return pid;
 }
 
-//Inicializa todas las tablas y estructuras del kernel
+// Inicializa todas las tablas y estructuras del kernel
 void kernel_init_structures()
 {
     // Inicializar tabla de procesos
@@ -91,11 +92,11 @@ void kernel_init_structures()
 
 /**
  * Busca un programa en la tabla de archivos por nombre
- * 
+ *
  * Se usa principalmente para:
  *   - El comando CARGAR: verifica que no exista ya y esa broma
  *   - El comando EJECUTAR: obtiene los datos del programa en disco
- * 
+ *
  * Retorna: índice en file_table, o -1 si no existe
  */
 int file_table_search_by_name(const char *program_name)
@@ -114,12 +115,12 @@ int file_table_search_by_name(const char *program_name)
 
 /**
  * Busca un programa en la tabla de archivos por PID
- * 
+ *
  * Se usa principalmente para:
  *   - Cuando un proceso TERMINA (kernel_handle_interrupt)
  *   - Cuando el SCHEDULER cambia de proceso
  *   - Para actualizar el estado del archivo en la tabla
- * 
+ *
  * Retorna: índice en file_table, o -1 si no existe
  */
 int file_table_find_by_pid(int pid)
@@ -138,11 +139,11 @@ int file_table_find_by_pid(int pid)
 
 /**
  * Obtiene un puntero a una entrada de la tabla
- * Valida que el índice 
- * 
+ * Valida que el índice
+ *
  * Retorna: puntero a FileTableEntry, o NULL si índice inválido
  */
-FileTableEntry* get_file_table_entry(int index)
+FileTableEntry *get_file_table_entry(int index)
 {
     if (index < 0 || index >= file_table_count)
     {
@@ -155,13 +156,13 @@ FileTableEntry* get_file_table_entry(int index)
 /**
  * Agrega un nuevo programa a la tabla de archivos.
  * Se llama desde load_program después de escribir en disco.
- * 
+ *
  * Parámetros:
  *   - program_name: nombre del programa (ej: "prog1.txt")
  *   - track, cylinder, sector: ubicación en disco
  *   - size: cantidad de palabras
  *   - n_start: índice _start leído del archivo
- * 
+ *
  * Retorna: índice en file_table, o -1 si error
  */
 int file_table_add_entry(const char *program_name, int track, int cylinder, int sector, int size, int n_start)
@@ -182,18 +183,18 @@ int file_table_add_entry(const char *program_name, int track, int cylinder, int 
 
     // Agregar la nueva entrada
     FileTableEntry *entry = &file_table[file_table_count];
-    
+
     strncpy(entry->program_name, program_name, 49);
     entry->program_name[49] = '\0'; // Garantizar null-termination
-    
+
     entry->track = track;
     entry->cylinder = cylinder;
     entry->sector_initial = sector;
     entry->size_words = size;
     entry->n_start = n_start;
-    entry->pid = -1;                    // Sin PID aún (en disco)
-    entry->partition_id = -1;           // Sin partición aún (en disco)
-    entry->state = FILE_STATE_DISK;     // Estado inicial: en disco
+    entry->pid = -1;                // Sin PID aún (en disco)
+    entry->partition_id = -1;       // Sin partición aún (en disco)
+    entry->state = FILE_STATE_DISK; // Estado inicial: en disco
 
     write_log(0, "FILE TABLE: Entrada %d agregada: '%s' [Track=%d, Cyl=%d, Sec=%d, Size=%d, n_start=%d]\n",
               file_table_count, program_name, track, cylinder, sector, size, n_start);
@@ -201,7 +202,6 @@ int file_table_add_entry(const char *program_name, int track, int cylinder, int 
     file_table_count++;
     return file_table_count - 1;
 }
-
 
 // Crea un PCB básico para un nuevo proceso (Estado NEW en disco)
 
@@ -442,7 +442,8 @@ void kernel_handle_interrupt(int interrupt_code)
             else
             {
                 write_log(1, "KERNEL ERROR: Entrada inválida.\n");
-                while (getchar() != '\n');
+                while (getchar() != '\n')
+                    ;
                 process_table[current_pid].context.AC = int_to_sm(0);
             }
             break;

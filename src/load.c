@@ -12,7 +12,7 @@
 
 /**
  * Lee un archivo .txt y lo almacena en un buffer
- * 
+ *
  * Retorna:
  *   - Numero de palabras leidas (>= 0) si exito
  *   - -1 si error
@@ -118,7 +118,7 @@ static int read_program_file(const char *filename, Word *words_buffer,
  * Retorna: 0 si exito, -1 si error
  */
 static int write_program_to_disk(const Word *words_buffer, int word_count,
-                                  int track, int cylinder, int sector_start)
+                                 int track, int cylinder, int sector_start)
 {
     write_log(1, "LOADER: Escribiendo %d palabras en disco (Track=%d, Cyl=%d, Sec=%d)...\n",
               word_count, track, cylinder, sector_start);
@@ -189,7 +189,7 @@ static int write_program_to_disk(const Word *words_buffer, int word_count,
  * Retorna: 0 si exito, -1 si error
  */
 static int read_program_from_disk(Word *words_buffer, int word_count,
-                                   int track, int cylinder, int sector_start)
+                                  int track, int cylinder, int sector_start)
 {
     write_log(1, "LOADER: Leyendo %d palabras desde disco (Track=%d, Cyl=%d, Sec=%d)...\n",
               word_count, track, cylinder, sector_start);
@@ -248,27 +248,27 @@ static int read_program_from_disk(Word *words_buffer, int word_count,
 
 /**
  * CARGAR DE PC REAL -> DISCO VIRTUAL
- * 
+ *
  * Lee el codigo fuente y lo carga en disco
  * El programa queda en estado NEW en disco, sin ocupar RAM
  * Se llama desde con el comando CARGAR
- * 
+ *
  * Flujo:
  *   1. Lee archivo .txt desde la pc (parsea directivas)
  *   2. Almacena palabras en buffer temporal
  *   3. Escribe todo en disco virtual usando disk_write_sector
  *   4. Crea PCB en tabla de procesos (Estado NEW)
  *   5. Agrega entrada en tabla de archivos (Estado DISK)
- * 
+ *
  * Parametros:
  *   filename: Ruta del archivo en PC real (ej: "Casos de prueba/prog1.txt")
  *   program_name: Nombre a asignar en tabla de archivos (ej: "prog1.txt")
  *   track, cylinder, sector: Ubicacion inicial en disco virtual
- * 
+ *
  * Retorna: PID del proceso creado si exito, -1 si error
  */
 int load_program_to_disk(const char *filename, const char *program_name,
-                          int track, int cylinder, int sector)
+                         int track, int cylinder, int sector)
 {
     write_log(1, "LOADER: ===== INICIANDO CARGA PC REAL -> DISCO =====\n");
     write_log(1, "LOADER: Programa: %s, Archivo: %s\n", program_name, filename);
@@ -341,24 +341,24 @@ int load_program_to_disk(const char *filename, const char *program_name,
 
 /**
  * CARGAR DE DISCO VIRTUAL -> RAM
- * 
+ *
  * Lee un programa desde el disco y lo carga en ram dentro de una particion
  * Inicializa contexto del proceso (PC, SP, RB, RL, etc)
  * El programa queda en estado READY, listo para ejecutar
  * Se llama con el comando EJECUTAR (cuando se cambia de NEW a READY)
- * 
+ *
  * Flujo:
  *   1. Lee programa desde disco a buffer temporal
  *   2. Escribe buffer en particion de RAM asignada
  *   3. Inicializa contexto del proceso (PC en PSW, SP, RB, RL, etc)
  *   4. Actualiza estado PCB a READY
  *   5. Actualiza estado en tabla de archivos a READY
- * 
+ *
  * Parametros:
  *   pid: PID del proceso a cargar en RAM
  *   partition_id: ID de la particion asignada (0-4)
  *   file_table_index: Indice en la tabla de archivos
- * 
+ *
  * Retorna: 0 si exito, -1 si error
  */
 int load_program_to_ram(int pid, int partition_id, int file_table_index)
@@ -433,22 +433,22 @@ int load_program_to_ram(int pid, int partition_id, int file_table_index)
     memset(&pcb->context, 0, sizeof(CPU_Context));
 
     // Registros de particion
-    pcb->context.RB = base_address;              // Registro Base (inicio de particion)
-    pcb->context.RL = limit_address;             // Registro Limite (final de particion)
-    pcb->context.PSW.PC = entry->n_start;        // Program Counter (dentro de PSW)
-    pcb->context.SP = sp_initial;                // Stack Pointer (final de particion)
+    pcb->context.RB = base_address;       // Registro Base (inicio de particion)
+    pcb->context.RL = limit_address;      // Registro Limite (final de particion)
+    pcb->context.PSW.PC = entry->n_start; // Program Counter (dentro de PSW)
+    pcb->context.SP = sp_initial;         // Stack Pointer (final de particion)
 
     // Configuracion del PSW (Program Status Word)
-    pcb->context.PSW.Mode = USER_MODE;           // Modo usuario
-    pcb->context.PSW.Interrupts = 1;             // Interrupciones habilitadas
-    pcb->context.PSW.CC = 0;                     // Codigo Condicion inicial
+    pcb->context.PSW.Mode = USER_MODE; // Modo usuario
+    pcb->context.PSW.Interrupts = 1;   // Interrupciones habilitadas
+    pcb->context.PSW.CC = 0;           // Codigo Condicion inicial
 
     // Otros registros
-    pcb->context.AC = 0;                         // Acumulador
-    pcb->context.MAR = 0;                        // Memory Address Register
-    pcb->context.MDR = 0;                        // Memory Data Register
-    pcb->context.IR = 0;                         // Instruction Register
-    pcb->context.RX = 0;                         // Registro indice
+    pcb->context.AC = 0;  // Acumulador
+    pcb->context.MAR = 0; // Memory Address Register
+    pcb->context.MDR = 0; // Memory Data Register
+    pcb->context.IR = 0;  // Instruction Register
+    pcb->context.RX = 0;  // Registro indice
 
     write_log(0, "LOADER: Contexto inicializado.\n");
     write_log(0, "LOADER:   RB (Base)=%d, RL (Limite)=%d\n", pcb->context.RB, pcb->context.RL);
@@ -460,8 +460,8 @@ int load_program_to_ram(int pid, int partition_id, int file_table_index)
     entry->partition_id = partition_id;
 
     // PASO 6: Actualizar estado en PCB
-    pcb->state = STATE_READY;
     pcb->partition_id = partition_id;
+    enqueue_ready(pid);
 
     // Liberar buffer temporal
     free(words_buffer);
