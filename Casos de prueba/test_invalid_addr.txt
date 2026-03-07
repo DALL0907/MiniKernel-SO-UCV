@@ -1,5 +1,5 @@
 .NombreProg test_invalid_addr
-.NumeroPalabras 6
+.NumeroPalabras 9
 _start 1
 
 04100777  // 1. LOAD inmediato 777 -> AC = 777
@@ -12,4 +12,7 @@ _start 1
 
 00100100  // 5. SUM inmediato 100 -> AC = AC + 100
 
-13000000  // 6. SVC
+04100000 // LOAD 0 (Cargamos un 0, que significa terminar sin error)
+25100000 // PSH 0 (Apilamos el 0 en la pila como parámetro)
+04100001 // LOAD 1 (Cargamos un 1 en el AC. Es el Código de Syscall termina_prog)
+13000000 // SVC (Ahora sí, el Kernel leerá el 1 y matará el proceso)

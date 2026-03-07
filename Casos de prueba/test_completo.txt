@@ -1,5 +1,5 @@
 .NombreProg test_completo
-.NumeroPalabras 10
+.NumeroPalabras 13
 _start 0
 
 04100010 // 1. LOAD 10 (Carga inicial) -> AC = 10
@@ -21,4 +21,8 @@ _start 0
 
 05000200 // 9. STR 200 (Guardamos el resultado final en Memoria[200])
 
-13000000 // 10. SVC (Fin del programa)
+// --- Secuencia correcta para Terminar Programa (Fase 2) ---
+04100000 // LOAD 0 (Cargamos un 0, que significa terminar sin error)
+25100000 // PSH 0 (Apilamos el 0 en la pila como parámetro)
+04100001 // LOAD 1 (Cargamos un 1 en el AC. Es el Código de Syscall termina_prog)
+13000000 // SVC (Ahora sí, el Kernel leerá el 1 y matará el proceso)

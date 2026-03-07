@@ -1,5 +1,5 @@
 .NombreProg break_math
-.NumeroPalabras 4
+.NumeroPalabras 7
 _start 0
 
 04100100 // 1. LOAD 100
@@ -8,4 +8,7 @@ _start 0
 
 05000010 // 3. STR 10 (Si llega aquí, falló la protección)
 
-13000000 // 4. SVC
+04100000 // LOAD 0 (Cargamos un 0, que significa terminar sin error)
+25100000 // PSH 0 (Apilamos el 0 en la pila como parámetro)
+04100001 // LOAD 1 (Cargamos un 1 en el AC. Es el Código de Syscall termina_prog)
+13000000 // SVC (Ahora sí, el Kernel leerá el 1 y matará el proceso)

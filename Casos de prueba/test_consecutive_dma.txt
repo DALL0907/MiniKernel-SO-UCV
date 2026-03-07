@@ -1,5 +1,5 @@
 .NombreProg test_consecutive_dma
-.NumeroPalabras 30
+.NumeroPalabras 33
 _start 1
 
 04100001  // 1. LOAD inmediato 1 -> AC = 1
@@ -60,4 +60,7 @@ _start 1
 
 00100001  // 29. SUM inmediato 1 -> AC = 2 + 1 = 3
 
-13000000  // SVC
+04100000 // LOAD 0 (Cargamos un 0, que significa terminar sin error)
+25100000 // PSH 0 (Apilamos el 0 en la pila como parámetro)
+04100001 // LOAD 1 (Cargamos un 1 en el AC. Es el Código de Syscall termina_prog)
+13000000 // SVC (Ahora sí, el Kernel leerá el 1 y matará el proceso)

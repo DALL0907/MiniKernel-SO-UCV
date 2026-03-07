@@ -1,5 +1,5 @@
 .NombreProg test_index
-.NumeroPalabras 6
+.NumeroPalabras 9
 _start 0
 
 // 1. LOADRX 5 (Cargamos el índice 5 en el registro RX)
@@ -23,4 +23,8 @@ _start 0
 04200100
 
 // 6. SVC
-13000000
+// --- Secuencia correcta para Terminar Programa (Fase 2) ---
+04100000 // LOAD 0 (Cargamos un 0, que significa terminar sin error)
+25100000 // PSH 0 (Apilamos el 0 en la pila como parámetro)
+04100001 // LOAD 1 (Cargamos un 1 en el AC. Es el Código de Syscall termina_prog)
+13000000 // SVC (Ahora sí, el Kernel leerá el 1 y matará el proceso)

@@ -1,36 +1,34 @@
 .NombreProg test_jump_adv
-.NumeroPalabras 10
+.NumeroPalabras 16
 _start 0
 
 // 1. LOAD 10
 04100010
-
 // 2. COMP 5 (10 > 5 -> CC=2 Mayor)
 08100005
-
-// 3. JMPLGT 5 (Saltar a instrucción 5 si es Mayor) -> Op 12
-// Si funciona, salta la instrucción 4.
-12000005
-
+// 3. JMPLGT 8 (Saltar a instrucción 8 si es Mayor) -> ANTES ERA 5
+12000008
 // 4. STR 0 (Si se ejecuta esto, falló JMPLGT. Guardamos basura)
 05000000
 
-// 5. SVC //No se debería ejecutar
-13000000
+// --- FIN PREMATURO (Por si falla el salto) ---
+04100000 // Dir 4: LOAD 0
+25100000 // Dir 5: PSH 0
+04100001 // Dir 6: LOAD 1 (Código Syscall)
+13000000 // Dir 7: SVC
 
 // --- DESTINO DEL SALTO ---
-// 6. LOAD 5
-04100005
+// 9. LOAD 5
+04100005 // Dir 8
+// 10. COMP 5 (5 == 5 -> CC=0 Igual)
+08100005 // Dir 9
+// 11. JMPNE 12 (Saltar a 12 si NO es igual). -> ANTES ERA 9
+10000012 // Dir 10
+// 12. LOAD 777 (Código de Éxito)
+04100777 // Dir 11
 
-// 7. COMP 5 (5 == 5 -> CC=0 Igual)
-08100005
-
-// 8. JMPNE 9 (Saltar a 9 si NO es igual).
-// Como SON iguales, NO debe saltar. Debe seguir a la 8. -> Op 10
-10000009
-
-// 9. LOAD 777 (Código de Éxito)
-04100777
-
-// 10. SVC
-13000000
+// --- FIN NORMAL ---
+04100000 // Dir 12: LOAD 0
+25100000 // Dir 13: PSH 0
+04100001 // Dir 14: LOAD 1
+13000000 // Dir 15: SVC
