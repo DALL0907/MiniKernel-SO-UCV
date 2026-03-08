@@ -1,5 +1,5 @@
 .NombreProg test_math
-.NumeroPalabras 7
+.NumeroPalabras 10
 _start 0
 
 // 1. LOAD 10

@@ -1,11 +1,10 @@
 _start 1
-.NumeroPalabras 10
+.NumeroPalabras 9
 .NombreProg 5mas5
 04100005 //load 5
 00100005 //sum 5
 25000000 //psh
 04100007 //load VALOR
-13000000 //svc
 04100007 //load VALOR
 04100000 // LOAD 0 (Cargamos un 0, que significa terminar sin error)
 25100000 // PSH 0 (Apilamos el 0 en la pila como parámetro)

@@ -176,7 +176,12 @@ void dispatch(int nuevo_pid)
 
 void cpu_interrupt(int interrupt_code)
 {
-
+    // Si ya hay una interrupción pendiente y llega el reloj, la ignoramos
+    //  para no aplastar una Syscall o un Error Fatal.
+    if (interrupt_pending && interrupt_code == INT_CLOCK)
+    {
+        return;
+    }
     // Solo registramos que hay una interrupción pendiente.
     // El ciclo cpu_step la procesará antes de la siguiente instrucción.
     interrupt_pending = 1;
@@ -187,6 +192,7 @@ void cpu_interrupt(int interrupt_code)
 int handle_interrupt()
 {
     write_log(0, "INT: Iniciando secuencia de interrupción %d...\n", interrupt_code_val);
+    int pid_antes = current_pid; // Guardamos quién estaba corriendo
 
     // 1. SALVAR CONTEXTO EN EL PCB (Dispatcher)
     // Si hay un proceso corriendo actualmente, guardamos su estado exacto.
@@ -209,6 +215,13 @@ int handle_interrupt()
     interrupt_pending = 0;
     // Siempre retornamos 0 para que el ciclo de la CPU en main.c siga vivo
     // ejecutando el siguiente proceso que el planificador haya elegido.
+
+    // Si el Kernel NO hizo un cambio de proceso, debemos devolverle la CPU al
+    // usuario actual restaurando sus registros (incluyendo su USER_MODE).
+    if (current_pid != NULL_PID && current_pid == pid_antes && process_table[current_pid].state == STATE_RUNNING)
+    {
+        context = process_table[current_pid].context;
+    }
     return 0;
 }
 

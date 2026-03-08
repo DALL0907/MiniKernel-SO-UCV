@@ -1,5 +1,5 @@
 .NombreProg test_pop
-.NumeroPalabras 6
+.NumeroPalabras 9
 _start 1
 
 25100123  // 1. PSH inmediato 123 -> Stack: [123]

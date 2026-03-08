@@ -267,6 +267,7 @@ int find_free_partition()
     {
         if (!partitions_bitmap[i])
         {
+            partitions_bitmap[i] = true; // Marcar como OCUPADA
             write_log(0, "KERNEL: Partición %d está libre.\n", i);
             return i;
         }
@@ -465,7 +466,14 @@ void kernel_handle_interrupt(int interrupt_code)
             break;
 
         default:
-            write_log(1, "KERNEL ERROR: Syscall desconocida (%d) del PID %d.\n", syscall_code, current_pid);
+            write_log(1, "KERNEL ERROR: Syscall desconocida (%d) del PID %d. Violación de seguridad.\n", syscall_code, current_pid);
+            // Parche: Asesinar al proceso rebelde
+            process_table[current_pid].state = STATE_TERMINATED;
+            if (process_table[current_pid].partition_id != -1)
+            {
+                partitions_bitmap[process_table[current_pid].partition_id] = false;
+            }
+            schedule(); // Cambiar de proceso inmediatamente
             break;
         }
     }

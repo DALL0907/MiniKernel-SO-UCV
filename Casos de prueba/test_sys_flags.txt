@@ -1,5 +1,5 @@
 .NombreProg test_sys_flags
-.NumeroPalabras 5
+.NumeroPalabras 8
 _start 0
 
 // 1. TTI (Simula un tick de reloj o checkpoint) -> Op 17
