@@ -1,0 +1,15 @@
+.NombreProg test_print
+.NumeroPalabras 8
+_start 0
+
+// --- IMPRIMIR UN NÚMERO ---
+04100999 // 1. LOAD 999 (Cargamos el número a imprimir)
+25100999 // 2. PSH 999 (Lo apilamos porque Syscall 2 pide el parámetro en la pila)
+04100002 // 3. LOAD 2 (Código Syscall 2: imprime_pantalla)
+13000000 // 4. SVC (Llamada al sistema)
+
+// --- FIN DEL PROGRAMA ---
+04100000 // 5. LOAD 0 
+25100000 // 6. PSH 0 
+04100001 // 7. LOAD 1 
+13000000 // 8. SVC

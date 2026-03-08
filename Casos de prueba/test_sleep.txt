@@ -1,0 +1,21 @@
+.NombreProg test_sleep
+.NumeroPalabras 12
+_start 0
+
+// --- DORMIR EL PROCESO ---
+04100010 // 1. LOAD 10
+25100010 // 2. PSH 10 (Apilamos 10 como los tics que queremos dormir)
+04100004 // 3. LOAD 4 (Código Syscall 4: Dormir)
+13000000 // 4. SVC (El planificador lo saca de la CPU temporalmente)
+
+// --- AL DESPERTAR, IMPRIMIR 777 ---
+04100777 // 5. LOAD 777
+25100777 // 6. PSH 777 (Apilamos 777 para imprimirlo)
+04100002 // 7. LOAD 2 (Código Syscall 2: imprime_pantalla)
+13000000 // 8. SVC
+
+// --- FIN DEL PROGRAMA ---
+04100000 // 9. LOAD 0 
+25100000 // 10. PSH 0 
+04100001 // 11. LOAD 1 
+13000000 // 12. SVC

@@ -1,0 +1,22 @@
+.NombreProg test_read
+.NumeroPalabras 11
+_start 0
+
+// --- LEER DE PANTALLA ---
+04100003 // 1. LOAD 3 (Código Syscall 3: leer_pantalla. No necesita parámetro en pila)
+13000000 // 2. SVC (El programa se pausa y pide input. El resultado queda en AC)
+
+// --- SUMAR 10 AL INPUT ---
+00100010 // 3. SUM 10 (Le sumamos 10 a lo que sea que esté en el AC)
+05000000 // 4. STR 0 (Guardamos el resultado temporalmente en Memoria[0])
+
+// --- IMPRIMIR EL RESULTADO ---
+25000000 // 5. PSH 0 (Apilamos el valor de Memoria[0] como parámetro)
+04100002 // 6. LOAD 2 (Código Syscall 2: imprime_pantalla)
+13000000 // 7. SVC
+
+// --- FIN DEL PROGRAMA ---
+04100000 // 8. LOAD 0 
+25100000 // 9. PSH 0 
+04100001 // 10. LOAD 1 
+13000000 // 11. SVC
