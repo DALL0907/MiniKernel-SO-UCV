@@ -16,23 +16,21 @@ static int interrupt_code_val = 0; // Cuál interrupción es
 
 // Guarda un valor en la Pila del Sistema
 // Retorna 0 si éxito, -1 si desbordamiento (Stack Overflow)
+// Guarda un valor en la Pila del Sistema o del Usuario
 int push_stack(int value)
 {
-    // La pila crece hacia abajo (direcciones menores)
-    // El SP apunta a la próxima dirección LIBRE).
-
     context.SP--;
 
-    // Protección básica para no sobrescribir el Vector de Interrupciones (posiciones 0-20)
-    if (context.SP < 30)
+    // El límite para no desbordar depende de si es Kernel o Usuario
+    int stack_limit = (context.PSW.Mode == USER_MODE) ? context.RB : 30;
+
+    if (context.SP < stack_limit)
     {
-        write_log(1, "FATAL: Stack Overflow (SP < 30). Sistema colapsado.\n");
+        write_log(1, "ERROR: Stack Overflow (Pila llena).\n");
         context.SP++; // Revertir cambio
         return -1;
     }
 
-    // Escribimos directamente en memoria física (el Kernel accede directo)
-    // Usamos el ID 0 (CPU)
     if (bus_write(context.SP, value, 0) != 0)
     {
         return -1;
@@ -43,14 +41,19 @@ int push_stack(int value)
 // Saca un valor de la pila
 int pop_stack(int *value)
 {
-    if (context.SP >= 299)
-    { // 300 es el inicio de usuario
-        write_log(1, "ERROR: Stack Underflow\n");
+    // la base de la pila depende del modo
+    int stack_base = (context.PSW.Mode == USER_MODE) ? context.RL : 299;
+
+    if (context.SP >= stack_base)
+    {
+        write_log(1, "ERROR: Stack Underflow (Pila vacia).\n");
         return -1;
     }
+
     // Leemos de donde apunta SP
     if (bus_read(context.SP, value, 0) != 0)
         return -1;
+
     // Incrementamos SP (la pila se reduce)
     context.SP++;
     return 0;
