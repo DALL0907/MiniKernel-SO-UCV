@@ -186,7 +186,7 @@ void cpu_interrupt(int interrupt_code)
     // El ciclo cpu_step la procesará antes de la siguiente instrucción.
     interrupt_pending = 1;
     interrupt_code_val = interrupt_code;
-    write_log(1, ">> SOLICITUD INTERRUPCION: Codigo %d detectada.\n", interrupt_code);
+    write_log(0, ">> SOLICITUD INTERRUPCION: Codigo %d detectada.\n", interrupt_code);
 }
 
 int handle_interrupt()
@@ -307,7 +307,7 @@ int cpu()
 
         cpu_interrupt(INT_INV_ADDR);
 
-        return 1;
+        return 0;
     }
     context.IR = context.MDR; // Cargar instrucción en IR
     context.PSW.PC++;         // Incrementar PC
@@ -404,7 +404,7 @@ int cpu()
             {
                 write_log(1, "ERROR ALU: División por CERO detectada.\n");
                 cpu_interrupt(INT_INV_INSTR); // Interrupción
-                return 1;
+                return 0;
             }
             // 3. Hacer la división matemática real
             long long resultado_temp = (long long)ac_real / val_real;
@@ -831,7 +831,7 @@ int cpu()
     default:
         write_log(1, "ERROR: Instruccion Ilegal (Opcode %d) en PC=%d\n", opcode, context.PSW.PC - 1);
         cpu_interrupt(INT_INV_INSTR); // Interrupción 5
-        return 1;
+        return 0;
     }
 
     return 0; // Continuar ejecución
