@@ -434,23 +434,36 @@ void kernel_handle_interrupt(int interrupt_code)
             break;
 
         case 3:
-            printf("\n[ENTRADA %d]> Ingrese un entero: ", current_pid);
-            int input_val;
-            if (scanf("%d", &input_val) == 1)
+            printf("\n[ENTRADA %d]> Ingrese un entero (o teclee 'memestat' / 'ps'): ", current_pid);
+            char input_str[50];
+
+            while (1)
             {
-                int input_sm = int_to_sm(input_val);
-                process_table[current_pid].context.AC = input_sm;
-                write_log(0, "SYSCALL 3: Proceso %d leyó %d.\n", current_pid, input_val);
-            }
-            else
-            {
-                write_log(1, "KERNEL ERROR: Entrada inválida.\n");
-                while (getchar() != '\n')
-                    ;
-                process_table[current_pid].context.AC = int_to_sm(0);
+                if (scanf("%s", input_str) == 1)
+                {
+                    if (strcmp(input_str, "ps") == 0)
+                    {
+                        extern void cmd_ps();
+                        cmd_ps();
+                        printf("\n[ENTRADA %d]> Ingrese un entero: ", current_pid);
+                    }
+                    else if (strcmp(input_str, "memestat") == 0)
+                    {
+                        extern void cmd_memestat();
+                        cmd_memestat();
+                        printf("\n[ENTRADA %d]> Ingrese un entero: ", current_pid);
+                    }
+                    else
+                    {
+                        // Si no es un comando de auditoría, asumimos que es un numero
+                        int input_val = atoi(input_str);
+                        process_table[current_pid].context.AC = int_to_sm(input_val);
+                        write_log(0, "SYSCALL 3: Proceso %d leyó %d.\n", current_pid, input_val);
+                        break; // Salimos del bucle infinito para continuar la ejecución
+                    }
+                }
             }
             break;
-
         case 4:
             if (kernel_pop_stack(current_pid, &param_raw) == 0)
             {

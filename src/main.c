@@ -87,8 +87,9 @@ static void print_banner()
 {
     printf("\n==============================================\n");
     printf("Comandos disponibles:\n");
-    printf("  ejecutar <prog1> <prog2> ... <progN>  - Carga y ejecuta una lista de programas\n");
+    printf("  ejecutar <prog1> <prog2> ... <progN>   - Carga y ejecuta una lista de programas\n");
     printf("  ps                                     - Muestra el estado de los procesos\n");
+    printf("  memestat                               - Muestra el estado de la memoria\n");
     printf("  apagar                                 - Apaga el sistema y cierra el simulador\n");
     printf("  reiniciar                              - Reinicia el sistema sin cerrar\n");
     printf("==============================================\n\n");
