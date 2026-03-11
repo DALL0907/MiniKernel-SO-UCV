@@ -4,6 +4,7 @@
 #include "kernel.h"
 #include "log.h"
 #include <string.h>
+#include <stdlib.h>
 #include <stdio.h>
 #include "dma.h"
 
