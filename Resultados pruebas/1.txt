@@ -1,0 +1,2500 @@
+[2026-03-15 01:02:40] Log iniciado.
+[2026-03-15 01:02:40] === INICIANDO SISTEMA ===
+[2026-03-15 01:02:40] BUS: Inicializado exitosamente
+[2026-03-15 01:02:40] DISK: Disco inicializado correctamente
+[2026-03-15 01:02:40] DMA: inicializado exitosamente
+[2026-03-15 01:02:40] CPU Inicializada.
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 0, valor 20
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 1, valor 20
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 2, valor 20
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 3, valor 20
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 4, valor 20
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 5, valor 20
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 6, valor 20
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 7, valor 20
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 8, valor 20
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 9, valor 20
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 10, valor 20
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 11, valor 20
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 12, valor 20
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 13, valor 20
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 14, valor 20
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 15, valor 20
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 16, valor 20
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 17, valor 20
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 18, valor 20
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 19, valor 20
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 20, valor 14000000
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 21, valor 0
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 22, valor 0
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 23, valor 0
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 24, valor 0
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 25, valor 0
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 26, valor 0
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 27, valor 0
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 28, valor 0
+[2026-03-15 01:02:40] Escribiendo memoria fisica: direccion 29, valor 0
+[2026-03-15 01:02:40] KERNEL: Vector de interrupciones inicializado.
+[2026-03-15 01:02:40] KERNEL: Estructuras inicializadas (Procesos, Archivos, Memoria).
+[2026-03-15 01:03:19] FILE TABLE: Programa 'test_concurrent.txt' NO encontrado.
+[2026-03-15 01:03:19] LOADER: ===== INICIANDO CARGA PC REAL -> DISCO =====
+[2026-03-15 01:03:19] LOADER: Programa: test_concurrent.txt, Archivo: test_concurrent.txt
+[2026-03-15 01:03:19] LOADER: Leyendo archivo test_concurrent.txt desde PC real...
+[2026-03-15 01:03:19] LOADER: Nombre del programa: test_conc
+[2026-03-15 01:03:19] LOADER: Palabras declaradas: 16
+[2026-03-15 01:03:19] LOADER: Directiva _start 0 -> n_start = 0
+[2026-03-15 01:03:19] LOADER: Archivo parseado exitosamente. Total: 16 palabras.
+[2026-03-15 01:03:19] LOADER: Archivo leido. 16 palabras en buffer temporal.
+[2026-03-15 01:03:19] LOADER: Escribiendo 16 palabras en disco (Track=0, Cyl=0, Sec=0)...
+[2026-03-15 01:03:19] Escribiendo en disco: pista 0, cilindro 0, sector 0, data: 04100999
+[2026-03-15 01:03:19] LOADER: Palabra 0 escrita en sector (0,0,0).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 0, cilindro 0, sector 1, data: 05000050
+[2026-03-15 01:03:19] LOADER: Palabra 1 escrita en sector (0,0,1).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 0, cilindro 0, sector 2, data: 28100001
+[2026-03-15 01:03:19] LOADER: Palabra 2 escrita en sector (0,0,2).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 0, cilindro 0, sector 3, data: 29100001
+[2026-03-15 01:03:19] LOADER: Palabra 3 escrita en sector (0,0,3).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 0, cilindro 0, sector 4, data: 30100001
+[2026-03-15 01:03:19] LOADER: Palabra 4 escrita en sector (0,0,4).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 0, cilindro 0, sector 5, data: 31100001
+[2026-03-15 01:03:19] LOADER: Palabra 5 escrita en sector (0,0,5).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 0, cilindro 0, sector 6, data: 32100050
+[2026-03-15 01:03:19] LOADER: Palabra 6 escrita en sector (0,0,6).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 0, cilindro 0, sector 7, data: 33000000
+[2026-03-15 01:03:19] LOADER: Palabra 7 escrita en sector (0,0,7).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 0, cilindro 0, sector 8, data: 04100100
+[2026-03-15 01:03:19] LOADER: Palabra 8 escrita en sector (0,0,8).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 0, cilindro 0, sector 9, data: 01100001
+[2026-03-15 01:03:19] LOADER: Palabra 9 escrita en sector (0,0,9).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 0, cilindro 0, sector 10, data: 08100000
+[2026-03-15 01:03:19] LOADER: Palabra 10 escrita en sector (0,0,10).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 0, cilindro 0, sector 11, data: 10000009
+[2026-03-15 01:03:19] LOADER: Palabra 11 escrita en sector (0,0,11).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 0, cilindro 0, sector 12, data: 04100000
+[2026-03-15 01:03:19] LOADER: Palabra 12 escrita en sector (0,0,12).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 0, cilindro 0, sector 13, data: 25100000
+[2026-03-15 01:03:19] LOADER: Palabra 13 escrita en sector (0,0,13).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 0, cilindro 0, sector 14, data: 04100001
+[2026-03-15 01:03:19] LOADER: Palabra 14 escrita en sector (0,0,14).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 0, cilindro 0, sector 15, data: 13000000
+[2026-03-15 01:03:19] LOADER: Palabra 15 escrita en sector (0,0,15).
+[2026-03-15 01:03:19] LOADER: 16 palabras escritas en disco exitosamente.
+[2026-03-15 01:03:19] LOADER: Programa escrito en disco exitosamente.
+[2026-03-15 01:03:19] KERNEL: Proceso creado PID=0, (test_concurrent.txt) en estado NEW.
+[2026-03-15 01:03:19] LOADER: PCB creado. PID=0
+[2026-03-15 01:03:19] FILE TABLE: Programa 'test_concurrent.txt' NO encontrado.
+[2026-03-15 01:03:19] FILE TABLE: Entrada 0 agregada: 'test_concurrent.txt' [Track=0, Cyl=0, Sec=0, Size=16, n_start=0]
+[2026-03-15 01:03:19] LOADER: Entrada en tabla de archivos creada (indice 0).
+[2026-03-15 01:03:19] LOADER: ===== CARGA PC->DISCO COMPLETADA =====
+[2026-03-15 01:03:19] LOADER: PID=0, Programa=test_concurrent.txt, Palabras=16, n_start=0
+[2026-03-15 01:03:19] FILE TABLE: Programa 'test_concurrent.txt' encontrado en índice 0.
+[2026-03-15 01:03:19] KERNEL: Partición 0 está libre.
+[2026-03-15 01:03:19] LOADER: ===== INICIANDO CARGA DISCO -> RAM =====
+[2026-03-15 01:03:19] LOADER: PID=0, Particion=0, FT_Index=0
+[2026-03-15 01:03:19] LOADER: Cargando 'test_concurrent.txt' (PID=0) a RAM (Particion 0).
+[2026-03-15 01:03:19] LOADER: Leyendo 16 palabras desde disco (Track=0, Cyl=0, Sec=0)...
+[2026-03-15 01:03:19] Leyendo en disco: pista 0, cilindro 0, sector 0, data: 04100999
+[2026-03-15 01:03:19] LOADER: Palabra 0 leida desde sector (0,0,0): 4100999
+[2026-03-15 01:03:19] Leyendo en disco: pista 0, cilindro 0, sector 1, data: 05000050
+[2026-03-15 01:03:19] LOADER: Palabra 1 leida desde sector (0,0,1): 5000050
+[2026-03-15 01:03:19] Leyendo en disco: pista 0, cilindro 0, sector 2, data: 28100001
+[2026-03-15 01:03:19] LOADER: Palabra 2 leida desde sector (0,0,2): 28100001
+[2026-03-15 01:03:19] Leyendo en disco: pista 0, cilindro 0, sector 3, data: 29100001
+[2026-03-15 01:03:19] LOADER: Palabra 3 leida desde sector (0,0,3): 29100001
+[2026-03-15 01:03:19] Leyendo en disco: pista 0, cilindro 0, sector 4, data: 30100001
+[2026-03-15 01:03:19] LOADER: Palabra 4 leida desde sector (0,0,4): 30100001
+[2026-03-15 01:03:19] Leyendo en disco: pista 0, cilindro 0, sector 5, data: 31100001
+[2026-03-15 01:03:19] LOADER: Palabra 5 leida desde sector (0,0,5): 31100001
+[2026-03-15 01:03:19] Leyendo en disco: pista 0, cilindro 0, sector 6, data: 32100050
+[2026-03-15 01:03:19] LOADER: Palabra 6 leida desde sector (0,0,6): 32100050
+[2026-03-15 01:03:19] Leyendo en disco: pista 0, cilindro 0, sector 7, data: 33000000
+[2026-03-15 01:03:19] LOADER: Palabra 7 leida desde sector (0,0,7): 33000000
+[2026-03-15 01:03:19] Leyendo en disco: pista 0, cilindro 0, sector 8, data: 04100100
+[2026-03-15 01:03:19] LOADER: Palabra 8 leida desde sector (0,0,8): 4100100
+[2026-03-15 01:03:19] Leyendo en disco: pista 0, cilindro 0, sector 9, data: 01100001
+[2026-03-15 01:03:19] LOADER: Palabra 9 leida desde sector (0,0,9): 1100001
+[2026-03-15 01:03:19] Leyendo en disco: pista 0, cilindro 0, sector 10, data: 08100000
+[2026-03-15 01:03:19] LOADER: Palabra 10 leida desde sector (0,0,10): 8100000
+[2026-03-15 01:03:19] Leyendo en disco: pista 0, cilindro 0, sector 11, data: 10000009
+[2026-03-15 01:03:19] LOADER: Palabra 11 leida desde sector (0,0,11): 10000009
+[2026-03-15 01:03:19] Leyendo en disco: pista 0, cilindro 0, sector 12, data: 04100000
+[2026-03-15 01:03:19] LOADER: Palabra 12 leida desde sector (0,0,12): 4100000
+[2026-03-15 01:03:19] Leyendo en disco: pista 0, cilindro 0, sector 13, data: 25100000
+[2026-03-15 01:03:19] LOADER: Palabra 13 leida desde sector (0,0,13): 25100000
+[2026-03-15 01:03:19] Leyendo en disco: pista 0, cilindro 0, sector 14, data: 04100001
+[2026-03-15 01:03:19] LOADER: Palabra 14 leida desde sector (0,0,14): 4100001
+[2026-03-15 01:03:19] Leyendo en disco: pista 0, cilindro 0, sector 15, data: 13000000
+[2026-03-15 01:03:19] LOADER: Palabra 15 leida desde sector (0,0,15): 13000000
+[2026-03-15 01:03:19] LOADER: 16 palabras leidas desde disco exitosamente.
+[2026-03-15 01:03:19] LOADER: Programa leido desde disco a buffer. 16 palabras.
+[2026-03-15 01:03:19] LOADER: Particion 0: direcciones RAM [300-639].
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 300, valor 4100999
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 301, valor 5000050
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 302, valor 28100001
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 303, valor 29100001
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 304, valor 30100001
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 305, valor 31100001
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 306, valor 32100050
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 307, valor 33000000
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 308, valor 4100100
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 312, valor 4100000
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 313, valor 25100000
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 314, valor 4100001
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 315, valor 13000000
+[2026-03-15 01:03:19] LOADER: Todas las palabras escritas en RAM exitosamente.
+[2026-03-15 01:03:19] LOADER: Contexto inicializado.
+[2026-03-15 01:03:19] LOADER:   RB (Base)=300, RL (Limite)=639
+[2026-03-15 01:03:19] LOADER:   PC (Program Counter)=0 (dentro de PSW)
+[2026-03-15 01:03:19] LOADER:   SP (Stack Pointer)=639 (primera posicion VACIA)
+[2026-03-15 01:03:19] LOADER: ===== CARGA DISCO->RAM COMPLETADA =====
+[2026-03-15 01:03:19] LOADER: PID=0 cargado en Particion 0, listo para ejecutar.
+[2026-03-15 01:03:19] FILE TABLE: Programa 'test_pop.txt' NO encontrado.
+[2026-03-15 01:03:19] LOADER: ===== INICIANDO CARGA PC REAL -> DISCO =====
+[2026-03-15 01:03:19] LOADER: Programa: test_pop.txt, Archivo: test_pop.txt
+[2026-03-15 01:03:19] LOADER: Leyendo archivo test_pop.txt desde PC real...
+[2026-03-15 01:03:19] LOADER: Nombre del programa: test_pop
+[2026-03-15 01:03:19] LOADER: Palabras declaradas: 9
+[2026-03-15 01:03:19] LOADER: Directiva _start 1 -> n_start = 0
+[2026-03-15 01:03:19] LOADER: Archivo parseado exitosamente. Total: 9 palabras.
+[2026-03-15 01:03:19] LOADER: Archivo leido. 9 palabras en buffer temporal.
+[2026-03-15 01:03:19] LOADER: Escribiendo 9 palabras en disco (Track=1, Cyl=0, Sec=0)...
+[2026-03-15 01:03:19] Escribiendo en disco: pista 1, cilindro 0, sector 0, data: 25100123
+[2026-03-15 01:03:19] LOADER: Palabra 0 escrita en sector (1,0,0).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 1, cilindro 0, sector 1, data: 25100456
+[2026-03-15 01:03:19] LOADER: Palabra 1 escrita en sector (1,0,1).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 1, cilindro 0, sector 2, data: 26000100
+[2026-03-15 01:03:19] LOADER: Palabra 2 escrita en sector (1,0,2).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 1, cilindro 0, sector 3, data: 26000101
+[2026-03-15 01:03:19] LOADER: Palabra 3 escrita en sector (1,0,3).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 1, cilindro 0, sector 4, data: 04100999
+[2026-03-15 01:03:19] LOADER: Palabra 4 escrita en sector (1,0,4).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 1, cilindro 0, sector 5, data: 04100000
+[2026-03-15 01:03:19] LOADER: Palabra 5 escrita en sector (1,0,5).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 1, cilindro 0, sector 6, data: 25100000
+[2026-03-15 01:03:19] LOADER: Palabra 6 escrita en sector (1,0,6).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 1, cilindro 0, sector 7, data: 04100001
+[2026-03-15 01:03:19] LOADER: Palabra 7 escrita en sector (1,0,7).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 1, cilindro 0, sector 8, data: 13000000
+[2026-03-15 01:03:19] LOADER: Palabra 8 escrita en sector (1,0,8).
+[2026-03-15 01:03:19] LOADER: 9 palabras escritas en disco exitosamente.
+[2026-03-15 01:03:19] LOADER: Programa escrito en disco exitosamente.
+[2026-03-15 01:03:19] KERNEL: Proceso creado PID=1, (test_pop.txt) en estado NEW.
+[2026-03-15 01:03:19] LOADER: PCB creado. PID=1
+[2026-03-15 01:03:19] FILE TABLE: Programa 'test_pop.txt' NO encontrado.
+[2026-03-15 01:03:19] FILE TABLE: Entrada 1 agregada: 'test_pop.txt' [Track=1, Cyl=0, Sec=0, Size=9, n_start=0]
+[2026-03-15 01:03:19] LOADER: Entrada en tabla de archivos creada (indice 1).
+[2026-03-15 01:03:19] LOADER: ===== CARGA PC->DISCO COMPLETADA =====
+[2026-03-15 01:03:19] LOADER: PID=1, Programa=test_pop.txt, Palabras=9, n_start=0
+[2026-03-15 01:03:19] FILE TABLE: Programa 'test_pop.txt' encontrado en índice 1.
+[2026-03-15 01:03:19] KERNEL: Partición 1 está libre.
+[2026-03-15 01:03:19] LOADER: ===== INICIANDO CARGA DISCO -> RAM =====
+[2026-03-15 01:03:19] LOADER: PID=1, Particion=1, FT_Index=1
+[2026-03-15 01:03:19] LOADER: Cargando 'test_pop.txt' (PID=1) a RAM (Particion 1).
+[2026-03-15 01:03:19] LOADER: Leyendo 9 palabras desde disco (Track=1, Cyl=0, Sec=0)...
+[2026-03-15 01:03:19] Leyendo en disco: pista 1, cilindro 0, sector 0, data: 25100123
+[2026-03-15 01:03:19] LOADER: Palabra 0 leida desde sector (1,0,0): 25100123
+[2026-03-15 01:03:19] Leyendo en disco: pista 1, cilindro 0, sector 1, data: 25100456
+[2026-03-15 01:03:19] LOADER: Palabra 1 leida desde sector (1,0,1): 25100456
+[2026-03-15 01:03:19] Leyendo en disco: pista 1, cilindro 0, sector 2, data: 26000100
+[2026-03-15 01:03:19] LOADER: Palabra 2 leida desde sector (1,0,2): 26000100
+[2026-03-15 01:03:19] Leyendo en disco: pista 1, cilindro 0, sector 3, data: 26000101
+[2026-03-15 01:03:19] LOADER: Palabra 3 leida desde sector (1,0,3): 26000101
+[2026-03-15 01:03:19] Leyendo en disco: pista 1, cilindro 0, sector 4, data: 04100999
+[2026-03-15 01:03:19] LOADER: Palabra 4 leida desde sector (1,0,4): 4100999
+[2026-03-15 01:03:19] Leyendo en disco: pista 1, cilindro 0, sector 5, data: 04100000
+[2026-03-15 01:03:19] LOADER: Palabra 5 leida desde sector (1,0,5): 4100000
+[2026-03-15 01:03:19] Leyendo en disco: pista 1, cilindro 0, sector 6, data: 25100000
+[2026-03-15 01:03:19] LOADER: Palabra 6 leida desde sector (1,0,6): 25100000
+[2026-03-15 01:03:19] Leyendo en disco: pista 1, cilindro 0, sector 7, data: 04100001
+[2026-03-15 01:03:19] LOADER: Palabra 7 leida desde sector (1,0,7): 4100001
+[2026-03-15 01:03:19] Leyendo en disco: pista 1, cilindro 0, sector 8, data: 13000000
+[2026-03-15 01:03:19] LOADER: Palabra 8 leida desde sector (1,0,8): 13000000
+[2026-03-15 01:03:19] LOADER: 9 palabras leidas desde disco exitosamente.
+[2026-03-15 01:03:19] LOADER: Programa leido desde disco a buffer. 9 palabras.
+[2026-03-15 01:03:19] LOADER: Particion 1: direcciones RAM [640-979].
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 640, valor 25100123
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 641, valor 25100456
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 642, valor 26000100
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 643, valor 26000101
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 644, valor 4100999
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 645, valor 4100000
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 646, valor 25100000
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 647, valor 4100001
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 648, valor 13000000
+[2026-03-15 01:03:19] LOADER: Todas las palabras escritas en RAM exitosamente.
+[2026-03-15 01:03:19] LOADER: Contexto inicializado.
+[2026-03-15 01:03:19] LOADER:   RB (Base)=640, RL (Limite)=979
+[2026-03-15 01:03:19] LOADER:   PC (Program Counter)=0 (dentro de PSW)
+[2026-03-15 01:03:19] LOADER:   SP (Stack Pointer)=979 (primera posicion VACIA)
+[2026-03-15 01:03:19] LOADER: ===== CARGA DISCO->RAM COMPLETADA =====
+[2026-03-15 01:03:19] LOADER: PID=1 cargado en Particion 1, listo para ejecutar.
+[2026-03-15 01:03:19] FILE TABLE: Programa 'test_math.txt' NO encontrado.
+[2026-03-15 01:03:19] LOADER: ===== INICIANDO CARGA PC REAL -> DISCO =====
+[2026-03-15 01:03:19] LOADER: Programa: test_math.txt, Archivo: test_math.txt
+[2026-03-15 01:03:19] LOADER: Leyendo archivo test_math.txt desde PC real...
+[2026-03-15 01:03:19] LOADER: Nombre del programa: test_math
+[2026-03-15 01:03:19] LOADER: Palabras declaradas: 10
+[2026-03-15 01:03:19] LOADER: Directiva _start 0 -> n_start = 0
+[2026-03-15 01:03:19] LOADER: Archivo parseado exitosamente. Total: 10 palabras.
+[2026-03-15 01:03:19] LOADER: Archivo leido. 10 palabras en buffer temporal.
+[2026-03-15 01:03:19] LOADER: Escribiendo 10 palabras en disco (Track=2, Cyl=0, Sec=0)...
+[2026-03-15 01:03:19] Escribiendo en disco: pista 2, cilindro 0, sector 0, data: 04100010
+[2026-03-15 01:03:19] LOADER: Palabra 0 escrita en sector (2,0,0).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 2, cilindro 0, sector 1, data: 00100010
+[2026-03-15 01:03:19] LOADER: Palabra 1 escrita en sector (2,0,1).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 2, cilindro 0, sector 2, data: 02100005
+[2026-03-15 01:03:19] LOADER: Palabra 2 escrita en sector (2,0,2).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 2, cilindro 0, sector 3, data: 03100002
+[2026-03-15 01:03:19] LOADER: Palabra 3 escrita en sector (2,0,3).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 2, cilindro 0, sector 4, data: 01100008
+[2026-03-15 01:03:19] LOADER: Palabra 4 escrita en sector (2,0,4).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 2, cilindro 0, sector 5, data: 05000010
+[2026-03-15 01:03:19] LOADER: Palabra 5 escrita en sector (2,0,5).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 2, cilindro 0, sector 6, data: 04100000
+[2026-03-15 01:03:19] LOADER: Palabra 6 escrita en sector (2,0,6).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 2, cilindro 0, sector 7, data: 25100000
+[2026-03-15 01:03:19] LOADER: Palabra 7 escrita en sector (2,0,7).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 2, cilindro 0, sector 8, data: 04100001
+[2026-03-15 01:03:19] LOADER: Palabra 8 escrita en sector (2,0,8).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 2, cilindro 0, sector 9, data: 13000000
+[2026-03-15 01:03:19] LOADER: Palabra 9 escrita en sector (2,0,9).
+[2026-03-15 01:03:19] LOADER: 10 palabras escritas en disco exitosamente.
+[2026-03-15 01:03:19] LOADER: Programa escrito en disco exitosamente.
+[2026-03-15 01:03:19] KERNEL: Proceso creado PID=2, (test_math.txt) en estado NEW.
+[2026-03-15 01:03:19] LOADER: PCB creado. PID=2
+[2026-03-15 01:03:19] FILE TABLE: Programa 'test_math.txt' NO encontrado.
+[2026-03-15 01:03:19] FILE TABLE: Entrada 2 agregada: 'test_math.txt' [Track=2, Cyl=0, Sec=0, Size=10, n_start=0]
+[2026-03-15 01:03:19] LOADER: Entrada en tabla de archivos creada (indice 2).
+[2026-03-15 01:03:19] LOADER: ===== CARGA PC->DISCO COMPLETADA =====
+[2026-03-15 01:03:19] LOADER: PID=2, Programa=test_math.txt, Palabras=10, n_start=0
+[2026-03-15 01:03:19] FILE TABLE: Programa 'test_math.txt' encontrado en índice 2.
+[2026-03-15 01:03:19] KERNEL: Partición 2 está libre.
+[2026-03-15 01:03:19] LOADER: ===== INICIANDO CARGA DISCO -> RAM =====
+[2026-03-15 01:03:19] LOADER: PID=2, Particion=2, FT_Index=2
+[2026-03-15 01:03:19] LOADER: Cargando 'test_math.txt' (PID=2) a RAM (Particion 2).
+[2026-03-15 01:03:19] LOADER: Leyendo 10 palabras desde disco (Track=2, Cyl=0, Sec=0)...
+[2026-03-15 01:03:19] Leyendo en disco: pista 2, cilindro 0, sector 0, data: 04100010
+[2026-03-15 01:03:19] LOADER: Palabra 0 leida desde sector (2,0,0): 4100010
+[2026-03-15 01:03:19] Leyendo en disco: pista 2, cilindro 0, sector 1, data: 00100010
+[2026-03-15 01:03:19] LOADER: Palabra 1 leida desde sector (2,0,1): 100010
+[2026-03-15 01:03:19] Leyendo en disco: pista 2, cilindro 0, sector 2, data: 02100005
+[2026-03-15 01:03:19] LOADER: Palabra 2 leida desde sector (2,0,2): 2100005
+[2026-03-15 01:03:19] Leyendo en disco: pista 2, cilindro 0, sector 3, data: 03100002
+[2026-03-15 01:03:19] LOADER: Palabra 3 leida desde sector (2,0,3): 3100002
+[2026-03-15 01:03:19] Leyendo en disco: pista 2, cilindro 0, sector 4, data: 01100008
+[2026-03-15 01:03:19] LOADER: Palabra 4 leida desde sector (2,0,4): 1100008
+[2026-03-15 01:03:19] Leyendo en disco: pista 2, cilindro 0, sector 5, data: 05000010
+[2026-03-15 01:03:19] LOADER: Palabra 5 leida desde sector (2,0,5): 5000010
+[2026-03-15 01:03:19] Leyendo en disco: pista 2, cilindro 0, sector 6, data: 04100000
+[2026-03-15 01:03:19] LOADER: Palabra 6 leida desde sector (2,0,6): 4100000
+[2026-03-15 01:03:19] Leyendo en disco: pista 2, cilindro 0, sector 7, data: 25100000
+[2026-03-15 01:03:19] LOADER: Palabra 7 leida desde sector (2,0,7): 25100000
+[2026-03-15 01:03:19] Leyendo en disco: pista 2, cilindro 0, sector 8, data: 04100001
+[2026-03-15 01:03:19] LOADER: Palabra 8 leida desde sector (2,0,8): 4100001
+[2026-03-15 01:03:19] Leyendo en disco: pista 2, cilindro 0, sector 9, data: 13000000
+[2026-03-15 01:03:19] LOADER: Palabra 9 leida desde sector (2,0,9): 13000000
+[2026-03-15 01:03:19] LOADER: 10 palabras leidas desde disco exitosamente.
+[2026-03-15 01:03:19] LOADER: Programa leido desde disco a buffer. 10 palabras.
+[2026-03-15 01:03:19] LOADER: Particion 2: direcciones RAM [980-1319].
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 980, valor 4100010
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 981, valor 100010
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 982, valor 2100005
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 983, valor 3100002
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 984, valor 1100008
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 985, valor 5000010
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 986, valor 4100000
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 987, valor 25100000
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 988, valor 4100001
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 989, valor 13000000
+[2026-03-15 01:03:19] LOADER: Todas las palabras escritas en RAM exitosamente.
+[2026-03-15 01:03:19] LOADER: Contexto inicializado.
+[2026-03-15 01:03:19] LOADER:   RB (Base)=980, RL (Limite)=1319
+[2026-03-15 01:03:19] LOADER:   PC (Program Counter)=0 (dentro de PSW)
+[2026-03-15 01:03:19] LOADER:   SP (Stack Pointer)=1319 (primera posicion VACIA)
+[2026-03-15 01:03:19] LOADER: ===== CARGA DISCO->RAM COMPLETADA =====
+[2026-03-15 01:03:19] LOADER: PID=2 cargado en Particion 2, listo para ejecutar.
+[2026-03-15 01:03:19] FILE TABLE: Programa '5mas5.txt' NO encontrado.
+[2026-03-15 01:03:19] LOADER: ===== INICIANDO CARGA PC REAL -> DISCO =====
+[2026-03-15 01:03:19] LOADER: Programa: 5mas5.txt, Archivo: 5mas5.txt
+[2026-03-15 01:03:19] LOADER: Leyendo archivo 5mas5.txt desde PC real...
+[2026-03-15 01:03:19] LOADER: Directiva _start 1 -> n_start = 0
+[2026-03-15 01:03:19] LOADER: Palabras declaradas: 9
+[2026-03-15 01:03:19] LOADER: Nombre del programa: 5mas5
+[2026-03-15 01:03:19] LOADER: Archivo parseado exitosamente. Total: 9 palabras.
+[2026-03-15 01:03:19] LOADER: Archivo leido. 9 palabras en buffer temporal.
+[2026-03-15 01:03:19] LOADER: Escribiendo 9 palabras en disco (Track=3, Cyl=0, Sec=0)...
+[2026-03-15 01:03:19] Escribiendo en disco: pista 3, cilindro 0, sector 0, data: 04100005
+[2026-03-15 01:03:19] LOADER: Palabra 0 escrita en sector (3,0,0).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 3, cilindro 0, sector 1, data: 00100005
+[2026-03-15 01:03:19] LOADER: Palabra 1 escrita en sector (3,0,1).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 3, cilindro 0, sector 2, data: 25000000
+[2026-03-15 01:03:19] LOADER: Palabra 2 escrita en sector (3,0,2).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 3, cilindro 0, sector 3, data: 04100007
+[2026-03-15 01:03:19] LOADER: Palabra 3 escrita en sector (3,0,3).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 3, cilindro 0, sector 4, data: 04100007
+[2026-03-15 01:03:19] LOADER: Palabra 4 escrita en sector (3,0,4).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 3, cilindro 0, sector 5, data: 04100000
+[2026-03-15 01:03:19] LOADER: Palabra 5 escrita en sector (3,0,5).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 3, cilindro 0, sector 6, data: 25100000
+[2026-03-15 01:03:19] LOADER: Palabra 6 escrita en sector (3,0,6).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 3, cilindro 0, sector 7, data: 04100001
+[2026-03-15 01:03:19] LOADER: Palabra 7 escrita en sector (3,0,7).
+[2026-03-15 01:03:19] Escribiendo en disco: pista 3, cilindro 0, sector 8, data: 13000000
+[2026-03-15 01:03:19] LOADER: Palabra 8 escrita en sector (3,0,8).
+[2026-03-15 01:03:19] LOADER: 9 palabras escritas en disco exitosamente.
+[2026-03-15 01:03:19] LOADER: Programa escrito en disco exitosamente.
+[2026-03-15 01:03:19] KERNEL: Proceso creado PID=3, (5mas5.txt) en estado NEW.
+[2026-03-15 01:03:19] LOADER: PCB creado. PID=3
+[2026-03-15 01:03:19] FILE TABLE: Programa '5mas5.txt' NO encontrado.
+[2026-03-15 01:03:19] FILE TABLE: Entrada 3 agregada: '5mas5.txt' [Track=3, Cyl=0, Sec=0, Size=9, n_start=0]
+[2026-03-15 01:03:19] LOADER: Entrada en tabla de archivos creada (indice 3).
+[2026-03-15 01:03:19] LOADER: ===== CARGA PC->DISCO COMPLETADA =====
+[2026-03-15 01:03:19] LOADER: PID=3, Programa=5mas5.txt, Palabras=9, n_start=0
+[2026-03-15 01:03:19] FILE TABLE: Programa '5mas5.txt' encontrado en índice 3.
+[2026-03-15 01:03:19] KERNEL: Partición 3 está libre.
+[2026-03-15 01:03:19] LOADER: ===== INICIANDO CARGA DISCO -> RAM =====
+[2026-03-15 01:03:19] LOADER: PID=3, Particion=3, FT_Index=3
+[2026-03-15 01:03:19] LOADER: Cargando '5mas5.txt' (PID=3) a RAM (Particion 3).
+[2026-03-15 01:03:19] LOADER: Leyendo 9 palabras desde disco (Track=3, Cyl=0, Sec=0)...
+[2026-03-15 01:03:19] Leyendo en disco: pista 3, cilindro 0, sector 0, data: 04100005
+[2026-03-15 01:03:19] LOADER: Palabra 0 leida desde sector (3,0,0): 4100005
+[2026-03-15 01:03:19] Leyendo en disco: pista 3, cilindro 0, sector 1, data: 00100005
+[2026-03-15 01:03:19] LOADER: Palabra 1 leida desde sector (3,0,1): 100005
+[2026-03-15 01:03:19] Leyendo en disco: pista 3, cilindro 0, sector 2, data: 25000000
+[2026-03-15 01:03:19] LOADER: Palabra 2 leida desde sector (3,0,2): 25000000
+[2026-03-15 01:03:19] Leyendo en disco: pista 3, cilindro 0, sector 3, data: 04100007
+[2026-03-15 01:03:19] LOADER: Palabra 3 leida desde sector (3,0,3): 4100007
+[2026-03-15 01:03:19] Leyendo en disco: pista 3, cilindro 0, sector 4, data: 04100007
+[2026-03-15 01:03:19] LOADER: Palabra 4 leida desde sector (3,0,4): 4100007
+[2026-03-15 01:03:19] Leyendo en disco: pista 3, cilindro 0, sector 5, data: 04100000
+[2026-03-15 01:03:19] LOADER: Palabra 5 leida desde sector (3,0,5): 4100000
+[2026-03-15 01:03:19] Leyendo en disco: pista 3, cilindro 0, sector 6, data: 25100000
+[2026-03-15 01:03:19] LOADER: Palabra 6 leida desde sector (3,0,6): 25100000
+[2026-03-15 01:03:19] Leyendo en disco: pista 3, cilindro 0, sector 7, data: 04100001
+[2026-03-15 01:03:19] LOADER: Palabra 7 leida desde sector (3,0,7): 4100001
+[2026-03-15 01:03:19] Leyendo en disco: pista 3, cilindro 0, sector 8, data: 13000000
+[2026-03-15 01:03:19] LOADER: Palabra 8 leida desde sector (3,0,8): 13000000
+[2026-03-15 01:03:19] LOADER: 9 palabras leidas desde disco exitosamente.
+[2026-03-15 01:03:19] LOADER: Programa leido desde disco a buffer. 9 palabras.
+[2026-03-15 01:03:19] LOADER: Particion 3: direcciones RAM [1320-1659].
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 1320, valor 4100005
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 1321, valor 100005
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 1322, valor 25000000
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 1323, valor 4100007
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 1324, valor 4100007
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 1325, valor 4100000
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 1326, valor 25100000
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 1327, valor 4100001
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 1328, valor 13000000
+[2026-03-15 01:03:19] LOADER: Todas las palabras escritas en RAM exitosamente.
+[2026-03-15 01:03:19] LOADER: Contexto inicializado.
+[2026-03-15 01:03:19] LOADER:   RB (Base)=1320, RL (Limite)=1659
+[2026-03-15 01:03:19] LOADER:   PC (Program Counter)=0 (dentro de PSW)
+[2026-03-15 01:03:19] LOADER:   SP (Stack Pointer)=1659 (primera posicion VACIA)
+[2026-03-15 01:03:19] LOADER: ===== CARGA DISCO->RAM COMPLETADA =====
+[2026-03-15 01:03:19] LOADER: PID=3 cargado en Particion 3, listo para ejecutar.
+[2026-03-15 01:03:19] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:19] Leyendo memoria fisica: direccion 300, valor 4100999
+[2026-03-15 01:03:19] Ejecutando LOAD, AC cargado con 999
+[2026-03-15 01:03:19] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:19] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:19] DISPATCHER: Contexto salvado para PID=0 (PC=1)
+[2026-03-15 01:03:19] Leyendo memoria fisica: direccion 301, valor 5000050
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 350, valor 999
+[2026-03-15 01:03:19] Ejecutando STR, valor 999 escrito en dirección 350
+[2026-03-15 01:03:19] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:19] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:19] DISPATCHER: Contexto salvado para PID=0 (PC=2)
+[2026-03-15 01:03:19] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:19] PLANIFICADOR: Quantum agotado. Sale PID 0 (test_concurrent.txt), Entra PID 1 (test_pop.txt)
+[2026-03-15 01:03:19] >> PLANIFICADOR: Cambio de contexto -> Entra PID 1 (test_pop.txt) a ejecutar.
+[2026-03-15 01:03:19] Leyendo memoria fisica: direccion 640, valor 25100123
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 978, valor 123
+[2026-03-15 01:03:19] PSH: Guardado 123 en Stack (SP=978)
+[2026-03-15 01:03:19] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:19] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:19] DISPATCHER: Contexto salvado para PID=1 (PC=1)
+[2026-03-15 01:03:19] Leyendo memoria fisica: direccion 641, valor 25100456
+[2026-03-15 01:03:19] Escribiendo memoria fisica: direccion 977, valor 456
+[2026-03-15 01:03:19] PSH: Guardado 456 en Stack (SP=977)
+[2026-03-15 01:03:19] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:19] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:19] DISPATCHER: Contexto salvado para PID=1 (PC=2)
+[2026-03-15 01:03:19] KERNEL: PID 1 agotó su quantum.
+[2026-03-15 01:03:19] PLANIFICADOR: Quantum agotado. Sale PID 1 (test_pop.txt), Entra PID 2 (test_math.txt)
+[2026-03-15 01:03:19] >> PLANIFICADOR: Cambio de contexto -> Entra PID 2 (test_math.txt) a ejecutar.
+[2026-03-15 01:03:19] Leyendo memoria fisica: direccion 980, valor 4100010
+[2026-03-15 01:03:19] Ejecutando LOAD, AC cargado con 10
+[2026-03-15 01:03:19] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:19] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:19] DISPATCHER: Contexto salvado para PID=2 (PC=1)
+[2026-03-15 01:03:19] Leyendo memoria fisica: direccion 981, valor 100010
+[2026-03-15 01:03:19] ALU: SUM 10 + 10 = 20 (Codificado en AC: 20)
+[2026-03-15 01:03:19] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:19] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:19] DISPATCHER: Contexto salvado para PID=2 (PC=2)
+[2026-03-15 01:03:19] KERNEL: PID 2 agotó su quantum.
+[2026-03-15 01:03:19] PLANIFICADOR: Quantum agotado. Sale PID 2 (test_math.txt), Entra PID 3 (5mas5.txt)
+[2026-03-15 01:03:19] >> PLANIFICADOR: Cambio de contexto -> Entra PID 3 (5mas5.txt) a ejecutar.
+[2026-03-15 01:03:19] Leyendo memoria fisica: direccion 1320, valor 4100005
+[2026-03-15 01:03:19] Ejecutando LOAD, AC cargado con 5
+[2026-03-15 01:03:19] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:19] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:19] DISPATCHER: Contexto salvado para PID=3 (PC=1)
+[2026-03-15 01:03:19] Leyendo memoria fisica: direccion 1321, valor 100005
+[2026-03-15 01:03:19] ALU: SUM 5 + 5 = 10 (Codificado en AC: 10)
+[2026-03-15 01:03:19] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=3 (PC=2)
+[2026-03-15 01:03:20] KERNEL: PID 3 agotó su quantum.
+[2026-03-15 01:03:20] PLANIFICADOR: Quantum agotado. Sale PID 3 (5mas5.txt), Entra PID 0 (test_concurrent.txt)
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 302, valor 28100001
+[2026-03-15 01:03:20] DMA: (Handler) Pista establecida en 1
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=3)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 303, valor 29100001
+[2026-03-15 01:03:20] DMA: (Handler) Cilindro establecido en 1
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=4)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] PLANIFICADOR: Quantum agotado. Sale PID 0 (test_concurrent.txt), Entra PID 1 (test_pop.txt)
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 1 (test_pop.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 642, valor 26000100
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 977, valor 456
+[2026-03-15 01:03:20] Escribiendo memoria fisica: direccion 740, valor 456
+[2026-03-15 01:03:20] POP: Recuperado 456 y guardado en Mem[740]
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=1 (PC=3)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 643, valor 26000101
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 978, valor 123
+[2026-03-15 01:03:20] Escribiendo memoria fisica: direccion 741, valor 123
+[2026-03-15 01:03:20] POP: Recuperado 123 y guardado en Mem[741]
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=1 (PC=4)
+[2026-03-15 01:03:20] KERNEL: PID 1 agotó su quantum.
+[2026-03-15 01:03:20] PLANIFICADOR: Quantum agotado. Sale PID 1 (test_pop.txt), Entra PID 2 (test_math.txt)
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 2 (test_math.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 982, valor 2100005
+[2026-03-15 01:03:20] ALU: MULT 20 * 5 = 100 (Codificado en AC: 100)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=2 (PC=3)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 983, valor 3100002
+[2026-03-15 01:03:20] ALU: DIVI 100 / 2 = 50 (Codificado en AC: 50)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=2 (PC=4)
+[2026-03-15 01:03:20] KERNEL: PID 2 agotó su quantum.
+[2026-03-15 01:03:20] PLANIFICADOR: Quantum agotado. Sale PID 2 (test_math.txt), Entra PID 3 (5mas5.txt)
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 3 (5mas5.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 1322, valor 25000000
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 1320, valor 4100005
+[2026-03-15 01:03:20] Escribiendo memoria fisica: direccion 1658, valor 4100005
+[2026-03-15 01:03:20] PSH: Guardado 4100005 en Stack (SP=1658)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=3 (PC=3)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 1323, valor 4100007
+[2026-03-15 01:03:20] Ejecutando LOAD, AC cargado con 7
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=3 (PC=4)
+[2026-03-15 01:03:20] KERNEL: PID 3 agotó su quantum.
+[2026-03-15 01:03:20] PLANIFICADOR: Quantum agotado. Sale PID 3 (5mas5.txt), Entra PID 0 (test_concurrent.txt)
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 304, valor 30100001
+[2026-03-15 01:03:20] DMA: (Handler) Sector establecido en 1
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=5)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 305, valor 31100001
+[2026-03-15 01:03:20] DMA: (Handler) Modo de operación establecido en 1 (0 = leer, 1 = escribir)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=6)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] PLANIFICADOR: Quantum agotado. Sale PID 0 (test_concurrent.txt), Entra PID 1 (test_pop.txt)
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 1 (test_pop.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 644, valor 4100999
+[2026-03-15 01:03:20] Ejecutando LOAD, AC cargado con 999
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=1 (PC=5)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 645, valor 4100000
+[2026-03-15 01:03:20] Ejecutando LOAD, AC cargado con 0
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=1 (PC=6)
+[2026-03-15 01:03:20] KERNEL: PID 1 agotó su quantum.
+[2026-03-15 01:03:20] PLANIFICADOR: Quantum agotado. Sale PID 1 (test_pop.txt), Entra PID 2 (test_math.txt)
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 2 (test_math.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 984, valor 1100008
+[2026-03-15 01:03:20] ALU: RES 50 - 8 = 42 (Codificado en AC: 42)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=2 (PC=5)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 985, valor 5000010
+[2026-03-15 01:03:20] Escribiendo memoria fisica: direccion 990, valor 42
+[2026-03-15 01:03:20] Ejecutando STR, valor 42 escrito en dirección 990
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=2 (PC=6)
+[2026-03-15 01:03:20] KERNEL: PID 2 agotó su quantum.
+[2026-03-15 01:03:20] PLANIFICADOR: Quantum agotado. Sale PID 2 (test_math.txt), Entra PID 3 (5mas5.txt)
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 3 (5mas5.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 1324, valor 4100007
+[2026-03-15 01:03:20] Ejecutando LOAD, AC cargado con 7
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=3 (PC=5)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 1325, valor 4100000
+[2026-03-15 01:03:20] Ejecutando LOAD, AC cargado con 0
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=3 (PC=6)
+[2026-03-15 01:03:20] KERNEL: PID 3 agotó su quantum.
+[2026-03-15 01:03:20] PLANIFICADOR: Quantum agotado. Sale PID 3 (5mas5.txt), Entra PID 0 (test_concurrent.txt)
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 306, valor 32100050
+[2026-03-15 01:03:20] DMA: (Handler) Dirección de memoria establecida en 350
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=7)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 307, valor 33000000
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 300, valor 4100999
+[2026-03-15 01:03:20] DMA: (Handler) Iniciando operación E/S asíncrona...
+[2026-03-15 01:03:20] DMA: Hilo de transferencia iniciado
+[2026-03-15 01:03:20] DMA: Operación E/S con parámetros - PISTA=1, CILINDRO=1, SECTOR=1, IO=1, ADDRESS=350
+[2026-03-15 01:03:20] Leyendo en disco: pista 1, cilindro 1, sector 1, data: 
+[2026-03-15 01:03:20] DMA: Leído sector del disco. Contenido: ""
+[2026-03-15 01:03:20] DMA: Convertido a entero. Valor: 0
+[2026-03-15 01:03:20] Escribiendo memoria fisica: direccion 350, valor 0
+[2026-03-15 01:03:20] DMA: ÉXITO - Transferencia Disco->Memoria completada. Sector "" escrito en dirección 350 como valor 0
+[2026-03-15 01:03:20] DMA: Operación finalizada. Estado: 0 (0=éxito, 1=error).
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 4 detectada.
+[2026-03-15 01:03:20] DMA: Hilo de transferencia finalizado correctamente
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 4...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=8)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 308, valor 4100100
+[2026-03-15 01:03:20] Ejecutando LOAD, AC cargado con 100
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] PLANIFICADOR: Quantum agotado. Sale PID 0 (test_concurrent.txt), Entra PID 1 (test_pop.txt)
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 1 (test_pop.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 646, valor 25100000
+[2026-03-15 01:03:20] Escribiendo memoria fisica: direccion 978, valor 0
+[2026-03-15 01:03:20] PSH: Guardado 0 en Stack (SP=978)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=1 (PC=7)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 647, valor 4100001
+[2026-03-15 01:03:20] Ejecutando LOAD, AC cargado con 1
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=1 (PC=8)
+[2026-03-15 01:03:20] KERNEL: PID 1 agotó su quantum.
+[2026-03-15 01:03:20] PLANIFICADOR: Quantum agotado. Sale PID 1 (test_pop.txt), Entra PID 2 (test_math.txt)
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 2 (test_math.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 986, valor 4100000
+[2026-03-15 01:03:20] Ejecutando LOAD, AC cargado con 0
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=2 (PC=7)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 987, valor 25100000
+[2026-03-15 01:03:20] Escribiendo memoria fisica: direccion 1318, valor 0
+[2026-03-15 01:03:20] PSH: Guardado 0 en Stack (SP=1318)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=2 (PC=8)
+[2026-03-15 01:03:20] KERNEL: PID 2 agotó su quantum.
+[2026-03-15 01:03:20] PLANIFICADOR: Quantum agotado. Sale PID 2 (test_math.txt), Entra PID 3 (5mas5.txt)
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 3 (5mas5.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 1326, valor 25100000
+[2026-03-15 01:03:20] Escribiendo memoria fisica: direccion 1657, valor 0
+[2026-03-15 01:03:20] PSH: Guardado 0 en Stack (SP=1657)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=3 (PC=7)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 1327, valor 4100001
+[2026-03-15 01:03:20] Ejecutando LOAD, AC cargado con 1
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=3 (PC=8)
+[2026-03-15 01:03:20] KERNEL: PID 3 agotó su quantum.
+[2026-03-15 01:03:20] PLANIFICADOR: Quantum agotado. Sale PID 3 (5mas5.txt), Entra PID 0 (test_concurrent.txt)
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 100 - 1 = 99 (Codificado en AC: 99)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] PLANIFICADOR: Quantum agotado. Sale PID 0 (test_concurrent.txt), Entra PID 1 (test_pop.txt)
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 1 (test_pop.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 648, valor 13000000
+[2026-03-15 01:03:20] SVC: Solicitud de servicio al sistema.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 2 detectada.
+[2026-03-15 01:03:20] SVC: Llamada al Sistema (Fin de programa temporal)
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 2...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=1 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 978, valor 0
+[2026-03-15 01:03:20] SYSCALL 1: Proceso 1 termina con estado 0.
+[2026-03-15 01:03:20] PLANIFICADOR: Quantum agotado. Sale PID 1 (test_pop.txt), Entra PID 2 (test_math.txt)
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 2 (test_math.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 988, valor 4100001
+[2026-03-15 01:03:20] Ejecutando LOAD, AC cargado con 1
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=2 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 989, valor 13000000
+[2026-03-15 01:03:20] SVC: Solicitud de servicio al sistema.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 2 detectada.
+[2026-03-15 01:03:20] SVC: Llamada al Sistema (Fin de programa temporal)
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 2...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=2 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 1318, valor 0
+[2026-03-15 01:03:20] SYSCALL 1: Proceso 2 termina con estado 0.
+[2026-03-15 01:03:20] PLANIFICADOR: Quantum agotado. Sale PID 2 (test_math.txt), Entra PID 3 (5mas5.txt)
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 3 (5mas5.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 1328, valor 13000000
+[2026-03-15 01:03:20] SVC: Solicitud de servicio al sistema.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 2 detectada.
+[2026-03-15 01:03:20] SVC: Llamada al Sistema (Fin de programa temporal)
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 2...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=3 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 1657, valor 0
+[2026-03-15 01:03:20] SYSCALL 1: Proceso 3 termina con estado 0.
+[2026-03-15 01:03:20] PLANIFICADOR: Quantum agotado. Sale PID 3 (5mas5.txt), Entra PID 0 (test_concurrent.txt)
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=99, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 99 - 1 = 98 (Codificado en AC: 98)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=98, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 98 - 1 = 97 (Codificado en AC: 97)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=97, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 97 - 1 = 96 (Codificado en AC: 96)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=96, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 96 - 1 = 95 (Codificado en AC: 95)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=95, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 95 - 1 = 94 (Codificado en AC: 94)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=94, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 94 - 1 = 93 (Codificado en AC: 93)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=93, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 93 - 1 = 92 (Codificado en AC: 92)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=92, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 92 - 1 = 91 (Codificado en AC: 91)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=91, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 91 - 1 = 90 (Codificado en AC: 90)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=90, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 90 - 1 = 89 (Codificado en AC: 89)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=89, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 89 - 1 = 88 (Codificado en AC: 88)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=88, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 88 - 1 = 87 (Codificado en AC: 87)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=87, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 87 - 1 = 86 (Codificado en AC: 86)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=86, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 86 - 1 = 85 (Codificado en AC: 85)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=85, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 85 - 1 = 84 (Codificado en AC: 84)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=84, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 84 - 1 = 83 (Codificado en AC: 83)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=83, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 83 - 1 = 82 (Codificado en AC: 82)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=82, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 82 - 1 = 81 (Codificado en AC: 81)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=81, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 81 - 1 = 80 (Codificado en AC: 80)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=80, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 80 - 1 = 79 (Codificado en AC: 79)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=79, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 79 - 1 = 78 (Codificado en AC: 78)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=78, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 78 - 1 = 77 (Codificado en AC: 77)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=77, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 77 - 1 = 76 (Codificado en AC: 76)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=76, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 76 - 1 = 75 (Codificado en AC: 75)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=75, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 75 - 1 = 74 (Codificado en AC: 74)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=74, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 74 - 1 = 73 (Codificado en AC: 73)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=73, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 73 - 1 = 72 (Codificado en AC: 72)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=72, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 72 - 1 = 71 (Codificado en AC: 71)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=71, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 71 - 1 = 70 (Codificado en AC: 70)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=70, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 70 - 1 = 69 (Codificado en AC: 69)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=69, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 69 - 1 = 68 (Codificado en AC: 68)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=68, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 68 - 1 = 67 (Codificado en AC: 67)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=67, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 67 - 1 = 66 (Codificado en AC: 66)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=66, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 66 - 1 = 65 (Codificado en AC: 65)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=65, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 65 - 1 = 64 (Codificado en AC: 64)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=64, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 64 - 1 = 63 (Codificado en AC: 63)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=63, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 63 - 1 = 62 (Codificado en AC: 62)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=62, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 62 - 1 = 61 (Codificado en AC: 61)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=61, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 61 - 1 = 60 (Codificado en AC: 60)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=60, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 60 - 1 = 59 (Codificado en AC: 59)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=59, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 59 - 1 = 58 (Codificado en AC: 58)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=58, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 58 - 1 = 57 (Codificado en AC: 57)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=57, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 57 - 1 = 56 (Codificado en AC: 56)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=56, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 56 - 1 = 55 (Codificado en AC: 55)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=55, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 55 - 1 = 54 (Codificado en AC: 54)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=54, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 54 - 1 = 53 (Codificado en AC: 53)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=53, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 53 - 1 = 52 (Codificado en AC: 52)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=52, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 52 - 1 = 51 (Codificado en AC: 51)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=51, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 51 - 1 = 50 (Codificado en AC: 50)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=50, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 50 - 1 = 49 (Codificado en AC: 49)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=49, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 49 - 1 = 48 (Codificado en AC: 48)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=48, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 48 - 1 = 47 (Codificado en AC: 47)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=47, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 47 - 1 = 46 (Codificado en AC: 46)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=46, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 46 - 1 = 45 (Codificado en AC: 45)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=45, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 45 - 1 = 44 (Codificado en AC: 44)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=44, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 44 - 1 = 43 (Codificado en AC: 43)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=43, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 43 - 1 = 42 (Codificado en AC: 42)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=42, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 42 - 1 = 41 (Codificado en AC: 41)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=41, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 41 - 1 = 40 (Codificado en AC: 40)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=40, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 40 - 1 = 39 (Codificado en AC: 39)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=39, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 39 - 1 = 38 (Codificado en AC: 38)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=38, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 38 - 1 = 37 (Codificado en AC: 37)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=37, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 37 - 1 = 36 (Codificado en AC: 36)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=36, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 36 - 1 = 35 (Codificado en AC: 35)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=35, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 35 - 1 = 34 (Codificado en AC: 34)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:20] JUMP (Op 10): Condicion cumplida (AC=34, Stack=0). Salto a 9.
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:20] ALU: RES 34 - 1 = 33 (Codificado en AC: 33)
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:20] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:20] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:20] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:20] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:20] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:20] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=33, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 33 - 1 = 32 (Codificado en AC: 32)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=32, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 32 - 1 = 31 (Codificado en AC: 31)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=31, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 31 - 1 = 30 (Codificado en AC: 30)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=30, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 30 - 1 = 29 (Codificado en AC: 29)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=29, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 29 - 1 = 28 (Codificado en AC: 28)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=28, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 28 - 1 = 27 (Codificado en AC: 27)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=27, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 27 - 1 = 26 (Codificado en AC: 26)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=26, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 26 - 1 = 25 (Codificado en AC: 25)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=25, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 25 - 1 = 24 (Codificado en AC: 24)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=24, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 24 - 1 = 23 (Codificado en AC: 23)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=23, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 23 - 1 = 22 (Codificado en AC: 22)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=22, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 22 - 1 = 21 (Codificado en AC: 21)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=21, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 21 - 1 = 20 (Codificado en AC: 20)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=20, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 20 - 1 = 19 (Codificado en AC: 19)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=19, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 19 - 1 = 18 (Codificado en AC: 18)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=18, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 18 - 1 = 17 (Codificado en AC: 17)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=17, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 17 - 1 = 16 (Codificado en AC: 16)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=16, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 16 - 1 = 15 (Codificado en AC: 15)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=15, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 15 - 1 = 14 (Codificado en AC: 14)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=14, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 14 - 1 = 13 (Codificado en AC: 13)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=13, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 13 - 1 = 12 (Codificado en AC: 12)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=12, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 12 - 1 = 11 (Codificado en AC: 11)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=11, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 11 - 1 = 10 (Codificado en AC: 10)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=10, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 10 - 1 = 9 (Codificado en AC: 9)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=9, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 9 - 1 = 8 (Codificado en AC: 8)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=8, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 8 - 1 = 7 (Codificado en AC: 7)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=7, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 7 - 1 = 6 (Codificado en AC: 6)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=6, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 6 - 1 = 5 (Codificado en AC: 5)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=5, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 5 - 1 = 4 (Codificado en AC: 4)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=4, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 4 - 1 = 3 (Codificado en AC: 3)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=3, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 3 - 1 = 2 (Codificado en AC: 2)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=2, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 2 - 1 = 1 (Codificado en AC: 1)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): Condicion cumplida (AC=1, Stack=0). Salto a 9.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 309, valor 1100001
+[2026-03-15 01:03:21] ALU: RES 1 - 1 = 0 (Codificado en AC: 0)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=10)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 310, valor 8100000
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=11)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 311, valor 10000009
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 639, valor 0
+[2026-03-15 01:03:21] JUMP (Op 10): No cumplida (AC=0, Stack=0).
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=12)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 312, valor 4100000
+[2026-03-15 01:03:21] Ejecutando LOAD, AC cargado con 0
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=13)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 313, valor 25100000
+[2026-03-15 01:03:21] Escribiendo memoria fisica: direccion 638, valor 0
+[2026-03-15 01:03:21] PSH: Guardado 0 en Stack (SP=638)
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=14)
+[2026-03-15 01:03:21] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:03:21] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_concurrent.txt) a ejecutar.
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 314, valor 4100001
+[2026-03-15 01:03:21] Ejecutando LOAD, AC cargado con 1
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=15)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 315, valor 13000000
+[2026-03-15 01:03:21] SVC: Solicitud de servicio al sistema.
+[2026-03-15 01:03:21] >> SOLICITUD INTERRUPCION: Codigo 2 detectada.
+[2026-03-15 01:03:21] SVC: Llamada al Sistema (Fin de programa temporal)
+[2026-03-15 01:03:21] INT: Iniciando secuencia de interrupción 2...
+[2026-03-15 01:03:21] DISPATCHER: Contexto salvado para PID=0 (PC=16)
+[2026-03-15 01:03:21] Leyendo memoria fisica: direccion 638, valor 0
+[2026-03-15 01:03:21] SYSCALL 1: Proceso 0 termina con estado 0.
+[2026-03-15 01:03:32] DMA: finalizado exitosamente
+[2026-03-15 01:03:32] BUS: finalizado exitosamente
+LOG: finalizado exitosamente.

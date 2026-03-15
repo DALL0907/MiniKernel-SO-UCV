@@ -1,0 +1,746 @@
+[2026-03-15 01:10:19] Log iniciado.
+[2026-03-15 01:10:19] === INICIANDO SISTEMA ===
+[2026-03-15 01:10:19] BUS: Inicializado exitosamente
+[2026-03-15 01:10:19] DISK: Disco inicializado correctamente
+[2026-03-15 01:10:19] DMA: inicializado exitosamente
+[2026-03-15 01:10:19] CPU Inicializada.
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 0, valor 20
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 1, valor 20
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 2, valor 20
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 3, valor 20
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 4, valor 20
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 5, valor 20
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 6, valor 20
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 7, valor 20
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 8, valor 20
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 9, valor 20
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 10, valor 20
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 11, valor 20
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 12, valor 20
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 13, valor 20
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 14, valor 20
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 15, valor 20
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 16, valor 20
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 17, valor 20
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 18, valor 20
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 19, valor 20
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 20, valor 14000000
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 21, valor 0
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 22, valor 0
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 23, valor 0
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 24, valor 0
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 25, valor 0
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 26, valor 0
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 27, valor 0
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 28, valor 0
+[2026-03-15 01:10:19] Escribiendo memoria fisica: direccion 29, valor 0
+[2026-03-15 01:10:19] KERNEL: Vector de interrupciones inicializado.
+[2026-03-15 01:10:19] KERNEL: Estructuras inicializadas (Procesos, Archivos, Memoria).
+[2026-03-15 01:10:28] FILE TABLE: Programa 'test_pop.txt' NO encontrado.
+[2026-03-15 01:10:28] LOADER: ===== INICIANDO CARGA PC REAL -> DISCO =====
+[2026-03-15 01:10:28] LOADER: Programa: test_pop.txt, Archivo: test_pop.txt
+[2026-03-15 01:10:28] LOADER: Leyendo archivo test_pop.txt desde PC real...
+[2026-03-15 01:10:28] LOADER: Nombre del programa: test_pop
+[2026-03-15 01:10:28] LOADER: Palabras declaradas: 9
+[2026-03-15 01:10:28] LOADER: Directiva _start 1 -> n_start = 0
+[2026-03-15 01:10:28] LOADER: Archivo parseado exitosamente. Total: 9 palabras.
+[2026-03-15 01:10:28] LOADER: Archivo leido. 9 palabras en buffer temporal.
+[2026-03-15 01:10:28] LOADER: Escribiendo 9 palabras en disco (Track=0, Cyl=0, Sec=0)...
+[2026-03-15 01:10:28] Escribiendo en disco: pista 0, cilindro 0, sector 0, data: 25100123
+[2026-03-15 01:10:28] LOADER: Palabra 0 escrita en sector (0,0,0).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 0, cilindro 0, sector 1, data: 25100456
+[2026-03-15 01:10:28] LOADER: Palabra 1 escrita en sector (0,0,1).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 0, cilindro 0, sector 2, data: 26000100
+[2026-03-15 01:10:28] LOADER: Palabra 2 escrita en sector (0,0,2).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 0, cilindro 0, sector 3, data: 26000101
+[2026-03-15 01:10:28] LOADER: Palabra 3 escrita en sector (0,0,3).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 0, cilindro 0, sector 4, data: 04100999
+[2026-03-15 01:10:28] LOADER: Palabra 4 escrita en sector (0,0,4).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 0, cilindro 0, sector 5, data: 04100000
+[2026-03-15 01:10:28] LOADER: Palabra 5 escrita en sector (0,0,5).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 0, cilindro 0, sector 6, data: 25100000
+[2026-03-15 01:10:28] LOADER: Palabra 6 escrita en sector (0,0,6).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 0, cilindro 0, sector 7, data: 04100001
+[2026-03-15 01:10:28] LOADER: Palabra 7 escrita en sector (0,0,7).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 0, cilindro 0, sector 8, data: 13000000
+[2026-03-15 01:10:28] LOADER: Palabra 8 escrita en sector (0,0,8).
+[2026-03-15 01:10:28] LOADER: 9 palabras escritas en disco exitosamente.
+[2026-03-15 01:10:28] LOADER: Programa escrito en disco exitosamente.
+[2026-03-15 01:10:28] KERNEL: Proceso creado PID=0, (test_pop.txt) en estado NEW.
+[2026-03-15 01:10:28] LOADER: PCB creado. PID=0
+[2026-03-15 01:10:28] FILE TABLE: Programa 'test_pop.txt' NO encontrado.
+[2026-03-15 01:10:28] FILE TABLE: Entrada 0 agregada: 'test_pop.txt' [Track=0, Cyl=0, Sec=0, Size=9, n_start=0]
+[2026-03-15 01:10:28] LOADER: Entrada en tabla de archivos creada (indice 0).
+[2026-03-15 01:10:28] LOADER: ===== CARGA PC->DISCO COMPLETADA =====
+[2026-03-15 01:10:28] LOADER: PID=0, Programa=test_pop.txt, Palabras=9, n_start=0
+[2026-03-15 01:10:28] FILE TABLE: Programa 'test_pop.txt' encontrado en índice 0.
+[2026-03-15 01:10:28] KERNEL: Partición 0 está libre.
+[2026-03-15 01:10:28] LOADER: ===== INICIANDO CARGA DISCO -> RAM =====
+[2026-03-15 01:10:28] LOADER: PID=0, Particion=0, FT_Index=0
+[2026-03-15 01:10:28] LOADER: Cargando 'test_pop.txt' (PID=0) a RAM (Particion 0).
+[2026-03-15 01:10:28] LOADER: Leyendo 9 palabras desde disco (Track=0, Cyl=0, Sec=0)...
+[2026-03-15 01:10:28] Leyendo en disco: pista 0, cilindro 0, sector 0, data: 25100123
+[2026-03-15 01:10:28] LOADER: Palabra 0 leida desde sector (0,0,0): 25100123
+[2026-03-15 01:10:28] Leyendo en disco: pista 0, cilindro 0, sector 1, data: 25100456
+[2026-03-15 01:10:28] LOADER: Palabra 1 leida desde sector (0,0,1): 25100456
+[2026-03-15 01:10:28] Leyendo en disco: pista 0, cilindro 0, sector 2, data: 26000100
+[2026-03-15 01:10:28] LOADER: Palabra 2 leida desde sector (0,0,2): 26000100
+[2026-03-15 01:10:28] Leyendo en disco: pista 0, cilindro 0, sector 3, data: 26000101
+[2026-03-15 01:10:28] LOADER: Palabra 3 leida desde sector (0,0,3): 26000101
+[2026-03-15 01:10:28] Leyendo en disco: pista 0, cilindro 0, sector 4, data: 04100999
+[2026-03-15 01:10:28] LOADER: Palabra 4 leida desde sector (0,0,4): 4100999
+[2026-03-15 01:10:28] Leyendo en disco: pista 0, cilindro 0, sector 5, data: 04100000
+[2026-03-15 01:10:28] LOADER: Palabra 5 leida desde sector (0,0,5): 4100000
+[2026-03-15 01:10:28] Leyendo en disco: pista 0, cilindro 0, sector 6, data: 25100000
+[2026-03-15 01:10:28] LOADER: Palabra 6 leida desde sector (0,0,6): 25100000
+[2026-03-15 01:10:28] Leyendo en disco: pista 0, cilindro 0, sector 7, data: 04100001
+[2026-03-15 01:10:28] LOADER: Palabra 7 leida desde sector (0,0,7): 4100001
+[2026-03-15 01:10:28] Leyendo en disco: pista 0, cilindro 0, sector 8, data: 13000000
+[2026-03-15 01:10:28] LOADER: Palabra 8 leida desde sector (0,0,8): 13000000
+[2026-03-15 01:10:28] LOADER: 9 palabras leidas desde disco exitosamente.
+[2026-03-15 01:10:28] LOADER: Programa leido desde disco a buffer. 9 palabras.
+[2026-03-15 01:10:28] LOADER: Particion 0: direcciones RAM [300-639].
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 300, valor 25100123
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 301, valor 25100456
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 302, valor 26000100
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 303, valor 26000101
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 304, valor 4100999
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 305, valor 4100000
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 306, valor 25100000
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 307, valor 4100001
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 308, valor 13000000
+[2026-03-15 01:10:28] LOADER: Todas las palabras escritas en RAM exitosamente.
+[2026-03-15 01:10:28] LOADER: Contexto inicializado.
+[2026-03-15 01:10:28] LOADER:   RB (Base)=300, RL (Limite)=639
+[2026-03-15 01:10:28] LOADER:   PC (Program Counter)=0 (dentro de PSW)
+[2026-03-15 01:10:28] LOADER:   SP (Stack Pointer)=639 (primera posicion VACIA)
+[2026-03-15 01:10:28] LOADER: ===== CARGA DISCO->RAM COMPLETADA =====
+[2026-03-15 01:10:28] LOADER: PID=0 cargado en Particion 0, listo para ejecutar.
+[2026-03-15 01:10:28] FILE TABLE: Programa 'test_sleep.txt' NO encontrado.
+[2026-03-15 01:10:28] LOADER: ===== INICIANDO CARGA PC REAL -> DISCO =====
+[2026-03-15 01:10:28] LOADER: Programa: test_sleep.txt, Archivo: test_sleep.txt
+[2026-03-15 01:10:28] LOADER: Leyendo archivo test_sleep.txt desde PC real...
+[2026-03-15 01:10:28] LOADER: Nombre del programa: test_sleep
+[2026-03-15 01:10:28] LOADER: Palabras declaradas: 12
+[2026-03-15 01:10:28] LOADER: Directiva _start 0 -> n_start = 0
+[2026-03-15 01:10:28] LOADER: Archivo parseado exitosamente. Total: 12 palabras.
+[2026-03-15 01:10:28] LOADER: Archivo leido. 12 palabras en buffer temporal.
+[2026-03-15 01:10:28] LOADER: Escribiendo 12 palabras en disco (Track=1, Cyl=0, Sec=0)...
+[2026-03-15 01:10:28] Escribiendo en disco: pista 1, cilindro 0, sector 0, data: 04100010
+[2026-03-15 01:10:28] LOADER: Palabra 0 escrita en sector (1,0,0).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 1, cilindro 0, sector 1, data: 25100010
+[2026-03-15 01:10:28] LOADER: Palabra 1 escrita en sector (1,0,1).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 1, cilindro 0, sector 2, data: 04100004
+[2026-03-15 01:10:28] LOADER: Palabra 2 escrita en sector (1,0,2).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 1, cilindro 0, sector 3, data: 13000000
+[2026-03-15 01:10:28] LOADER: Palabra 3 escrita en sector (1,0,3).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 1, cilindro 0, sector 4, data: 04100777
+[2026-03-15 01:10:28] LOADER: Palabra 4 escrita en sector (1,0,4).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 1, cilindro 0, sector 5, data: 25100777
+[2026-03-15 01:10:28] LOADER: Palabra 5 escrita en sector (1,0,5).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 1, cilindro 0, sector 6, data: 04100002
+[2026-03-15 01:10:28] LOADER: Palabra 6 escrita en sector (1,0,6).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 1, cilindro 0, sector 7, data: 13000000
+[2026-03-15 01:10:28] LOADER: Palabra 7 escrita en sector (1,0,7).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 1, cilindro 0, sector 8, data: 04100000
+[2026-03-15 01:10:28] LOADER: Palabra 8 escrita en sector (1,0,8).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 1, cilindro 0, sector 9, data: 25100000
+[2026-03-15 01:10:28] LOADER: Palabra 9 escrita en sector (1,0,9).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 1, cilindro 0, sector 10, data: 04100001
+[2026-03-15 01:10:28] LOADER: Palabra 10 escrita en sector (1,0,10).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 1, cilindro 0, sector 11, data: 13000000
+[2026-03-15 01:10:28] LOADER: Palabra 11 escrita en sector (1,0,11).
+[2026-03-15 01:10:28] LOADER: 12 palabras escritas en disco exitosamente.
+[2026-03-15 01:10:28] LOADER: Programa escrito en disco exitosamente.
+[2026-03-15 01:10:28] KERNEL: Proceso creado PID=1, (test_sleep.txt) en estado NEW.
+[2026-03-15 01:10:28] LOADER: PCB creado. PID=1
+[2026-03-15 01:10:28] FILE TABLE: Programa 'test_sleep.txt' NO encontrado.
+[2026-03-15 01:10:28] FILE TABLE: Entrada 1 agregada: 'test_sleep.txt' [Track=1, Cyl=0, Sec=0, Size=12, n_start=0]
+[2026-03-15 01:10:28] LOADER: Entrada en tabla de archivos creada (indice 1).
+[2026-03-15 01:10:28] LOADER: ===== CARGA PC->DISCO COMPLETADA =====
+[2026-03-15 01:10:28] LOADER: PID=1, Programa=test_sleep.txt, Palabras=12, n_start=0
+[2026-03-15 01:10:28] FILE TABLE: Programa 'test_sleep.txt' encontrado en índice 1.
+[2026-03-15 01:10:28] KERNEL: Partición 1 está libre.
+[2026-03-15 01:10:28] LOADER: ===== INICIANDO CARGA DISCO -> RAM =====
+[2026-03-15 01:10:28] LOADER: PID=1, Particion=1, FT_Index=1
+[2026-03-15 01:10:28] LOADER: Cargando 'test_sleep.txt' (PID=1) a RAM (Particion 1).
+[2026-03-15 01:10:28] LOADER: Leyendo 12 palabras desde disco (Track=1, Cyl=0, Sec=0)...
+[2026-03-15 01:10:28] Leyendo en disco: pista 1, cilindro 0, sector 0, data: 04100010
+[2026-03-15 01:10:28] LOADER: Palabra 0 leida desde sector (1,0,0): 4100010
+[2026-03-15 01:10:28] Leyendo en disco: pista 1, cilindro 0, sector 1, data: 25100010
+[2026-03-15 01:10:28] LOADER: Palabra 1 leida desde sector (1,0,1): 25100010
+[2026-03-15 01:10:28] Leyendo en disco: pista 1, cilindro 0, sector 2, data: 04100004
+[2026-03-15 01:10:28] LOADER: Palabra 2 leida desde sector (1,0,2): 4100004
+[2026-03-15 01:10:28] Leyendo en disco: pista 1, cilindro 0, sector 3, data: 13000000
+[2026-03-15 01:10:28] LOADER: Palabra 3 leida desde sector (1,0,3): 13000000
+[2026-03-15 01:10:28] Leyendo en disco: pista 1, cilindro 0, sector 4, data: 04100777
+[2026-03-15 01:10:28] LOADER: Palabra 4 leida desde sector (1,0,4): 4100777
+[2026-03-15 01:10:28] Leyendo en disco: pista 1, cilindro 0, sector 5, data: 25100777
+[2026-03-15 01:10:28] LOADER: Palabra 5 leida desde sector (1,0,5): 25100777
+[2026-03-15 01:10:28] Leyendo en disco: pista 1, cilindro 0, sector 6, data: 04100002
+[2026-03-15 01:10:28] LOADER: Palabra 6 leida desde sector (1,0,6): 4100002
+[2026-03-15 01:10:28] Leyendo en disco: pista 1, cilindro 0, sector 7, data: 13000000
+[2026-03-15 01:10:28] LOADER: Palabra 7 leida desde sector (1,0,7): 13000000
+[2026-03-15 01:10:28] Leyendo en disco: pista 1, cilindro 0, sector 8, data: 04100000
+[2026-03-15 01:10:28] LOADER: Palabra 8 leida desde sector (1,0,8): 4100000
+[2026-03-15 01:10:28] Leyendo en disco: pista 1, cilindro 0, sector 9, data: 25100000
+[2026-03-15 01:10:28] LOADER: Palabra 9 leida desde sector (1,0,9): 25100000
+[2026-03-15 01:10:28] Leyendo en disco: pista 1, cilindro 0, sector 10, data: 04100001
+[2026-03-15 01:10:28] LOADER: Palabra 10 leida desde sector (1,0,10): 4100001
+[2026-03-15 01:10:28] Leyendo en disco: pista 1, cilindro 0, sector 11, data: 13000000
+[2026-03-15 01:10:28] LOADER: Palabra 11 leida desde sector (1,0,11): 13000000
+[2026-03-15 01:10:28] LOADER: 12 palabras leidas desde disco exitosamente.
+[2026-03-15 01:10:28] LOADER: Programa leido desde disco a buffer. 12 palabras.
+[2026-03-15 01:10:28] LOADER: Particion 1: direcciones RAM [640-979].
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 640, valor 4100010
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 641, valor 25100010
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 642, valor 4100004
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 643, valor 13000000
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 644, valor 4100777
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 645, valor 25100777
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 646, valor 4100002
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 647, valor 13000000
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 648, valor 4100000
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 649, valor 25100000
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 650, valor 4100001
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 651, valor 13000000
+[2026-03-15 01:10:28] LOADER: Todas las palabras escritas en RAM exitosamente.
+[2026-03-15 01:10:28] LOADER: Contexto inicializado.
+[2026-03-15 01:10:28] LOADER:   RB (Base)=640, RL (Limite)=979
+[2026-03-15 01:10:28] LOADER:   PC (Program Counter)=0 (dentro de PSW)
+[2026-03-15 01:10:28] LOADER:   SP (Stack Pointer)=979 (primera posicion VACIA)
+[2026-03-15 01:10:28] LOADER: ===== CARGA DISCO->RAM COMPLETADA =====
+[2026-03-15 01:10:28] LOADER: PID=1 cargado en Particion 1, listo para ejecutar.
+[2026-03-15 01:10:28] FILE TABLE: Programa 'test' NO encontrado.
+[2026-03-15 01:10:28] LOADER: ===== INICIANDO CARGA PC REAL -> DISCO =====
+[2026-03-15 01:10:28] LOADER: Programa: test, Archivo: test
+[2026-03-15 01:10:28] LOADER: No se pudo abrir el archivo: test
+[2026-03-15 01:10:28] LOADER ERROR: Fallo al leer archivo.
+[2026-03-15 01:10:28] FILE TABLE: Programa 'test' NO encontrado.
+[2026-03-15 01:10:28] KERNEL: Partición 2 está libre.
+[2026-03-15 01:10:28] LOADER: ===== INICIANDO CARGA DISCO -> RAM =====
+[2026-03-15 01:10:28] LOADER: PID=-1, Particion=2, FT_Index=-1
+[2026-03-15 01:10:28] FILE TABLE ERROR: Índice -1 fuera de rango [0, 2).
+[2026-03-15 01:10:28] LOADER ERROR: Entrada invalida en tabla de archivos.
+[2026-03-15 01:10:28] FILE TABLE: Programa 'test_consecutive_dma.txt' NO encontrado.
+[2026-03-15 01:10:28] LOADER: ===== INICIANDO CARGA PC REAL -> DISCO =====
+[2026-03-15 01:10:28] LOADER: Programa: test_consecutive_dma.txt, Archivo: test_consecutive_dma.txt
+[2026-03-15 01:10:28] LOADER: Leyendo archivo test_consecutive_dma.txt desde PC real...
+[2026-03-15 01:10:28] LOADER: Nombre del programa: test_consecutive_dma
+[2026-03-15 01:10:28] LOADER: Palabras declaradas: 33
+[2026-03-15 01:10:28] LOADER: Directiva _start 1 -> n_start = 0
+[2026-03-15 01:10:28] LOADER: Archivo parseado exitosamente. Total: 33 palabras.
+[2026-03-15 01:10:28] LOADER: Archivo leido. 33 palabras en buffer temporal.
+[2026-03-15 01:10:28] LOADER: Escribiendo 33 palabras en disco (Track=2, Cyl=0, Sec=0)...
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 0, data: 04100001
+[2026-03-15 01:10:28] LOADER: Palabra 0 escrita en sector (2,0,0).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 1, data: 05000500
+[2026-03-15 01:10:28] LOADER: Palabra 1 escrita en sector (2,0,1).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 2, data: 28100000
+[2026-03-15 01:10:28] LOADER: Palabra 2 escrita en sector (2,0,2).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 3, data: 29100000
+[2026-03-15 01:10:28] LOADER: Palabra 3 escrita en sector (2,0,3).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 4, data: 30100000
+[2026-03-15 01:10:28] LOADER: Palabra 4 escrita en sector (2,0,4).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 5, data: 31100000
+[2026-03-15 01:10:28] LOADER: Palabra 5 escrita en sector (2,0,5).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 6, data: 32100500
+[2026-03-15 01:10:28] LOADER: Palabra 6 escrita en sector (2,0,6).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 7, data: 33000000
+[2026-03-15 01:10:28] LOADER: Palabra 7 escrita en sector (2,0,7).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 8, data: 04100000
+[2026-03-15 01:10:28] LOADER: Palabra 8 escrita en sector (2,0,8).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 9, data: 31100001
+[2026-03-15 01:10:28] LOADER: Palabra 9 escrita en sector (2,0,9).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 10, data: 32100600
+[2026-03-15 01:10:28] LOADER: Palabra 10 escrita en sector (2,0,10).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 11, data: 33000000
+[2026-03-15 01:10:28] LOADER: Palabra 11 escrita en sector (2,0,11).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 12, data: 04100000
+[2026-03-15 01:10:28] LOADER: Palabra 12 escrita en sector (2,0,12).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 13, data: 04000600
+[2026-03-15 01:10:28] LOADER: Palabra 13 escrita en sector (2,0,13).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 14, data: 00100001
+[2026-03-15 01:10:28] LOADER: Palabra 14 escrita en sector (2,0,14).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 15, data: 05000600
+[2026-03-15 01:10:28] LOADER: Palabra 15 escrita en sector (2,0,15).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 16, data: 28100000
+[2026-03-15 01:10:28] LOADER: Palabra 16 escrita en sector (2,0,16).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 17, data: 29100000
+[2026-03-15 01:10:28] LOADER: Palabra 17 escrita en sector (2,0,17).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 18, data: 30100001
+[2026-03-15 01:10:28] LOADER: Palabra 18 escrita en sector (2,0,18).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 19, data: 31100000
+[2026-03-15 01:10:28] LOADER: Palabra 19 escrita en sector (2,0,19).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 20, data: 32100600
+[2026-03-15 01:10:28] LOADER: Palabra 20 escrita en sector (2,0,20).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 21, data: 33000000
+[2026-03-15 01:10:28] LOADER: Palabra 21 escrita en sector (2,0,21).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 22, data: 04100000
+[2026-03-15 01:10:28] LOADER: Palabra 22 escrita en sector (2,0,22).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 23, data: 31100001
+[2026-03-15 01:10:28] LOADER: Palabra 23 escrita en sector (2,0,23).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 24, data: 32100700
+[2026-03-15 01:10:28] LOADER: Palabra 24 escrita en sector (2,0,24).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 25, data: 33000000
+[2026-03-15 01:10:28] LOADER: Palabra 25 escrita en sector (2,0,25).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 26, data: 04100000
+[2026-03-15 01:10:28] LOADER: Palabra 26 escrita en sector (2,0,26).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 27, data: 04000700
+[2026-03-15 01:10:28] LOADER: Palabra 27 escrita en sector (2,0,27).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 28, data: 00100001
+[2026-03-15 01:10:28] LOADER: Palabra 28 escrita en sector (2,0,28).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 29, data: 04100000
+[2026-03-15 01:10:28] LOADER: Palabra 29 escrita en sector (2,0,29).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 30, data: 25100000
+[2026-03-15 01:10:28] LOADER: Palabra 30 escrita en sector (2,0,30).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 31, data: 04100001
+[2026-03-15 01:10:28] LOADER: Palabra 31 escrita en sector (2,0,31).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 2, cilindro 0, sector 32, data: 13000000
+[2026-03-15 01:10:28] LOADER: Palabra 32 escrita en sector (2,0,32).
+[2026-03-15 01:10:28] LOADER: 33 palabras escritas en disco exitosamente.
+[2026-03-15 01:10:28] LOADER: Programa escrito en disco exitosamente.
+[2026-03-15 01:10:28] KERNEL: Proceso creado PID=2, (test_consecutive_dma.txt) en estado NEW.
+[2026-03-15 01:10:28] LOADER: PCB creado. PID=2
+[2026-03-15 01:10:28] FILE TABLE: Programa 'test_consecutive_dma.txt' NO encontrado.
+[2026-03-15 01:10:28] FILE TABLE: Entrada 2 agregada: 'test_consecutive_dma.txt' [Track=2, Cyl=0, Sec=0, Size=33, n_start=0]
+[2026-03-15 01:10:28] LOADER: Entrada en tabla de archivos creada (indice 2).
+[2026-03-15 01:10:28] LOADER: ===== CARGA PC->DISCO COMPLETADA =====
+[2026-03-15 01:10:28] LOADER: PID=2, Programa=test_consecutive_dma.txt, Palabras=33, n_start=0
+[2026-03-15 01:10:28] FILE TABLE: Programa 'test_consecutive_dma.txt' encontrado en índice 2.
+[2026-03-15 01:10:28] KERNEL: Partición 3 está libre.
+[2026-03-15 01:10:28] LOADER: ===== INICIANDO CARGA DISCO -> RAM =====
+[2026-03-15 01:10:28] LOADER: PID=2, Particion=3, FT_Index=2
+[2026-03-15 01:10:28] LOADER: Cargando 'test_consecutive_dma.txt' (PID=2) a RAM (Particion 3).
+[2026-03-15 01:10:28] LOADER: Leyendo 33 palabras desde disco (Track=2, Cyl=0, Sec=0)...
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 0, data: 04100001
+[2026-03-15 01:10:28] LOADER: Palabra 0 leida desde sector (2,0,0): 4100001
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 1, data: 05000500
+[2026-03-15 01:10:28] LOADER: Palabra 1 leida desde sector (2,0,1): 5000500
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 2, data: 28100000
+[2026-03-15 01:10:28] LOADER: Palabra 2 leida desde sector (2,0,2): 28100000
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 3, data: 29100000
+[2026-03-15 01:10:28] LOADER: Palabra 3 leida desde sector (2,0,3): 29100000
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 4, data: 30100000
+[2026-03-15 01:10:28] LOADER: Palabra 4 leida desde sector (2,0,4): 30100000
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 5, data: 31100000
+[2026-03-15 01:10:28] LOADER: Palabra 5 leida desde sector (2,0,5): 31100000
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 6, data: 32100500
+[2026-03-15 01:10:28] LOADER: Palabra 6 leida desde sector (2,0,6): 32100500
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 7, data: 33000000
+[2026-03-15 01:10:28] LOADER: Palabra 7 leida desde sector (2,0,7): 33000000
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 8, data: 04100000
+[2026-03-15 01:10:28] LOADER: Palabra 8 leida desde sector (2,0,8): 4100000
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 9, data: 31100001
+[2026-03-15 01:10:28] LOADER: Palabra 9 leida desde sector (2,0,9): 31100001
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 10, data: 32100600
+[2026-03-15 01:10:28] LOADER: Palabra 10 leida desde sector (2,0,10): 32100600
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 11, data: 33000000
+[2026-03-15 01:10:28] LOADER: Palabra 11 leida desde sector (2,0,11): 33000000
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 12, data: 04100000
+[2026-03-15 01:10:28] LOADER: Palabra 12 leida desde sector (2,0,12): 4100000
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 13, data: 04000600
+[2026-03-15 01:10:28] LOADER: Palabra 13 leida desde sector (2,0,13): 4000600
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 14, data: 00100001
+[2026-03-15 01:10:28] LOADER: Palabra 14 leida desde sector (2,0,14): 100001
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 15, data: 05000600
+[2026-03-15 01:10:28] LOADER: Palabra 15 leida desde sector (2,0,15): 5000600
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 16, data: 28100000
+[2026-03-15 01:10:28] LOADER: Palabra 16 leida desde sector (2,0,16): 28100000
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 17, data: 29100000
+[2026-03-15 01:10:28] LOADER: Palabra 17 leida desde sector (2,0,17): 29100000
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 18, data: 30100001
+[2026-03-15 01:10:28] LOADER: Palabra 18 leida desde sector (2,0,18): 30100001
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 19, data: 31100000
+[2026-03-15 01:10:28] LOADER: Palabra 19 leida desde sector (2,0,19): 31100000
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 20, data: 32100600
+[2026-03-15 01:10:28] LOADER: Palabra 20 leida desde sector (2,0,20): 32100600
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 21, data: 33000000
+[2026-03-15 01:10:28] LOADER: Palabra 21 leida desde sector (2,0,21): 33000000
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 22, data: 04100000
+[2026-03-15 01:10:28] LOADER: Palabra 22 leida desde sector (2,0,22): 4100000
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 23, data: 31100001
+[2026-03-15 01:10:28] LOADER: Palabra 23 leida desde sector (2,0,23): 31100001
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 24, data: 32100700
+[2026-03-15 01:10:28] LOADER: Palabra 24 leida desde sector (2,0,24): 32100700
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 25, data: 33000000
+[2026-03-15 01:10:28] LOADER: Palabra 25 leida desde sector (2,0,25): 33000000
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 26, data: 04100000
+[2026-03-15 01:10:28] LOADER: Palabra 26 leida desde sector (2,0,26): 4100000
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 27, data: 04000700
+[2026-03-15 01:10:28] LOADER: Palabra 27 leida desde sector (2,0,27): 4000700
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 28, data: 00100001
+[2026-03-15 01:10:28] LOADER: Palabra 28 leida desde sector (2,0,28): 100001
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 29, data: 04100000
+[2026-03-15 01:10:28] LOADER: Palabra 29 leida desde sector (2,0,29): 4100000
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 30, data: 25100000
+[2026-03-15 01:10:28] LOADER: Palabra 30 leida desde sector (2,0,30): 25100000
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 31, data: 04100001
+[2026-03-15 01:10:28] LOADER: Palabra 31 leida desde sector (2,0,31): 4100001
+[2026-03-15 01:10:28] Leyendo en disco: pista 2, cilindro 0, sector 32, data: 13000000
+[2026-03-15 01:10:28] LOADER: Palabra 32 leida desde sector (2,0,32): 13000000
+[2026-03-15 01:10:28] LOADER: 33 palabras leidas desde disco exitosamente.
+[2026-03-15 01:10:28] LOADER: Programa leido desde disco a buffer. 33 palabras.
+[2026-03-15 01:10:28] LOADER: Particion 3: direcciones RAM [1320-1659].
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1320, valor 4100001
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1321, valor 5000500
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1322, valor 28100000
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1323, valor 29100000
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1324, valor 30100000
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1325, valor 31100000
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1326, valor 32100500
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1327, valor 33000000
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1328, valor 4100000
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1329, valor 31100001
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1330, valor 32100600
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1331, valor 33000000
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1332, valor 4100000
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1333, valor 4000600
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1334, valor 100001
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1335, valor 5000600
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1336, valor 28100000
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1337, valor 29100000
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1338, valor 30100001
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1339, valor 31100000
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1340, valor 32100600
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1341, valor 33000000
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1342, valor 4100000
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1343, valor 31100001
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1344, valor 32100700
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1345, valor 33000000
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1346, valor 4100000
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1347, valor 4000700
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1348, valor 100001
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1349, valor 4100000
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1350, valor 25100000
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1351, valor 4100001
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1352, valor 13000000
+[2026-03-15 01:10:28] LOADER: Todas las palabras escritas en RAM exitosamente.
+[2026-03-15 01:10:28] LOADER: Contexto inicializado.
+[2026-03-15 01:10:28] LOADER:   RB (Base)=1320, RL (Limite)=1659
+[2026-03-15 01:10:28] LOADER:   PC (Program Counter)=0 (dentro de PSW)
+[2026-03-15 01:10:28] LOADER:   SP (Stack Pointer)=1659 (primera posicion VACIA)
+[2026-03-15 01:10:28] LOADER: ===== CARGA DISCO->RAM COMPLETADA =====
+[2026-03-15 01:10:28] LOADER: PID=2 cargado en Particion 3, listo para ejecutar.
+[2026-03-15 01:10:28] FILE TABLE: Programa 'test_math.txt' NO encontrado.
+[2026-03-15 01:10:28] LOADER: ===== INICIANDO CARGA PC REAL -> DISCO =====
+[2026-03-15 01:10:28] LOADER: Programa: test_math.txt, Archivo: test_math.txt
+[2026-03-15 01:10:28] LOADER: Leyendo archivo test_math.txt desde PC real...
+[2026-03-15 01:10:28] LOADER: Nombre del programa: test_math
+[2026-03-15 01:10:28] LOADER: Palabras declaradas: 10
+[2026-03-15 01:10:28] LOADER: Directiva _start 0 -> n_start = 0
+[2026-03-15 01:10:28] LOADER: Archivo parseado exitosamente. Total: 10 palabras.
+[2026-03-15 01:10:28] LOADER: Archivo leido. 10 palabras en buffer temporal.
+[2026-03-15 01:10:28] LOADER: Escribiendo 10 palabras en disco (Track=3, Cyl=0, Sec=0)...
+[2026-03-15 01:10:28] Escribiendo en disco: pista 3, cilindro 0, sector 0, data: 04100010
+[2026-03-15 01:10:28] LOADER: Palabra 0 escrita en sector (3,0,0).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 3, cilindro 0, sector 1, data: 00100010
+[2026-03-15 01:10:28] LOADER: Palabra 1 escrita en sector (3,0,1).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 3, cilindro 0, sector 2, data: 02100005
+[2026-03-15 01:10:28] LOADER: Palabra 2 escrita en sector (3,0,2).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 3, cilindro 0, sector 3, data: 03100002
+[2026-03-15 01:10:28] LOADER: Palabra 3 escrita en sector (3,0,3).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 3, cilindro 0, sector 4, data: 01100008
+[2026-03-15 01:10:28] LOADER: Palabra 4 escrita en sector (3,0,4).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 3, cilindro 0, sector 5, data: 05000010
+[2026-03-15 01:10:28] LOADER: Palabra 5 escrita en sector (3,0,5).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 3, cilindro 0, sector 6, data: 04100000
+[2026-03-15 01:10:28] LOADER: Palabra 6 escrita en sector (3,0,6).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 3, cilindro 0, sector 7, data: 25100000
+[2026-03-15 01:10:28] LOADER: Palabra 7 escrita en sector (3,0,7).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 3, cilindro 0, sector 8, data: 04100001
+[2026-03-15 01:10:28] LOADER: Palabra 8 escrita en sector (3,0,8).
+[2026-03-15 01:10:28] Escribiendo en disco: pista 3, cilindro 0, sector 9, data: 13000000
+[2026-03-15 01:10:28] LOADER: Palabra 9 escrita en sector (3,0,9).
+[2026-03-15 01:10:28] LOADER: 10 palabras escritas en disco exitosamente.
+[2026-03-15 01:10:28] LOADER: Programa escrito en disco exitosamente.
+[2026-03-15 01:10:28] KERNEL: Proceso creado PID=3, (test_math.txt) en estado NEW.
+[2026-03-15 01:10:28] LOADER: PCB creado. PID=3
+[2026-03-15 01:10:28] FILE TABLE: Programa 'test_math.txt' NO encontrado.
+[2026-03-15 01:10:28] FILE TABLE: Entrada 3 agregada: 'test_math.txt' [Track=3, Cyl=0, Sec=0, Size=10, n_start=0]
+[2026-03-15 01:10:28] LOADER: Entrada en tabla de archivos creada (indice 3).
+[2026-03-15 01:10:28] LOADER: ===== CARGA PC->DISCO COMPLETADA =====
+[2026-03-15 01:10:28] LOADER: PID=3, Programa=test_math.txt, Palabras=10, n_start=0
+[2026-03-15 01:10:28] FILE TABLE: Programa 'test_math.txt' encontrado en índice 3.
+[2026-03-15 01:10:28] KERNEL: Partición 4 está libre.
+[2026-03-15 01:10:28] LOADER: ===== INICIANDO CARGA DISCO -> RAM =====
+[2026-03-15 01:10:28] LOADER: PID=3, Particion=4, FT_Index=3
+[2026-03-15 01:10:28] LOADER: Cargando 'test_math.txt' (PID=3) a RAM (Particion 4).
+[2026-03-15 01:10:28] LOADER: Leyendo 10 palabras desde disco (Track=3, Cyl=0, Sec=0)...
+[2026-03-15 01:10:28] Leyendo en disco: pista 3, cilindro 0, sector 0, data: 04100010
+[2026-03-15 01:10:28] LOADER: Palabra 0 leida desde sector (3,0,0): 4100010
+[2026-03-15 01:10:28] Leyendo en disco: pista 3, cilindro 0, sector 1, data: 00100010
+[2026-03-15 01:10:28] LOADER: Palabra 1 leida desde sector (3,0,1): 100010
+[2026-03-15 01:10:28] Leyendo en disco: pista 3, cilindro 0, sector 2, data: 02100005
+[2026-03-15 01:10:28] LOADER: Palabra 2 leida desde sector (3,0,2): 2100005
+[2026-03-15 01:10:28] Leyendo en disco: pista 3, cilindro 0, sector 3, data: 03100002
+[2026-03-15 01:10:28] LOADER: Palabra 3 leida desde sector (3,0,3): 3100002
+[2026-03-15 01:10:28] Leyendo en disco: pista 3, cilindro 0, sector 4, data: 01100008
+[2026-03-15 01:10:28] LOADER: Palabra 4 leida desde sector (3,0,4): 1100008
+[2026-03-15 01:10:28] Leyendo en disco: pista 3, cilindro 0, sector 5, data: 05000010
+[2026-03-15 01:10:28] LOADER: Palabra 5 leida desde sector (3,0,5): 5000010
+[2026-03-15 01:10:28] Leyendo en disco: pista 3, cilindro 0, sector 6, data: 04100000
+[2026-03-15 01:10:28] LOADER: Palabra 6 leida desde sector (3,0,6): 4100000
+[2026-03-15 01:10:28] Leyendo en disco: pista 3, cilindro 0, sector 7, data: 25100000
+[2026-03-15 01:10:28] LOADER: Palabra 7 leida desde sector (3,0,7): 25100000
+[2026-03-15 01:10:28] Leyendo en disco: pista 3, cilindro 0, sector 8, data: 04100001
+[2026-03-15 01:10:28] LOADER: Palabra 8 leida desde sector (3,0,8): 4100001
+[2026-03-15 01:10:28] Leyendo en disco: pista 3, cilindro 0, sector 9, data: 13000000
+[2026-03-15 01:10:28] LOADER: Palabra 9 leida desde sector (3,0,9): 13000000
+[2026-03-15 01:10:28] LOADER: 10 palabras leidas desde disco exitosamente.
+[2026-03-15 01:10:28] LOADER: Programa leido desde disco a buffer. 10 palabras.
+[2026-03-15 01:10:28] LOADER: Particion 4: direcciones RAM [1660-1999].
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1660, valor 4100010
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1661, valor 100010
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1662, valor 2100005
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1663, valor 3100002
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1664, valor 1100008
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1665, valor 5000010
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1666, valor 4100000
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1667, valor 25100000
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1668, valor 4100001
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1669, valor 13000000
+[2026-03-15 01:10:28] LOADER: Todas las palabras escritas en RAM exitosamente.
+[2026-03-15 01:10:28] LOADER: Contexto inicializado.
+[2026-03-15 01:10:28] LOADER:   RB (Base)=1660, RL (Limite)=1999
+[2026-03-15 01:10:28] LOADER:   PC (Program Counter)=0 (dentro de PSW)
+[2026-03-15 01:10:28] LOADER:   SP (Stack Pointer)=1999 (primera posicion VACIA)
+[2026-03-15 01:10:28] LOADER: ===== CARGA DISCO->RAM COMPLETADA =====
+[2026-03-15 01:10:28] LOADER: PID=3 cargado en Particion 4, listo para ejecutar.
+[2026-03-15 01:10:28] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_pop.txt) a ejecutar.
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 300, valor 25100123
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 638, valor 123
+[2026-03-15 01:10:28] PSH: Guardado 123 en Stack (SP=638)
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=0 (PC=1)
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 301, valor 25100456
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 637, valor 456
+[2026-03-15 01:10:28] PSH: Guardado 456 en Stack (SP=637)
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=0 (PC=2)
+[2026-03-15 01:10:28] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:10:28] PLANIFICADOR: Quantum agotado. Sale PID 0 (test_pop.txt), Entra PID 1 (test_sleep.txt)
+[2026-03-15 01:10:28] >> PLANIFICADOR: Cambio de contexto -> Entra PID 1 (test_sleep.txt) a ejecutar.
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 640, valor 4100010
+[2026-03-15 01:10:28] Ejecutando LOAD, AC cargado con 10
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=1 (PC=1)
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 641, valor 25100010
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 978, valor 10
+[2026-03-15 01:10:28] PSH: Guardado 10 en Stack (SP=978)
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=1 (PC=2)
+[2026-03-15 01:10:28] KERNEL: PID 1 agotó su quantum.
+[2026-03-15 01:10:28] PLANIFICADOR: Quantum agotado. Sale PID 1 (test_sleep.txt), Entra PID 2 (test_consecutive_dma.txt)
+[2026-03-15 01:10:28] >> PLANIFICADOR: Cambio de contexto -> Entra PID 2 (test_consecutive_dma.txt) a ejecutar.
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 1320, valor 4100001
+[2026-03-15 01:10:28] Ejecutando LOAD, AC cargado con 1
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=2 (PC=1)
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 1321, valor 5000500
+[2026-03-15 01:10:28] ERROR MMU: Violacion de Segmento. Logica:500 -> Fisica:1820 (Limites RB:1320 - RL:1659)
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 6 detectada.
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 6...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=2 (PC=2)
+[2026-03-15 01:10:28] KERNEL: Error fatal (Cod 6) en PID 2. Terminando.
+[2026-03-15 01:10:28] PLANIFICADOR: Quantum agotado. Sale PID 2 (test_consecutive_dma.txt), Entra PID 3 (test_math.txt)
+[2026-03-15 01:10:28] >> PLANIFICADOR: Cambio de contexto -> Entra PID 3 (test_math.txt) a ejecutar.
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 1660, valor 4100010
+[2026-03-15 01:10:28] Ejecutando LOAD, AC cargado con 10
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=3 (PC=1)
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 1661, valor 100010
+[2026-03-15 01:10:28] ALU: SUM 10 + 10 = 20 (Codificado en AC: 20)
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=3 (PC=2)
+[2026-03-15 01:10:28] KERNEL: PID 3 agotó su quantum.
+[2026-03-15 01:10:28] PLANIFICADOR: Quantum agotado. Sale PID 3 (test_math.txt), Entra PID 0 (test_pop.txt)
+[2026-03-15 01:10:28] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_pop.txt) a ejecutar.
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 302, valor 26000100
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 637, valor 456
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 400, valor 456
+[2026-03-15 01:10:28] POP: Recuperado 456 y guardado en Mem[400]
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=0 (PC=3)
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 303, valor 26000101
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 638, valor 123
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 401, valor 123
+[2026-03-15 01:10:28] POP: Recuperado 123 y guardado en Mem[401]
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=0 (PC=4)
+[2026-03-15 01:10:28] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:10:28] PLANIFICADOR: Quantum agotado. Sale PID 0 (test_pop.txt), Entra PID 1 (test_sleep.txt)
+[2026-03-15 01:10:28] >> PLANIFICADOR: Cambio de contexto -> Entra PID 1 (test_sleep.txt) a ejecutar.
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 642, valor 4100004
+[2026-03-15 01:10:28] Ejecutando LOAD, AC cargado con 4
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=1 (PC=3)
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 643, valor 13000000
+[2026-03-15 01:10:28] SVC: Solicitud de servicio al sistema.
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 2 detectada.
+[2026-03-15 01:10:28] SVC: Llamada al Sistema (Fin de programa temporal)
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 2...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=1 (PC=4)
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 978, valor 10
+[2026-03-15 01:10:28] SYSCALL 4: Proceso 1 duerme 10 tics.
+[2026-03-15 01:10:28] PLANIFICADOR: Quantum agotado. Sale PID 1 (test_sleep.txt), Entra PID 3 (test_math.txt)
+[2026-03-15 01:10:28] >> PLANIFICADOR: Cambio de contexto -> Entra PID 3 (test_math.txt) a ejecutar.
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 1662, valor 2100005
+[2026-03-15 01:10:28] ALU: MULT 20 * 5 = 100 (Codificado en AC: 100)
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=3 (PC=3)
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 1663, valor 3100002
+[2026-03-15 01:10:28] ALU: DIVI 100 / 2 = 50 (Codificado en AC: 50)
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=3 (PC=4)
+[2026-03-15 01:10:28] KERNEL: PID 3 agotó su quantum.
+[2026-03-15 01:10:28] PLANIFICADOR: Quantum agotado. Sale PID 3 (test_math.txt), Entra PID 0 (test_pop.txt)
+[2026-03-15 01:10:28] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_pop.txt) a ejecutar.
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 304, valor 4100999
+[2026-03-15 01:10:28] Ejecutando LOAD, AC cargado con 999
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=0 (PC=5)
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 305, valor 4100000
+[2026-03-15 01:10:28] Ejecutando LOAD, AC cargado con 0
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=0 (PC=6)
+[2026-03-15 01:10:28] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:10:28] PLANIFICADOR: Quantum agotado. Sale PID 0 (test_pop.txt), Entra PID 3 (test_math.txt)
+[2026-03-15 01:10:28] >> PLANIFICADOR: Cambio de contexto -> Entra PID 3 (test_math.txt) a ejecutar.
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 1664, valor 1100008
+[2026-03-15 01:10:28] ALU: RES 50 - 8 = 42 (Codificado en AC: 42)
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=3 (PC=5)
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 1665, valor 5000010
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1670, valor 42
+[2026-03-15 01:10:28] Ejecutando STR, valor 42 escrito en dirección 1670
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=3 (PC=6)
+[2026-03-15 01:10:28] KERNEL: PID 3 agotó su quantum.
+[2026-03-15 01:10:28] PLANIFICADOR: Quantum agotado. Sale PID 3 (test_math.txt), Entra PID 0 (test_pop.txt)
+[2026-03-15 01:10:28] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_pop.txt) a ejecutar.
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 306, valor 25100000
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 638, valor 0
+[2026-03-15 01:10:28] PSH: Guardado 0 en Stack (SP=638)
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=0 (PC=7)
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 307, valor 4100001
+[2026-03-15 01:10:28] Ejecutando LOAD, AC cargado con 1
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=0 (PC=8)
+[2026-03-15 01:10:28] KERNEL: PID 0 agotó su quantum.
+[2026-03-15 01:10:28] PLANIFICADOR: Quantum agotado. Sale PID 0 (test_pop.txt), Entra PID 3 (test_math.txt)
+[2026-03-15 01:10:28] >> PLANIFICADOR: Cambio de contexto -> Entra PID 3 (test_math.txt) a ejecutar.
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 1666, valor 4100000
+[2026-03-15 01:10:28] Ejecutando LOAD, AC cargado con 0
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=3 (PC=7)
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 1667, valor 25100000
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 1998, valor 0
+[2026-03-15 01:10:28] PSH: Guardado 0 en Stack (SP=1998)
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=3 (PC=8)
+[2026-03-15 01:10:28] KERNEL: Proceso 1 despertó. Pasa a LISTO.
+[2026-03-15 01:10:28] KERNEL: PID 3 agotó su quantum.
+[2026-03-15 01:10:28] PLANIFICADOR: Quantum agotado. Sale PID 3 (test_math.txt), Entra PID 0 (test_pop.txt)
+[2026-03-15 01:10:28] >> PLANIFICADOR: Cambio de contexto -> Entra PID 0 (test_pop.txt) a ejecutar.
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 308, valor 13000000
+[2026-03-15 01:10:28] SVC: Solicitud de servicio al sistema.
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 2 detectada.
+[2026-03-15 01:10:28] SVC: Llamada al Sistema (Fin de programa temporal)
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 2...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=0 (PC=9)
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 638, valor 0
+[2026-03-15 01:10:28] SYSCALL 1: Proceso 0 termina con estado 0.
+[2026-03-15 01:10:28] PLANIFICADOR: Quantum agotado. Sale PID 0 (test_pop.txt), Entra PID 1 (test_sleep.txt)
+[2026-03-15 01:10:28] >> PLANIFICADOR: Cambio de contexto -> Entra PID 1 (test_sleep.txt) a ejecutar.
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 644, valor 4100777
+[2026-03-15 01:10:28] Ejecutando LOAD, AC cargado con 777
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=1 (PC=5)
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 645, valor 25100777
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 978, valor 777
+[2026-03-15 01:10:28] PSH: Guardado 777 en Stack (SP=978)
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=1 (PC=6)
+[2026-03-15 01:10:28] KERNEL: PID 1 agotó su quantum.
+[2026-03-15 01:10:28] PLANIFICADOR: Quantum agotado. Sale PID 1 (test_sleep.txt), Entra PID 3 (test_math.txt)
+[2026-03-15 01:10:28] >> PLANIFICADOR: Cambio de contexto -> Entra PID 3 (test_math.txt) a ejecutar.
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 1668, valor 4100001
+[2026-03-15 01:10:28] Ejecutando LOAD, AC cargado con 1
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=3 (PC=9)
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 1669, valor 13000000
+[2026-03-15 01:10:28] SVC: Solicitud de servicio al sistema.
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 2 detectada.
+[2026-03-15 01:10:28] SVC: Llamada al Sistema (Fin de programa temporal)
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 2...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=3 (PC=10)
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 1998, valor 0
+[2026-03-15 01:10:28] SYSCALL 1: Proceso 3 termina con estado 0.
+[2026-03-15 01:10:28] PLANIFICADOR: Quantum agotado. Sale PID 3 (test_math.txt), Entra PID 1 (test_sleep.txt)
+[2026-03-15 01:10:28] >> PLANIFICADOR: Cambio de contexto -> Entra PID 1 (test_sleep.txt) a ejecutar.
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 646, valor 4100002
+[2026-03-15 01:10:28] Ejecutando LOAD, AC cargado con 2
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=1 (PC=7)
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 647, valor 13000000
+[2026-03-15 01:10:28] SVC: Solicitud de servicio al sistema.
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 2 detectada.
+[2026-03-15 01:10:28] SVC: Llamada al Sistema (Fin de programa temporal)
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 2...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=1 (PC=8)
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 978, valor 777
+[2026-03-15 01:10:28] SYSCALL 2: Proceso 1 imprime 777.
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 648, valor 4100000
+[2026-03-15 01:10:28] Ejecutando LOAD, AC cargado con 0
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=1 (PC=9)
+[2026-03-15 01:10:28] KERNEL: PID 1 agotó su quantum.
+[2026-03-15 01:10:28] >> PLANIFICADOR: Cambio de contexto -> Entra PID 1 (test_sleep.txt) a ejecutar.
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 649, valor 25100000
+[2026-03-15 01:10:28] Escribiendo memoria fisica: direccion 978, valor 0
+[2026-03-15 01:10:28] PSH: Guardado 0 en Stack (SP=978)
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=1 (PC=10)
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 650, valor 4100001
+[2026-03-15 01:10:28] Ejecutando LOAD, AC cargado con 1
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 3 detectada.
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 3...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=1 (PC=11)
+[2026-03-15 01:10:28] KERNEL: PID 1 agotó su quantum.
+[2026-03-15 01:10:28] >> PLANIFICADOR: Cambio de contexto -> Entra PID 1 (test_sleep.txt) a ejecutar.
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 651, valor 13000000
+[2026-03-15 01:10:28] SVC: Solicitud de servicio al sistema.
+[2026-03-15 01:10:28] >> SOLICITUD INTERRUPCION: Codigo 2 detectada.
+[2026-03-15 01:10:28] SVC: Llamada al Sistema (Fin de programa temporal)
+[2026-03-15 01:10:28] INT: Iniciando secuencia de interrupción 2...
+[2026-03-15 01:10:28] DISPATCHER: Contexto salvado para PID=1 (PC=12)
+[2026-03-15 01:10:28] Leyendo memoria fisica: direccion 978, valor 0
+[2026-03-15 01:10:28] SYSCALL 1: Proceso 1 termina con estado 0.
